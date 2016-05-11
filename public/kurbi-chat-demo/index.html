@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+
+
+
+
+</head>
+
+
+<body>
+
+<h1>This is a Dummy Page</h1>
+
+<div style="height:100px;width:100px;background-color:green;" class="kurbi-chat"></div>
+
+<script>!function(e,t){function n(n){t=e.createElement("script"),t.type="text/javascript",t.innerHTML=n,e.getElementsByTagName("head")[0].appendChild(t),kirby.params(r)}function o(t){var n=e.createElement("div");n.innerHTML=t,s.appendChild(n)}function a(t){var n=e.createElement("style");n.innerHTML=t,e.body.appendChild(n)}var s=e.createElement("div");s.style.position="absolute",s.style.top="0px",s.style.left="0px",s.setAttribute("class","kurbi-chat-parent"),e.getElementsByTagName("body")[0].appendChild(s);var r="5733b2649b578370006d5436",l=new XMLHttpRequest;l.open("GET","http://public.foolhardysoftworks.com:9000/chatbox?key="+r,!0),l.onload=function(){if(l.status>=200&&l.status<400){var e=l.responseText,t=JSON.parse(e);n(t.js),a(t.css),o(t.html)}else console.log("error",l.status)},l.onerror=function(){console.log("connection error")},l.send()}(document);</script>
+
+</body>
+
+
+
+
+</html>
