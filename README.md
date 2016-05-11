@@ -15,12 +15,12 @@ by a wizard that lets users customize their chat box.  It returns a snippet that
 See 'public\backend' for an example of how it's used.  **Make this happen in stamplay.**  
   
   
-'templates'  
+`templates`  
   
 This folder contains templates that control the functionaity of the chat box and snippet template.  This is where the chat box can be styled and functionality can be added to it.  
 
   
-'templates\javascript\snippet_template.js'  
+`templates\javascript\snippet_template.js`  
   
 This file is the un-uglified javascript which is returned by the **createSnippet()** function.  It should not have to be modifed often, but if it does need to be modified, there it is.  I think it's wisest to keep it in native javascript.  
 
