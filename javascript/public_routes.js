@@ -22,6 +22,7 @@ var less,hbs,js,snippet;
 
 router.route('/chatbox')
 	.get(_getUserChat)              //serves the chat box to the client webpage (snippet_template.js)
+
 	.post(createSnippet);  			//this endpoint is called by the backend, to generate a chatbox and a corresponding snippet
 
 router.route('/chat')

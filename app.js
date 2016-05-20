@@ -13,9 +13,12 @@ app.use(bodyParser.urlencoded({ extended: true, parameterLimit:10000, limit:'5mb
 app.use(bodyParser.json({parameterLimit:10000, limit:'5mb'}));
 app.use(cors());
 
-var router = express.Router();  
+var router = express.Router();
+
 app.use('/',publicRoutes);
+
 app.use('/backend',express.static('public/backend'));
+
 app.use('/demo', express.static('public/kurbi-chat-demo'));
 
 
