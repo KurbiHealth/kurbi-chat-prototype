@@ -31,7 +31,7 @@ router.route('/chat')
 
 
 new Promise(loadTemplates).then(function(templates){
-	
+
 	less = templates.less;
 	hbs = templates.hbs;
 	js = templates.js;
@@ -72,6 +72,7 @@ function loadTemplates(resolve,reject){
 
 function getUserChat(req,res){
 	var id = req.query.key;
+// REPLACE WITH STAMPLAY
 	Chat.findById(id, function(err,doc){
 		if(err) console.log(err);
 		else return res.json(doc);
@@ -147,7 +148,7 @@ function createSnippet(req,res){
 	promises.push(compileLESS(lessData,less));
 
 	Promise.all(promises).then(function(results){
-
+// REPLACE WITH STAMPLAY
 		var chat = new Chat();
 		chat.js = js;
 		chat.html = results[0];
@@ -279,9 +280,10 @@ function registerChat(req,res,next){
 	var question = req.body.question;
 	var userInformation = req.body.userInformation;
 
-
+// REPLACE WITH STAMPLAY
 	cInstance.findOne({url:url, token:token}).then(function(doc){
 		if(!doc || doc.token == '') {
+// REPLACE WITH STAMPLAY
 			doc = new cInstance();
 			doc.url = url;
 			doc.chatbox = key;

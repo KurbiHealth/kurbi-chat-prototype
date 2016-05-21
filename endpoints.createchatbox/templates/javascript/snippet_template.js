@@ -9,9 +9,12 @@
 	parent.setAttribute('class','kurbi-chat-parent');
 	
     d.getElementsByTagName('body')[0].appendChild(parent);
-    var kirbyApiKey = "#BANANA";
+    var kurbiApiKey = "#BANANA"; // it's the Stamplay _id from 'chatbox' data model
 	var request = new XMLHttpRequest();
-	request.open('GET', 'http://public.foolhardysoftworks.com:9000/chatbox'+'?key='+kirbyApiKey, true);
+	// for production
+	request.open('GET', 'https://kurbi.stamplayapp.com/api/cobject/v1/chatbox/' + kurbiApiKey, true);
+	// for dev
+	//request.open('GET', 'http://chat.gokurbi.com/chatbox' + kurbiApiKey, true);
 
 	request.onload = function() {
 	  if (request.status >= 200 && request.status < 400) {
@@ -36,7 +39,7 @@
 	    script.type = 'text/javascript';
 	    script.innerHTML = newScript;
 	    d.getElementsByTagName('head')[0].appendChild(script);
-	    kirby.params(kirbyApiKey);
+	    kirby.params(kurbiApiKey);
 	}
 
 	function loadHtml(newHtml){

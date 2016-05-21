@@ -4,7 +4,9 @@ var BUTTON_CLASS = 'kurbi-chat';
 if(!namespace.kirby) namespace.kirby = {};
 namespace.kirby.params = params;
 //take control of the jquery variable in the local scope.
-var URL = 'http://public.foolhardysoftworks.com:9000/';
+//var URL = 'http://public.foolhardysoftworks.com:9000/';
+var URL = 'kchat:8080/chat/';
+//var URL = 'http://chat.gokurbi.com/chat/'
 var key = null;
 var userToken = localStorage.getItem('kurbiUserToken');
 var userIcon = null;
