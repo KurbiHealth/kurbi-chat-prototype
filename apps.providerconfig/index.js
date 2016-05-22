@@ -1,7 +1,7 @@
 (function(scope){
 //var URL = 'http://public.foolhardysoftworks.com:9000/chatbox'
-var URL = 'kchat:8080/chatbox'
-//var URL = 'http://chat.gokurbi.com/chatbox';
+//var URL = 'kchat:8080/chatbox'
+var URL = 'http://chat.gokurbi.com/chatbox';
 $(document).ready(init);
 
 
