@@ -1,7 +1,7 @@
 (function(scope){
 var URL = 'http://public.foolhardysoftworks.com:9000/chatbox';
 $(document).ready(init);
-
+var apiKey = 'public';
 
 function init(){
 
@@ -17,12 +17,23 @@ function init(){
 			console.log(response);
 			var div = $('.code').append('<div></div>');
 			div.text("<script>"+response.snippet + "</script>");
+			apiKey = response.apiKey;
 
 		});
 		
 
 	});
 
+	var socket = io();
+	socket.on('connect', function(data){
+	
+	});
+
+	socket.emit('join room', 'beer');
+
+	socket.on('message', function(data){
+		console.log(data);
+	})
 }
 
 // scope.getSnippet = getSnippet;

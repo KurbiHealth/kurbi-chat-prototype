@@ -11,6 +11,7 @@
     "less": "^2.7.1",
     "mongoose": "^4.4.16",
     "socket.io": "^1.4.6",
+    "socket.io-client": "^1.4.6",
     "uglify-js": "^2.6.2"
   },
   "devDependencies": {},

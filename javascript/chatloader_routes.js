@@ -1,10 +1,8 @@
 var express 						= require('express');
 var router 							= express.Router();
 var mongoose  						= require('mongoose');
-//var io 								= require('socket.io')()
 
 var Chat 							= require('./chatSchema');
-var cInstance 						= require('./chatInstanceSchema');
 
 var UglifyJS 						= require('uglify-js');
 var Handlebars 						= require('handlebars');
@@ -14,7 +12,7 @@ var fs 								= require('fs');
 
 
 module.exports = function(){
-var debug = false;     				//this forces a recompile of the chatbox every time the endpoint is hit - so you can immediately see changes made to the template
+var debug = true;     				//this forces a recompile of the chatbox every time the endpoint is hit - so you can immediately see changes made to the template
 var _getUserChat = debug ? debugGetUserChat : getUserChat;  //this is how the above is done
 
 var ICONS = [];						
@@ -24,8 +22,6 @@ router.route('/chatbox')
 	.get(_getUserChat)              //serves the chat box to the client webpage (snippet_template.js)
 	.post(createSnippet);  			//this endpoint is called by the backend, to generate a chatbox and a corresponding snippet
 
-router.route('/chat')
-	.post(registerChat);            //not currently used. 
 
 
 
@@ -156,7 +152,7 @@ function createSnippet(req,res){
 			else{
 				var customSnippet = snippet.replace('#BANANA', chat._id);
 				var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
-				return res.json({'snippet':uglySnippet.code});	
+				return res.json({'snippet':uglySnippet.code, 'apiKey':chat._id});	
 			}
 			
 		});
@@ -266,39 +262,6 @@ fs.readdir('public/backend/icons/PNG', function(err,items){
 });
 
 }
-
-
-
-function registerChat(req,res,next){
-//unfinished -- there's going to be some user token storage... 
-//might be needed for socket coordination 
-	var url = req.body.url;
-	var key = req.body.key;
-	var token = req.body.token;
-	var question = req.body.question;
-	var userInformation = req.body.userInformation;
-
-
-	cInstance.findOne({url:url, token:token}).then(function(doc){
-		if(!doc || doc.token == '') {
-			doc = new cInstance();
-			doc.url = url;
-			doc.chatbox = key;
-			var fingerprint = (new Date()).valueOf().toString() + Math.random().toString();
-			doc.token = require('crypto').createHash('md5').update(fingerprint).digest("hex");
-			doc.question = question;
-			doc.userInformation = userInformation;
-		}
-
-		doc.save();
-
-		res.json({token:doc.token});
-	});
-
-// 	next();
- }
-
-
 
 
 }

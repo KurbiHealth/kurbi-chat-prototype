@@ -8,13 +8,13 @@
 </head>
 
 
-<body>
+<body style="background-color:#ccffff;">
 
 <h1>This is a Dummy Page</h1>
 
-<div style="height:100px;width:100px;background-color:green;" class="kurbi-chat"></div>
 
-<script>!function(e,t){function n(n){t=e.createElement("script"),t.type="text/javascript",t.innerHTML=n,e.getElementsByTagName("head")[0].appendChild(t),kirby.params(r)}function o(t){var n=e.createElement("div");n.innerHTML=t,s.appendChild(n)}function a(t){var n=e.createElement("style");n.innerHTML=t,e.body.appendChild(n)}var s=e.createElement("div");s.style.position="absolute",s.style.top="0px",s.style.left="0px",s.setAttribute("class","kurbi-chat-parent"),e.getElementsByTagName("body")[0].appendChild(s);var r="5733b2649b578370006d5436",l=new XMLHttpRequest;l.open("GET","http://public.foolhardysoftworks.com:9000/chatbox?key="+r,!0),l.onload=function(){if(l.status>=200&&l.status<400){var e=l.responseText,t=JSON.parse(e);n(t.js),a(t.css),o(t.html)}else console.log("error",l.status)},l.onerror=function(){console.log("connection error")},l.send()}(document);</script>
+
+<script>!function(e,t){function n(){var t=e.createElement("script");t.type="text/javascript",t.src="http://public.foolhardysoftworks.com:9000/socket.io/socket.io.js",e.getElementsByTagName("head")[0].appendChild(t)}function a(t){var n=e.createElement("script");n.type="text/javascript",n.innerHTML=t,e.getElementsByTagName("head")[0].appendChild(n),kirby.params(c)}function o(t){var n=e.createElement("div");n.innerHTML=t,r.appendChild(n)}function s(t){var n=e.createElement("style");n.innerHTML=t,e.body.appendChild(n)}var r=e.createElement("div");r.style.position="absolute",r.style.top="0px",r.style.left="0px",r.setAttribute("class","kurbi-chat-parent"),e.getElementsByTagName("body")[0].appendChild(r);var c="57415cd1ef3b99700a049cca",i=new XMLHttpRequest;i.open("GET","http://public.foolhardysoftworks.com:9000/chatbox?key="+c,!0),i.onload=function(){if(i.status>=200&&i.status<400){var e=i.responseText,t=JSON.parse(e);n(),a(t.js),s(t.css),o(t.html)}else console.log("error",i.status)},i.onerror=function(){console.log("connection error")},i.send()}(document);</script>
 
 </body>
 
