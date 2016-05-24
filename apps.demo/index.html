@@ -28,8 +28,8 @@
 	<link href="css/custom.css" rel="stylesheet" type="text/css">
 	
 	<!-- JAVASCRIPTS -->
-	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<!--<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
 	
 </head>
 <body>
@@ -151,7 +151,7 @@
 		
 	</div>
 </div>
-<div style="height:40px;width:150px;background-color:blue;color:white;position:fixed;top:100px;left:0;padding-top:10px;padding-left:10px;box-shadow: 2px 2px lightgray;" class="kurbi-chat"><p>Do you need help?</p></div>
+<div class="kurbi-chat"></div>
 
 <script>!function(e,t){function n(n){t=e.createElement("script"),t.type="text/javascript",t.innerHTML=n,e.getElementsByTagName("head")[0].appendChild(t),kirby.params(r)}function a(t){var n=e.createElement("div");n.innerHTML=t,o.appendChild(n)}function s(t){var n=e.createElement("style");n.innerHTML=t,e.body.appendChild(n)}var o=e.createElement("div");o.style.position="absolute",o.style.top="0px",o.style.left="0px",o.setAttribute("class","kurbi-chat-parent"),e.getElementsByTagName("body")[0].appendChild(o);var r="574237415182837e0d2cbf6a",i=new XMLHttpRequest;i.open("GET","https://kurbi.stamplayapp.com/api/cobject/v1/chatbox/"+r,!0),i.onload=function(){if(i.status>=200&&i.status<400){var e=i.responseText,t=JSON.parse(e);n(t.js),s(t.css),a(t.html)}else console.log("error",i.status)},i.onerror=function(){console.log("connection error")},i.send()}(document);</script>
 </body>
