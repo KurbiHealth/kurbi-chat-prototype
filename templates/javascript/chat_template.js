@@ -1,5 +1,9 @@
 (function(d,namespace){
 
+tada = function(item){
+	console.log('heya');
+	if(item) console.log(item);
+}
 
 
 var ChatBox = function(info){
@@ -9,121 +13,73 @@ var ChatBox = function(info){
 	this.show = show;
 	this.info = info;
 	this.userId = info.sessionID;
+	this.template = {};
+	this.click = {};
+	this.instanceId = makeKey();
 	var socket = null;
+
+///// Okay here is some weirdness...
+// I want to be able to use the handlebar templating to loop over data objects
+// ... like when we want to show a list of icons.  
+//
+// We also want the ability to have these items do things when clicked
+// We also want the ChatBox methods private to the chatbox.
+// 
+// The problem is that the onclick methods inside of the templating engines
+// do not have access to the chatbox scope, because it's private.
+// so our options seemed to be: expose some methods for chatting on the global scope
+// the methods could be general utilites that are then invoked by the chat messages
+// or they could be message specific handlers.  
+// for example the Icon Picker message object needs to assign an icon.
+// I thought it would be nice to be able to define the methods that a message object uses
+// inside of the template that defines the message itself.  
+
+// So currently, the hbs templates define their own message handlers
+// and these message handlers are attached to the ChatBox scope
+// via the attachClickHandler function.
+// once they are attached to the chatbox scope, they can use the chatbox
+// methods.  
+
+// the #pickle stuff.. is because so far, the chatbox could be instantiated more than one time
+// to make multiple boxes per window, if we wanted.
+// however, the attachHandler functions then need to know which chatbox
+// to attach the clickhandler to.  So the chatbox now generates an id
+// when it's instantiated and puts that into the templates
+// as they're attached to the DOM.
+// so they can call the correct handler attachers.
+
+	if(!kurbi.attachClickHandler) kurbi.attachClickHandler = {};
+	if(!kurbi.click) kurbi.click = {};
+
+	kurbi.attachClickHandler[that.instanceId] = function(id,fn){
+		if(!that.click[id]) that.click[id] = fn;
+	}
+
+	kurbi.click[that.instanceId] = function(id, data){
+		that.click[id](data);
+	}
 
 	setup();
 
+
 	function appendMessage(msg){
-		switch(msg.type){
-
-			case 'text':
-				var m = document.createElement('div');
-				m.innerHTML = msg.body;
-				that.content.appendChild(m);
-				m.className = 'kurbi-chat-message';
-				if(msg.name == that.userId) m.className+= " kurbi-self-message";
-				m.scrollIntoView();
-			break;
-
-			case 'icon':
-				var m = document.createElement('img');
-				m.src = msg.body;
-				m.className = 'kurbi-chat-icon';
-				if(msg.name == that.userId) m.className+= " kurbi-self-message";
-				m.style.display = "block";
-				that.content.appendChild(m);
-				m.scrollIntoView();
-			break;
-
-			default:
-				var m = document.createElement('div');
-				m.innerHTML = msg.body;
-				m.className = 'kurbi-chat-message';
-				if(msg.name == that.userId) m.className+= " kurbi-self-message";
-				that.content.appendChild(m);
-				m.scrollIntoView();
-		}
+		
+		var compiledTemplate = Handlebars.compile(that.template[msg.type]);
+		that.content.innerHTML += compiledTemplate(msg.body).replace(/#pickle/g, that.instanceId);
+		that.content.scrollTop = that.content.scrollHeight;
+		
 	}
 //
 	function prependMessage(msg){
-		switch(msg.type){
-
-			case 'text':
-				var m = document.createElement('div');
-				m.innerHTML = msg.body;
-				m.className = 'kurbi-chat-message';
-				if(msg.name == that.userId) m.className+= " kurbi-self-message";
-		 		that.content.insertBefore(m,that.content.firstChild);
-			break;
-
-			case 'icon':
-				var m = document.createElement('img');
-				m.src = msg.body;
-				m.className = 'kurbi-chat-icon';
-				if(msg.name == that.userId) m.className+= " kurbi-self-message";
-				m.style.display = "block";
-				that.content.appendChild(m);
-				that.content.insertBefore(m,that.content.firstChild);
-			break;
-
-			default:
-				var m = document.createElement('div');
-				m.innerHTML = msg.body;
-				m.className = 'kurbi-chat-message';
-				if(msg.name == that.userId) m.className+= " kurbi-self-message";
-		 		that.content.insertBefore(m,that.content.firstChild);
-		}	
+		var compiledTemplate = Handlebars.compile(that.template[msg.type]);
+		that.content.innerHTML = compiledTemplate(msg.body).replace(/#pickle/g, that.instanceId) + that.content.innerHTML;
 	}
 
 //
 	function setInput(responses){
-		that.footer.innerHTML = "";
-		if(!responses || responses.length == 0) {
-			var m = document.createElement('input');
-			m.className = 'kurbi-input-field';
-			that.footer.appendChild(m);
-		}
-		else{
+		var compiledTemplate = Handlebars.compile(that.template[responses.type]);
+		that.footer.innerHTML = compiledTemplate({responses:responses.body}).replace(/#pickle/g, that.instanceId);
 
-			var l = document.createElement('div');
-			l.className = 'kurbi-response-prompt';
-			l.innerHTML = 'Choose One:';
-			that.footer.appendChild(l);
-			var n = document.createElement('div');
-			n.className = 'kurbi-response-container';
-			that.footer.appendChild(n);
-			responses.forEach(function(response){
-				var m;
-				switch(response.type){
-
-					case 'text':
-						m = document.createElement('div');
-						m.className = 'kurbi-response-option';
-						m.innerHTML = response.body;
-						n.appendChild(m);
-					break;
-
-					case 'icon':
-						m = document.createElement('img');
-						m.className = 'kurbi-response-option kurbi-chat-icon';
-						m.src = response.body;
-						n.appendChild(m);
-					break;
-
-					default:
-						m = document.createElement('div');
-						m.className = 'kurbi-response-option';
-						m.innerHTML = response.body;
-						n.appendChild(m);
-
-
-				}
-				
-				m.addEventListener('click', function(){
-					socket.emit('message', { message: {name:that.userId,body:response.body, type:response.type}});
-				});
-			});
-		}
 	}
 
 	function addMessage(data){
@@ -148,7 +104,9 @@ var ChatBox = function(info){
 	}
 
 	function setup(){
-		
+		loadTemplate('text message');
+		loadTemplate('response list text');
+		loadTemplate('response list icons');
 		that.box = d.getElementsByClassName('kurbi-chat-box')[0];
 		that.banner = d.getElementsByClassName('kurbi-chat-banner')[0];
 		that.backdrop = d.getElementsByClassName('kurbi-backdrop')[0];	
@@ -156,7 +114,16 @@ var ChatBox = function(info){
 		that.footer  = d.getElementsByClassName('kurbi-chat-footer')[0];
 
 	}
-//
+
+	function loadTemplate(templateName){
+		Handlebars.registerHelper('json', function(context) {
+		    	return JSON.stringify(context);
+			});
+		$.get('http://public.foolhardysoftworks.com:9000/template', {template:templateName}, function(res){
+			that.template[templateName] = res;
+		});
+
+	}
 
 	function hide(){
 		
@@ -176,7 +143,7 @@ var ChatBox = function(info){
 
 		if(socket){
 			
-			this.box.style.height='35vh';
+			this.box.style.height='55vh';
 			this.box.style.top="0px";
 			this.backdrop.style.height="100vh";
 			this.content.scrollTop = this.content.scrollHeight;
@@ -189,7 +156,7 @@ var ChatBox = function(info){
 		if(!socket){
 			socket = io();
 			socket.emit('register', that.info);
-			socket.on('history', addHistory);
+			//socket.on('history', addHistory);
 			socket.on('message', addMessage);
 			}
 	}
@@ -201,8 +168,9 @@ var ChatBox = function(info){
 
 
 //setup public members
-if(!namespace.kirby) namespace.kirby = {};
-namespace.kirby.params = params;     // callback that can receive variables from the clients webpage.
+if(!namespace.kurbi) namespace.kurbi = {};
+namespace.kurbi.params = params;     // callback that can receive variables from the clients webpage.
+console.log(namespace);
 loadJQuery(this, init);
 var info = null;
 
@@ -216,7 +184,7 @@ function params(apikey){
 }
 
 function init(local){
-		
+
 	local.chatbox = chatFactory(local);
 	
 }

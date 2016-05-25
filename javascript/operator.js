@@ -39,13 +39,15 @@ function clearRooms(){
 io.on('connect', function(socket){
 
 	socket.on('register', function(info){
-		var room = getRoom(info.sessionID,info.url,info.key);
-		if(!rooms[room]) {
-			createRoom(room, info);	
-			KingBot.requestBot(room,info);	
-			}
+		// var room = getRoom(info.sessionID,info.url,info.key);
+		// if(!rooms[room]) {
+		// 	createRoom(room, info);	
+		// 	KingBot.requestBot(room,info);	
+		// 	}
 		socket.source = 'patient';
-		joinRoom(room);
+		socket.emit('message', testmsgA());
+		socket.emit('message', testmsgB());
+		//joinRoom(room);
 	});
 
 	socket.on('join room', function(data){
@@ -107,6 +109,70 @@ io.on('connect', function(socket){
 function getRoom(id,url,key){
 	var string = id + url + key;
 	return require('crypto').createHash('md5').update(string).digest("hex");
+}
+
+
+function testmsgA(){
+ var msg =	{
+				message:{
+					type:'text message', 
+					body:{
+						displayName:'Madison Area Wellness Collective', 
+						text:"Our chat is completely anonymous, so let's start by choosing an avatar you'd like to represent you.",
+					}
+
+				},
+				responses: {
+					type:'response list text',
+					body:[
+							{
+								text:"click me",
+								id: 'dog',
+							},
+							{
+								text:"no click me",
+								id: 'cat',
+							}],
+				}
+
+		};
+
+	return msg;
+}
+
+
+function testmsgB(){
+
+var body = [];
+var letters = 'ABCDEFGHIJKLMNO';
+
+for(var i = 0; i < 12; i++){
+	var temp = {};
+	var M = "0" + Math.floor(Math.random()*4 + 1);
+	var N = letters[Math.floor(Math.random()*letters.length)];
+	
+	temp.url = "http://public.foolhardysoftworks.com:9000/backend/icons/PNG/"+N+M+".png";
+	temp.id = N;
+	body.push(temp);
+}
+
+ var msg =	{
+				message:{
+					type:'text message', 
+					body:{
+						displayName:'Madison Area Wellness Collective', 
+						text:"Our chat is completely anonymous, so let's start by choosing an avatar you'd like to represent you.",
+					}
+
+				},
+				responses: {
+					type:'response list icons',
+					body:body,
+				}
+
+		};
+
+	return msg;
 }
 
 

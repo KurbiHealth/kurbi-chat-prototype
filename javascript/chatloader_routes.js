@@ -22,7 +22,8 @@ router.route('/chatbox')
 	.get(_getUserChat)              //serves the chat box to the client webpage (snippet_template.js)
 	.post(createSnippet);  			//this endpoint is called by the backend, to generate a chatbox and a corresponding snippet
 
-
+router.route('/template')
+	.get(getTemplate);
 
 
 new Promise(loadTemplates).then(function(templates){
@@ -37,6 +38,35 @@ new Promise(loadTemplates).then(function(templates){
 populateIconList();
 
 return router;
+
+
+function getTemplate(req,res){
+	var templateName = req.query.template;
+
+	var dir = './templates/html/';
+	var filename = null;
+	switch(templateName){
+		case 'text message':
+		filename = dir + 'text_message.hbs';
+		break;
+
+		case 'response list text':
+		filename = dir + 'response_list_text.hbs';
+		break;
+
+		case 'response list icons':
+		filename = dir + 'response_list_icons.hbs';
+		break;
+
+		default:
+
+	}
+	console.log('calling filename', filename)
+	new Promise(loadHBS(filename)).then(function(template){
+		res.send(template);
+	});
+
+}
 
 function loadTemplates(resolve,reject){
 //this just loads the templates as strings using: loadHBS, loadLESS, loadJS, and loadSnippet.

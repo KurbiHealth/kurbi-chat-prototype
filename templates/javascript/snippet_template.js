@@ -14,20 +14,27 @@
 	}else{
  	 d.getElementsByTagName('body')[0].insertBefore(parent,d.getElementsByTagName('body')[0].firstChild);	
 	}
-	
+	var hbar = 0;
+	var sbar = 0;
+	var kbar = 0;
+	var obj = null;
+	loadHandlebars();
+	loadSocket();
 
-    var kirbyApiKey = "#BANANA";
+    var kurbiApiKey = "#BANANA";
 	var request = new XMLHttpRequest();
-	request.open('GET', 'http://public.foolhardysoftworks.com:9000/chatbox'+'?key='+kirbyApiKey, true);
+	request.open('GET', 'http://public.foolhardysoftworks.com:9000/chatbox'+'?key='+kurbiApiKey, true);
 
 	request.onload = function() {
 	  if (request.status >= 200 && request.status < 400) {
 		    var resp = request.responseText;
-		    var obj = JSON.parse(resp);
+		    obj = JSON.parse(resp);
+		    kbar = 1;
 		    loadSocket();
-		    loadScript(obj.js);
+		    loadHandlebars();
 		    loadCSS(obj.css);
 		    loadHtml(obj.html);
+		    if(kbar*hbar*sbar)loadScript(obj.js);
 		    
 	  } else {
 	    	console.log('error', request.status);
@@ -40,33 +47,56 @@
 
 	request.send();
 
+	function loadHandlebars(){
+
+		var script = d.createElement('script');
+		script.type = 'text/javascript';
+		script.src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js";
+		script.async = true;
+		script.onload = function(){
+			hbar = 1;
+			if(kbar*hbar*sbar)loadScript(obj.js);
+		}
+		d.getElementsByTagName('head')[0].appendChild(script);
+
+	}
+
 	function loadSocket(){
 		var script = d.createElement('script');
 		script.type = 'text/javascript';
 		script.src = "http://public.foolhardysoftworks.com:9000/socket.io/socket.io.js";
+		script.async = true;
+		script.onload = function(){
+			sbar = 1;
+			if(kbar*hbar*sbar)loadScript(obj.js);
+		}
 		d.getElementsByTagName('head')[0].appendChild(script);
 
 	}	
 
 
-	function loadScript(newScript){
-		var script = d.createElement('script');
-	    script.type = 'text/javascript';
-	    script.innerHTML = newScript;
-	    d.getElementsByTagName('head')[0].appendChild(script);
-	    kirby.params(kirbyApiKey);
-	}
-
-	function loadHtml(newHtml){
-	    var s = d.createElement('div');
-		s.innerHTML = newHtml;
-		parent.appendChild(s);
-	}
-
 	function loadCSS(newCSS){
 		var s = d.createElement('style');
 	    s.innerHTML = newCSS;
 	    d.body.appendChild(s);
+	}
+
+
+	function loadHtml(newHtml){
+	    var s = d.createElement('div');
+	    s.innerHTML = newHtml;
+		parent.appendChild(s);
+	}
+
+
+	function loadScript(newScript){
+		kbar = 0;
+		var script = d.createElement('script');
+	    script.type = 'text/javascript';
+	    script.innerHTML = newScript;
+	    script.async = false;
+	    d.getElementsByTagName('head')[0].appendChild(script);
+	    kurbi.params(kurbiApiKey);
 	}
 
 	
