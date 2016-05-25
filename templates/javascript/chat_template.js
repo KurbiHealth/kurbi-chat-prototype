@@ -40,7 +40,7 @@ var ChatBox = function(info){
 // once they are attached to the chatbox scope, they can use the chatbox
 // methods.  
 
-// the #pickle stuff.. is because so far, the chatbox could be instantiated more than one time
+// the #pickle stuff.. is because so far, the chatbox could *ALMOST* be instantiated more than one time
 // to make multiple boxes per window, if we wanted.
 // however, the attachHandler functions then need to know which chatbox
 // to attach the clickhandler to.  So the chatbox now generates an id
