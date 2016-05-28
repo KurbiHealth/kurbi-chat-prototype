@@ -1,5 +1,28 @@
 module.exports = function(io){
+// SOCKET CHEAT SHEET
+// // sending to sender-client only
+//  socket.emit('message', "this is a test");
 
+//  // sending to all clients, include sender
+//  io.emit('message', "this is a test");
+
+//  // sending to all clients except sender
+//  socket.broadcast.emit('message', "this is a test");
+
+//  // sending to all clients in 'game' room(channel) except sender
+//  socket.broadcast.to('game').emit('message', 'nice game');
+
+//  // sending to all clients in 'game' room(channel), include sender
+//  io.in('game').emit('message', 'cool game');
+
+//  // sending to sender client, only if they are in 'game' room(channel)
+//  socket.to('game').emit('message', 'enjoy the game');
+
+//  // sending to all clients in namespace 'myNamespace', include sender
+//  io.of('myNamespace').emit('message', 'gg');
+
+//  // sending to individual socketid
+//  socket.broadcast.to(socketid).emit('message', 'for your eyes only');
 
 var express 						= require('express');
 var mongoose  						= require('mongoose');
@@ -39,15 +62,13 @@ function clearRooms(){
 io.on('connect', function(socket){
 
 	socket.on('register', function(info){
-		// var room = getRoom(info.sessionID,info.url,info.key);
-		// if(!rooms[room]) {
-		// 	createRoom(room, info);	
-		// 	KingBot.requestBot(room,info);	
-		// 	}
+		var room = getRoom(info.sessionID,info.url,info.key);
+		if(!rooms[room]) {
+			createRoom(room, info);	
+			KingBot.requestBot(room,info);	
+			}
 		socket.source = 'patient';
-		socket.emit('message', testmsgA());
-		socket.emit('message', testmsgB());
-		//joinRoom(room);
+		joinRoom(room);
 	});
 
 	socket.on('join room', function(data){
@@ -59,10 +80,14 @@ io.on('connect', function(socket){
 		joinRoom(room);
 	});
 
+	socket.on('start', function(){
+		socket.broadcast.to(socket.room).emit('start');
+	});
+
 	socket.on('message', function(data){
 		data.source = socket.source;
-		io.to(socket.room).emit('message',data);
-		logChat(data,socket.room);
+		socket.broadcast.to(socket.room).emit('message',data);
+		//logChat(data,socket.room);
 	});
 
 	socket.on('disconnect', function(){
@@ -112,68 +137,8 @@ function getRoom(id,url,key){
 }
 
 
-function testmsgA(){
- var msg =	{
-				message:{
-					type:'text message', 
-					body:{
-						displayName:'Madison Area Wellness Collective', 
-						text:"Our chat is completely anonymous, so let's start by choosing an avatar you'd like to represent you.",
-					}
-
-				},
-				responses: {
-					type:'response list text',
-					body:[
-							{
-								text:"click me",
-								id: 'dog',
-							},
-							{
-								text:"no click me",
-								id: 'cat',
-							}],
-				}
-
-		};
-
-	return msg;
-}
 
 
-function testmsgB(){
-
-var body = [];
-var letters = 'ABCDEFGHIJKLMNO';
-
-for(var i = 0; i < 12; i++){
-	var temp = {};
-	var M = "0" + Math.floor(Math.random()*4 + 1);
-	var N = letters[Math.floor(Math.random()*letters.length)];
-	
-	temp.url = "http://public.foolhardysoftworks.com:9000/backend/icons/PNG/"+N+M+".png";
-	temp.id = N;
-	body.push(temp);
-}
-
- var msg =	{
-				message:{
-					type:'text message', 
-					body:{
-						displayName:'Madison Area Wellness Collective', 
-						text:"Our chat is completely anonymous, so let's start by choosing an avatar you'd like to represent you.",
-					}
-
-				},
-				responses: {
-					type:'response list icons',
-					body:body,
-				}
-
-		};
-
-	return msg;
-}
 
 
 }

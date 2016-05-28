@@ -46,8 +46,21 @@ function getTemplate(req,res){
 	var dir = './templates/html/';
 	var filename = null;
 	switch(templateName){
+
+		case 'welcome message':
+		filename = dir + 'welcome_page.hbs';
+		break;
+
 		case 'text message':
 		filename = dir + 'text_message.hbs';
+		break;
+
+		case 'image message':
+		filename = dir + 'image_message.hbs';
+		break;
+
+		case 'response welcome':
+		filename = dir + 'response_welcome.hbs';
 		break;
 
 		case 'response list text':
@@ -56,6 +69,14 @@ function getTemplate(req,res){
 
 		case 'response list icons':
 		filename = dir + 'response_list_icons.hbs';
+		break;
+
+		case 'large free response':
+		filename = dir + 'response_free_large.hbs';
+		break;
+
+		case 'small free response':
+		filename = dir + 'response_free_small.hbs';
 		break;
 
 		default:

@@ -34,8 +34,8 @@
 }
 </style>
 <img src="http://public.foolhardysoftworks.com:9000/backend/icons/PNG/small-image.png" onload="
-kurbi.attachClickHandler['#pickle']('qwpp', function(data){
-	console.log(data);
+kurbi.attachClickHandler['#pickle']('qwpp', function(data,chatbox){
+	chatbox.sendMessage(data.message);
 });
 
 this.parentNode.removeChild(this);

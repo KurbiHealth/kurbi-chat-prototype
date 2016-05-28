@@ -1,10 +1,5 @@
 (function(d,namespace){
 
-tada = function(item){
-	console.log('heya');
-	if(item) console.log(item);
-}
-
 
 var ChatBox = function(info){
 
@@ -16,6 +11,9 @@ var ChatBox = function(info){
 	this.template = {};
 	this.click = {};
 	this.instanceId = makeKey();
+	this.sendMessage = sendMessage;
+	this.start = start;
+	that.clear = clear;
 	var socket = null;
 
 ///// Okay here is some weirdness...
@@ -47,6 +45,8 @@ var ChatBox = function(info){
 // when it's instantiated and puts that into the templates
 // as they're attached to the DOM.
 // so they can call the correct handler attachers.
+//
+// I remember not having to pass in the scope (that)... but now I do.  So whatever.
 
 	if(!kurbi.attachClickHandler) kurbi.attachClickHandler = {};
 	if(!kurbi.click) kurbi.click = {};
@@ -56,36 +56,68 @@ var ChatBox = function(info){
 	}
 
 	kurbi.click[that.instanceId] = function(id, data){
-		that.click[id](data);
+		that.click[id](data, that);
 	}
+
 
 	setup();
 
+	function start(){
+		socket.emit('start');
+	}
 
-	function appendMessage(msg){
+	function sendMessage(msg){
+		console.log('send msg', msg);	
+		msg.userId = that.userId;
+		msg.body.displayName = 
+		that.footer.innerHTML = "";
+		appendMessage(msg, true, function(){
+			//only send the message after it has been appended
+			//because sometimes the send and response is quicker
+			//than the image can load.
+			var temp = {};
+			temp.message = msg;
+			socket.emit('message', temp);	
+		});
 		
-		var compiledTemplate = Handlebars.compile(that.template[msg.type]);
-		that.content.innerHTML += compiledTemplate(msg.body).replace(/#pickle/g, that.instanceId);
-		that.content.scrollTop = that.content.scrollHeight;
 		
 	}
-//
+
+
+	function appendMessage(msg, self,callback){
+		msg.body.self = (self != null);
+		getTemplate(msg.type, function(template){
+			var compiledTemplate = Handlebars.compile(template);
+			that.content.innerHTML += compiledTemplate(msg.body).replace(/#pickle/g, that.instanceId);
+			that.content.scrollTop = that.content.scrollHeight;
+			if(callback) callback();
+		});
+				
+	}
+
 	function prependMessage(msg){
-		var compiledTemplate = Handlebars.compile(that.template[msg.type]);
-		that.content.innerHTML = compiledTemplate(msg.body).replace(/#pickle/g, that.instanceId) + that.content.innerHTML;
+		getTemplate(msg.type, function(template){
+			var compiledTemplate = Handlebars.compile(template);
+			that.content.innerHTML += compiledTemplate(msg.body).replace(/#pickle/g, that.instanceId) + that.content.innerHTML;
+			that.content.scrollTop = that.content.scrollHeight;
+		});
+		
 	}
 
-//
+
 	function setInput(responses){
-		var compiledTemplate = Handlebars.compile(that.template[responses.type]);
-		that.footer.innerHTML = compiledTemplate({responses:responses.body}).replace(/#pickle/g, that.instanceId);
+		getTemplate(responses.type, function(template){
+			var compiledTemplate = Handlebars.compile(template);
+			that.footer.innerHTML = compiledTemplate({responses:responses.body}).replace(/#pickle/g, that.instanceId);
+			
+		});
 
 	}
 
 	function addMessage(data){
-		console.log(data);
+		console.log('new message', data);
 		appendMessage(data.message);
-		setInput(data.responses);
+		if(data.responses) setInput(data.responses);
 	}
 
 
@@ -104,9 +136,11 @@ var ChatBox = function(info){
 	}
 
 	function setup(){
-		loadTemplate('text message');
-		loadTemplate('response list text');
-		loadTemplate('response list icons');
+		
+		Handlebars.registerHelper('json', function(context){
+			return JSON.stringify(context);
+		});
+
 		that.box = d.getElementsByClassName('kurbi-chat-box')[0];
 		that.banner = d.getElementsByClassName('kurbi-chat-banner')[0];
 		that.backdrop = d.getElementsByClassName('kurbi-backdrop')[0];	
@@ -115,14 +149,14 @@ var ChatBox = function(info){
 
 	}
 
-	function loadTemplate(templateName){
-		Handlebars.registerHelper('json', function(context) {
-		    	return JSON.stringify(context);
-			});
-		$.get('http://public.foolhardysoftworks.com:9000/template', {template:templateName}, function(res){
-			that.template[templateName] = res;
-		});
-
+	function getTemplate(templateName, callback){
+		if(that.template[templateName]) callback(that.template[templateName]);
+		else{
+			$.get('http://public.foolhardysoftworks.com:9000/template', {client:kurbi.client_id, version:kurbi.version, template:templateName}, function(res){
+						that.template[templateName] = res;
+						callback(that.template[templateName]);
+					});
+		}
 	}
 
 	function hide(){
@@ -152,6 +186,10 @@ var ChatBox = function(info){
 		
 	}
 
+	function clear(){
+		that.content.innerHTML = "";
+	}
+
 	function setupSocket(){
 		if(!socket){
 			socket = io();
@@ -170,7 +208,9 @@ var ChatBox = function(info){
 //setup public members
 if(!namespace.kurbi) namespace.kurbi = {};
 namespace.kurbi.params = params;     // callback that can receive variables from the clients webpage.
-console.log(namespace);
+kurbi.version = 1.0;
+kurbi.client_id = 'web';
+kurbi.getPatientIcon = getPatientIcon;
 loadJQuery(this, init);
 var info = null;
 
@@ -187,6 +227,12 @@ function init(local){
 
 	local.chatbox = chatFactory(local);
 	
+}
+
+function getPatientIcon(){
+	var iconPath = localStorage.getItem('patient_icon');
+	if(iconPath == null) iconPath = 'http://public.foolhardysoftworks.com:9000/backend/icons/PNG/a01.png';
+	return iconPath;
 }
 
 function chatFactory(local){
