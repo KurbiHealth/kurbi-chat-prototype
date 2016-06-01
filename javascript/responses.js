@@ -20,7 +20,7 @@ responses['welcome'] = {
 							id: 'begin',
 							message: {
 								type: "text message",
-								qCode: 'welcome',
+								qCode: null,
 								meta: 'yes',
 								body: {
 										text:"Okay, let's go",
@@ -35,7 +35,7 @@ responses['welcome'] = {
 					  		id: 'cancel',	
 							message: {
 								type: "text message",
-								qCode: 'welcome',
+								qCode: null,
 								meta: 'no',
 								body: {
 									 	text:"I'd rather not",
@@ -84,7 +84,7 @@ responses['have shoulder pain'] = {
 					message: textMessage(name,"Stop being a bitch.  Unless of course, you're a professional pitcher. Do you have million dollar contracts riding on your shoulder health? Are you pitching for the Yankees?",'pitcher',null),
 }
 responses['pitcher'] = {
-					message: textMessage(name,"I didn't think so.",null,null),
+					message: textMessage(name,"I didn't think so.","end",null),
 }
 
 responses['have knee pain'] = {
@@ -92,7 +92,7 @@ responses['have knee pain'] = {
 }
 
 responses['bucket list'] = {
-					message: textMessage(name,"You have a classic case of being old. When you get old, your shit starts to break. Go buy some depends and think about your bucket list.",null,null),
+					message: textMessage(name,"You have a classic case of being old. When you get old, your shit starts to break. Go buy some depends and think about your bucket list.","end",null),
 }
 
 responses['backpain for a day'] = {
@@ -108,11 +108,11 @@ responses['backpain for a day'] = {
 }
 
 responses['backpain for a week'] = {
-					message: textMessage(name,"toughen up", null,null),
+					message: textMessage(name,"toughen up", "end",null),
 }
 
 responses['backpain for longer than a week'] = {
-					message: textMessage(name,"I'm familiar with a big pain in my backside.  I've just thought of a way to make it go away.  Goodbye.", null,null),
+					message: textMessage(name,"I'm familiar with a big pain in my backside.  I've just thought of a way to make it go away.  Goodbye.", "end",null),
 }
 
 responses['by brodin'] = {
@@ -128,15 +128,15 @@ responses['by brodin'] = {
 }
 
 responses['wheyman'] = {
-					message: textMessage(name,"Wheyman, Brother!  You walk the Iron Path", null,null),
+					message: textMessage(name,"Wheyman, Brother!  You walk the Iron Path", "end",null),
 }
 
 responses['crystals'] = {
-					message: textMessage(name,"Alas you have been seduced by a harpy of Broki into a false temple. There is only one way to swole acceptance, brother.  The Iron Way.", null,null),
+					message: textMessage(name,"Alas you have been seduced by a harpy of Broki into a false temple. There is only one way to swole acceptance, brother.  The Iron Way.", "end",null),
 }
 
 responses['dog'] = {
-					message: textMessage(name,"I've seen this before. It does not end well for you... or the dog.", null,null),
+					message: textMessage(name,"I've seen this before. It does not end well for you... or the dog.", "end",null),
 }
 
 responses['I did nothing'] = {
@@ -186,7 +186,7 @@ responses['back pain details'] = {
 }
 
 responses['dont fucking email me'] = {
-					message: textMessage(name,"Wish granted! Signing you up for cat facts.", null,null),
+					message: textMessage(name,"Wish granted! Signing you up for cat facts.", "end",null),
 					
 }
 
@@ -209,15 +209,15 @@ responses['email me'] = {
 }
 
 responses['scored the email'] = {
-					message: textMessage(name,"OK, great! This is exciting. We use an app called Kurbi for these conversations. It'll make sure you stay anonymous so that your information and identity aren't used inappropriately. If you're happy with my feedback you can rate me and share your contact information so that we can set up a time to talk in person.",null, null),
+					message: textMessage(name,"What would you like to be called?",null, null),
 					responses:{
 						type:'small free response',
 						body:{
-							buttonText:"Add Details",
-							prompt:"Type in your email in the box below:",
+							buttonText:"Add Name",
+							prompt:"Type in your first name in the box below:",
 							message:{
 										type:"text message",
-										qCode:"grab the name",
+										qCode:"end",
 										body:{
 											text:"",
 										}
@@ -226,6 +226,27 @@ responses['scored the email'] = {
 					}
 }
 
+responses['end'] = {
+				message:{
+					type:'end message', 
+					body:{
+						displayName:name, 
+						text:"Well, this is the end of our chat. Thanks a lot for taking the time to get to know us. We hope that the answers we find for you are helpful. Look for a summary of our conversation in the email inbox momentarily. If we happened to get something wrong or if there is something else you'd like to add follow the instructions to revisit our chat session.\n\n We wish you all the best!",
+						image:'http://public.foolhardysoftworks.com:9000/backend/icons/PNG/voltron.png',
+					}
+
+				},
+				responses: {
+					type:'response end',
+					body:{
+						bye:{
+							text: "End Chat Session",
+							id: 'end',
+						},				
+					}
+				}
+
+		};
 
 
 return responses;

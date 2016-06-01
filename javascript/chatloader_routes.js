@@ -59,6 +59,10 @@ function getTemplate(req,res){
 		filename = dir + 'image_message.hbs';
 		break;
 
+		case 'end message':
+		filename = dir + 'end_page.hbs';
+		break;
+
 		case 'response welcome':
 		filename = dir + 'response_welcome.hbs';
 		break;
@@ -77,6 +81,10 @@ function getTemplate(req,res){
 
 		case 'small free response':
 		filename = dir + 'response_free_small.hbs';
+		break;
+
+		case 'response end':
+		filename = dir + 'response_end.hbs';
 		break;
 
 		default:

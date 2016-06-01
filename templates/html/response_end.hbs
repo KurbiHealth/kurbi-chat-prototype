@@ -1,16 +1,16 @@
 <div>
 <style type="text/css">
 
-.kurbi-qwpp-parent {
+.kurbi-llio-parent {
 	display:flex;
 	flex-direction:row;
-	justify-content:flex-start;
+	justify-content:center;
 	align-items:center;
 	flex-wrap:wrap;
 	width:100%;
 }
 
-.kurbi-qwpp-child {
+.kurbi-llio-bye {
 	line-height:50px;
 	height:50px;
 	margin-right:8px;
@@ -22,29 +22,30 @@
 	min-width:150px;
 	background-color:#00aaff;
 	text-align: center;
+	font-weight: bold;
 	cursor:pointer;
 }
 
 
-.kurbi-qwpp-prompt{
-	font-size:1.3em;
-	color:#888888;
-	margin-bottom:10px;
-}
 </style>
 <img src="http://public.foolhardysoftworks.com:9000/backend/icons/PNG/small-image.png" onload="
-kurbi.attachClickHandler['#pickle']('qwpp', function(data,chatbox){
-	chatbox.sendMessage(data.message);
+kurbi.attachClickHandler['#pickle']('llio', function(data, chatbox){
+	console.log(data);
+	if(data.id=='end') {
+		chatbox.clear();
+		chatbox.hide();
+		chatbox.end();
+	}
+	
 });
 
 this.parentNode.removeChild(this);
 
 "/>
-<div class="kurbi-qwpp-prompt">Choose One:</div>
-<div class='kurbi-qwpp-parent'>
- {{#each responses}}
- <div class='kurbi-qwpp-child' onclick="kurbi.click['#pickle']('qwpp', {{json this}})">{{this.text}}</div>
- {{/each}}
+<div class='kurbi-llio-parent'>
+<div style="width:15%;"></div>
+ <div class='kurbi-llio-bye' onclick="kurbi.click['#pickle']('llio', {{json responses.bye}})">{{responses.bye.text}}</div>
+
 </div>
 
 

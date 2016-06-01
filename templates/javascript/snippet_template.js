@@ -83,9 +83,7 @@
 
 
 	function loadHtml(newHtml){
-	    var s = d.createElement('div');
-	    s.innerHTML = newHtml;
-		parent.appendChild(s);
+		parent.innerHTML += newHtml;
 	}
 
 

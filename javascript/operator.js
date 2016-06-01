@@ -23,7 +23,7 @@ module.exports = function(io){
 
 //  // sending to individual socketid
 //  socket.broadcast.to(socketid).emit('message', 'for your eyes only');
-
+//
 var express 						= require('express');
 var mongoose  						= require('mongoose');
 
@@ -84,10 +84,15 @@ io.on('connect', function(socket){
 		socket.broadcast.to(socket.room).emit('start');
 	});
 
+	socket.on('end', function(){
+		socket.disconnect();
+		socket.broadcast.to(socket.room).emit('end');
+	});
+
 	socket.on('message', function(data){
 		data.source = socket.source;
 		socket.broadcast.to(socket.room).emit('message',data);
-		//logChat(data,socket.room);
+		logChat(data,socket.room);
 	});
 
 	socket.on('disconnect', function(){

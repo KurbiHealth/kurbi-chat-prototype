@@ -4,7 +4,6 @@
 .kurbi-kkrm-prompt{
 	font-size:1.3em;
 	color:#888888;
-	font-family:sans-serif;
 	margin-bottom:30px;
 }
 
@@ -37,7 +36,7 @@
 	min-width:150px;
 	background-color:#00aaff;
 	text-align: center;
-	font-family:sans-serif;
+	cursor:pointer;	
 }
 
 .kurbi-kkrm-icon {
@@ -55,10 +54,11 @@
 <img src="http://public.foolhardysoftworks.com:9000/backend/icons/PNG/small-image.png" onload="
 
 var input = this.parentNode.getElementsByClassName('kurbi-kkrm-input')[0];
-kurbi.attachClickHandler['#pickle']('kkrm', function(data, chatbox){
 
+kurbi.attachClickHandler['#pickle']('kkrm', function(data, chatbox){
 	data.body.text = input.value;
 	chatbox.sendMessage(data);
+	
 });
 
 this.parentNode.removeChild(this);

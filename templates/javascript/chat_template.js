@@ -14,6 +14,7 @@ var ChatBox = function(info){
 	this.sendMessage = sendMessage;
 	this.start = start;
 	that.clear = clear;
+	that.end = end;
 	var socket = null;
 
 ///// Okay here is some weirdness...
@@ -52,7 +53,7 @@ var ChatBox = function(info){
 	if(!kurbi.click) kurbi.click = {};
 
 	kurbi.attachClickHandler[that.instanceId] = function(id,fn){
-		if(!that.click[id]) that.click[id] = fn;
+		that.click[id] = fn;
 	}
 
 	kurbi.click[that.instanceId] = function(id, data){
@@ -64,6 +65,12 @@ var ChatBox = function(info){
 
 	function start(){
 		socket.emit('start');
+	}
+
+	function end(){
+		clearKey();
+		socket.emit('end');
+		that.banner.parentNode.removeChild(that.banner);
 	}
 
 	function sendMessage(msg){
@@ -89,7 +96,11 @@ var ChatBox = function(info){
 		getTemplate(msg.type, function(template){
 			var compiledTemplate = Handlebars.compile(template);
 			that.content.innerHTML += compiledTemplate(msg.body).replace(/#pickle/g, that.instanceId);
-			that.content.scrollTop = that.content.scrollHeight;
+			setTimeout(function(){
+				$('.kurbi-chat-body').animate({scrollTop:that.content.scrollHeight},500);
+				//that.content.scrollTop = that.content.scrollHeight;
+			},50);
+
 			if(callback) callback();
 		});
 				
@@ -116,7 +127,7 @@ var ChatBox = function(info){
 
 	function addMessage(data){
 		console.log('new message', data);
-		appendMessage(data.message);
+		if(data.message) appendMessage(data.message);
 		if(data.responses) setInput(data.responses);
 	}
 
@@ -144,7 +155,7 @@ var ChatBox = function(info){
 		that.box = d.getElementsByClassName('kurbi-chat-box')[0];
 		that.banner = d.getElementsByClassName('kurbi-chat-banner')[0];
 		that.backdrop = d.getElementsByClassName('kurbi-backdrop')[0];	
-		that.content = d.getElementsByClassName('kurbi-chat-text')[0];
+		that.content = d.getElementsByClassName('kurbi-chat-body')[0];
 		that.footer  = d.getElementsByClassName('kurbi-chat-footer')[0];
 
 	}
@@ -329,6 +340,10 @@ function getKey(){
 	if(!localStorage.getItem('physics')) localStorage.setItem('physics', makeKey());
 	return localStorage.getItem('physics');
 
+}
+
+function clearKey(){
+	localStorage.removeItem('physics');
 }
 
 function makeKey(){
