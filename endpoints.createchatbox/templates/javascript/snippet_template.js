@@ -1,6 +1,4 @@
 (function(d, script) {
-<<<<<<< HEAD
-=======
 
 	//var serverURL = 'http://public.foolhardysoftworks.com:9000';
 	//var serverURL = 'http://chat.gokurbi.com';
@@ -8,7 +6,6 @@
 
 console.log('---in snippet_template.js----');
 
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 	var overlay = true;
 	//should create our own html parent
 	//because their body may not be position relative;
@@ -18,10 +15,6 @@ console.log('---in snippet_template.js----');
 	parent.style.top = '0px';
 	parent.style.left = '0px';
 	parent.setAttribute('class','kurbi-chat-parent');
-<<<<<<< HEAD
-<<<<<<< HEAD:templates/javascript/snippet_template.js
-=======
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 	if(overlay){
 	 parent.style.position = 'absolute';	
 	 d.getElementsByTagName('body')[0].appendChild(parent);
@@ -36,33 +29,14 @@ console.log('---in snippet_template.js----');
 	loadSocket();
 
     var kurbiApiKey = "#BANANA";
-<<<<<<< HEAD
-	var request = new XMLHttpRequest();
-	request.open('GET', 'http://public.foolhardysoftworks.com:9000/chatbox'+'?key='+kurbiApiKey, true);
-=======
-	
-    d.getElementsByTagName('body')[0].appendChild(parent);
-    var kurbiApiKey = "#BANANA"; // it's the Stamplay _id from 'chatbox' data model
-	var request = new XMLHttpRequest();
-	// for production
-	request.open('GET', 'https://kurbi.stamplayapp.com/api/cobject/v1/chatbox/' + kurbiApiKey, true);
-	// for dev
-	//request.open('GET', 'http://chat.gokurbi.com/chatbox' + kurbiApiKey, true);
->>>>>>> matt:endpoints.createchatbox/templates/javascript/snippet_template.js
-=======
 	var request = new XMLHttpRequest();
 	request.open('GET', serverURL + '/chatbox'+'?key='+kurbiApiKey, true);
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 
 	request.onload = function() {
 	  if (request.status >= 200 && request.status < 400) {
 		    var resp = request.responseText;
-<<<<<<< HEAD
-		    obj = JSON.parse(resp);
-=======
 		    obj = JSON.parse(JSON.parse(resp));
 		    obj = obj.data[0];
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 		    kbar = 1;
 		    loadSocket();
 		    loadHandlebars();
@@ -81,10 +55,6 @@ console.log('---in snippet_template.js----');
 
 	request.send();
 
-<<<<<<< HEAD
-<<<<<<< HEAD:templates/javascript/snippet_template.js
-=======
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 	function loadHandlebars(){
 
 		var script = d.createElement('script');
@@ -96,37 +66,9 @@ console.log('---in snippet_template.js----');
 			if(kbar*hbar*sbar)loadScript(obj.js);
 		}
 		d.getElementsByTagName('head')[0].appendChild(script);
-<<<<<<< HEAD
-=======
-	function loadScript(newScript){
-		script = d.createElement('script');
-	    script.type = 'text/javascript';
-	    script.innerHTML = newScript;
-	    d.getElementsByTagName('head')[0].appendChild(script);
-	    kirby.params(kurbiApiKey);
-=======
 
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
-	}
->>>>>>> matt:endpoints.createchatbox/templates/javascript/snippet_template.js
-
-<<<<<<< HEAD
 	}
 
-	function loadSocket(){
-		var script = d.createElement('script');
-		script.type = 'text/javascript';
-		script.src = "http://public.foolhardysoftworks.com:9000/socket.io/socket.io.js";
-		script.async = true;
-		script.onload = function(){
-			sbar = 1;
-			if(kbar*hbar*sbar)loadScript(obj.js);
-		}
-		d.getElementsByTagName('head')[0].appendChild(script);
-
-	}	
-
-=======
 	function loadSocket(){
 		var script = d.createElement('script');
 		script.type = 'text/javascript';
@@ -141,7 +83,6 @@ console.log('---in snippet_template.js----');
 		d.getElementsByTagName('head')[0].appendChild(script);
 	}
 
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 
 	function loadCSS(newCSS){
 		var s = d.createElement('style');
@@ -149,26 +90,6 @@ console.log('---in snippet_template.js----');
 	    d.body.appendChild(s);
 	}
 
-<<<<<<< HEAD
-
-	function loadHtml(newHtml){
-		parent.innerHTML += newHtml;
-	}
-
-
-	function loadScript(newScript){
-		kbar = 0;
-		var script = d.createElement('script');
-	    script.type = 'text/javascript';
-	    script.innerHTML = newScript;
-	    script.async = false;
-	    d.getElementsByTagName('head')[0].appendChild(script);
-	    kurbi.params(kurbiApiKey);
-	}
-
-	
-
-=======
 
 	function loadHtml(newHtml){
 	    var s = d.createElement('div');
@@ -190,5 +111,4 @@ console.log('---in snippet_template.js----');
 	}
 
 
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 }(document));

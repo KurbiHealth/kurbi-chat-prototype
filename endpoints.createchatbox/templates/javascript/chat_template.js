@@ -1,15 +1,11 @@
 (function(d,namespace){
 
-<<<<<<< HEAD
-<<<<<<< HEAD:templates/javascript/chat_template.js
-=======
 //var serverURL = 'http://public.foolhardysoftworks.com:9000';
 //var serverURL = 'http://chat.gokurbi.com';
 var serverURL = 'http://kchat:8080';
 
 console.log('---in chat_template.js---');
 console.log('serverURL',serverURL);
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 
 var ChatBox = function(info){
 
@@ -24,10 +20,6 @@ var ChatBox = function(info){
 	this.sendMessage = sendMessage;
 	this.start = start;
 	that.clear = clear;
-<<<<<<< HEAD
-	that.end = end;
-=======
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 	var socket = null;
 
 ///// Okay here is some weirdness...
@@ -66,11 +58,7 @@ var ChatBox = function(info){
 	if(!kurbi.click) kurbi.click = {};
 
 	kurbi.attachClickHandler[that.instanceId] = function(id,fn){
-<<<<<<< HEAD
-		that.click[id] = fn;
-=======
 		if(!that.click[id]) that.click[id] = fn;
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 	}
 
 	kurbi.click[that.instanceId] = function(id, data){
@@ -84,15 +72,6 @@ var ChatBox = function(info){
 		socket.emit('start');
 	}
 
-<<<<<<< HEAD
-	function end(){
-		clearKey();
-		socket.emit('end');
-		that.banner.parentNode.removeChild(that.banner);
-	}
-
-=======
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 	function sendMessage(msg){
 		console.log('send msg', msg);	
 		msg.userId = that.userId;
@@ -116,15 +95,7 @@ var ChatBox = function(info){
 		getTemplate(msg.type, function(template){
 			var compiledTemplate = Handlebars.compile(template);
 			that.content.innerHTML += compiledTemplate(msg.body).replace(/#pickle/g, that.instanceId);
-<<<<<<< HEAD
-			setTimeout(function(){
-				$('.kurbi-chat-body').animate({scrollTop:that.content.scrollHeight},500);
-				//that.content.scrollTop = that.content.scrollHeight;
-			},50);
-
-=======
 			that.content.scrollTop = that.content.scrollHeight;
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 			if(callback) callback();
 		});
 				
@@ -151,11 +122,7 @@ var ChatBox = function(info){
 
 	function addMessage(data){
 		console.log('new message', data);
-<<<<<<< HEAD
-		if(data.message) appendMessage(data.message);
-=======
 		appendMessage(data.message);
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 		if(data.responses) setInput(data.responses);
 	}
 
@@ -183,11 +150,7 @@ var ChatBox = function(info){
 		that.box = d.getElementsByClassName('kurbi-chat-box')[0];
 		that.banner = d.getElementsByClassName('kurbi-chat-banner')[0];
 		that.backdrop = d.getElementsByClassName('kurbi-backdrop')[0];	
-<<<<<<< HEAD
-		that.content = d.getElementsByClassName('kurbi-chat-body')[0];
-=======
 		that.content = d.getElementsByClassName('kurbi-chat-text')[0];
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 		that.footer  = d.getElementsByClassName('kurbi-chat-footer')[0];
 
 	}
@@ -195,11 +158,7 @@ var ChatBox = function(info){
 	function getTemplate(templateName, callback){
 		if(that.template[templateName]) callback(that.template[templateName]);
 		else{
-<<<<<<< HEAD
-			$.get('http://public.foolhardysoftworks.com:9000/template', {client:kurbi.client_id, version:kurbi.version, template:templateName}, function(res){
-=======
 			$.get(serverURL + '/template', {client:kurbi.client_id, version:kurbi.version, template:templateName}, function(res){
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 						that.template[templateName] = res;
 						callback(that.template[templateName]);
 					});
@@ -246,65 +205,12 @@ var ChatBox = function(info){
 			}
 	}
 
-<<<<<<< HEAD
-
-
-=======
-var BUTTON_CLASS = 'kurbi-chat';
-if(!namespace.kirby) namespace.kirby = {};
-namespace.kirby.params = params;
-//take control of the jquery variable in the local scope.
-//var URL = 'http://public.foolhardysoftworks.com:9000/';
-//var URL = 'kchat:8080/chat/';
-var URL = 'http://chat.gokurbi.com/chat/'
-var key = null;
-var userToken = localStorage.getItem('kurbiUserToken');
-var userIcon = null;
-var $;  	
-var visible = false;
-var parent = document.getElementsByClassName('kurbi-chat-parent')[0];
-loadJQuery(init);
-
-var clicked = {};
-
-clicked['button'] = toggleChat;
-clicked['kurbi-chat-banner'] = toggleChat;
-clicked['kurbi-backdrop'] = toggleChat;
-
-function toggleChat(e){
-	var chatBox = d.getElementsByClassName('kurbi-chat-box')[0];
-	var banner = d.getElementsByClassName('kurbi-chat-banner')[0];
-	var backdrop = d.getElementsByClassName('kurbi-backdrop')[0];
-	visible = !visible
-	if(visible) {
-		chatBox.style.height='40vh';
-		chatBox.style.bottom="3vh";
-		backdrop.style.height="100vh";
-		if(banner) banner.style.height="45vh";
-
-	}
-	if(!visible) {
-		chatBox.style.height='0px';
-		chatBox.style.bottom="-50px";
-		backdrop.style.height='0px';
-		if(banner) banner.style.height="10vh";
-	}	
->>>>>>> matt:endpoints.createchatbox/templates/javascript/chat_template.js
-}
-
-
-
-//setup public members
-if(!namespace.kurbi) namespace.kurbi = {};
-namespace.kurbi.params = params;     // callback that can receive variables from the clients webpage.
-=======
 }
 
 //setup public members
 if(!namespace.kurbi) namespace.kurbi = {};
 // callback that can receive variables from the clients webpage
 namespace.kurbi.params = params;
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 kurbi.version = 1.0;
 kurbi.client_id = 'web';
 kurbi.getPatientIcon = getPatientIcon;
@@ -328,11 +234,7 @@ function init(local){
 
 function getPatientIcon(){
 	var iconPath = localStorage.getItem('patient_icon');
-<<<<<<< HEAD
-	if(iconPath == null) iconPath = 'http://public.foolhardysoftworks.com:9000/backend/icons/PNG/a01.png';
-=======
 	if(iconPath == null) iconPath = serverURL + '/backend/icons/PNG/a01.png';
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 	return iconPath;
 }
 
@@ -361,11 +263,7 @@ function chatFactory(local){
 	 				var bannerNoThanks = attachToDom('kurbi-banner-nope', bannerButtons);
 	 				var bannerHandle = attachToDom('kurbi-banner-handle', banner);
 
-<<<<<<< HEAD
-	 				bannerIcon.src = "http://public.foolhardysoftworks.com:9000/backend/icons/PNG/A01.png";
-=======
 	 				bannerIcon.src = serverURL + "/backend/icons/PNG/A01.png";
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 	 				bannerHeader.innerHTML = "Jessica Dufault, PT, DPT";
 	 				bannerQuestion.innerHTML = "Can I help you find what you're looking for?";
 	 				bannerSure.innerHTML = "Sure!";
@@ -375,7 +273,6 @@ function chatFactory(local){
 	 attachToDom('kurbi-backdrop', parent);
 
 	 return new ChatBox(info);
-<<<<<<< HEAD
 
 	function toggleBanner(e){
 		console.log('clicked');
@@ -389,102 +286,7 @@ function chatFactory(local){
 		}
 	}
 
-=======
 
-	function toggleBanner(e){
-		console.log('clicked');
-		bannerVisible = !bannerVisible;
-		var banner  = d.getElementsByClassName('kurbi-chat-banner')[0];
-		if(bannerVisible){
-			banner.style.left="0px";
-		}
-		if(!bannerVisible){
-			banner.style.left="-340px";
-		}
-	}
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
-
-	function toggleChat(e){
-
-<<<<<<< HEAD
-		visible = !visible
-		if(visible) {
-			chatbox.show();
-
-		}
-		if(!visible) {
-			chatbox.hide();
-		}	
-	}
-
-	function attachToDom(c, parent, type){
-		if(!type) type = 'div';
-		var s = document.createElement(type);
-		s.setAttribute('class',c);
-		parent.appendChild(s);
-
-		s.addEventListener('click', clicked[c]);
-		return s;
-	}
-
-	function connectToButton(buttonClass){
-		var buttons = d.getElementsByClassName(buttonClass);
-		if(buttons.length == 0) return false
-		else
-			for(var i = 0; i < buttons.length; i++){
-				buttons[i].addEventListener('click', clicked['button']);
-			}
-
-		return true;
-	}
-
-}
-
-
-
-///// HELPER FUNCTIONS ////
-
-
-function getKey(){
-
-	if(!localStorage.getItem('physics')) localStorage.setItem('physics', makeKey());
-	return localStorage.getItem('physics');
-
-}
-
-function clearKey(){
-	localStorage.removeItem('physics');
-}
-
-function makeKey(){
-	var text = "";
-	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-	for( var i=0; i < 16; i++ )
-	    text += possible.charAt(Math.floor(Math.random() * possible.length));
-	
-	return text;	
-}
-
-
-function loadJQuery(local, callback){
-	if(window.jQuery) 
-		return callback();
-
-	else {
-	    var s = document.createElement('script'); 
-	    s.type = 'text/javascript';
-	    s.src = "http://code.jquery.com/jquery-2.2.3.min.js";
-	    s.setAttribute('integrity',"sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=");
-	    s.setAttribute('crossorigin', 'anonymous');
-	    s.async = true;
-	    s.onload = function(){
-   			local.$ = jQuery.noConflict();
-   			return callback(local);
-	    }
-	 
-	    document.getElementsByTagName('head')[0].appendChild(s);
-=======
 	function toggleChat(e){
 
 		visible = !visible
@@ -529,7 +331,6 @@ function loadJQuery(local, callback){
 
 		if(!localStorage.getItem('physics')) localStorage.setItem('physics', makeKey());
 		return localStorage.getItem('physics');
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 
 	}
 
@@ -565,5 +366,6 @@ function loadJQuery(local, callback){
 		}
 		
 	}
+
 
 })(document,this);

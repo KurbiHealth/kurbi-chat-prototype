@@ -30,36 +30,15 @@ var DATASOURCE	= process.env.DATASOURCE 	|| 'stamplay';
 
 var express 						= require('express');
 var app								= express();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-var bodyParser 						= require('body-parser');
-var cors       						= require('cors');
-var port 							= process.argv[2] || 8080; 
-
-var ioServer 						= require('http').Server(app)
-var io 								= require('socket.io')(ioServer);
-var publicRoutes 					= require('./javascript/chatloader_routes')(app);
-var botRoutes 						= require('./javascript/botbuilder_routes')(app);
-var operatorRoutes 					= require('./javascript/operator')(io);
-=======
-var port 							= process.argv[2] || 8080;
-var baseDir							= 'http://kchat:8080';
-//var baseDir							= 'http://public.foolhardysoftworks.com:9000';
-//var baseDir							= 'http://chat.gokurbi.com'
-=======
 var ioServer 						= require('http').Server(app)
 var io 								= require('socket.io')(ioServer);
 
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce
 
 /**
  * ----------------------------------------
  * DATA LAYER 
  * ----------------------------------------
  */
->>>>>>> matt
 
 if(DATASOURCE == 'mongodb'){
 	var mongodbUrl = 'mongodb://inferno:27017/kurbichat';
@@ -90,15 +69,6 @@ app.use(bodyParser.urlencoded({ extended: true, parameterLimit:10000, limit:'5mb
 app.use(bodyParser.json({parameterLimit:10000, limit:'5mb'}));
 app.use(cors());
 
-<<<<<<< HEAD
-var router = express.Router();  
-app.use('/',publicRoutes);
-app.use('/',botRoutes);
-app.use('/backend',express.static('public/backend'));
-app.use('/demo', express.static('public/kurbi-chat-demo'));
-app.use('/botbuilder', express.static('public/botbuilder'));
-=======
->>>>>>> matt
 
 /**
  * ----------------------------------------
@@ -181,20 +151,8 @@ app.use('/',router);
  * ----------------------------------------
  */
 
-<<<<<<< HEAD
-ioServer.listen(port, function(err,data){
-  if(err) console.log(err);
-  console.log(new Date());
-  console.log('listening on port ' + port);
-});
-
-
-
-
-=======
 ioServer.listen(PORT, function(err,data){
   if(err) console.log(err);
   console.log(new Date());
   console.log('listening on port ' + PORT + ', using DATASOURCE ' + DATASOURCE + ', on ENV ' + ENV + ', using BASEURL: ' + BASEURL);
 });
->>>>>>> cf754e9e9a54eb191808bda8cf3473f2182343ce

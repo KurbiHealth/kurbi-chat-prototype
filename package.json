@@ -12,11 +12,8 @@
     "less": "^2.7.1",
     "mongoose": "^4.4.16",
     "socket.io": "^1.4.6",
-<<<<<<< HEAD
     "socket.io-client": "^1.4.6",
-=======
     "stamplay": "^1.0.6",
->>>>>>> matt
     "uglify-js": "^2.6.2"
   },
   "devDependencies": {},
