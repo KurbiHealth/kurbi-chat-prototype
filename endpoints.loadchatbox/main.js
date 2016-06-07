@@ -1,6 +1,6 @@
-module.exports = function(router){
+module.exports = function(router,DATASOURCE,db){
 
-	require('../sharedFunctions.js');
+	var globFunc = require('../sharedFunctions/chatCreateFunctions')();
 
 	var ICONS = [];						
 	var less,
@@ -15,15 +15,37 @@ module.exports = function(router){
 // client webpage (snippet_template.js)
 	router
 		.route('/chatbox')
-			.get(debugGetUserChat)
+			.get(getUserChat);
 // -------------------------------------------
 
 	return router;
 
+	function getUserChat(req,res){
+
+		var id = req.query.key;
+		if(DATASOURCE == 'mongodb'){
+
+			Chat.findById(id, function(err,doc){
+				if(err) console.log(err);
+				else return res.json(doc);
+			});
+
+		}else if(DATASOURCE == 'stamplay'){
+
+			db.Object('chatbox')
+			.get({ _id : id }, function(err,doc) {
+				if(err) return console.log(err);
+				else return res.json(doc);
+			})
+
+		}
+
+	}
+
 	function debugGetUserChat(req,res){
 
 		//this is to force it to recompile the html/css every time
-		var lTemps = new Promise(loadTemplates);
+		var lTemps = new Promise(globFunc.loadTemplates);
 
 		lTemps.then(function(template){
 			var hbsData = {
@@ -36,8 +58,8 @@ module.exports = function(router){
 
 			var response = {};
 			var promises = [];
-			promises.push(compileHBS(hbsData,template.hbs));
-			promises.push(compileLESS(lessData,template.less));
+			promises.push(globFunc.compileHBS(hbsData,template.hbs));
+			promises.push(globFunc.compileLESS(lessData,template.less));
 
 			Promise.all(promises).then(function(results){
 

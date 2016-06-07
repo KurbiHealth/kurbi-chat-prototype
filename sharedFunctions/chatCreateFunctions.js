@@ -62,13 +62,47 @@ module.exports = function(){
 
 	}
 
+	function loadHBS(filename){
+
+		return function(resolve,reject){
+			fs.readFile(filename, 'utf8',function(err,data){
+				if(err) return console.log(err);
+				resolve(data);
+			});
+
+		}
+	}
+
+	function loadJS(resolve,reject){
+			fs.readFile('./endpoints.createchatbox/templates/javascript/chat_template.js', 'utf8',function(err,data){
+				if(err) return console.log(err);
+					resolve(data);	
+			});			
+	}
+
+	function loadSnippet(resolve,reject){
+			fs.readFile('./endpoints.createchatbox/templates/javascript/snippet_template.js', 'utf8',function(err,data){
+				if(err) return console.log(err);
+					resolve(data);	
+			});			
+	}
+
+	function loadLESS(resolve,reject){
+			Promise.all([new Promise(loadDefaultLessVariables), new Promise(loadDefaultBaseLess)])
+			.then(function(results){
+				resolve(results);
+			});
+	}
+
 	var returnObj = {
 		loadTemplates: loadTemplates,
 		compileHBS: compileHBS,
-		compileLESS: compileLESS
+		compileLESS: compileLESS,
+		loadHBS: loadHBS,
+		loadJS: loadJS,
+		loadSnippet: loadSnippet,
+		loadLESS: loadLESS
 	}
-
-console.log('returnObj',returnObj);
 	
 	return returnObj;
 
