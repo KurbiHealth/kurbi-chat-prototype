@@ -1,5 +1,6 @@
 (function(d,namespace){
 
+<<<<<<< HEAD:templates/javascript/chat_template.js
 
 var ChatBox = function(info){
 
@@ -212,6 +213,47 @@ var ChatBox = function(info){
 
 
 
+=======
+var BUTTON_CLASS = 'kurbi-chat';
+if(!namespace.kirby) namespace.kirby = {};
+namespace.kirby.params = params;
+//take control of the jquery variable in the local scope.
+//var URL = 'http://public.foolhardysoftworks.com:9000/';
+//var URL = 'kchat:8080/chat/';
+var URL = 'http://chat.gokurbi.com/chat/'
+var key = null;
+var userToken = localStorage.getItem('kurbiUserToken');
+var userIcon = null;
+var $;  	
+var visible = false;
+var parent = document.getElementsByClassName('kurbi-chat-parent')[0];
+loadJQuery(init);
+
+var clicked = {};
+
+clicked['button'] = toggleChat;
+clicked['kurbi-chat-banner'] = toggleChat;
+clicked['kurbi-backdrop'] = toggleChat;
+
+function toggleChat(e){
+	var chatBox = d.getElementsByClassName('kurbi-chat-box')[0];
+	var banner = d.getElementsByClassName('kurbi-chat-banner')[0];
+	var backdrop = d.getElementsByClassName('kurbi-backdrop')[0];
+	visible = !visible
+	if(visible) {
+		chatBox.style.height='40vh';
+		chatBox.style.bottom="3vh";
+		backdrop.style.height="100vh";
+		if(banner) banner.style.height="45vh";
+
+	}
+	if(!visible) {
+		chatBox.style.height='0px';
+		chatBox.style.bottom="-50px";
+		backdrop.style.height='0px';
+		if(banner) banner.style.height="10vh";
+	}	
+>>>>>>> matt:endpoints.createchatbox/templates/javascript/chat_template.js
 }
 
 

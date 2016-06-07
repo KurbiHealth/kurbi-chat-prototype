@@ -12,5 +12,3 @@ var chatSchema   = new Schema({
 
 
 module.exports = mongoose.model('chatbox', chatSchema);
-
-

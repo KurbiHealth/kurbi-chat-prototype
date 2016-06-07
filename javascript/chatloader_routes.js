@@ -20,6 +20,7 @@ var less,hbs,js,snippet;
 
 router.route('/chatbox')
 	.get(_getUserChat)              //serves the chat box to the client webpage (snippet_template.js)
+
 	.post(createSnippet);  			//this endpoint is called by the backend, to generate a chatbox and a corresponding snippet
 
 router.route('/template')
@@ -27,7 +28,7 @@ router.route('/template')
 
 
 new Promise(loadTemplates).then(function(templates){
-	
+
 	less = templates.less;
 	hbs = templates.hbs;
 	js = templates.js;
@@ -126,6 +127,7 @@ function loadTemplates(resolve,reject){
 
 function getUserChat(req,res){
 	var id = req.query.key;
+// REPLACE WITH STAMPLAY
 	Chat.findById(id, function(err,doc){
 		if(err) console.log(err);
 		else return res.json(doc);
@@ -201,7 +203,7 @@ function createSnippet(req,res){
 	promises.push(compileLESS(lessData,less));
 
 	Promise.all(promises).then(function(results){
-
+// REPLACE WITH STAMPLAY
 		var chat = new Chat();
 		chat.js = js;
 		chat.html = results[0];
@@ -323,4 +325,41 @@ fs.readdir('public/backend/icons/PNG', function(err,items){
 }
 
 
+<<<<<<< HEAD:javascript/chatloader_routes.js
+=======
+
+function registerChat(req,res,next){
+//unfinished -- there's going to be some user token storage... 
+//might be needed for socket coordination 
+	var url = req.body.url;
+	var key = req.body.key;
+	var token = req.body.token;
+	var question = req.body.question;
+	var userInformation = req.body.userInformation;
+
+// REPLACE WITH STAMPLAY
+	cInstance.findOne({url:url, token:token}).then(function(doc){
+		if(!doc || doc.token == '') {
+// REPLACE WITH STAMPLAY
+			doc = new cInstance();
+			doc.url = url;
+			doc.chatbox = key;
+			var fingerprint = (new Date()).valueOf().toString() + Math.random().toString();
+			doc.token = require('crypto').createHash('md5').update(fingerprint).digest("hex");
+			doc.question = question;
+			doc.userInformation = userInformation;
+		}
+
+		doc.save();
+
+		res.json({token:doc.token});
+	});
+
+// 	next();
+ }
+
+
+
+
+>>>>>>> matt:javascript/public_routes.js
 }

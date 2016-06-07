@@ -8,6 +8,7 @@
 	parent.style.top = '0px';
 	parent.style.left = '0px';
 	parent.setAttribute('class','kurbi-chat-parent');
+<<<<<<< HEAD:templates/javascript/snippet_template.js
 	if(overlay){
 	 parent.style.position = 'absolute';	
 	 d.getElementsByTagName('body')[0].appendChild(parent);
@@ -24,6 +25,16 @@
     var kurbiApiKey = "#BANANA";
 	var request = new XMLHttpRequest();
 	request.open('GET', 'http://public.foolhardysoftworks.com:9000/chatbox'+'?key='+kurbiApiKey, true);
+=======
+	
+    d.getElementsByTagName('body')[0].appendChild(parent);
+    var kurbiApiKey = "#BANANA"; // it's the Stamplay _id from 'chatbox' data model
+	var request = new XMLHttpRequest();
+	// for production
+	request.open('GET', 'https://kurbi.stamplayapp.com/api/cobject/v1/chatbox/' + kurbiApiKey, true);
+	// for dev
+	//request.open('GET', 'http://chat.gokurbi.com/chatbox' + kurbiApiKey, true);
+>>>>>>> matt:endpoints.createchatbox/templates/javascript/snippet_template.js
 
 	request.onload = function() {
 	  if (request.status >= 200 && request.status < 400) {
@@ -47,6 +58,7 @@
 
 	request.send();
 
+<<<<<<< HEAD:templates/javascript/snippet_template.js
 	function loadHandlebars(){
 
 		var script = d.createElement('script');
@@ -58,6 +70,15 @@
 			if(kbar*hbar*sbar)loadScript(obj.js);
 		}
 		d.getElementsByTagName('head')[0].appendChild(script);
+=======
+	function loadScript(newScript){
+		script = d.createElement('script');
+	    script.type = 'text/javascript';
+	    script.innerHTML = newScript;
+	    d.getElementsByTagName('head')[0].appendChild(script);
+	    kirby.params(kurbiApiKey);
+	}
+>>>>>>> matt:endpoints.createchatbox/templates/javascript/snippet_template.js
 
 	}
 
