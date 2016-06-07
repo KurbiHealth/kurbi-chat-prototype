@@ -4,7 +4,7 @@ Kurbi Chat Platform
 OVERVIEW
 ---
 
-###Important Parts
+###Components
 
 **Create Chat Box** 
 
