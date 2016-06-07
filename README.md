@@ -12,7 +12,7 @@ This endpoint accepts the POST from the Chat Box Config app below, and compiles 
 
 main file: `/endpoints.createchatbox/main.js`
 
-URL: `/`
+URL: `/chatbox (POST)`
 
 **Load Chat Box**
 
@@ -20,7 +20,7 @@ This endpoint is called by the snipped from a user's website. It returns the cha
 
 main file: `/endpoints.loadchatbox/main.js`
 
-URL: `/`
+URL: `/chatbox (GET)`
 
 **Load Chat Box Message Templates**
 
@@ -28,7 +28,7 @@ This endpoint is used by the chat box to load templates that are needed by the c
 
 main file: `/endpoints.loadmessagetemplate/main.js`
 
-URL: `/`
+URL: `/template (GET)`
 
 **Chat Box Conversations (SocketIO)**
 
@@ -36,7 +36,7 @@ This manages the sockets that the chat boxes use to communicate with the Bot and
 
 main file: `/endpoints.conversate/operator.js`
 
-URL: `/`
+URL: Uses SocketIO, so does not have a url endpoint
 
 **ChatBot**
 
@@ -44,7 +44,9 @@ This endpoint sends messages and accepts responses from chat boxes on user websi
 
 main file: `/endpoints.chatbot/main.js`
 
-URL: `/`
+URL: `/chatboxes (GET)`
+
+URL: `/message (POST)`
 
 **---- APPS ----**
 
