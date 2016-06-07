@@ -2,18 +2,19 @@ var mongoose     = require('mongoose');
 var Schema       = mongoose.Schema;
 var ObjectId 	 = Schema.Types.ObjectId;
 
-var chatInstance   = new Schema({
+var chatRoomSchema   = new Schema({
     
-    // loadCount: 	{type:Number, default: 0},
-	chatbox:  	{type:ObjectId, ref:"chatbox"},
-	url: 		{type:String, unique:true},
-	token: 	{type:String, unique:true},
-	messages: 	[],
+  
+	key: 				String,
+	url: 				String,
+	sessionID:			String,
+	room: 				{type:String, unique:true},
+	messages: 			[],
 	
 });
 
 
-module.exports = mongoose.model('chatboxInstance', chatInstance);
+module.exports = mongoose.model('chatroom', chatRoomSchema);
 
 //I played with the idea of injecting some counters into the mongoose save function
 //this code is kept here to remind me of how to do it!  

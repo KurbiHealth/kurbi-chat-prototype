@@ -1,33 +1,40 @@
+* {
+	font-family:sans-serif;
+}
 .kurbi-chat-box {
 	display:flex;
 	justify-content:flex-start;
 	align-items:stretch;
 	flex-direction:column;
 	position:fixed;
-	bottom: -50px;
-	right:3vw;
-	width:300px;
+	top:-200px;
+	left:0px;
+	right:0px;
 	height:0px;
+	padding-top:100px;
 	background-color:@bodyColor;
 	z-index:5;
-	-webkit-transition: height .4s, bottom .4s;
+	-webkit-transition: height .4s, top .4s;
 
 }
 
 .kurbi-chat-container {
 	display:flex;
+	position:relative;
 	flex-grow:1;
-	width:100%;
+	width:44%;
 	flex-direction:column;
 	align-items:stretch;
+	margin-left:28%;
 }
 
+
+
 .kurbi-chat-header {
-	display:relative;
-	flex-grow:0;
+	position:absolute;
 	width:100%;
-	height:50px;
-	background-color:@headerColor;
+	height:25px;
+	background: linear-gradient(rgba(255,255,250,1), rgba(255,255,255,0));
 }
 
 .kurbi-chat-header h5{
@@ -38,13 +45,14 @@
 
 .kurbi-chat-footer{
 	flex-grow:0;
+	flex-shrink:0;
 	width:100%;
-	height:50px;
+
 }
 
-#kurbi-input-field {
+.kurbi-input-field {
 	width:100%;
-	line-height:50px;
+	line-height:@inputHeight;
 	background-color:@inputColor;
 	border:none;
 	box-shadow: none;
@@ -53,8 +61,10 @@
 .kurbi-chat-text {
 	overflow-y:scroll;
 	width:100%;
-	padding-left:5%;
-	padding-right:5%;
+}
+
+.kurbi-chat-text::-webkit-scrollbar { 
+    display: none; 
 }
 
 .kurbi-chat-grow{
@@ -64,12 +74,92 @@
 .kurbi-chat-banner {
 	position:fixed;
 	background-color:@bannerColor;
-	height:10vh;
-	width:100%;
-	bottom:0px;
+	height:14vh;
+	width:350px;
+	left:0px;
+	top:24vh;
+
+	top:;
 	z-index:2;
-	-webkit-transition: height .4s, bottom .4s;
+	-webkit-transition: left .4s,
 }
+
+.kurbi-banner-handle {
+	position:absolute;
+	right:0px;
+	width:10px;
+	background-color: @kurbiBlue;
+	height:100%;
+}
+
+.kurbi-banner-icon-container{
+	height:100%;
+	width:25%;
+	float:left;
+	background-color:white;
+}
+
+.kurbi-banner-icon{
+	width:50%;
+	height:auto;
+	margin-left:25%;
+	margin-top:5px;
+}
+
+.kurbi-banner-content{
+	float:left;
+	height:100%;
+	width:75%;
+	float:left;
+	background-color:white;
+}
+
+.kurbi-banner-header{
+	display:block;
+	color:@bannerHeaderColor;
+	font-size:.85em;
+	font-weight:thinner;
+	margin-bottom:15px;
+	margin-top:2px;
+
+}
+
+.kurbi-banner-question{
+	display:block;
+	font-size:1.2em;
+	font-weight:bold;
+	margin-bottom:20px;
+}
+
+.kurbi-banner-buttons{
+	display:block;
+	margin-bottom:4px;
+}
+
+.kurbi-banner-sure{
+	display:inline-block;
+	width:35%;
+	text-align:center;
+	height:2.5vh;
+	line-height:2.5vh;
+	background-color:@kurbiBlue;
+	color:white;
+	font-size:1.2em;
+	border-radius:2px;
+
+
+}
+
+.kurbi-banner-nope{
+	display:inline-block;
+	width:50%;
+	text-align:center;
+	height:2.5vh;
+	line-height:2.5vh;
+	font-size:.8em;
+	color:@kurbiBlue;
+}
+
 
 .kurbi-backdrop {
 	position:fixed;
@@ -82,8 +172,4 @@
 
 }
 
-.kurbi-icon {
-	width:20%;
-	height:auto;
-}
 

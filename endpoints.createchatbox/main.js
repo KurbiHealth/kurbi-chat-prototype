@@ -3,11 +3,13 @@ var Handlebars 						= require('handlebars');
 var Less 							= require('less');
 var fs 								= require('fs');
 
-module.exports = function(router,mongoose,useStamplay,stamplay,baseDir){
+module.exports = function(router,DATASOURCE,db,BASEURL){
 
-	var Chat 							= require('./schemas/chatSchema')(mongoose);
+	if(DATASOURCE == 'mongodb'){
+		var Chat 	= require('./schemas.mongoose/chatSchema')(db);
+	}
 
-	var shared = require('../sharedFunctions.js');
+	var globFunc = require('../sharedFunctions/chatCreateFunctions')();
 
 	var ICONS = [];						
 	var less,
@@ -32,7 +34,7 @@ module.exports = function(router,mongoose,useStamplay,stamplay,baseDir){
 
 	});
 
-	populateIconList(baseDir);
+	populateIconList(BASEURL);
 
 	return router;
 
@@ -75,7 +77,7 @@ module.exports = function(router,mongoose,useStamplay,stamplay,baseDir){
 
 		Promise.all(promises).then(function(results){
 
-			if(!useStamplay){
+			if(DATASOURCE == 'mongodb'){
 				// Data Layer is Mongoose
 				var chat = new Chat();
 				chat.js = js;
@@ -91,23 +93,20 @@ module.exports = function(router,mongoose,useStamplay,stamplay,baseDir){
 					}
 					
 				});
-			}else{
+			}else if(DATASOURCE == 'stamplay'){
 				// Data Layer is Stamplay Node SDK
 				var data = {
 				    "js": js,
 				    "html": results[0],
 				    "css": results[1]
 				}
-				stamplay.Object('chatbox').save(data, function(error, result){
+				db.Object('chatbox').save(data, function(error, result){
 				    if(error) 
 				    	console.log(error);
 					else{
 						result = JSON.parse(result);
-console.log(result.id);
 						var customSnippet = snippet.replace('#BANANA', result.id);
-//console.log(customSnippet);
 						var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
-console.log(uglySnippet);
 						return res.json({'snippet':uglySnippet.code});	
 					}
 				})
@@ -129,7 +128,6 @@ console.log(uglySnippet);
 		Promise.all(promises).then(function(results){
 			var template = {};
 			template.hbs = results[0];
-
 			template.less = {
 									vars:results[1][0],
 									file:results[1][1],
@@ -175,7 +173,7 @@ console.log(uglySnippet);
 		});
 
 	}
-
+// DELETE
 	function loadHBS(filename){
 
 		return function(resolve,reject){
@@ -186,7 +184,7 @@ console.log(uglySnippet);
 
 		}
 	}
-
+// DELETE
 	function loadLESS(resolve,reject){
 			Promise.all([new Promise(loadDefaultLessVariables), new Promise(loadDefaultBaseLess)])
 			.then(function(results){
@@ -207,14 +205,14 @@ console.log(uglySnippet);
 					resolve(data);	
 			});	
 	}
-
+// DELETE
 	function loadJS(resolve,reject){
 			fs.readFile('./endpoints.createchatbox/templates/javascript/chat_template.js', 'utf8',function(err,data){
 				if(err) return console.log(err);
 					resolve(data);	
 			});			
 	}
-
+// DELETE
 	function loadSnippet(resolve,reject){
 			fs.readFile('./endpoints.createchatbox/templates/javascript/snippet_template.js', 'utf8',function(err,data){
 				if(err) return console.log(err);
@@ -227,15 +225,15 @@ console.log(uglySnippet);
 /////////////////////////////////////////////////////////////////
 /// UN-IMPORTANT SHNITZELS /// 
 //------------------------------------------------------------///
-	function populateIconList(baseDir){
+	function populateIconList(BASEURL){
 	//I had a shitton of icons, so I made it choose randomly from them because it was funny
-		if(baseDir == '' || typeof baseDir == 'undefined')
-			var baseDir = 'http://public.foolhardysoftworks.com:9000';
+		if(BASEURL == '' || typeof BASEURL == 'undefined')
+			var BASEURL = 'http://public.foolhardysoftworks.com:9000';
 		fs.readdir('./apps.providerconfig/icons/PNG', function(err,items){
 			var limit = items.length < 12 ? items.length : 12;
 			for(var i = 0; i < limit; i++){
 				var choice = Math.floor(Math.random()*(items.length-1));
-				ICONS.push(baseDir + '/backend/icons/PNG/'+items[choice]);	
+				ICONS.push(BASEURL + '/backend/icons/PNG/'+items[choice]);	
 			}
 		});
 
