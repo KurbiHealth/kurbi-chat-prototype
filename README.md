@@ -91,14 +91,6 @@ First, run `npm install` to make sure you have all depencies. Then (in the root 
 
 `PORT=3000 DATASOURCE=stamplay BASEURL=http://chat.gokurbi.com ENV=prod forever app.js`
 
-
-COMMAND LINE PARAMETERS
----
-
-ON DEV:  PORT=?? DATASOURCE=?? BASEURL=?? ENV=?? node app.js
-
-ON PROD: PORT=?? DATASOURCE=?? BASEURL=?? ENV=?? forever app.js
-
 **options for parameters**
 
 PORT		8080|3000
