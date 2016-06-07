@@ -2,6 +2,7 @@ $(document).ready(init);
 
 //var URL = 'http://public.foolhardysoftworks.com:9000';
 var URL = 'http://chat.gokurbi.com';
+//var URL = 'http://kchat:8080';
 
 function init(){
 
