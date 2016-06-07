@@ -5,7 +5,7 @@
  * ON DEV:  PORT=?? DATASOURCE=?? BASEURL=?? ENV=?? node app.js
  * ON PROD: PORT=?? DATASOURCE=?? BASEURL=?? ENV=?? forever app.js
  * 
- * 		PORT 		= 8080
+ * 		PORT 		= 8080|3000
  * 		DATASOURCE 	= stamplay|mongodb 
  * 		BASEURL 	= http://kchat:8080|http://chat.gokurbi.com|http://public.foolhardysoftworks.com:9000
  * 		ENV 		= prod|dev|local
@@ -13,7 +13,8 @@
  * @TODO figure out how to pass BASEURL to the apps (static routes); the express.
  * static() middleware does not use next(), so there is now way to intercept the 
  * static file prior to sending to user
- * TEMP: PORT=8080 DATASOURCE=stamplay BASEURL=http://kchat:8080 ENV=local node app.js
+ * LOCAL (MATT'S): PORT=8080 DATASOURCE=stamplay BASEURL=http://kchat:8080 ENV=local node app.js
+ * PROD: PORT=3000 DATASOURCE=stamplay BASEURL=http://chat.gokurbi.com ENV=prod forever app.js
  */
 
 var ENV 		= process.env.ENV 			|| 'prod';
