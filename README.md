@@ -22,7 +22,7 @@ main file: `/endpoints.loadchatbox/main.js`
 
 URL: `/`
 
-**Load Chat Box Message Templates
+**Load Chat Box Message Templates**
 
 This endpoint is used by the chat box to load templates that are needed by the chatbot messages. 
 
