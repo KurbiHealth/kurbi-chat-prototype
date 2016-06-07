@@ -42,7 +42,7 @@ module.exports = function(io,DATASOURCE,db,express){
 //and if there are no people in them, it disconnects the bots. 
 //for now it's setInterval
 
-	setInterval(clearRooms, 1000*60*5);
+	//setInterval(clearRooms, 1000*60*5);
 
 	function clearRooms(){
 		console.log('clearing empty rooms');
