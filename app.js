@@ -113,7 +113,7 @@ require('./endpoints.loadmessagetemplate/main.js')(router,DATASOURCE,db);
  * This manages the sockets that the chat boxes use to communicate with
  * the Bot and with (potentially) other human beings.
  */
-require('./endpoints.conversate/operator')(io,DATASOURCE,db,express);
+require('./endpoints.conversate/operator')(io,DATASOURCE,db,express,PORT);
 
 /**
  * ChatBot

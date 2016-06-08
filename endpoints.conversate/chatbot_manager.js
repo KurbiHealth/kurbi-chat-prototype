@@ -1,4 +1,4 @@
-module.exports = function(DATASOURCE,db){
+module.exports = function(DATASOURCE,db,PORT){
 
 	var KEEP_ALIVE_TIME = 1000*60*5;
 	
@@ -25,7 +25,7 @@ module.exports = function(DATASOURCE,db){
 	function requestBot(room,info){
 		removeOldBots();
 		var connection = {};
-		connection.socket = io.connect('http://localhost:3000', {forceNew:true});
+		connection.socket = io.connect('http://localhost:'+PORT, {forceNew:true});
 		connection.lastMessage = new Date();
 
 		connection.socket.on('connect', function(){

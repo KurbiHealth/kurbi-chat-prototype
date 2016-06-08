@@ -1,4 +1,4 @@
-module.exports = function(io,DATASOURCE,db,express){
+module.exports = function(io,DATASOURCE,db,express,PORT){
 
 // SOCKET CHEAT SHEET
 // // sending to sender-client only
@@ -31,7 +31,7 @@ module.exports = function(io,DATASOURCE,db,express){
 		var ChatRoom 						= require('./chatRoomSchema');
 	}
 
-	var KingBot							= require('./chatbot_manager')(DATASOURCE,db);
+	var KingBot							= require('./chatbot_manager')(DATASOURCE,db,PORT);
 
 	var rooms = {};						//list of active rooms
 	var checkRooms = [];				//list of rooms that might be empty (and need their bots removed)
