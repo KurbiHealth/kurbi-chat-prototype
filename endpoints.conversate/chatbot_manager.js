@@ -25,7 +25,7 @@ module.exports = function(DATASOURCE,db){
 	function requestBot(room,info){
 		removeOldBots();
 		var connection = {};
-		connection.socket = io.connect('http://localhost:8080', {forceNew:true});
+		connection.socket = io.connect('http://localhost:3000', {forceNew:true});
 		connection.lastMessage = new Date();
 
 		connection.socket.on('connect', function(){
