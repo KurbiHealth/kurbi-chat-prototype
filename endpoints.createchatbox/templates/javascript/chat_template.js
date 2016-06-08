@@ -20,6 +20,7 @@ var ChatBox = function(info){
 	this.sendMessage = sendMessage;
 	this.start = start;
 	that.clear = clear;
+	that.end = end;
 	var socket = null;
 
 ///// Okay here is some weirdness...
@@ -58,7 +59,7 @@ var ChatBox = function(info){
 	if(!kurbi.click) kurbi.click = {};
 
 	kurbi.attachClickHandler[that.instanceId] = function(id,fn){
-		if(!that.click[id]) that.click[id] = fn;
+		that.click[id] = fn;
 	}
 
 	kurbi.click[that.instanceId] = function(id, data){
@@ -70,6 +71,12 @@ var ChatBox = function(info){
 
 	function start(){
 		socket.emit('start');
+	}
+
+	function end(){
+		clearKey();
+		socket.emit('end');
+		that.banner.parentNode.removeChild(that.banner);
 	}
 
 	function sendMessage(msg){
@@ -95,7 +102,11 @@ var ChatBox = function(info){
 		getTemplate(msg.type, function(template){
 			var compiledTemplate = Handlebars.compile(template);
 			that.content.innerHTML += compiledTemplate(msg.body).replace(/#pickle/g, that.instanceId);
-			that.content.scrollTop = that.content.scrollHeight;
+			setTimeout(function(){
+				$('.kurbi-chat-body').animate({scrollTop:that.content.scrollHeight},500);
+				//that.content.scrollTop = that.content.scrollHeight;
+			},50);
+
 			if(callback) callback();
 		});
 				
@@ -122,7 +133,7 @@ var ChatBox = function(info){
 
 	function addMessage(data){
 		console.log('new message', data);
-		appendMessage(data.message);
+		if(data.message) appendMessage(data.message);
 		if(data.responses) setInput(data.responses);
 	}
 
@@ -150,7 +161,7 @@ var ChatBox = function(info){
 		that.box = d.getElementsByClassName('kurbi-chat-box')[0];
 		that.banner = d.getElementsByClassName('kurbi-chat-banner')[0];
 		that.backdrop = d.getElementsByClassName('kurbi-backdrop')[0];	
-		that.content = d.getElementsByClassName('kurbi-chat-text')[0];
+		that.content = d.getElementsByClassName('kurbi-chat-body')[0];
 		that.footer  = d.getElementsByClassName('kurbi-chat-footer')[0];
 
 	}
@@ -158,7 +169,7 @@ var ChatBox = function(info){
 	function getTemplate(templateName, callback){
 		if(that.template[templateName]) callback(that.template[templateName]);
 		else{
-			$.get(serverURL + '/template', {client:kurbi.client_id, version:kurbi.version, template:templateName}, function(res){
+			$.get('http://public.foolhardysoftworks.com:9000/template', {client:kurbi.client_id, version:kurbi.version, template:templateName}, function(res){
 						that.template[templateName] = res;
 						callback(that.template[templateName]);
 					});
@@ -205,12 +216,15 @@ var ChatBox = function(info){
 			}
 	}
 
+
+
 }
+
+
 
 //setup public members
 if(!namespace.kurbi) namespace.kurbi = {};
-// callback that can receive variables from the clients webpage
-namespace.kurbi.params = params;
+namespace.kurbi.params = params;     // callback that can receive variables from the clients webpage.
 kurbi.version = 1.0;
 kurbi.client_id = 'web';
 kurbi.getPatientIcon = getPatientIcon;
@@ -234,7 +248,7 @@ function init(local){
 
 function getPatientIcon(){
 	var iconPath = localStorage.getItem('patient_icon');
-	if(iconPath == null) iconPath = serverURL + '/backend/icons/PNG/a01.png';
+	if(iconPath == null) iconPath = 'http://public.foolhardysoftworks.com:9000/backend/icons/PNG/a01.png';
 	return iconPath;
 }
 
@@ -263,7 +277,7 @@ function chatFactory(local){
 	 				var bannerNoThanks = attachToDom('kurbi-banner-nope', bannerButtons);
 	 				var bannerHandle = attachToDom('kurbi-banner-handle', banner);
 
-	 				bannerIcon.src = serverURL + "/backend/icons/PNG/A01.png";
+	 				bannerIcon.src = "http://public.foolhardysoftworks.com:9000/backend/icons/PNG/A01.png";
 	 				bannerHeader.innerHTML = "Jessica Dufault, PT, DPT";
 	 				bannerQuestion.innerHTML = "Can I help you find what you're looking for?";
 	 				bannerSure.innerHTML = "Sure!";
@@ -327,45 +341,48 @@ function chatFactory(local){
 ///// HELPER FUNCTIONS ////
 
 
-	function getKey(){
+function getKey(){
 
-		if(!localStorage.getItem('physics')) localStorage.setItem('physics', makeKey());
-		return localStorage.getItem('physics');
+	if(!localStorage.getItem('physics')) localStorage.setItem('physics', makeKey());
+	return localStorage.getItem('physics');
+
+}
+
+function clearKey(){
+	localStorage.removeItem('physics');
+}
+
+function makeKey(){
+	var text = "";
+	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+	for( var i=0; i < 16; i++ )
+	    text += possible.charAt(Math.floor(Math.random() * possible.length));
+	
+	return text;	
+}
+
+
+function loadJQuery(local, callback){
+	if(window.jQuery) 
+		return callback();
+
+	else {
+	    var s = document.createElement('script'); 
+	    s.type = 'text/javascript';
+	    s.src = "http://code.jquery.com/jquery-2.2.3.min.js";
+	    s.setAttribute('integrity',"sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=");
+	    s.setAttribute('crossorigin', 'anonymous');
+	    s.async = true;
+	    s.onload = function(){
+   			local.$ = jQuery.noConflict();
+   			return callback(local);
+	    }
+	 
+	    document.getElementsByTagName('head')[0].appendChild(s);
 
 	}
-
-	function makeKey(){
-		var text = "";
-		var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-		for( var i=0; i < 16; i++ )
-		    text += possible.charAt(Math.floor(Math.random() * possible.length));
-		
-		return text;	
-	}
-
-
-	function loadJQuery(local, callback){
-		if(window.jQuery) 
-			return callback();
-
-		else {
-		    var s = document.createElement('script'); 
-		    s.type = 'text/javascript';
-		    s.src = "http://code.jquery.com/jquery-2.2.3.min.js";
-		    s.setAttribute('integrity',"sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=");
-		    s.setAttribute('crossorigin', 'anonymous');
-		    s.async = true;
-		    s.onload = function(){
-	   			local.$ = jQuery.noConflict();
-	   			return callback(local);
-		    }
-		 
-		    document.getElementsByTagName('head')[0].appendChild(s);
-
-		}
-		
-	}
-
+	
+}
 
 })(document,this);
