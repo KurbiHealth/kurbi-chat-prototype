@@ -67,6 +67,7 @@ module.exports = function(io,DATASOURCE,db,express){
 	io.on('connect', function(socket){
 
 		socket.on('register', function(info){
+			console.log('registering');
 			var room = getRoom(info.sessionID,info.url,info.key);
 			if(!rooms[room]) {
 				createRoom(room, info);	
@@ -77,6 +78,7 @@ module.exports = function(io,DATASOURCE,db,express){
 		});
 
 		socket.on('join room', function(data){
+			console.log('joining room');
 			var room = data.room;
 			socket.source = data.source;
 
@@ -86,10 +88,12 @@ module.exports = function(io,DATASOURCE,db,express){
 		});
 
 		socket.on('start', function(){
+			console.log('starting');
 			socket.broadcast.to(socket.room).emit('start');
 		});
 
 		socket.on('message', function(data){
+			console.log('message: ',data);
 			data.source = socket.source;
 			socket.broadcast.to(socket.room).emit('message',data);
 			//logChat(data,socket.room);
