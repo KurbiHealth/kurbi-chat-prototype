@@ -70,8 +70,10 @@ module.exports = function(io,DATASOURCE,db,express){
 			console.log('registering');
 			var room = getRoom(info.sessionID,info.url,info.key);
 			if(!rooms[room]) {
+				console.log('in rooms[room]');
 				createRoom(room, info);	
-				KingBot.requestBot(room,info);	
+				KingBot.requestBot(room,info);
+				console.log('post rooms[room]');
 				}
 			socket.source = 'patient';
 			joinRoom(room);
@@ -106,6 +108,7 @@ module.exports = function(io,DATASOURCE,db,express){
 
 
 		function joinRoom(room){
+			console.log('in joinRoom()');
 			socket.room = room;
 			socket.join(room);
 			getChatHistory();
@@ -161,8 +164,10 @@ module.exports = function(io,DATASOURCE,db,express){
 					io.to(socket.id).emit('history', chatroom.messages);
 				});
 			}else if(DATASOURCE == 'stamplay'){
+				console.log('in (stamplay) getChatHistory()');
 				db.Object("chatroom")
 				.get({room: socket.room},function(err,result){
+					console.log('got chatroom from Stamplay',result);
 					io.to(socket.id).emit('history', result.messages);
 				});
 			}
