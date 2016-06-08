@@ -1,6 +1,11 @@
-* {
+.kurbi-chat-parent {
 	font-family:sans-serif;
+	font-size:14px;
+	@media (max-height: 950px){
+		font-size:12px;
+	}
 }
+
 .kurbi-chat-box {
 	display:flex;
 	justify-content:flex-start;
@@ -19,6 +24,7 @@
 }
 
 .kurbi-chat-container {
+	z-index: 1;
 	display:flex;
 	position:relative;
 	flex-grow:1;
@@ -31,10 +37,11 @@
 
 
 .kurbi-chat-header {
+	z-index: 10;
 	position:absolute;
 	width:100%;
-	height:25px;
-	background: linear-gradient(rgba(255,255,250,1), rgba(255,255,255,0));
+	height:75px;
+	background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
 }
 
 .kurbi-chat-header h5{
@@ -47,6 +54,7 @@
 	flex-grow:0;
 	flex-shrink:0;
 	width:100%;
+	margin-top:50px;
 
 }
 
@@ -58,23 +66,22 @@
 	box-shadow: none;
 }
 
-.kurbi-chat-text {
+.kurbi-chat-body {
+	flex-grow:1;
 	overflow-y:scroll;
 	width:100%;
 }
 
-.kurbi-chat-text::-webkit-scrollbar { 
+.kurbi-chat-body::-webkit-scrollbar { 
     display: none; 
 }
 
-.kurbi-chat-grow{
-	flex-grow:1;
-}
+
 
 .kurbi-chat-banner {
 	position:fixed;
 	background-color:@bannerColor;
-	height:14vh;
+	height:170px;
 	width:350px;
 	left:0px;
 	top:24vh;
@@ -140,8 +147,8 @@
 	display:inline-block;
 	width:35%;
 	text-align:center;
-	height:2.5vh;
-	line-height:2.5vh;
+	height:40px;
+	line-height:40px;
 	background-color:@kurbiBlue;
 	color:white;
 	font-size:1.2em;
@@ -154,8 +161,8 @@
 	display:inline-block;
 	width:50%;
 	text-align:center;
-	height:2.5vh;
-	line-height:2.5vh;
+	height:40px;
+	line-height:40px;
 	font-size:.8em;
 	color:@kurbiBlue;
 }

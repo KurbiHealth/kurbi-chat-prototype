@@ -39,12 +39,16 @@ module.exports = function(DATASOURCE,db,PORT){
 			});
 
 			function reply(msg){
-				console.log('replying to,', msg);
-				if(responses[msg.qCode]) {
-				console.log('chosen response:', responses[msg.qCode]);
-				connection.socket.emit('message',responses[msg.qCode]);
-				reply(responses[msg.qCode].message);
-				}
+				var waitTime = Math.floor(Math.random()*2500+1000);
+				setTimeout(function(){
+					console.log('replying to,', msg);
+					if(responses[msg.qCode]) {
+					console.log('chosen response:', responses[msg.qCode]);
+					connection.socket.emit('message',responses[msg.qCode]);
+					reply(responses[msg.qCode].message);
+					}
+
+				}, waitTime);
 			}
 
 
