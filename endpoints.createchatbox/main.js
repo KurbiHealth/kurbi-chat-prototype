@@ -109,7 +109,7 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 				    	console.log(error);
 					else{
 						result = JSON.parse(result);
-						var customSnippet = snippet.replace('#BANANA', chat._id).replace(/#SERVER_URL/g,BASEURL);
+						var customSnippet = snippet.replace('#BANANA', result.id).replace(/#SERVER_URL/g,BASEURL);
 						var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
 						return res.json({'snippet':uglySnippet.code});	
 					}
