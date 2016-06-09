@@ -97,7 +97,7 @@ NOTE: change BASEURL's value to your local url you're using for testing.
 **Production**
 First, run `npm install` to make sure you have all depencies. Then (in the root folder) run 
 
-`PORT=3000 DATASOURCE=stamplay BASEURL=http://chat.gokurbi.com ENV=prod forever app.js`
+`PORT=3000 DATASOURCE=stamplay BASEURL=http://chat.gokurbi.com ENV=prod forever start app.js`
 
 **options for parameters**
 
