@@ -115,3 +115,4 @@ TO DO's
 * fix bug so one doesn't have to clear out "physics" from LocalStorage to run chat box again on page
 * add functionality to save a conversation to db (Stamplay)
 * design and add the user data structure from FHIR, and add data keys to responses objects
+* set up admin panel for chatbox configuration, and for building conversations
