@@ -2,7 +2,8 @@
 
 	//var URL = 'http://public.foolhardysoftworks.com:9000/chatbox'
 	//var URL = 'http://kchat:8080/chatbox';
-	var URL = 'http://chat.gokurbi.com/chatbox';
+	//var URL = 'http://chat.gokurbi.com/chatbox';
+	var URL = 'http://' + window.location.host + '/chatbox';
 
 $(document).ready(init);
 
@@ -29,17 +30,19 @@ $(document).ready(init);
 
 		});
 
-		var socket = io();
-		
-		socket.on('connect', function(data){
-		
-		});
 
-		socket.emit('join room', 'beer');
+		//this stuff is so that we can have a provider chat live with their clients...
+		// var socket = io();
+		
+		// socket.on('connect', function(data){
+		
+		// });
 
-		socket.on('message', function(data){
-			console.log(data);
-		})
+		// socket.emit('join room', 'beer');
+
+		// socket.on('message', function(data){
+		// 	console.log(data);
+		// });
 
 	}
 

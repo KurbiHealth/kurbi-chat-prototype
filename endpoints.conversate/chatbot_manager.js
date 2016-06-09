@@ -1,6 +1,7 @@
-module.exports = function(DATASOURCE,db,PORT){
+module.exports = function(DATASOURCE,BASEURL, PORT){
 
 	var KEEP_ALIVE_TIME = 1000*60*5;
+	console.log(BASEURL);
 	
 	var io = require('socket.io-client');
 
@@ -9,7 +10,7 @@ module.exports = function(DATASOURCE,db,PORT){
 	}
 
 	var service = {};
-	var responses = require('../endpoints.chatbot/responses.js')('Madison Area Wellness Collective');
+	var responses = require('../endpoints.chatbot/responses.js')('Madison Area Wellness Collective',BASEURL);
 	service.requestBot = requestBot;
 	service.connections = [];
 

@@ -6,7 +6,10 @@ var fs 								= require('fs');
 module.exports = function(router,DATASOURCE,db,BASEURL){
 
 	if(DATASOURCE == 'mongodb'){
-		var Chat 	= require('./schemas.mongoose/chatSchema')(db);
+		
+		var Chat 	= require('../schemas.mongoose/chatSchema');
+		
+
 	}
 
 	var globFunc = require('../sharedFunctions/chatCreateFunctions')();
@@ -61,7 +64,7 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 //   to the user.      
 
 	function createSnippet(req,res){
-
+		
 		var hbsData = {
 			content: req.body.title,
 			icons: ICONS,
@@ -74,20 +77,21 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 		var promises = [];
 		promises.push(compileHBS(hbsData,hbs));
 		promises.push(compileLESS(lessData,less));
-
+		
 		Promise.all(promises).then(function(results){
-
+			
 			if(DATASOURCE == 'mongodb'){
 				// Data Layer is Mongoose
 				var chat = new Chat();
 				chat.js = js;
-				chat.html = results[0];
+				chat.html = results[0].replace(/#SERVER_URL/g,BASEURL);
 				chat.css = results[1];
-
+				
 				chat.save(function(err){
+					
 					if(err) console.log(err);
 					else{
-						var customSnippet = snippet.replace('#BANANA', chat._id);
+						var customSnippet = snippet.replace('#BANANA', chat._id).replace(/#SERVER_URL/g,BASEURL);
 						var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
 						return res.json({'snippet':uglySnippet.code});	
 					}
@@ -105,7 +109,7 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 				    	console.log(error);
 					else{
 						result = JSON.parse(result);
-						var customSnippet = snippet.replace('#BANANA', result.id);
+						var customSnippet = snippet.replace('#BANANA', chat._id).replace(/#SERVER_URL/g,BASEURL);
 						var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
 						return res.json({'snippet':uglySnippet.code});	
 					}
@@ -227,8 +231,8 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 //------------------------------------------------------------///
 	function populateIconList(BASEURL){
 	//I had a shitton of icons, so I made it choose randomly from them because it was funny
-		if(BASEURL == '' || typeof BASEURL == 'undefined')
-			var BASEURL = 'http://public.foolhardysoftworks.com:9000';
+		// if(BASEURL == '' || typeof BASEURL == 'undefined')
+		// 	var BASEURL = 'http://public.foolhardysoftworks.com:9000';
 		fs.readdir('./apps.providerconfig/icons/PNG', function(err,items){
 			var limit = items.length < 12 ? items.length : 12;
 			for(var i = 0; i < limit; i++){

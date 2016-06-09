@@ -1,6 +1,5 @@
 <div>
 <style type="text/css">
-
 .kurbi-ppdf-parent {
 	display:flex;
 	flex-direction:row;
@@ -9,7 +8,6 @@
 	flex-wrap:wrap;
 	width:100%;
 }
-
 .kurbi-ppdf-yes {
 	line-height:50px;
 	height:50px;
@@ -22,13 +20,9 @@
 	min-width:150px;
 	background-color:#00aaff;
 	text-align: center;
-	font-family:sans-serif;
 	font-weight: bold;
 	cursor:pointer;
 }
-
-
-
 .kurbi-ppdf-no {
 	line-height:50px;
 	height:50px;
@@ -41,15 +35,12 @@
 	min-width:150px;
 	background-color:white;
 	text-align: center;
-	font-family:sans-serif;
 	box-shadow: 1px 2px 2px #cccccc;
 	font-weight: bold;
 	cursor:pointer;
 }
-
-
 </style>
-<img src="http://public.foolhardysoftworks.com:9000/backend/icons/PNG/small-image.png" onload="
+<img src="#SMALL_IMAGE_URL" onload="
 kurbi.attachClickHandler['#pickle']('ppdf', function(data, chatbox){
 	console.log(data);
 	if(data.id=='cancel') chatbox.hide();
@@ -58,9 +49,7 @@ kurbi.attachClickHandler['#pickle']('ppdf', function(data, chatbox){
 		chatbox.start();
 	}
 });
-
 this.parentNode.removeChild(this);
-
 "/>
 <div class='kurbi-ppdf-parent'>
 <div style="width:15%;"></div>

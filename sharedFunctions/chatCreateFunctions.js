@@ -13,9 +13,12 @@ module.exports = function(){
 		promises.push(new Promise(loadHBS('./endpoints.createchatbox/templates/html/chat_template.hbs')));
 		promises.push(new Promise(loadLESS));
 		promises.push(new Promise(loadJS));
-		promises.push(new Promise(loadSnippet));
+		//promises.push(new Promise(loadSnippet));
+		console.log('bark');
 
 		Promise.all(promises).then(function(results){
+			console.log('bee');
+
 			var template = {};
 			template.hbs = results[0];
 
@@ -25,7 +28,7 @@ module.exports = function(){
 							};
 			template.js = results[2];
 			template.snippet = results[3];
-			
+			console.log('shared', template);
 			resolve(template);
 
 		});	
@@ -63,7 +66,6 @@ module.exports = function(){
 	}
 
 	function loadHBS(filename){
-
 		return function(resolve,reject){
 			fs.readFile(filename, 'utf8',function(err,data){
 				if(err) return console.log(err);
@@ -92,6 +94,20 @@ module.exports = function(){
 			.then(function(results){
 				resolve(results);
 			});
+	}
+	
+	function loadDefaultLessVariables(resolve,reject){
+		fs.readFile('./endpoints.createchatbox/templates/css/default_variables.less', 'utf8',function(err,data){
+				if(err) return console.log(err);
+					resolve(data);	
+			});	
+	}
+
+	function loadDefaultBaseLess(resolve,reject){
+			fs.readFile('./endpoints.createchatbox/templates/css/chat_template.less', 'utf8',function(err,data){
+				if(err) return console.log(err);
+					resolve(data);	
+			});	
 	}
 
 	var returnObj = {

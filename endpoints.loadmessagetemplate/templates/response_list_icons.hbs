@@ -1,6 +1,5 @@
 <div>
 <style type="text/css">
-
 .kurbi-qttf-grandparent{
 	display:flex;
 	flex-direction:row;
@@ -8,7 +7,6 @@
 	margin-bottom:50px;
 	margin-top:40px;
 }
-
 .kurbi-qttf-parent {
 	display:flex;
 	flex-direction:row;
@@ -17,25 +15,21 @@
 	flex-wrap:wrap;
 	width:470px;
 }
-
 .kurbi-qttf-icon {
 	width:70px;
 	margin-left:2px;
 	margin-right:2px;
 	cursor:pointer;
 }
-
 </style>
 
 <div class='kurbi-qttf-grandparent'>
-<img src="http://public.foolhardysoftworks.com:9000/backend/icons/PNG/small-image.png" onload="
+<img src="#SMALL_IMAGE_URL" onload="
 kurbi.attachClickHandler['#pickle']('qttf', function(data, chatbox){
 	localStorage.setItem('patient_icon', data.url);	
 	chatbox.sendMessage(data.message);
 });
-
 this.parentNode.removeChild(this);
-
 "/>
 <div class='kurbi-qttf-parent'>
  {{#each responses}}

@@ -1,8 +1,8 @@
 module.exports = function(router,DATASOURCE,db,BASEURL){
 
 	if(DATASOURCE == 'mongodb'){
-		var Chat 							= require('./schemas.mongoose/chatSchema');
-		var Bot								= require('./schemas.mongoose/chatbotSchema');
+		var Chat 							= require('../schemas.mongoose/chatSchema');
+		var Bot								= require('../schemas.mongoose/chatbotSchema');
 	}
 
 // -------------------------------------------

@@ -1,6 +1,5 @@
 <div>
 <style type="text/css">
-
 .kurbi-qwpp-parent {
 	display:flex;
 	flex-direction:row;
@@ -9,7 +8,6 @@
 	flex-wrap:wrap;
 	width:100%;
 }
-
 .kurbi-qwpp-child {
 	line-height:50px;
 	height:50px;
@@ -22,24 +20,19 @@
 	min-width:150px;
 	background-color:#00aaff;
 	text-align: center;
-	font-family:sans-serif;
+	cursor:pointer;
 }
-
-
 .kurbi-qwpp-prompt{
 	font-size:1.3em;
 	color:#888888;
-	font-family:sans-serif;
 	margin-bottom:10px;
 }
 </style>
-<img src="http://public.foolhardysoftworks.com:9000/backend/icons/PNG/small-image.png" onload="
+<img src="#SMALL_IMAGE_URL" onload="
 kurbi.attachClickHandler['#pickle']('qwpp', function(data,chatbox){
 	chatbox.sendMessage(data.message);
 });
-
 this.parentNode.removeChild(this);
-
 "/>
 <div class="kurbi-qwpp-prompt">Choose One:</div>
 <div class='kurbi-qwpp-parent'>

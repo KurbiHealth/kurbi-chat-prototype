@@ -1,8 +1,9 @@
 (function(d,namespace){
 
 //var serverURL = 'http://public.foolhardysoftworks.com:9000';
-var serverURL = 'http://chat.gokurbi.com';
+//var serverURL = 'http://chat.gokurbi.com';
 //var serverURL = 'http://kchat:8080';
+var serverURL = '#SERVER_URL'
 
 console.log('---in chat_template.js---');
 console.log('serverURL',serverURL);

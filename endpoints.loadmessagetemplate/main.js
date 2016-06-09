@@ -1,4 +1,4 @@
-module.exports = function(router,DATASOURCE,db){
+module.exports = function(router,DATASOURCE,db,BASEURL){
 
 	var globFunc = require('../sharedFunctions/chatCreateFunctions')();
 
@@ -35,6 +35,10 @@ module.exports = function(router,DATASOURCE,db){
 			filename = dir + 'image_message.hbs';
 			break;
 
+			case 'end message':
+			filename = dir + 'end_page.hbs';
+			break;
+
 			case 'response welcome':
 			filename = dir + 'response_welcome.hbs';
 			break;
@@ -55,6 +59,11 @@ module.exports = function(router,DATASOURCE,db){
 			filename = dir + 'response_free_small.hbs';
 			break;
 
+			case 'response end':
+			filename = dir + 'response_end.hbs';
+			break;
+
+
 			default:
 
 		}
@@ -63,7 +72,7 @@ module.exports = function(router,DATASOURCE,db){
 
 		new Promise(globFunc.loadHBS(filename))
 		.then(function(template){
-			res.send(template);
+			res.send(template.replace(/#SMALL_IMAGE_URL/g, BASEURL+'/backend/icons/PNG/small-image.png'));
 		});
 
 	}

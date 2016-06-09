@@ -1,10 +1,9 @@
 {{#if self}}
 
-<div style="margin-top:100px;margin-bottom:100px;display:block;height:50px;">
+<div style="margin-top:100px;display:block;height:50px;">
 
 
 <style type="text/css">
-
 	.kurbi-aqetrt-patient-icon {
 		height:50px;
 		width:auto;
@@ -13,9 +12,7 @@
 		margin-bottom:8px;
 		float:right;
 	}
-
 	.kurbi-aqetrt-text{
-		font-family:sans-serif;
 		font-size:1.2em;
 		color:white;
 		line-height:50px;
@@ -31,12 +28,10 @@
 		float:right;
 		border-radius:5px;
 	}
-
-
 </style>
 
 
- <img class="kurbi-aqetrt-patient-icon" src="http://public.foolhardysoftworks.com:9000/backend/icons/PNG/small-image.png" onload="this.onload=null; this.src=kurbi.getPatientIcon();"/>
+ <img class="kurbi-aqetrt-patient-icon" src="#SMALL_IMAGE_URL" onload="this.onload=null; this.src=kurbi.getPatientIcon();"/>
 <div class="kurbi-aqetrt-text">{{text}}</div>
 
 
@@ -48,27 +43,20 @@
 
 
 
-<div style="margin-top:100px;margin-bottom:100px">
+<div style="margin-top:100px;">
 
 
 <style type="text/css">
-
 	.kurbi-qetrt-displayName {
-		font-family:sans-serif;
 		font-weight:bold;
 		font-size:.8em;
 		margin-bottom:15px;
 		color:#444444;
-
 	}
-
 	.kurbi-qetrt-text{
-		font-family:sans-serif;
 		font-size:1.8em;
 		color:#666666;
 	}
-
-
 </style>
 
 <div class="kurbi-qetrt-displayName">{{displayName}}</div>

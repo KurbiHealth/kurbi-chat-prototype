@@ -1,4 +1,4 @@
-module.exports = function(io,DATASOURCE,db,express,PORT){
+module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 
 // SOCKET CHEAT SHEET
 // // sending to sender-client only
@@ -28,10 +28,10 @@ module.exports = function(io,DATASOURCE,db,express,PORT){
 	var mongoose  						= require('mongoose');
 
 	if(DATASOURCE == 'mongodb'){
-		var ChatRoom 						= require('./chatRoomSchema');
+		var ChatRoom 						= require('../schemas.mongoose/chatRoomSchema');
 	}
 
-	var KingBot							= require('./chatbot_manager')(DATASOURCE,db,PORT);
+	var KingBot							= require('./chatbot_manager')(DATASOURCE,BASEURL,PORT);
 
 	var rooms = {};						//list of active rooms
 	var checkRooms = [];				//list of rooms that might be empty (and need their bots removed)

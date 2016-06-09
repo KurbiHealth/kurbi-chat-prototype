@@ -1,8 +1,8 @@
 (function(d, script) {
 
-	//var serverURL = 'http://public.foolhardysoftworks.com:9000';
-	var serverURL = 'http://chat.gokurbi.com';
+	//var serverURL = 'http://chat.gokurbi.com';
 	//var serverURL = 'http://kchat:8080'
+	var serverURL = '#SERVER_URL';
 
 console.log('---in snippet_template.js----');
 
@@ -35,8 +35,7 @@ console.log('---in snippet_template.js----');
 	request.onload = function() {
 	  if (request.status >= 200 && request.status < 400) {
 		    var resp = request.responseText;
-		    obj = JSON.parse(JSON.parse(resp));
-		    obj = obj.data[0];
+		    obj = JSON.parse(resp);
 		    kbar = 1;
 		    loadSocket();
 		    loadHandlebars();
@@ -92,9 +91,7 @@ console.log('---in snippet_template.js----');
 
 
 	function loadHtml(newHtml){
-	    var s = d.createElement('div');
-	    s.innerHTML = newHtml;
-		parent.appendChild(s);
+		parent.innerHTML += newHtml;
 	}
 
 

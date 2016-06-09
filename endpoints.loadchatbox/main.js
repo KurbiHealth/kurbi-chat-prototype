@@ -1,4 +1,4 @@
-module.exports = function(router,DATASOURCE,db){
+module.exports = function(router,ENV,DATASOURCE,db){
 
 	var globFunc = require('../sharedFunctions/chatCreateFunctions')();
 
@@ -13,9 +13,10 @@ module.exports = function(router,DATASOURCE,db){
 // This is a dev/debug version of the endpoint, the production version is on Stamplay
 // Each time this is loaded, it recompiles the chat box & serves the chat box to the 
 // client webpage (snippet_template.js)
+var _getUserChat = (ENV=='dev') ? debugGetUserChat : getUserChat;
 	router
 		.route('/chatbox')
-			.get(getUserChat);
+			.get(_getUserChat);
 // -------------------------------------------
 
 	return router;
@@ -24,7 +25,7 @@ module.exports = function(router,DATASOURCE,db){
 
 		var id = req.query.key;
 		if(DATASOURCE == 'mongodb'){
-
+			var Chat = require('../schemas.mongoose/chatSchema');
 			Chat.findById(id, function(err,doc){
 				if(err) console.log(err);
 				else return res.json(doc);
@@ -43,7 +44,6 @@ module.exports = function(router,DATASOURCE,db){
 	}
 
 	function debugGetUserChat(req,res){
-
 		//this is to force it to recompile the html/css every time
 		var lTemps = new Promise(globFunc.loadTemplates);
 

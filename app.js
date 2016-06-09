@@ -99,21 +99,21 @@ require('./endpoints.createchatbox/main.js')(router,DATASOURCE,db,BASEURL);
  * This endpoint is called by the snipped from a user's website. It 
  * returns the chat box referred to by the key in the snippet url.
  */
-require('./endpoints.loadchatbox/main.js')(router,DATASOURCE,db);
+require('./endpoints.loadchatbox/main.js')(router,ENV,DATASOURCE,db);
 
 /**
  * Load Chat Box Message Templates
  * This endpoint is used by the chat box to load templates that are needed by 
  * the chatbot messages.
  */
-require('./endpoints.loadmessagetemplate/main.js')(router,DATASOURCE,db);
+require('./endpoints.loadmessagetemplate/main.js')(router,DATASOURCE,db,BASEURL);
 
 /**
  * Chat Box Conversations (SocketIO)
  * This manages the sockets that the chat boxes use to communicate with
  * the Bot and with (potentially) other human beings.
  */
-require('./endpoints.conversate/operator')(io,DATASOURCE,db,express,PORT);
+require('./endpoints.conversate/operator')(io,DATASOURCE,express,BASEURL,PORT,db);
 
 /**
  * ChatBot
