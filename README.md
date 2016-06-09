@@ -108,3 +108,7 @@ DATASOURCE	stamplay|mongodb
 BASEURL 	http://kchat:8080|http://chat.gokurbi.com|http://public.foolhardysoftworks.com:9000
 
 ENV 		prod|dev|local
+
+TO DO's
+---
+* make the backend config fields work (change the color and text of header)
