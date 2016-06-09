@@ -38,7 +38,7 @@ var _getUserChat = (ENV=='dev') ? debugGetUserChat : getUserChat;
 				if(err){
 					return console.log(err);
 				}else{
-					var tempResult = JSON.parse(doc);
+					var tempResult = JSON.parse(JSON.parse(doc));
 					var finalResult = tempResult.data;
 					return res.json(finalResult);
 				}
