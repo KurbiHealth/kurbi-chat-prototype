@@ -40,7 +40,7 @@ var _getUserChat = (ENV=='dev') ? debugGetUserChat : getUserChat;
 				}else{
 					var result = doc.data;
 					result = JSON.stringify(result);
-					return res.json(finalResult);
+					return res.json(result);
 				}
 			})
 
