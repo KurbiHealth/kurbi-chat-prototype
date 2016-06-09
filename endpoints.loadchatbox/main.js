@@ -35,8 +35,13 @@ var _getUserChat = (ENV=='dev') ? debugGetUserChat : getUserChat;
 
 			db.Object('chatbox')
 			.get({ _id : id }, function(err,doc) {
-				if(err) return console.log(err);
-				else return res.json(doc);
+				if(err){
+					return console.log(err);
+				}else{
+					var tempResult = JSON.parse(doc);
+					var finalResult = tempResult.data;
+					return res.json(finalResult);
+				}
 			})
 
 		}
