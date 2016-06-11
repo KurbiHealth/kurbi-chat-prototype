@@ -278,8 +278,8 @@ function chatFactory(local){
 	 				var bannerNoThanks = attachToDom('kurbi-banner-nope', bannerButtons);
 	 				var bannerHandle = attachToDom('kurbi-banner-handle', banner);
 
-	 				bannerIcon.src = "http://public.foolhardysoftworks.com:9000/backend/icons/PNG/A01.png";
-	 				bannerHeader.innerHTML = "Jessica Dufault, PT, DPT";
+	 				bannerIcon.src = "http://chat.gokurbi.com/demo/img/logo.png";
+	 				bannerHeader.innerHTML = "Madison Area Wellness Collective";
 	 				bannerQuestion.innerHTML = "Can I help you find what you're looking for?";
 	 				bannerSure.innerHTML = "Sure!";
 	 				bannerNoThanks.innerHTML = "No thank you";

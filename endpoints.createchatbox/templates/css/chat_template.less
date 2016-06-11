@@ -80,11 +80,16 @@
 
 .kurbi-chat-banner {
 	position:fixed;
-	background-color:@bannerColor;
-	height:170px;
-	width:350px;
+	background-color: @bkgdColor;
+//	background-color:@bannerColor;
+//	height:170px;
+	width:310px;
 	left:0px;
-	top:24vh;
+	top:22vh;
+	border-top: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	padding: 10px 0;
 
 	top:;
 	z-index:2;
@@ -97,37 +102,38 @@
 	width:10px;
 	background-color: @kurbiBlue;
 	height:100%;
+	display:none;
 }
 
 .kurbi-banner-icon-container{
 	height:100%;
 	width:25%;
 	float:left;
-	background-color:white;
+	background-color: @bkgdColor;
 }
 
 .kurbi-banner-icon{
 	width:50%;
 	height:auto;
 	margin-left:25%;
-	margin-top:5px;
+//	margin-top:5px;
 }
 
 .kurbi-banner-content{
 	float:left;
 	height:100%;
 	width:75%;
-	float:left;
-	background-color:white;
+	
+	background-color: @bkgdColor;
 }
 
 .kurbi-banner-header{
 	display:block;
 	color:@bannerHeaderColor;
-	font-size:.85em;
+	font-size:.9em;
 	font-weight:thinner;
-	margin-bottom:15px;
-	margin-top:2px;
+	margin-bottom:10px;
+//	margin-top:2px;
 
 }
 
@@ -135,36 +141,35 @@
 	display:block;
 	font-size:1.2em;
 	font-weight:bold;
-	margin-bottom:20px;
+	margin-bottom:10px;
 }
 
 .kurbi-banner-buttons{
 	display:block;
-	margin-bottom:4px;
+//	margin-bottom:4px;
 }
 
 .kurbi-banner-sure{
 	display:inline-block;
 	width:35%;
 	text-align:center;
-	height:40px;
-	line-height:40px;
+	height:25px;
+	line-height:25px;
 	background-color:@kurbiBlue;
 	color:white;
 	font-size:1.2em;
-	border-radius:2px;
-
-
+	cursor: pointer;
 }
 
 .kurbi-banner-nope{
 	display:inline-block;
 	width:50%;
 	text-align:center;
-	height:40px;
-	line-height:40px;
-	font-size:.8em;
+	height:25px;
+	line-height:25px;
+	font-size:.9em;
 	color:@kurbiBlue;
+	cursor: pointer;
 }
 
 
