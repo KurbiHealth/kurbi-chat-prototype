@@ -70,10 +70,8 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 			console.log('registering');
 			var room = getRoom(info.sessionID,info.url,info.key);
 			if(!rooms[room]) {
-				console.log('in rooms[room]');
 				createRoom(room, info);	
 				KingBot.requestBot(room,info);
-				console.log('post rooms[room]');
 				}
 			socket.source = 'patient';
 			joinRoom(room);
@@ -98,7 +96,7 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 			console.log('message: ',data);
 			data.source = socket.source;
 			socket.broadcast.to(socket.room).emit('message',data);
-			//logChat(data,socket.room);
+			logChat(data,socket.room);
 		});
 
 		socket.on('disconnect', function(){

@@ -113,11 +113,11 @@ var ChatBox = function(info){
 				
 	}
 
-	function prependMessage(msg){
+	function prependMessage(msg, i, callback){
 		getTemplate(msg.type, function(template){
 			var compiledTemplate = Handlebars.compile(template);
-			that.content.innerHTML += compiledTemplate(msg.body).replace(/#pickle/g, that.instanceId) + that.content.innerHTML;
-			that.content.scrollTop = that.content.scrollHeight;
+			callback(compiledTemplate(msg.body).replace(/#pickle/g, that.instanceId), i);
+			
 		});
 		
 	}
@@ -146,11 +146,21 @@ var ChatBox = function(info){
 		//ready flag.
 		console.log('history');
 		console.log(data);
-		data.reverse().forEach(function(packet){
-			prependMessage(packet.message);
-		});
-		if(data.length > 0) setInput(data[data.length - 1].responses);
-		that.content.scrollTop = that.content.scrollHeight;
+		var s = [];
+		s.length = data.length;
+		var count = 0;
+		for(var i = data.length - 1; i >= 0; i--){
+			prependMessage(data[i].message, i, function(string, j){
+				count++;
+				s[j] = string;
+				if(count == s.length) {
+					that.content.innerHTML = s.join("");
+					if(data.length > 0) setInput(data[data.length - 1].responses);
+					that.content.scrollTop = that.content.scrollHeight;
+				}
+			});
+		}
+		
 	}
 
 	function setup(){
@@ -180,7 +190,7 @@ var ChatBox = function(info){
 	function hide(){
 		
 		this.box.style.height='0px';
-		this.box.style.top="-300px";
+		this.box.style.top="-500px";
 		this.backdrop.style.height='0px';
 
 	}
@@ -196,6 +206,7 @@ var ChatBox = function(info){
 		if(socket){
 			
 			this.box.style.height='55vh';
+			this.box.style.paddingBottom='25px';
 			this.box.style.top="0px";
 			this.backdrop.style.height="100vh";
 			this.content.scrollTop = this.content.scrollHeight;
@@ -212,7 +223,7 @@ var ChatBox = function(info){
 		if(!socket){
 			socket = io();
 			socket.emit('register', that.info);
-			//socket.on('history', addHistory);
+			socket.on('history', addHistory);
 			socket.on('message', addMessage);
 			}
 	}
@@ -262,6 +273,7 @@ function chatFactory(local){
 		clicked['button'] = toggleChat;
 		clicked['kurbi-banner-sure'] = toggleChat;
 		clicked['kurbi-backdrop'] = toggleChat;
+		clicked['kurbi-close-button'] = toggleChat;
 		clicked['kurbi-banner-nope'] = toggleBanner;
 		clicked['kurbi-banner-handle'] = toggleBanner;
 
@@ -283,6 +295,8 @@ function chatFactory(local){
 	 				bannerQuestion.innerHTML = "Can I help you find what you're looking for?";
 	 				bannerSure.innerHTML = "Sure!";
 	 				bannerNoThanks.innerHTML = "No thank you";
+
+	 				d.getElementById('kurbi-chat-close-button').addEventListener('click', clicked['kurbi-close-button']);
 	 				
 	 	}
 	 attachToDom('kurbi-backdrop', parent);

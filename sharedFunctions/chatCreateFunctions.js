@@ -13,11 +13,8 @@ module.exports = function(){
 		promises.push(new Promise(loadHBS('./endpoints.createchatbox/templates/html/chat_template.hbs')));
 		promises.push(new Promise(loadLESS));
 		promises.push(new Promise(loadJS));
-		//promises.push(new Promise(loadSnippet));
-		console.log('bark');
 
 		Promise.all(promises).then(function(results){
-			console.log('bee');
 
 			var template = {};
 			template.hbs = results[0];
@@ -28,7 +25,6 @@ module.exports = function(){
 							};
 			template.js = results[2];
 			template.snippet = results[3];
-			console.log('shared', template);
 			resolve(template);
 
 		});	

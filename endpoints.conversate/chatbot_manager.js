@@ -32,7 +32,11 @@ module.exports = function(DATASOURCE,BASEURL, PORT){
 		connection.socket.on('connect', function(){
 			console.log('connecting bot');
 			connection.socket.emit('join room', {'room':room, 'source':'bot'});
-			connection.socket.emit('message', responses['welcome']);	
+			//connection.socket.emit('message', responses['welcome']);	
+			connection.socket.on('history', (data) => {
+				console.log(data);
+				if(!data || data.length == 0) connection.socket.emit('message',responses['welcome']);
+			});
 			connection.socket.on('start', () => { connection.socket.emit('message', responses['avatar']) });
 			connection.socket.on('message', function(data){
 				console.log(data);

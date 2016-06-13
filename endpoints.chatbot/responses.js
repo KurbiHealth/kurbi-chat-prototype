@@ -9,7 +9,7 @@ responses['welcome'] = {
 					body:{
 						displayName:name, 
 						text:"Thanks for visiting our website. We know how confusing it can be to find the care you're looking for. We'd love for you to choose Mindful Motion, but we care more about finding you the right fit for you. \n\nWould you answer a couple of questions to help us point you in the right direction?",
-						image: BASEURL+'/backend/icons/PNG/voltron.png',
+						image: BASEURL+'/backend/icons/PNG/mawc.png',
 					}
 
 				},
@@ -233,7 +233,7 @@ responses['end'] = {
 					body:{
 						displayName:name, 
 						text:"Well, this is the end of our chat. Thanks a lot for taking the time to get to know us. We hope that the answers we find for you are helpful. Look for a summary of our conversation in the email inbox momentarily. If we happened to get something wrong or if there is something else you'd like to add follow the instructions to revisit our chat session.\n\n We wish you all the best!",
-						image:'http://public.foolhardysoftworks.com:9000/backend/icons/PNG/voltron.png',
+						image: BASEURL+'/backend/icons/PNG/mawc.png',
 					}
 
 				},
@@ -272,20 +272,18 @@ function chooseAvatar(){
 var body = [];
 var letters = 'ABCDEFGHIJKLMNO';
 
-for(var i = 0; i < 12; i++){
+for(var i = 1; i < 13; i++){
 	var temp = {};
-	var M = "0" + Math.floor(Math.random()*4 + 1);
-	var N = letters[Math.floor(Math.random()*letters.length)];
 	
-	temp.url = BASEURL+"/backend/icons/PNG/"+N+M+".png";
+	temp.url = BASEURL+"/backend/icons/PNG/icon-"+i+".png";
 	temp.message = {};
 	temp.message.type = 'image message';
 	temp.message.qCode = 'avatar chosen';
-	temp.message.meta = N+M;
+	temp.message.meta = i;
 	temp.message.body = {
 					image: temp.url,
 						};
-	temp.id = N;
+	temp.id = i;
 	body.push(temp);
 }
 
