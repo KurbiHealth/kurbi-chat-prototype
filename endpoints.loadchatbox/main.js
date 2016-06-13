@@ -1,4 +1,4 @@
-module.exports = function(router,ENV,DATASOURCE,db){
+module.exports = function(router,ENV,DATASOURCE,db,BASEURL){
 
 	var globFunc = require('../sharedFunctions/chatCreateFunctions')();
 
@@ -68,9 +68,9 @@ var _getUserChat = (ENV=='dev') ? debugGetUserChat : getUserChat;
 
 			Promise.all(promises).then(function(results){
 
-				response.js = template.js;
+				response.js = template.js.replace(/#SERVER_URL/g,BASEURL);
 				response.css = results[1];
-				response.html = results[0];
+				response.html = results[0].replace(/#SERVER_URL/g,BASEURL);
 				return res.json(response);
 			
 			});

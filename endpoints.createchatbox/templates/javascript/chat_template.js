@@ -1,8 +1,6 @@
 (function(d,namespace){
 
-//var serverURL = 'http://public.foolhardysoftworks.com:9000';
-//var serverURL = 'http://chat.gokurbi.com';
-//var serverURL = 'http://kchat:8080';
+
 var serverURL = '#SERVER_URL'
 
 console.log('---in chat_template.js---');
@@ -180,7 +178,7 @@ var ChatBox = function(info){
 	function getTemplate(templateName, callback){
 		if(that.template[templateName]) callback(that.template[templateName]);
 		else{
-			$.get('http://public.foolhardysoftworks.com:9000/template', {client:kurbi.client_id, version:kurbi.version, template:templateName}, function(res){
+			$.get(serverURL+'/template', {client:kurbi.client_id, version:kurbi.version, template:templateName}, function(res){
 						that.template[templateName] = res;
 						callback(that.template[templateName]);
 					});
@@ -205,7 +203,7 @@ var ChatBox = function(info){
 
 		if(socket){
 			
-			this.box.style.height='55vh';
+			this.box.style.height='70vh';
 			this.box.style.paddingBottom='25px';
 			this.box.style.top="0px";
 			this.backdrop.style.height="100vh";
@@ -260,7 +258,7 @@ function init(local){
 
 function getPatientIcon(){
 	var iconPath = localStorage.getItem('patient_icon');
-	if(iconPath == null) iconPath = 'http://public.foolhardysoftworks.com:9000/backend/icons/PNG/a01.png';
+	if(iconPath == null) iconPath = serverURL+'/backend/icons/PNG/a01.png';
 	return iconPath;
 }
 

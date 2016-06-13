@@ -99,7 +99,7 @@ require('./endpoints.createchatbox/main.js')(router,DATASOURCE,db,BASEURL);
  * This endpoint is called by the snipped from a user's website. It 
  * returns the chat box referred to by the key in the snippet url.
  */
-require('./endpoints.loadchatbox/main.js')(router,ENV,DATASOURCE,db);
+require('./endpoints.loadchatbox/main.js')(router,ENV,DATASOURCE,db,BASEURL);
 
 /**
  * Load Chat Box Message Templates
