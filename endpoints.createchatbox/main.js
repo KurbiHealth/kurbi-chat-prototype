@@ -70,21 +70,29 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 			icons: ICONS,
 		}
 		var lessData = {};
+
 		if(req.body.color) lessData.headerColor = req.body.color;
 
+		if(req.body.avatar) var userAvatar = req.body.avatar;
+			else var userAvatar = '';
+		if(req.body.headline) var userHeadline = req.body.headline;
+			else var userHeadline = '';
 
 		var response = {};
 		var promises = [];
 		promises.push(compileHBS(hbsData,hbs));
 		promises.push(compileLESS(lessData,less));
 		
-		Promise.all(promises).then(function(results){
-			
+		Promise.all(promises).then(function(results){		
 			if(DATASOURCE == 'mongodb'){
 				// Data Layer is Mongoose
 				var chat = new Chat();
 				chat.js = js;
-				chat.html = results[0].replace(/#SERVER_URL/g,BASEURL);
+				chat.html = results[0]
+					.replace(/#SERVER_URL/g,BASEURL)
+					.replace(/#ICON/g,userAvatar)
+					.replace(/#HEADLINE/g,userHeadline)
+					;
 				chat.css = results[1];
 				
 				chat.save(function(err){
@@ -98,11 +106,24 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 					
 				});
 			}else if(DATASOURCE == 'stamplay'){
+				var chatObj = {};
+				chatObj.js = js;
+console.log(chatObj.js);
+				chatObj.js
+					.replace('/#SERVER_URL/g',BASEURL);
+console.log(chatObj.js);
+				chatObj.html = results[0];
+				chatObj.html
+					.replace(/#SERVER_URL/g,BASEURL)
+					.replace(/#ICON/g,userAvatar)
+					.replace(/#HEADLINE/g,userHeadline)
+					;
+				chatObj.css = results[1];
 				// Data Layer is Stamplay Node SDK
 				var data = {
-				    "js": js,
-				    "html": results[0],
-				    "css": results[1]
+				    "js": chatObj.js,
+				    "html": chatObj.html,
+				    "css": chatObj.css
 				}
 				db.Object('chatbox').save(data, function(error, result){
 				    if(error) 
