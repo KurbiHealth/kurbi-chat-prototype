@@ -18,7 +18,8 @@
 	padding-left:10px;
 	padding-right:10px;
 	min-width:150px;
-	background-color:#0c4dc0;
+//	background-color:#0c4dc0;
+	background-color: #229CBD;
 	text-align: center;
 	font-weight: bold;
 	cursor:pointer;
@@ -52,7 +53,7 @@ kurbi.attachClickHandler['#pickle']('ppdf', function(data, chatbox){
 this.parentNode.removeChild(this);
 "/>
 <div class='kurbi-ppdf-parent'>
-<div style="width:15%;"></div>
+
  <div class='kurbi-ppdf-yes' onclick="kurbi.click['#pickle']('ppdf', {{json responses.yes}})">{{responses.yes.text}}</div>
 
  <div class='kurbi-ppdf-no' onclick="kurbi.click['#pickle']('ppdf', {{json responses.no}})">{{responses.no.text}}</div>
