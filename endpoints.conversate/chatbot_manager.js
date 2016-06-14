@@ -10,7 +10,7 @@ module.exports = function(DATASOURCE,BASEURL, PORT){
 	}
 
 	var service = {};
-	var responses = require('../endpoints.chatbot/responses.js')('Madison Area Wellness Collective',BASEURL);
+	var responses = require('../endpoints.chatbot/responses.demo.js')('Madison Area Wellness Collective',BASEURL);
 	service.requestBot = requestBot;
 	service.connections = [];
 
