@@ -309,7 +309,7 @@ function chatFactory(local){
 			banner.style.left="0px";
 		}
 		if(!bannerVisible){
-			banner.style.left="-340px";
+			banner.style.left="-265px";
 		}
 	}
 

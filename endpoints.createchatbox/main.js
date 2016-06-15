@@ -65,21 +65,25 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 
 	function createSnippet(req,res){
 		
+		if(req.body.avatar) var userAvatar = req.body.avatar;
+			else var userAvatar = '/backend/icons/PNG/mawc.png'; // https://lh6.ggpht.com/HZFQUEzeti5NttBAuyzCM-p6BjEQCZk5fq4ryopFFYvy6qPp8zMFzVHk1IdzWNLr4X7M=w300
+		if(req.body.headline) var userHeadline = req.body.headline;
+			else var userHeadline = 'Welcome';
+
 		var hbsData = {
-			content: req.body.title,
-			icons: ICONS,
+			headline: userHeadline,
+			icon_url: userAvatar
 		}
+		
+
 		var lessData = {};
 
 		if(req.body.color) lessData.headerColor = req.body.color;
 
-		if(req.body.avatar) var userAvatar = req.body.avatar;
-			else var userAvatar = '';
-		if(req.body.headline) var userHeadline = req.body.headline;
-			else var userHeadline = '';
-
 		var response = {};
 		var promises = [];
+
+
 		promises.push(compileHBS(hbsData,hbs));
 		promises.push(compileLESS(lessData,less));
 		
@@ -87,12 +91,10 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 			if(DATASOURCE == 'mongodb'){
 				// Data Layer is Mongoose
 				var chat = new Chat();
-				chat.js = js;
+				chat.js = js
+					.replace(/#SERVER_URL/g,BASEURL);
 				chat.html = results[0]
-					.replace(/#SERVER_URL/g,BASEURL)
-					.replace(/#ICON/g,userAvatar)
-					.replace(/#HEADLINE/g,userHeadline)
-					;
+					.replace(/#SERVER_URL/g,BASEURL);
 				chat.css = results[1];
 				
 				chat.save(function(err){
@@ -107,17 +109,10 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 				});
 			}else if(DATASOURCE == 'stamplay'){
 				var chatObj = {};
-				chatObj.js = js;
-console.log(chatObj.js);
-				chatObj.js
-					.replace('/#SERVER_URL/g',BASEURL);
-console.log(chatObj.js);
-				chatObj.html = results[0];
-				chatObj.html
-					.replace(/#SERVER_URL/g,BASEURL)
-					.replace(/#ICON/g,userAvatar)
-					.replace(/#HEADLINE/g,userHeadline)
-					;
+				chatObj.js = js
+					.replace(/#SERVER_URL/g,BASEURL);
+				chatObj.html = results[0]
+					.replace(/#SERVER_URL/g,BASEURL);
 				chatObj.css = results[1];
 				// Data Layer is Stamplay Node SDK
 				var data = {

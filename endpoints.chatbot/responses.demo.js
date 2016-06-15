@@ -229,7 +229,7 @@ responses['back one day asked pros'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -240,7 +240,7 @@ responses['back one day self care'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -251,7 +251,7 @@ responses['back one day no treatment'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -264,7 +264,7 @@ responses['back one week asked pros'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -275,7 +275,7 @@ responses['back one week self care'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -286,7 +286,7 @@ responses['back one week no treatment'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -299,7 +299,7 @@ responses['back more then one week asked pros'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -310,7 +310,7 @@ responses['back more then one week self care'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -321,7 +321,7 @@ responses['back more then one week no treatment'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -336,7 +336,7 @@ responses['shoulder one day asked pros'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -347,7 +347,7 @@ responses['shoulder one day self care'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -358,7 +358,7 @@ responses['shoulder one day no treatment'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -371,7 +371,7 @@ responses['shoulder one week asked pros'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -382,7 +382,7 @@ responses['shoulder one week self care'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -393,7 +393,7 @@ responses['shoulder one week no treatment'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -406,7 +406,7 @@ responses['shoulder more then one week asked pros'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -417,7 +417,7 @@ responses['shoulder more then one week self care'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -428,7 +428,7 @@ responses['shoulder more then one week no treatment'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -443,7 +443,7 @@ responses['knee one day asked pros'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -454,7 +454,7 @@ responses['knee one day self care'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -465,7 +465,7 @@ responses['knee one day no treatment'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -478,7 +478,7 @@ responses['knee one week asked pros'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -489,7 +489,7 @@ responses['knee one week self care'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -500,7 +500,7 @@ responses['knee one week no treatment'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -513,7 +513,7 @@ responses['knee more then one week asked pros'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -524,7 +524,7 @@ responses['knee more then one week self care'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }
@@ -535,7 +535,7 @@ responses['knee more then one week no treatment'] = {
 						type:'response list text',
 						body:[
 							{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-							{text:"No, not quite", message:textMessage(null,"No, not quite", "ya dont got it", null)},
+							{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
 							],
 					}
 }

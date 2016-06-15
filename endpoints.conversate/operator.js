@@ -28,7 +28,7 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 	var mongoose  						= require('mongoose');
 
 	if(DATASOURCE == 'mongodb'){
-		var ChatRoom 						= require('../schemas.mongoose/chatRoomSchema');
+		var ChatRoom 					= require('../schemas.mongoose/chatRoomSchema');
 	}
 
 	var KingBot							= require('./chatbot_manager')(DATASOURCE,BASEURL,PORT);
@@ -45,7 +45,7 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 	//setInterval(clearRooms, 1000*60*5);
 
 	function clearRooms(){
-		console.log('clearing empty rooms');
+		console.log('--------clearing empty rooms');
 		var emptyRooms = checkRooms.filter((room) => {		
 			//assumes room is empty, if it finds a patient, 
 			//it means the room is not empty - so don't add it
@@ -67,7 +67,7 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 	io.on('connect', function(socket){
 
 		socket.on('register', function(info){
-			console.log('registering');
+			console.log('-------registering');
 			var room = getRoom(info.sessionID,info.url,info.key);
 			if(!rooms[room]) {
 				createRoom(room, info);	
@@ -78,7 +78,7 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 		});
 
 		socket.on('join room', function(data){
-			console.log('joining room');
+			console.log('-------joining room');
 			var room = data.room;
 			socket.source = data.source;
 
@@ -88,12 +88,12 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 		});
 
 		socket.on('start', function(){
-			console.log('starting');
+			console.log('--------starting');
 			socket.broadcast.to(socket.room).emit('start');
 		});
 
 		socket.on('message', function(data){
-			console.log('message: ',data);
+			console.log('--------message: ',data.toString().substring(0,20));
 			data.source = socket.source;
 			socket.broadcast.to(socket.room).emit('message',data);
 			logChat(data,socket.room);
@@ -106,7 +106,7 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 
 
 		function joinRoom(room){
-			console.log('in joinRoom()');
+			console.log('-------in joinRoom()');
 			socket.room = room;
 			socket.join(room);
 			getChatHistory();
@@ -114,6 +114,7 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 		}
 
 		function createRoom(room,info){
+console.log('-------running createRoom()');
 			if(DATASOURCE == 'mongodb'){
 				chatroom = new ChatRoom();
 				chatroom.url = info.url;
@@ -128,11 +129,21 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 					'key': info.key,
 					'sessionID': info.sessionID
 				}
-				db.Object("chatroom")
-				.save(chatroom, function(err,success) {
+				db.Object('chatroom').get({room: room},function(err,result){
 					if(err) return console.log(err);
-					console.log(success);
-				});
+					result = JSON.parse(result);
+					console.log('--result.data.length: ',result.data.length);
+					if(result.data.length == 0){
+						console.log('--creating new room',chatroom);
+						db.Object("chatroom")
+						.save(chatroom, function(err,success) {
+							if(err) return console.log('--ERROR unable to create a room: ',err);
+							console.log('--successfully created room: ',success);
+						});
+					}else{
+						console.log('--room already existed');
+					}
+				})
 			}
 		}
 
@@ -144,14 +155,32 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 					chatroom.save();
 				});
 			}else if(DATASOURCE == 'stamplay'){
+console.log('room id: ',room);
 				db.Object("chatroom")
 				.get({room: room},function(err,result){
 					if(err) return console.log(err);
-					db.Object("chatroom")
-					.save({messages: result},function(err,success){
-						if(err) return console.log(err);
-						else return console.log(success);
-					});
+					console.log('--chatroom result without parsing',result);
+					result = JSON.parse(result);
+					console.log('--chatroom result after parsing',result.data);
+					if(result.data.length == 0){
+						return console.log('ERROR: unable to load room to log a chat');
+					}else{
+						var roomId = result.data[0].id;
+						var messages = result.data[0].messages || [];
+						if(typeof message == 'object')
+							message = JSON.stringify(message);
+						console.log('--about to log message, it is ',typeof message,' and value is: ',message);
+						/* 
+
+						FIX THIS
+						
+						db.Object("chatroom").push(roomId,'messages',message,function(err,success){
+							if(err) 
+								return console.log('ERROR logChat(): ',err);
+							else 
+								return console.log('message logged to room '+room+' successfully');//console.log(success);
+						});*/
+					}
 				});
 			}
 		}
@@ -162,11 +191,22 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 					io.to(socket.id).emit('history', chatroom.messages);
 				});
 			}else if(DATASOURCE == 'stamplay'){
-				console.log('in (stamplay) getChatHistory()');
+				console.log('-------in getChatHistory() -- DATASOURCE==stamplay');
+				console.log('socket.room: ',socket.room);
 				db.Object("chatroom")
 				.get({room: socket.room},function(err,result){
-					console.log('got chatroom from Stamplay',result);
-					io.to(socket.id).emit('history', result.messages);
+					result = JSON.parse(result);
+					console.log('--loaded ' + result.data.length + ' chatRoom records from stamplay');
+					if(result.data[0]){
+						console.log('result.data[0] is TRUE');
+						console.log('result.data[0].messages: ',result.data[0].messages);
+						var messages = result.data[0].messages || [];
+					}else{
+						console.log('result.data[0] is FALSE');
+						var messages = [];
+					}
+					console.log('--var messages is ',typeof messages,', and value is',messages);
+					io.to(socket.id).emit('history', messages);
 				});
 			}
 		}
