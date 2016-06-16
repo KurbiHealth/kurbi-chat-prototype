@@ -8,7 +8,7 @@ responses['welcome'] = {
 					type:'welcome message', 
 					body:{
 						displayName:name, 
-						text:"Thanks for visiting our website. We know how confusing it can be to find the care you're looking for. We'd love for you to choose Mindful Motion, but we care more about finding you the right fit for you. \n\nWould you answer a couple of questions to help us point you in the right direction?",
+						text:"Thanks for visiting our website. We know how confusing it can be to find the answers and care you need. We’d love for you to choose on our members, but more than that we’d like to help you find someone that is the best fit for your needs and interests.\n\nWould you mind answering a couple of questions to help us point you in the right direction?",
 						image: BASEURL+'/backend/icons/PNG/mawc.png',
 					}
 
@@ -636,7 +636,7 @@ responses['end'] = {
 					type:'end message', 
 					body:{
 						displayName:name, 
-						text:"Well, this is the end of our chat. Thanks a lot for taking the time to get to know us. We hope that the answers we find for you are helpful. Look for a summary of our conversation in the email inbox momentarily. If we happened to get something wrong or if there is something else you'd like to add follow the instructions to revisit our chat session.\n\n We wish you all the best!",
+						text:"Well, this is the end of our chat. Thanks a lot for taking the time to get to know us. We hope that the answers we find for you are helpful. Look for a summary of our conversation in your email inbox momentarily. If we happened to get something wrong or if there is something else you'd like to add follow the instructions to revisit our chat session.\n\n We wish you all the best!",
 						image: BASEURL+'/backend/icons/PNG/mawc.png',
 					}
 
