@@ -93,7 +93,7 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 		});
 
 		socket.on('message', function(data){
-			console.log('--------message: ',data.toString().substring(0,20));
+			console.log('--------message: ',JSON.stringify(data).substring(0,20));
 			data.source = socket.source;
 			socket.broadcast.to(socket.room).emit('message',data);
 			logChat(data,socket.room);
@@ -155,13 +155,11 @@ console.log('-------running createRoom()');
 					chatroom.save();
 				});
 			}else if(DATASOURCE == 'stamplay'){
-console.log('room id: ',room);
+				console.log('room id: ',room);
 				db.Object("chatroom")
 				.get({room: room},function(err,result){
 					if(err) return console.log(err);
-					console.log('--chatroom result without parsing',result);
 					result = JSON.parse(result);
-					console.log('--chatroom result after parsing',result.data);
 					if(result.data.length == 0){
 						return console.log('ERROR: unable to load room to log a chat');
 					}else{
@@ -169,17 +167,13 @@ console.log('room id: ',room);
 						var messages = result.data[0].messages || [];
 						if(typeof message == 'object')
 							message = JSON.stringify(message);
-						console.log('--about to log message, it is ',typeof message,' and value is: ',message);
-						/* 
-
-						FIX THIS
-						
-						db.Object("chatroom").push(roomId,'messages',message,function(err,success){
+						messages.push(message);
+						db.Object("chatroom").patch(roomId,{messages: messages},function(err,success){
 							if(err) 
-								return console.log('ERROR logChat(): ',err);
+								console.log('ERROR logChat(): ',err);
 							else 
-								return console.log('message logged to room '+room+' successfully');//console.log(success);
-						});*/
+								console.log('message logged to room successfully');
+						});
 					}
 				});
 			}
@@ -192,20 +186,21 @@ console.log('room id: ',room);
 				});
 			}else if(DATASOURCE == 'stamplay'){
 				console.log('-------in getChatHistory() -- DATASOURCE==stamplay');
-				console.log('socket.room: ',socket.room);
 				db.Object("chatroom")
 				.get({room: socket.room},function(err,result){
 					result = JSON.parse(result);
 					console.log('--loaded ' + result.data.length + ' chatRoom records from stamplay');
 					if(result.data[0]){
-						console.log('result.data[0] is TRUE');
-						console.log('result.data[0].messages: ',result.data[0].messages);
 						var messages = result.data[0].messages || [];
 					}else{
-						console.log('result.data[0] is FALSE');
 						var messages = [];
 					}
-					console.log('--var messages is ',typeof messages,', and value is',messages);
+					if(messages.length > 0){
+						messages = messages.map(function(e){
+							return JSON.parse(e);
+						});
+					}
+					console.log('--var messages is ',typeof messages,', and length: ' + messages.length + ', and first message is type: '+ typeof messages[0]);
 					io.to(socket.id).emit('history', messages);
 				});
 			}
