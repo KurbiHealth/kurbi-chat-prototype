@@ -54,7 +54,7 @@ angular
 			var data = result.data;
 console.log(data);
             data.map(function(a){
-            	a.dt_create = new Date(a.dt_create).toLocaleString();
+            	a.dt_create = new Date(a.dt_create);
             	$scope.articles.push(a);
             });
             $scope.$apply();
@@ -101,8 +101,8 @@ console.log(data);
 					<div class="row" ng-repeat="article in articles | orderBy :'dt_create' : reverse">
 						<div class="col-md-12" style="background: white;border: 1px solid #ddd;border-radius:3px;margin-bottom:10px;">
 							<h4 style="margin-bottom: 20px;font-size: 18px;font-weight: normal; color: #140C87;">{{article.title}}</h4>
-							<p style="margin-bottom: 20px;">Written {{article.dt_create}}</p>
-							<span ng-bind-html="trust(article.body)">
+							<p style="margin-bottom: 20px;">Written {{article.dt_create | date: "medium"}}</p>
+							<span ng-bind-html="trust(article.body)"></span>
 						</div>
 					</div>
 				</div>
