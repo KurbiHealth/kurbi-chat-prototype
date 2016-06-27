@@ -98,7 +98,7 @@ console.log(data);
 			<div class="row">
 				<div class="col-md-6" style="padding-left:30px;">
 					<h3 style="">Articles</h3>
-					<div class="row" ng-repeat="article in articles | orderBy :'dt_create' : reverse">
+					<div class="row" ng-repeat="article in articles | orderBy :'dt_create' : true">
 						<div class="col-md-12" style="background: white;border: 1px solid #ddd;border-radius:3px;margin-bottom:10px;">
 							<h4 style="margin-bottom: 20px;font-size: 18px;font-weight: normal; color: #140C87;">{{article.title}}</h4>
 							<p style="margin-bottom: 20px;">Written {{article.dt_create | date: "medium"}}</p>
