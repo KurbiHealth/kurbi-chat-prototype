@@ -203,7 +203,7 @@ var ChatBox = function(info){
 
 		if(socket){
 			
-			this.box.style.height='70vh';
+			this.box.style.height='100vh';
 			this.box.style.paddingBottom='25px';
 			this.box.style.top="0px";
 			this.backdrop.style.height="100vh";
@@ -311,11 +311,12 @@ function chatFactory(local){
 		if(!bannerVisible){
 			banner.style.left="-265px";
 		}
+		//visible = !visible;
+		//toggleChat();
 	}
 
 
 	function toggleChat(e){
-
 		visible = !visible
 		if(visible) {
 			chatbox.show();
@@ -323,7 +324,9 @@ function chatFactory(local){
 		}
 		if(!visible) {
 			chatbox.hide();
-		}	
+		}
+		//bannerVisible = !bannerVisible;
+		//toggleBanner();
 	}
 
 	function attachToDom(c, parent, type){

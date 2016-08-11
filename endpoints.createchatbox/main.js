@@ -25,7 +25,8 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 // this endpoint is called by the backend, to generate a chatbox and a corresponding snippet
 	router
 		.route('/chatbox')
-			.post(createSnippet);
+			.post(createSnippet)
+			.put(updateChatBox);
 // -------------------------------------------
 
 	new Promise(loadTemplates).then(function(templates){
@@ -127,7 +128,74 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 						result = JSON.parse(result);
 						var customSnippet = snippet.replace('#BANANA', result.id).replace(/#SERVER_URL/g,BASEURL);
 						var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
+						return res.json({'snippet':uglySnippet.code, 'chatBoxId': result.id});	
+					}
+				})
+			}
+
+		});
+	}
+
+	function updateChatBox(req,res){
+		var chatBoxId = req.body.chatBoxId;
+		if(req.body.avatar) var userAvatar = req.body.avatar;
+			else var userAvatar = '/backend/icons/PNG/mawc.png'; // https://lh6.ggpht.com/HZFQUEzeti5NttBAuyzCM-p6BjEQCZk5fq4ryopFFYvy6qPp8zMFzVHk1IdzWNLr4X7M=w300
+		if(req.body.headline) var userHeadline = req.body.headline;
+			else var userHeadline = 'Welcome';
+
+		var hbsData = {
+			headline: userHeadline,
+			icon_url: userAvatar
+		}
+		
+		var lessData = {};
+
+		if(req.body.color) lessData.headerColor = req.body.color;
+
+		var response = {};
+		var promises = [];
+
+		promises.push(compileHBS(hbsData,hbs));
+		promises.push(compileLESS(lessData,less));
+		Promise.all(promises).then(function(results){		
+			if(DATASOURCE == 'mongodb'){
+				// Data Layer is Mongoose
+				var chat = new Chat();
+				chat.js = js
+					.replace(/#SERVER_URL/g,BASEURL);
+				chat.html = results[0]
+					.replace(/#SERVER_URL/g,BASEURL);
+				chat.css = results[1];
+				
+				chat.update(function(err){ // ?? not sure if update is correct, but I'm in a hurry
+					
+					if(err) console.log(err);
+					else{
+						var customSnippet = snippet.replace('#BANANA', chat._id).replace(/#SERVER_URL/g,BASEURL);
+						var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
 						return res.json({'snippet':uglySnippet.code});	
+					}
+					
+				});
+			}else if(DATASOURCE == 'stamplay'){
+				var chatObj = {};
+				chatObj.js = js
+					.replace(/#SERVER_URL/g,BASEURL);
+				chatObj.html = results[0]
+					.replace(/#SERVER_URL/g,BASEURL);
+				chatObj.css = results[1];
+				// Data Layer is Stamplay Node SDK
+				var data = {
+				    "js": chatObj.js,
+				    "html": chatObj.html,
+				    "css": chatObj.css
+				}
+				db.Object('chatbox').update(chatBoxId, data, function(error, result){
+				    if(error) 
+				    	console.log(error);
+					else{
+						result = JSON.parse(result);
+						return res.sendStatus(200,'Completed successfully');	
 					}
 				})
 			}

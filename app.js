@@ -77,9 +77,8 @@ app.use(cors());
  * ----------------------------------------
  */
 
-// *************
-// * IMPORTANT *  set up core route engine, which gets passed to all routes below
-// *************
+// IMPORTANT 
+// set up core route engine, which gets passed to all routes below
 var router = express.Router();
 
 // ---- ENDPOINTS ----
@@ -122,6 +121,12 @@ require('./endpoints.conversate/operator')(io,DATASOURCE,express,BASEURL,PORT,db
  */
 require('./endpoints.chatbot/main.js')(router,DATASOURCE,db,BASEURL);
 
+/**
+ *
+ */
+require('./endpoints.receivecontactform/main.js')(router,DATASOURCE,db);
+
+
 // ---- APPS ----
 
 /**
@@ -140,9 +145,12 @@ app.use('/demo', express.static('apps.demo'));
 app.use('/botbuilder', express.static('apps.botbuilder'));
 
 
-// *************
-// * IMPORTANT *  Add all routes to root URL
-// *************
+// ---- STATIC ASSETS ----
+app.use(express.static('static'));
+
+
+// IMPORTANT 
+// Add all routes to root URL
 app.use('/',router);
 
 
