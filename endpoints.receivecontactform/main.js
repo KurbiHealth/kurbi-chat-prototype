@@ -20,10 +20,10 @@ module.exports = function(router,DATASOURCE,db){
 			db.Object('contacts')
 			.save({ email : email }, function(err,doc) {
 				if(err){
-					return console.log(err);
+					res.redirect('http://gokurbi.com');
 				}else{
  					var result = JSON.parse(doc)
-					return res.json(result);
+					res.redirect('http://gokurbi.com');
 				}
 			})
 
