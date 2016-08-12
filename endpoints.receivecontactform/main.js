@@ -1,4 +1,4 @@
-module.exports = function(router,ENV,DATASOURCE,db,BASEURL){
+module.exports = function(router,DATASOURCE,db){
 
 // -------------------------------------------
 // ROUTE DEFINITION
@@ -14,7 +14,7 @@ module.exports = function(router,ENV,DATASOURCE,db,BASEURL){
 	function receiveContactForm(req,res){
 
 		var email = req.body.email;
-console.log('-------req body',req.body);
+
 		if(DATASOURCE == 'stamplay'){
 
 			db.Object('contacts')
@@ -23,7 +23,6 @@ console.log('-------req body',req.body);
 					return console.log(err);
 				}else{
  					var result = JSON.parse(doc)
-					result = result.data[0];
 					return res.json(result);
 				}
 			})
