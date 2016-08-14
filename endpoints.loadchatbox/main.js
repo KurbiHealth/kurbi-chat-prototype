@@ -1,4 +1,4 @@
-module.exports = function(router,ENV,DATASOURCE,db,BASEURL){
+module.exports = function(router,ENV,DATASOURCE,db,BASEURL,PORT){
 
 	var globFunc = require('../sharedFunctions/chatCreateFunctions')();
 
@@ -51,7 +51,8 @@ var _getUserChat = (ENV=='dev') ? debugGetUserChat : getUserChat;
 	function debugGetUserChat(req,res){
 		//this is to force it to recompile the html/css every time
 		var lTemps = new Promise(globFunc.loadTemplates);
-
+		var url = BASEURL;
+		if(PORT) url += ":" + PORT; 
 		lTemps.then(function(template){
 			var hbsData = {
 				content: 'debug mode',
@@ -68,9 +69,9 @@ var _getUserChat = (ENV=='dev') ? debugGetUserChat : getUserChat;
 
 			Promise.all(promises).then(function(results){
 
-				response.js = template.js.replace(/#SERVER_URL/g,BASEURL);
+				response.js = template.js.replace(/#SERVER_URL/g,url);
 				response.css = results[1];
-				response.html = results[0].replace(/#SERVER_URL/g,BASEURL);
+				response.html = results[0].replace(/#SERVER_URL/g,url);
 				return res.json(response);
 			
 			});

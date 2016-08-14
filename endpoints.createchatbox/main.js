@@ -3,7 +3,10 @@ var Handlebars 						= require('handlebars');
 var Less 							= require('less');
 var fs 								= require('fs');
 
-module.exports = function(router,DATASOURCE,db,BASEURL){
+module.exports = function(router,DATASOURCE,db,BASEURL, PORT){
+
+	var URL = BASEURL;
+	if(PORT) URL += ":" + PORT;
 
 	if(DATASOURCE == 'mongodb'){
 		
@@ -93,16 +96,16 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 				// Data Layer is Mongoose
 				var chat = new Chat();
 				chat.js = js
-					.replace(/#SERVER_URL/g,BASEURL);
+					.replace(/#SERVER_URL/g,URL);
 				chat.html = results[0]
-					.replace(/#SERVER_URL/g,BASEURL);
+					.replace(/#SERVER_URL/g,URL);
 				chat.css = results[1];
 				
 				chat.save(function(err){
 					
 					if(err) console.log(err);
 					else{
-						var customSnippet = snippet.replace('#BANANA', chat._id).replace(/#SERVER_URL/g,BASEURL);
+						var customSnippet = snippet.replace('#BANANA', chat._id).replace(/#SERVER_URL/g,URL);
 						var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
 						return res.json({'snippet':uglySnippet.code});	
 					}
@@ -111,9 +114,9 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 			}else if(DATASOURCE == 'stamplay'){
 				var chatObj = {};
 				chatObj.js = js
-					.replace(/#SERVER_URL/g,BASEURL);
+					.replace(/#SERVER_URL/g,URL);
 				chatObj.html = results[0]
-					.replace(/#SERVER_URL/g,BASEURL);
+					.replace(/#SERVER_URL/g,URL);
 				chatObj.css = results[1];
 				// Data Layer is Stamplay Node SDK
 				var data = {
@@ -126,7 +129,7 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 				    	console.log(error);
 					else{
 						result = JSON.parse(result);
-						var customSnippet = snippet.replace('#BANANA', result.id).replace(/#SERVER_URL/g,BASEURL);
+						var customSnippet = snippet.replace('#BANANA', result.id).replace(/#SERVER_URL/g,URL);
 						var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
 						return res.json({'snippet':uglySnippet.code, 'chatBoxId': result.id});	
 					}
@@ -162,16 +165,16 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 				// Data Layer is Mongoose
 				var chat = new Chat();
 				chat.js = js
-					.replace(/#SERVER_URL/g,BASEURL);
+					.replace(/#SERVER_URL/g,URL);
 				chat.html = results[0]
-					.replace(/#SERVER_URL/g,BASEURL);
+					.replace(/#SERVER_URL/g,URL);
 				chat.css = results[1];
 				
 				chat.update(function(err){ // ?? not sure if update is correct, but I'm in a hurry
 					
 					if(err) console.log(err);
 					else{
-						var customSnippet = snippet.replace('#BANANA', chat._id).replace(/#SERVER_URL/g,BASEURL);
+						var customSnippet = snippet.replace('#BANANA', chat._id).replace(/#SERVER_URL/g,URL);
 						var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
 						return res.json({'snippet':uglySnippet.code});	
 					}
@@ -180,9 +183,9 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 			}else if(DATASOURCE == 'stamplay'){
 				var chatObj = {};
 				chatObj.js = js
-					.replace(/#SERVER_URL/g,BASEURL);
+					.replace(/#SERVER_URL/g,URL);
 				chatObj.html = results[0]
-					.replace(/#SERVER_URL/g,BASEURL);
+					.replace(/#SERVER_URL/g,URL);
 				chatObj.css = results[1];
 				// Data Layer is Stamplay Node SDK
 				var data = {
@@ -313,7 +316,7 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 /////////////////////////////////////////////////////////////////
 /// UN-IMPORTANT SHNITZELS /// 
 //------------------------------------------------------------///
-	function populateIconList(BASEURL){
+	function populateIconList(URL){
 	//I had a shitton of icons, so I made it choose randomly from them because it was funny
 		// if(BASEURL == '' || typeof BASEURL == 'undefined')
 		// 	var BASEURL = 'http://public.foolhardysoftworks.com:9000';
@@ -321,7 +324,7 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 			var limit = items.length < 12 ? items.length : 12;
 			for(var i = 0; i < limit; i++){
 				var choice = Math.floor(Math.random()*(items.length-1));
-				ICONS.push(BASEURL + '/backend/icons/PNG/'+items[choice]);	
+				ICONS.push(URL + '/backend/icons/PNG/'+items[choice]);	
 			}
 		});
 

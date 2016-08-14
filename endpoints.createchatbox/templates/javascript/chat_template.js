@@ -302,7 +302,7 @@ function chatFactory(local){
 	 return new ChatBox(info);
 
 	function toggleBanner(e){
-		console.log('clicked');
+		console.log('toggleBanner clicked');
 		bannerVisible = !bannerVisible;
 		var banner  = d.getElementsByClassName('kurbi-chat-banner')[0];
 		if(bannerVisible){
@@ -325,8 +325,7 @@ function chatFactory(local){
 		if(!visible) {
 			chatbox.hide();
 		}
-		//bannerVisible = !bannerVisible;
-		//toggleBanner();
+		toggleBanner();
 	}
 
 	function attachToDom(c, parent, type){

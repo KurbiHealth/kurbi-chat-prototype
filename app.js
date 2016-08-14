@@ -91,14 +91,14 @@ var router = express.Router();
  * returned to the app.  The snippet is displayed to the user so the user 
  * can embed it on their site.
  */
-require('./endpoints.createchatbox/main.js')(router,DATASOURCE,db,BASEURL);
+require('./endpoints.createchatbox/main.js')(router,DATASOURCE,db,BASEURL,PORT);
 
 /**
  * Load Chat Box
  * This endpoint is called by the snipped from a user's website. It 
  * returns the chat box referred to by the key in the snippet url.
  */
-require('./endpoints.loadchatbox/main.js')(router,ENV,DATASOURCE,db,BASEURL);
+require('./endpoints.loadchatbox/main.js')(router,ENV,DATASOURCE,db,BASEURL,PORT);
 
 /**
  * Load Chat Box Message Templates
