@@ -7,7 +7,7 @@ module.exports = function(name,BASEURL){
 			type:'welcome message', 
 			body:{
 				displayName:name, 
-				text:"Thanks for visiting our website. We know how confusing it can be to find the answers and care you need. We’d love for you to choose on our members, but more than that we’d like to help you find someone that is the best fit for your needs and interests.\n\nWould you mind answering a couple of questions to help us point you in the right direction?\n<i>You are free to stop at any time, but if you choose to share private information with us, please know that you are legally sharing this with a HIPAA-compliant vendor. Click here for more information <a href=\"http://chat.gokurbi.com/demo/privacy_policy.html\" target=\"_blank\">Privacy Policy</a></i>",
+				text:"Thanks for visiting our website. We know how confusing it can be to find the answers and care you need. We’d love for you to choose on our members, but more than that we’d like to help you find someone that is the best fit for your needs and interests.\n\nWould you mind answering a couple of questions to help us point you in the right direction?\n<i>You are free to stop at any time, but if you choose to share private information with us, please know that you are legally sharing this with a HIPAA-compliant vendor. Click on 'Privacy Policy' in the footer of this page for more information.",
 				image: BASEURL+'/backend/icons/PNG/mawc.png',
 			}
 
