@@ -52,7 +52,7 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 	//setInterval(clearRooms, 1000*60*5);
 
 	function clearRooms(){
-console.log('--------clearing empty rooms');
+//console.log('--------clearing empty rooms');
 		var emptyRooms = checkRooms.filter((room) => {		
 			//assumes room is empty, if it finds a patient, 
 			//it means the room is not empty - so don't add it
@@ -77,7 +77,7 @@ console.log('--------clearing empty rooms');
 		// THIS EVENT ('register') IS EMITTED BY THE CHATBOX WHEN IT LOADS 
 		// (/endpoints.createchatbox/templates/js/chat_template.js)
 		socket.on('register', function(info){
-console.log('-------registering');
+//console.log('-------registering');
 			var room = getRoom(info.sessionID,info.url,info.key);
 			createUserRecord(room);
 			userRecords[room]['chatboxId'] = info.key;
@@ -90,7 +90,7 @@ console.log('-------registering');
 		});
 
 		socket.on('join room', function(data){
-console.log('-------joining room');
+//console.log('-------joining room');
 			var room = data.room;
 			socket.source = data.source;
 
@@ -100,22 +100,43 @@ console.log('-------joining room');
 		});
 
 		socket.on('start', function(){
-console.log('--------starting');
+//console.log('--------starting');
 			socket.broadcast.to(socket.room).emit('start');
 		});
 
 		socket.on('message', function(data){
-console.log('--------message: ',JSON.stringify(data).substring(0,20));
+//console.log('--------message: ',JSON.stringify(data).substring(0,20));
 			data.source = socket.source;
+			checkForUserData(data,socket.room);
+			if(data.message.body.text && data.message.body.text == 'RUNTIMEREPLACE'){
+console.log('in RUNTIMEREPLACE, data:',data, typeof data);
+				if(typeof data == 'string'){
+					data = JSON.parse(data);
+				}
+				data.message.body.text = runtimeReplaceMessage(data);
+console.log('data:',data);
+			}
+console.log('&&&&&&&&&&& in operator.js, sending msg, ',data);
 			socket.broadcast.to(socket.room).emit('message',data);
 			logChat(data,socket.room);
-			checkForUserData(data,socket.room);
 		});
 
 		socket.on('disconnect', function(){
-console.log('disconnecting: ' + socket.source, socket.id);
+//console.log('disconnecting: ' + socket.source, socket.id);
 			if(socket.source == 'patient') checkRooms.push(socket.room);
 		});
+
+		// TO DO: make this a switch statement that looks at qCode and 
+		// creates a custom message for that qCode 
+		// right now the message being passed in above doesn't have qCode, that 
+		// needs adding
+		function runtimeReplaceMessage(msg){
+			var temp = '';
+			var userTemp = userRecords[socket.room]['customData'];
+			temp = 'So here is what we have so far. Your problem is "' + userTemp['get duration'] + '", it has been going on for "' + userTemp['get treatment'] + '", and you have treated it with "' + userTemp['user summary'] + '". Is that right?';
+console.log('temp runtimereplace: ',temp);
+			return temp;
+		}
 
 		function createUserRecord(roomId){
 			if(!(roomId in userRecords)){
@@ -213,7 +234,7 @@ console.log('disconnecting: ' + socket.source, socket.id);
 
 
 		function joinRoom(room){
-console.log('-------in joinRoom()');
+//console.log('-------in joinRoom()');
 			socket.room = room;
 			socket.join(room);
 			getChatHistory();
@@ -221,7 +242,7 @@ console.log('-------in joinRoom()');
 		}
 
 		function createRoom(room,info){
-console.log('-------running createRoom()');
+//console.log('-------running createRoom()');
 			if(DATASOURCE == 'mongodb'){
 				chatroom = new ChatRoom();
 				chatroom.url = info.url;
@@ -240,9 +261,9 @@ console.log('-------running createRoom()');
 				db.Object('chatroom').get({room: room},function(err,result){
 					if(err) return console.log(err);
 					result = JSON.parse(result);
-console.log('--result.data.length: ',result.data.length);
+//console.log('--result.data.length: ',result.data.length);
 					if(result.data.length == 0){
-console.log('--creating new room',chatroom);
+//console.log('--creating new room',chatroom);
 						db.Object("chatroom")
 						.save(chatroom, function(err,success) {
 							if(err) return console.log('--ERROR unable to create a room: ',err);
@@ -250,7 +271,7 @@ console.log('--creating new room',chatroom);
 							userRecords[room]['chatRoomId'] = success.id;
 						});
 					}else{
-console.log('--room already existed: result',result);
+//console.log('--room already existed: result',result);
 						userRecords[room]['chatRoomId'] = result.data.id;
 					}
 				});
@@ -265,7 +286,7 @@ console.log('--room already existed: result',result);
 					chatroom.save();
 				});
 			}else if(DATASOURCE == 'stamplay'){
-console.log('room id: ',room);
+//console.log('room id: ',room);
 				db.Object("chatroom")
 				.get({room: room},function(err,result){
 					if(err) return console.log(err);
@@ -295,11 +316,11 @@ console.log('room id: ',room);
 					io.to(socket.id).emit('history', chatroom.messages);
 				});
 			}else if(DATASOURCE == 'stamplay'){
-console.log('-------in getChatHistory() -- DATASOURCE==stamplay');
+//console.log('-------in getChatHistory() -- DATASOURCE==stamplay');
 				db.Object("chatroom")
 				.get({room: socket.room},function(err,result){
 					result = JSON.parse(result);
-console.log('--loaded ' + result.data.length + ' chatRoom records from stamplay');
+//console.log('--loaded ' + result.data.length + ' chatRoom records from stamplay');
 					if(result.data[0]){
 						var messages = result.data[0].messages || [];
 					}else{
@@ -310,7 +331,7 @@ console.log('--loaded ' + result.data.length + ' chatRoom records from stamplay'
 							return JSON.parse(e);
 						});
 					}
-console.log('--var messages is ',typeof messages,', and length: ' + messages.length + ', and first message is type: '+ typeof messages[0]);
+//console.log('--var messages is ',typeof messages,', and length: ' + messages.length + ', and first message is type: '+ typeof messages[0]);
 					io.to(socket.id).emit('history', messages);
 				});
 			}

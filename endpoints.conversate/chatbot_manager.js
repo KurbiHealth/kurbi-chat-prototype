@@ -10,7 +10,7 @@ module.exports = function(DATASOURCE,BASEURL, PORT){
 	}
 
 	var service = {};
-	var responses = require('../endpoints.chatbot/responses.demo.js')('Madison Area Wellness Collective',BASEURL);
+	var responses = require('../endpoints.chatbot/responses2.demo.js')('Madison Area Wellness Collective',BASEURL);
 	service.requestBot = requestBot;
 	service.connections = [];
 
@@ -37,25 +37,26 @@ module.exports = function(DATASOURCE,BASEURL, PORT){
 			//connection.socket.emit('message', responses['welcome']);	
 			
 			connection.socket.on('history', (data) => {
-				console.log('\n--in chatbot_manager.js, requestBot(), var history: ',data);
+//console.log('\n--in chatbot_manager.js, requestBot(), var history: ',data);
 				if(!data || data.length == 0) connection.socket.emit('message',responses['welcome']);
 			});
 
 			connection.socket.on('start', () => { connection.socket.emit('message', responses['avatar']) });
 			
 			connection.socket.on('message', function(data){
-				console.log(data);
+//console.log(data);
 				reply(data.message);	
 			});
 
 			function reply(msg){
 				var waitTime = Math.floor(Math.random()*2500+1000);
 				setTimeout(function(){
-					console.log('replying to,', msg);
-					if(responses[msg.qCode]) {
-					console.log('chosen response:', responses[msg.qCode]);
-					connection.socket.emit('message',responses[msg.qCode]);
-					reply(responses[msg.qCode].message);
+//console.log('replying to,', msg);
+					if(msg && responses[msg.qCode]) {
+//console.log('chosen response:', responses[msg.qCode]);
+						//if(msg.qCode)
+						connection.socket.emit('message',responses[msg.qCode]);
+						reply(responses[msg.qCode].message);
 					}
 
 				}, waitTime);
