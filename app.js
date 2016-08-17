@@ -10,15 +10,12 @@
  * 		BASEURL 	= http://kchat:8080|http://chat.gokurbi.com|http://public.foolhardysoftworks.com:9000
  * 		ENV 		= prod|dev|local
  * 
- * @TODO figure out how to pass BASEURL to the apps (static routes); the express.
- * static() middleware does not use next(), so there is now way to intercept the 
- * static file prior to sending to user
  * LOCAL (MATT'S): PORT=8080 DATASOURCE=stamplay BASEURL=http://kchat:8080 ENV=local node app.js
  * PROD: PORT=3000 DATASOURCE=stamplay BASEURL=http://chat.gokurbi.com ENV=prod forever app.js
  */
 
 var ENV 		= process.env.ENV 			|| 'prod';
-var PORT 		= process.env.PORT 			|| 8080;
+var PORT 		= process.env.PORT 			|| 3000;
 var BASEURL		= process.env.BASEURL		|| 'http://chat.gokurbi.com';
 var DATASOURCE	= process.env.DATASOURCE 	|| 'stamplay';
 
