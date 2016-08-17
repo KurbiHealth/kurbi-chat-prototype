@@ -88,7 +88,7 @@ var router = express.Router();
  * returned to the app.  The snippet is displayed to the user so the user 
  * can embed it on their site.
  */
-require('./endpoints.createchatbox/main.js')(router,DATASOURCE,db,BASEURL,PORT);
+require('./endpoints.createchatbox/main.js')(router,DATASOURCE,db,BASEURL,PORT,ENV);
 
 /**
  * Load Chat Box

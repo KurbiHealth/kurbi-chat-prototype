@@ -3,10 +3,10 @@ var Handlebars 						= require('handlebars');
 var Less 							= require('less');
 var fs 								= require('fs');
 
-module.exports = function(router,DATASOURCE,db,BASEURL, PORT){
+module.exports = function(router,DATASOURCE,db,BASEURL,PORT,ENV){
 
 	var URL = BASEURL;
-	if(PORT) URL += ":" + PORT;
+	if(PORT && ENV != 'prod') URL += ":" + PORT;
 
 	if(DATASOURCE == 'mongodb'){
 		
