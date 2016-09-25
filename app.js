@@ -48,6 +48,7 @@ if(DATASOURCE == 'mongodb'){
 	  console.log('Mongo connection ok!');
 	});
 }
+
 if(DATASOURCE == 'stamplay'){
 	var Stamplay = require('stamplay');
 	var db = new Stamplay('kurbi', '7d99dc081cf607a09b09590cc2869bc3c39b1c3b176894fd0cca237e677213d0');
@@ -119,9 +120,16 @@ require('./endpoints.conversate/operator')(io,DATASOURCE,express,BASEURL,PORT,db
 require('./endpoints.chatbot/main.js')(router,DATASOURCE,db,BASEURL);
 
 /**
- *
+ * Contact Form
+ * save the contact form hosted on our Webflow site (www.gokurbi.com)
  */
 require('./endpoints.receivecontactform/main.js')(router,DATASOURCE,db);
+
+/**
+ * Logging
+ * save logs to stamplay
+ */
+require('./endpoints.log/main.js')(router,DATASOURCE,db);
 
 
 // ---- APPS ----

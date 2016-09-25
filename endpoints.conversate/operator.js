@@ -185,7 +185,7 @@ console.log('temp runtimereplace: ',temp);
 						db.User.get({email: userRecords[roomId]['email']},function(err,result){
 							if(err){return err;}
 							result = JSON.parse(result);
-							if(result.data){
+							if(result.data && result.data.length > 0){
 								var data = result.data[0];
 								// insert result.id into userRecords
 								userRecords[roomId]['stamplayId'] = data.id;
