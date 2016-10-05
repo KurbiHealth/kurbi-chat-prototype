@@ -57,6 +57,8 @@ var _getUserChat = (ENV=='dev') ? debugGetUserChat : getUserChat;
 			var hbsData = {
 				content: 'debug mode',
 				icons: ICONS,
+				server_url: url,
+				server_close_button: url + '/img/icons/button_close.png'
 			}
 			var lessData = {
 				

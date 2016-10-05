@@ -103,7 +103,7 @@ require('./endpoints.loadchatbox/main.js')(router,ENV,DATASOURCE,db,BASEURL,PORT
  * This endpoint is used by the chat box to load templates that are needed by 
  * the chatbot messages.
  */
-require('./endpoints.loadmessagetemplate/main.js')(router,DATASOURCE,db,BASEURL);
+require('./endpoints.loadmessagetemplate/main.js')(router,DATASOURCE,db,BASEURL,PORT);
 
 /**
  * Chat Box Conversations (SocketIO)

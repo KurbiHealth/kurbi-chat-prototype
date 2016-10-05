@@ -1,4 +1,4 @@
-module.exports = function(DATASOURCE,BASEURL, PORT){
+module.exports = function(DATASOURCE,BASEURL,PORT){
 
 	var KEEP_ALIVE_TIME = 1000*60*5;
 	console.log(BASEURL);
@@ -10,7 +10,11 @@ module.exports = function(DATASOURCE,BASEURL, PORT){
 	}
 
 	var service = {};
-	var responses = require('../endpoints.chatbot/responses2.demo.js')('Madison Area Wellness Collective',BASEURL);
+
+	var URL = BASEURL;
+	if(PORT) URL += ":" + PORT;
+
+	var responses = require('../endpoints.chatbot/responses2.demo.js')('Madison Area Wellness Collective',URL);
 	service.requestBot = requestBot;
 	service.connections = [];
 

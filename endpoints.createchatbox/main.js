@@ -69,28 +69,37 @@ module.exports = function(router,DATASOURCE,db,BASEURL,PORT,ENV){
 
 	function createSnippet(req,res){
 		
-		if(req.body.avatar) var userAvatar = req.body.avatar;
-			else var userAvatar = '/backend/icons/PNG/mawc.png'; // https://lh6.ggpht.com/HZFQUEzeti5NttBAuyzCM-p6BjEQCZk5fq4ryopFFYvy6qPp8zMFzVHk1IdzWNLr4X7M=w300
-		if(req.body.headline) var userHeadline = req.body.headline;
-			else var userHeadline = 'Welcome';
+		if(req.body.avatar & req.body.avatar != '') 
+			var userAvatar = req.body.avatar;
+		else 
+			var userAvatar = URL + '/backend/icons/PNG/mawc.png'; // https://lh6.ggpht.com/HZFQUEzeti5NttBAuyzCM-p6BjEQCZk5fq4ryopFFYvy6qPp8zMFzVHk1IdzWNLr4X7M=w300
+
+console.log('userAvatar',userAvatar);		
+
+		if(req.body.headline && req.body.headline != '') 
+			var userHeadline = req.body.headline;
+		else 
+			var userHeadline = 'Welcome';
 
 		var hbsData = {
 			headline: userHeadline,
-			icon_url: userAvatar
+			icon_url: userAvatar,
+			icon_urlb: 'http://kchat:8080/backend/icons/PNG/mawc.png',
+			server_url: URL,
+			server_close_button: URL + '/img/icons/button_close.png'
 		}
-		
-
+console.log('hbsData',hbsData);
 		var lessData = {};
 
-		if(req.body.color) lessData.headerColor = req.body.color;
+		if(req.body.color && req.body.color != '') 
+			lessData.headerColor = req.body.color;
 
 		var response = {};
 		var promises = [];
 
-
 		promises.push(compileHBS(hbsData,hbs));
 		promises.push(compileLESS(lessData,less));
-		
+
 		Promise.all(promises).then(function(results){		
 			if(DATASOURCE == 'mongodb'){
 				// Data Layer is Mongoose
@@ -141,10 +150,15 @@ module.exports = function(router,DATASOURCE,db,BASEURL,PORT,ENV){
 
 	function updateChatBox(req,res){
 		var chatBoxId = req.body.chatBoxId;
-		if(req.body.avatar) var userAvatar = req.body.avatar;
-			else var userAvatar = '/backend/icons/PNG/mawc.png'; // https://lh6.ggpht.com/HZFQUEzeti5NttBAuyzCM-p6BjEQCZk5fq4ryopFFYvy6qPp8zMFzVHk1IdzWNLr4X7M=w300
-		if(req.body.headline) var userHeadline = req.body.headline;
-			else var userHeadline = 'Welcome';
+		if(req.body.avatar && req.body.avatar != '') 
+			var userAvatar = req.body.avatar;
+		else 
+			var userAvatar = URL + '/backend/icons/PNG/mawc.png'; // https://lh6.ggpht.com/HZFQUEzeti5NttBAuyzCM-p6BjEQCZk5fq4ryopFFYvy6qPp8zMFzVHk1IdzWNLr4X7M=w300
+		
+		if(req.body.headline && req.body.headline != '') 
+			var userHeadline = req.body.headline;
+		else 
+			var userHeadline = 'Welcome';
 
 		var hbsData = {
 			headline: userHeadline,
@@ -236,6 +250,7 @@ module.exports = function(router,DATASOURCE,db,BASEURL,PORT,ENV){
 
 	function compileHBS(data,hbs){
 		return new Promise(function(resolve,reject){
+console.log('data in compile',data);
 			var html = Handlebars.compile(hbs)(data);
 			resolve(html);
 		});

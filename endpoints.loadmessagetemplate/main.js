@@ -1,6 +1,10 @@
-module.exports = function(router,DATASOURCE,db,BASEURL){
+module.exports = function(router,DATASOURCE,db,BASEURL,PORT){
 
 	var globFunc = require('../sharedFunctions/chatCreateFunctions')();
+
+	var URL = BASEURL;
+	if(PORT)
+		URL = URL + ':' + PORT;
 
 // -------------------------------------------
 // ROUTE DEFINITION
@@ -72,7 +76,7 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 
 		new Promise(globFunc.loadHBS(filename))
 		.then(function(template){
-			res.send(template.replace(/#SMALL_IMAGE_URL/g, BASEURL+'/backend/icons/PNG/small-image.png'));
+			res.send(template.replace(/#SMALL_IMAGE_URL/g, URL+'/backend/icons/PNG/small-image.png'));
 		});
 
 	}
