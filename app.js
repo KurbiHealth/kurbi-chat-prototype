@@ -15,7 +15,8 @@
  */
 
 var ENV 		= process.env.ENV 			|| 'prod';
-var PORT 		= process.env.PORT 			|| 3000;
+var PORT 		= process.env.PORT 			|| '';
+var LISTENPORT	= process.env.LISTENPORT	|| 3000;
 var BASEURL		= process.env.BASEURL		|| 'http://chat.gokurbi.com';
 var DATASOURCE	= process.env.DATASOURCE 	|| 'stamplay';
 
@@ -165,8 +166,8 @@ app.use('/',router);
  * ----------------------------------------
  */
 
-ioServer.listen(PORT, function(err,data){
+ioServer.listen(LISTENPORT, function(err,data){
   if(err) console.log(err);
   console.log(new Date());
-  console.log('listening on port ' + PORT + ', using DATASOURCE ' + DATASOURCE + ', on ENV ' + ENV + ', using BASEURL: ' + BASEURL);
+  console.log('listening on port ' + LISTENPORT + ', using DATASOURCE ' + DATASOURCE + ', on ENV ' + ENV + ', using BASEURL: ' + BASEURL);
 });
