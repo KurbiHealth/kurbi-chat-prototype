@@ -30,7 +30,7 @@ var DATASOURCE	= process.env.DATASOURCE 	|| 'stamplay';
 var express 						= require('express');
 var app								= express();
 var ioServer 						= require('http').Server(app)
-var io 								= require('socket.io')(ioServer,{origins: '*:*'});
+var io 								= require('socket.io')(ioServer);
 
 
 /**
