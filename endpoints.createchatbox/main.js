@@ -72,7 +72,7 @@ module.exports = function(router,DATASOURCE,db,BASEURL,PORT,ENV){
 		if(req.body.avatar & req.body.avatar != '') 
 			var userAvatar = req.body.avatar;
 		else 
-			var userAvatar = URL + '/backend/icons/PNG/mawc.png'; // https://lh6.ggpht.com/HZFQUEzeti5NttBAuyzCM-p6BjEQCZk5fq4ryopFFYvy6qPp8zMFzVHk1IdzWNLr4X7M=w300
+			var userAvatar = URL + 'http://chat.gokurbi.com/backend/icons/PNG/mawc.png'; // https://lh6.ggpht.com/HZFQUEzeti5NttBAuyzCM-p6BjEQCZk5fq4ryopFFYvy6qPp8zMFzVHk1IdzWNLr4X7M=w300
 
 console.log('userAvatar',userAvatar);		
 
@@ -84,7 +84,7 @@ console.log('userAvatar',userAvatar);
 		var hbsData = {
 			headline: userHeadline,
 			icon_url: userAvatar,
-			icon_urlb: '/backend/icons/PNG/mawc.png',
+			icon_urlb: 'http://chat.gokurbi.com/backend/icons/PNG/mawc.png',
 			server_url: URL,
 			server_close_button: URL + '/img/icons/button_close.png'
 		}
