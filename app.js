@@ -67,7 +67,7 @@ var cors       						= require('cors');
 
 app.use(bodyParser.urlencoded({ extended: true, parameterLimit:10000, limit:'5mb'}));
 app.use(bodyParser.json({parameterLimit:10000, limit:'5mb'}));
-//app.use(cors());
+app.use(cors());
 
 
 /**
