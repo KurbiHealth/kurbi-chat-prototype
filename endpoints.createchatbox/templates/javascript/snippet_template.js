@@ -72,7 +72,7 @@ console.log('---in snippet_template.js----');
 		script.type = 'text/javascript';
 		//socketCDNUrl = 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.6/socket.io.js';
 		script.src = serverURL + "/socket.io/socket.io.js";
-		script.src = socketCDNUrl;
+		//script.src = socketCDNUrl;
 		script.async = true;
 		script.onload = function(){
 			sbar = 1;
