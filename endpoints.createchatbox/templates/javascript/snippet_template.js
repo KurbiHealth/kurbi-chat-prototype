@@ -70,8 +70,8 @@ console.log('---in snippet_template.js----');
 	function loadSocket(){
 		var script = d.createElement('script');
 		script.type = 'text/javascript';
-		socketCDNUrl = 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.6/socket.io.js';
-		//script.src = serverURL + "/socket.io/socket.io.js";
+		//socketCDNUrl = 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.6/socket.io.js';
+		script.src = serverURL + "/socket.io/socket.io.js";
 		script.src = socketCDNUrl;
 		script.async = true;
 		script.onload = function(){
