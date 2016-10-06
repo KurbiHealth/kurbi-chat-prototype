@@ -218,7 +218,7 @@ var ChatBox = function(info){
 
 	function setupSocket(){
 		if(!socket){
-			socket = io('http://kchat:8080');
+			socket = io('http://chat.gokurbi.com');
 			socket.emit('register', that.info);
 			socket.on('history', addHistory);
 			socket.on('message', addMessage);

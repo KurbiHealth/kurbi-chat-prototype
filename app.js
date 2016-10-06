@@ -11,7 +11,7 @@
  * 		ENV 		= prod|dev|local
  * 
  * LOCAL (MATT'S): PORT=8080 DATASOURCE=stamplay BASEURL=http://kchat:8080 ENV=local node app.js
- * PROD: PORT=3000 DATASOURCE=stamplay BASEURL=http://chat.gokurbi.com ENV=prod forever app.js
+ * PROD: LISTENPORT=3000 DATASOURCE=stamplay BASEURL=http://chat.gokurbi.com ENV=prod forever app.js
  */
 
 var ENV 		= process.env.ENV 			|| 'prod';

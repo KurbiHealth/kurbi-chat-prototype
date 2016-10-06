@@ -84,7 +84,7 @@ console.log('userAvatar',userAvatar);
 		var hbsData = {
 			headline: userHeadline,
 			icon_url: userAvatar,
-			icon_urlb: 'http://kchat:8080/backend/icons/PNG/mawc.png',
+			icon_urlb: '/backend/icons/PNG/mawc.png',
 			server_url: URL,
 			server_close_button: URL + '/img/icons/button_close.png'
 		}
