@@ -25,8 +25,8 @@ console.log('---in snippet_template.js----');
 	var sbar = 0;
 	var kbar = 0;
 	var obj = null;
-	loadHandlebars();
-	loadSocket();
+	// loadHandlebars();
+	// loadSocket();
 
     var kurbiApiKey = "#BANANA";
 	var request = new XMLHttpRequest();
@@ -55,7 +55,6 @@ console.log('---in snippet_template.js----');
 	request.send();
 
 	function loadHandlebars(){
-
 		var script = d.createElement('script');
 		script.type = 'text/javascript';
 		script.src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js";
@@ -71,9 +70,9 @@ console.log('---in snippet_template.js----');
 	function loadSocket(){
 		var script = d.createElement('script');
 		script.type = 'text/javascript';
-		socketCDNUrl = 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.6/socket.io.js';
-		//script.src = serverURL + "/socket.io/socket.io.js";
-		script.src = socketCDNUrl;
+		//socketCDNUrl = 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.6/socket.io.js';
+		script.src = serverURL + "/socket.io/socket.io.js";
+		//script.src = socketCDNUrl;
 		script.async = true;
 		script.onload = function(){
 			sbar = 1;

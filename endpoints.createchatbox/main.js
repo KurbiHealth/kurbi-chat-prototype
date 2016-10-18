@@ -88,23 +88,27 @@ function getStyles(req,res){
 
 function createStyle(req,res){
 
-		if(req.body.avatar) var userAvatar = req.body.avatar;
+		if(req.body.avatar && req.body.avatar != '') var userAvatar = req.body.avatar;
 			else var userAvatar = '/backend/icons/PNG/mawc.png'; // https://lh6.ggpht.com/HZFQUEzeti5NttBAuyzCM-p6BjEQCZk5fq4ryopFFYvy6qPp8zMFzVHk1IdzWNLr4X7M=w300
-		if(req.body.headline) var userHeadline = req.body.headline;
+		if(req.body.headline && req.body.headline != '') var userHeadline = req.body.headline;
 			else var userHeadline = 'Welcome';
 
 		var hbsData = {
 			headline: userHeadline,
-			icon_url: userAvatar
+			icon_url: userAvatar,
+			icon_urlb: 'http://chat.gokurbi.com/backend/icons/PNG/mawc.png',
+			server_url: URL,
+			server_close_button: URL + '/img/icons/button_close.png'
 		}
-		
-
+console.log('hbsData',hbsData);
 		var lessData = {};
 
-		if(req.body.color) lessData.headerColor = req.body.color;
+		if(req.body.color && req.body.color != '') 
+			lessData.headerColor = req.body.color;
 
 		var response = {};
 		var promises = [];
+
 		var configuration = { 
 							hbsData:hbsData,
 							lessData:lessData,
@@ -128,6 +132,7 @@ function updateStyle(req,res){
 	return res.json({okay:"okay"});
 }
 
+
 function getBots(req,res){
 	
 	db.getChatBots({owner:req.user._id}).then((docs) => {
@@ -147,6 +152,7 @@ function getChatboxes(req,res){
 		var chosenStyle = doc.getStyle();
 		db.getChatStyle({_id:chosenStyle}).then((style) => {return res.json(style)});
 	});
+
 
 }
 
@@ -299,6 +305,7 @@ function updateChatbox(req,res){
 
 	function compileHBS(data,hbs){
 		return new Promise(function(resolve,reject){
+console.log('data in compile',data);
 			var html = Handlebars.compile(hbs)(data);
 			resolve(html);
 		});

@@ -163,7 +163,6 @@ var ChatBox = function(info){
 	}
 
 	function setup(){
-		
 		Handlebars.registerHelper('json', function(context){
 			return JSON.stringify(context);
 		});
@@ -220,14 +219,12 @@ var ChatBox = function(info){
 
 	function setupSocket(){
 		if(!socket){
-			socket = io();
+			socket = io(serverURL);
 			socket.emit('register', that.info);
 			socket.on('history', addHistory);
 			socket.on('message', addMessage);
-			}
+		}
 	}
-
-
 
 }
 
@@ -239,7 +236,8 @@ namespace.kurbi.params = params;     // callback that can receive variables from
 kurbi.version = 1.0;
 kurbi.client_id = 'web';
 kurbi.getPatientIcon = getPatientIcon;
-loadJQuery(this, init);
+// loadJQuery(this, init);
+var that = this;
 var info = null;
 
 function params(apikey){
@@ -249,6 +247,8 @@ function params(apikey){
 			 url: window.location.href,
 			 icon: null,
 			}
+console.log('info',info);
+	loadJQuery(that, init);
 }
 
 function init(local){
@@ -380,10 +380,10 @@ function makeKey(){
 
 
 function loadJQuery(local, callback){
-	if(window.jQuery) 
-		return callback();
-
-	else {
+	if(window.jQuery){
+		local.$ = jQuery.noConflict();
+		return callback(local);
+	}else{
 	    var s = document.createElement('script'); 
 	    s.type = 'text/javascript';
 	    s.src = "http://code.jquery.com/jquery-2.2.3.min.js";

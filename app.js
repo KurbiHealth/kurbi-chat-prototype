@@ -11,11 +11,12 @@
  * 		ENV 		= prod|dev|local
  * 
  * LOCAL (MATT'S): PORT=8080 DATASOURCE=stamplay BASEURL=http://kchat:8080 ENV=local node app.js
- * PROD: PORT=3000 DATASOURCE=stamplay BASEURL=http://chat.gokurbi.com ENV=prod forever app.js
+ * PROD: LISTENPORT=3000 DATASOURCE=stamplay BASEURL=http://chat.gokurbi.com ENV=prod forever app.js
  */
 
 var ENV 		= process.env.ENV 			|| 'prod';
-var PORT 		= process.env.PORT 			|| 3000;
+var PORT 		= process.env.PORT 			|| '';
+var LISTENPORT	= process.env.LISTENPORT	|| 3000;
 var BASEURL		= process.env.BASEURL		|| 'http://chat.gokurbi.com';
 var DATASOURCE	= process.env.DATASOURCE 	|| 'stamplay';
 
@@ -94,7 +95,9 @@ require('./endpoints.loadchatbox/main.js')(router,ENV,db,BASEURL,PORT);
  * This endpoint is used by the chat box to load templates that are needed by 
  * the chatbot messages.
  */
+
 require('./endpoints.loadmessagetemplate/main.js')(router,db,BASEURL,PORT);
+
 
 /**
  * Chat Box Conversations (SocketIO)
@@ -111,9 +114,16 @@ require('./endpoints.conversate/operator')(io,express,BASEURL,PORT,db);
 //require('./endpoints.chatbot/main.js')(router,db,BASEURL);
 
 /**
- *
+ * Contact Form
+ * save the contact form hosted on our Webflow site (www.gokurbi.com)
  */
 require('./endpoints.receivecontactform/main.js')(DATASOURCE,router,db);
+
+/**
+ * Logging
+ * save logs to stamplay
+ */
+require('./endpoints.log/main.js')(router,DATASOURCE,db);
 
 
 // ---- APPS ----
@@ -149,11 +159,12 @@ app.use('/',router);
  * ----------------------------------------
  */
 
-ioServer.listen(PORT, function(err,data){
+ioServer.listen(LISTENPORT, function(err,data){
   if(err) console.log(err);
   console.log(new Date());
-  console.log('listening on port ' + PORT + ', using DATASOURCE ' + DATASOURCE + ', on ENV ' + ENV + ', using BASEURL: ' + BASEURL);
+  console.log('listening on port ' + LISTENPORT + ', using DATASOURCE ' + DATASOURCE + ', on ENV ' + ENV + ', using BASEURL: ' + BASEURL);
 });
 
 
 }); //end of the dataservice bracket.
+

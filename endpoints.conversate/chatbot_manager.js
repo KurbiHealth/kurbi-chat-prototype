@@ -1,12 +1,15 @@
 module.exports = function(BASEURL, PORT,db){
 	var serverURL = BASEURL;
 	if(PORT && PORT != 80) serverURL = BASEURL + ":" + PORT;
+
 	var KEEP_ALIVE_TIME = 1000*60*5;
 	
 	var io = require('socket.io-client');
 
 	var service = {};
+
 	var bots = {};
+
 
 	service.requestBot = requestBot;
 	service.connections = [];

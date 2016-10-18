@@ -1,7 +1,9 @@
 module.exports = function(router,db,BASEURL,PORT){
 	var serverURL = BASEURL;
 	if(PORT && PORT != 80) serverURL = BASEURL + ":" + PORT;
+
 	var globFunc = require('../sharedFunctions/chatCreateFunctions')();
+
 
 // -------------------------------------------
 // ROUTE DEFINITION
@@ -73,7 +75,9 @@ module.exports = function(router,db,BASEURL,PORT){
 
 		new Promise(globFunc.loadHBS(filename))
 		.then(function(template){
+
 			res.send(template.replace(/#SMALL_IMAGE_URL/g, serverURL+'/backend/icons/PNG/small-image.png'));
+
 		});
 
 	}
