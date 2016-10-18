@@ -10,6 +10,7 @@ var chatRoomSchema   = new Schema({
 	sessionID:			String,
 	room: 				{type:String, unique:true},
 	messages: 			[],
+	userVariables: 		{},
 	
 });
 

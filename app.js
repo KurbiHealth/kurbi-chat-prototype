@@ -30,43 +30,33 @@ var express 						= require('express');
 var app								= express();
 var ioServer 						= require('http').Server(app)
 var io 								= require('socket.io')(ioServer);
-
-
-/**
- * ----------------------------------------
- * DATA LAYER 
- * ----------------------------------------
- */
-
-if(DATASOURCE == 'mongodb'){
-	var mongodbUrl = 'mongodb://inferno:27017/kurbichat';
-	var db = require('mongoose');
-	db.connect(mongodbUrl);
-	var conn = db.connection;
-	conn.on('error', console.error.bind(console, 'Mongo connection Error : '));
-	conn.once('open', function(){
-	  console.log('Mongo connection ok!');
-	});
-}
-if(DATASOURCE == 'stamplay'){
-	var Stamplay = require('stamplay');
-	var db = new Stamplay('kurbi', '7d99dc081cf607a09b09590cc2869bc3c39b1c3b176894fd0cca237e677213d0');
-}
-
-
-/**
- * ----------------------------------------
- * UTILITIES (MIDDLEWARE)
- * ----------------------------------------
- */
-
 var bodyParser 						= require('body-parser');
 var cors       						= require('cors');
+io.set('origins', '*:*');
+
+require('./service.data/dataService.js')(DATASOURCE).then(function(db){
+	//we are now connected to our data service, so it's safe to make data calls
+
+
 
 app.use(bodyParser.urlencoded({ extended: true, parameterLimit:10000, limit:'5mb'}));
 app.use(bodyParser.json({parameterLimit:10000, limit:'5mb'}));
 app.use(cors());
 
+
+var devUser = function(req,res,next){
+    var admin = {};
+	admin.email = "john@foolhardysoftworks.com";
+	admin.role = 'admin';
+	admin.enabled = true;
+	admin.chatboxes = [];
+	db.createProvider(admin).then(function(doc){
+		req.user = doc;
+		next();
+	});
+
+}
+if(ENV == 'dev') app.use(devUser)
 
 /**
  * ----------------------------------------
@@ -88,40 +78,42 @@ var router = express.Router();
  * returned to the app.  The snippet is displayed to the user so the user 
  * can embed it on their site.
  */
-require('./endpoints.createchatbox/main.js')(router,DATASOURCE,db,BASEURL,PORT,ENV);
+
+require('./endpoints.createchatbox/main.js')(router,db,BASEURL,PORT,ENV);
 
 /**
  * Load Chat Box
  * This endpoint is called by the snipped from a user's website. It 
  * returns the chat box referred to by the key in the snippet url.
  */
-require('./endpoints.loadchatbox/main.js')(router,ENV,DATASOURCE,db,BASEURL,PORT);
+
+require('./endpoints.loadchatbox/main.js')(router,ENV,db,BASEURL,PORT);
 
 /**
  * Load Chat Box Message Templates
  * This endpoint is used by the chat box to load templates that are needed by 
  * the chatbot messages.
  */
-require('./endpoints.loadmessagetemplate/main.js')(router,DATASOURCE,db,BASEURL);
+require('./endpoints.loadmessagetemplate/main.js')(router,db,BASEURL,PORT);
 
 /**
  * Chat Box Conversations (SocketIO)
  * This manages the sockets that the chat boxes use to communicate with
  * the Bot and with (potentially) other human beings.
  */
-require('./endpoints.conversate/operator')(io,DATASOURCE,express,BASEURL,PORT,db);
+require('./endpoints.conversate/operator')(io,express,BASEURL,PORT,db);
 
 /**
  * ChatBot
  * This endpoint sends messages and accepts responses from chat boxes
  * on user websites. These are sent through SocketIO.
  */
-require('./endpoints.chatbot/main.js')(router,DATASOURCE,db,BASEURL);
+//require('./endpoints.chatbot/main.js')(router,db,BASEURL);
 
 /**
  *
  */
-require('./endpoints.receivecontactform/main.js')(router,DATASOURCE,db);
+require('./endpoints.receivecontactform/main.js')(DATASOURCE,router,db);
 
 
 // ---- APPS ----
@@ -139,11 +131,11 @@ app.use('/demo', express.static('apps.demo'));
 /**
  * App to build bot conversations
  */
-app.use('/botbuilder', express.static('apps.botbuilder'));
+//app.use('/botbuilder', express.static('apps.botbuilder'));
 
 
 // ---- STATIC ASSETS ----
-app.use(express.static('static'));
+// app.use(express.static('static'));
 
 
 // IMPORTANT 
@@ -162,3 +154,6 @@ ioServer.listen(PORT, function(err,data){
   console.log(new Date());
   console.log('listening on port ' + PORT + ', using DATASOURCE ' + DATASOURCE + ', on ENV ' + ENV + ', using BASEURL: ' + BASEURL);
 });
+
+
+}); //end of the dataservice bracket.

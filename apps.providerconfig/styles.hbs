@@ -1,0 +1,26 @@
+<div>
+
+
+<form id="createStyle">
+<div style="margin-left:10%;display:relative;width:80%;height:100%;background-color:#aaaacc;padding-bottom;50px;">
+	Style Creator
+	<input name="color" placeholder="header color" type="text"></input>
+	<input name="title" placeholder="header text" type="text"></input>
+	<input type="submit" style="height:100px;"></input>
+	
+	<div>Styles</div>
+	<table style="width:100%">
+		<th>Header</th>
+		<th>Color</th>
+	{{#each styles}}
+	<tr>
+	<td style="text-align:center;">{{this.configuration.hbsData.headline}}</td>
+	<td style="text-align:center;background-color:{{this.configuration.lessData.headerColor}}"></td>
+	</tr>
+	{{/each}}
+	</table>
+</div>
+</form>
+
+
+</div>

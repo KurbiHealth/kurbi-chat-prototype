@@ -1,5 +1,6 @@
-module.exports = function(router,DATASOURCE,db,BASEURL){
-
+module.exports = function(router,db,BASEURL,PORT){
+	var serverURL = BASEURL;
+	if(PORT && PORT != 80) serverURL = BASEURL + ":" + PORT;
 	var globFunc = require('../sharedFunctions/chatCreateFunctions')();
 
 // -------------------------------------------
@@ -72,7 +73,7 @@ module.exports = function(router,DATASOURCE,db,BASEURL){
 
 		new Promise(globFunc.loadHBS(filename))
 		.then(function(template){
-			res.send(template.replace(/#SMALL_IMAGE_URL/g, BASEURL+'/backend/icons/PNG/small-image.png'));
+			res.send(template.replace(/#SMALL_IMAGE_URL/g, serverURL+'/backend/icons/PNG/small-image.png'));
 		});
 
 	}

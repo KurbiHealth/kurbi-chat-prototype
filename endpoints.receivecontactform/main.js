@@ -1,4 +1,4 @@
-module.exports = function(router,DATASOURCE,db){
+module.exports = function(DATASOURCE,router,db){
 
 // -------------------------------------------
 // ROUTE DEFINITION

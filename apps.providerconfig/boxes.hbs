@@ -1,0 +1,17 @@
+<form id="createBox">
+	<div>Create a new Chatbox</div>
+	<input type="submit" style="height:100px;"></input>
+</form>
+<div>
+	{{#each boxes}}
+	<form class="updateBox">
+		<div>snippet:</div>
+		<div><span>&ltscript&gt</span>{{this.snippet}}<span>&lt/script&gt</span></div>
+		{{#each this.pages}}
+		<input placeholder="{{this}}" readonly="readonly"></input>
+		{{/each}}
+		<input name="addPage" placeholder="Add Allowed Page" type="text"></input>
+		<input type="submit" style="height:100px"></input>
+	</form>
+	{{/each}}
+	</div>

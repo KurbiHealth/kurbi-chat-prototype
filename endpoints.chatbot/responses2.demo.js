@@ -1,4 +1,4 @@
-module.exports = function(name,BASEURL){
+module.exports = function(name,URL){
 
 	var responses = {};
 
@@ -8,7 +8,7 @@ module.exports = function(name,BASEURL){
 			body:{
 				displayName:name, 
 				text:"Thanks for visiting our website. We know how confusing it can be to find the answers and care you need. We’d love for you to choose on our members, but more than that we’d like to help you find someone that is the best fit for your needs and interests.\n\nWould you mind answering a couple of questions to help us point you in the right direction?\nIMPORTANT: This chat is anonymous until the end, but if at that point you choose to share private information with us, please know that you are legally sharing this with a HIPAA-compliant vendor. Click on 'Privacy Policy' in the footer of this page for more information.",
-				image: BASEURL+'/backend/icons/PNG/mawc.png',
+				image: URL+'/backend/icons/PNG/mawc.png',
 			}
 
 		},
@@ -61,6 +61,7 @@ module.exports = function(name,BASEURL){
 				message:{
 					type:"text message",
 					qCode:"get duration",
+					variable: "symptom",
 					body:{
 						text:"",
 					}
@@ -73,6 +74,7 @@ module.exports = function(name,BASEURL){
 		message: textMessage(name,"How long has it been bothering you?",null,null),
 		responses:{
 			type:'response list text',
+			variable: 'symptomDuration',
 			body:[
 				{text:"A day or so", message:textMessage(null,"A day or so","get treatment",null)},
 				{text:"About a week", message:textMessage(null,"About a week", "get treatment", null)},
@@ -85,6 +87,7 @@ module.exports = function(name,BASEURL){
 		message: textMessage(name,"What have you done the most for treatment?", null,null),
 		responses:{
 			type:'response list text',
+			variable: 'treatmentType',
 			body:[
 				{text:"Professional Care", message:textMessage(null,"Professional Care","user summary",null)},
 				{text:"Self-Care", message:textMessage(null,"Self-Care", "user summary", null)},
@@ -101,7 +104,7 @@ module.exports = function(name,BASEURL){
 			type:'text message', 
 			body:{
 				displayName: name, 
-				text: 'RUNTIMEREPLACE'			}
+				text: 'So here is what we have so far. Your problem is [_symptom_], it has been going on for [_symptomDuration_], and you have treated it with [_treatmentType_]. Is that right?'			}
 
 		},
 		responses:{
@@ -209,7 +212,7 @@ module.exports = function(name,BASEURL){
 			body:{
 				displayName:name, 
 				text:"Well, this is the end of our chat. Thanks a lot for taking the time to get to know us. We hope that the answers we find for you are helpful. Look for a summary of our conversation in your email inbox momentarily. If we happened to get something wrong or if there is something else you'd like to add follow the instructions to revisit our chat session.\n\n We wish you all the best!",
-				image: BASEURL+'/backend/icons/PNG/mawc.png',
+				image: URL+'/backend/icons/PNG/mawc.png',
 			}
 
 		},
@@ -248,7 +251,7 @@ module.exports = function(name,BASEURL){
 		for(var i = 1; i < 13; i++){
 			var temp = {};
 			
-			temp.url = BASEURL+"/backend/icons/PNG/icon-"+i+".png";
+			temp.url = URL+"/backend/icons/PNG/icon-"+i+".png";
 			temp.message = {};
 			temp.message.type = 'image message';
 			temp.message.qCode = qCode;

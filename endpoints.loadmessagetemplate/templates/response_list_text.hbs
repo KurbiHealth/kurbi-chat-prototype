@@ -39,7 +39,13 @@ this.parentNode.removeChild(this);
 <div class="kurbi-qwpp-prompt">Choose One:</div>
 <div class='kurbi-qwpp-parent'>
  {{#each responses}}
- <div class='kurbi-qwpp-child' onclick="kurbi.click['#pickle']('qwpp', {{json this}})">{{this.text}}</div>
+
+ <div class='kurbi-qwpp-child' onclick="(function(){
+	 var temp = {{json this}};
+	 var temp2 = {{json ../this}};
+	 temp.message.variable = temp2.variable;
+	 kurbi.click['#pickle']('qwpp', temp)
+ })()">{{this.text}}</div>
  {{/each}}
 </div>
 

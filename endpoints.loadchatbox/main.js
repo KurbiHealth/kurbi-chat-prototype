@@ -1,4 +1,4 @@
-module.exports = function(router,ENV,DATASOURCE,db,BASEURL,PORT){
+module.exports = function(router,ENV,db,BASEURL,PORT){
 
 	var globFunc = require('../sharedFunctions/chatCreateFunctions')();
 
@@ -24,27 +24,7 @@ var _getUserChat = (ENV=='dev') ? debugGetUserChat : getUserChat;
 	function getUserChat(req,res){
 
 		var id = req.query.key;
-		if(DATASOURCE == 'mongodb'){
-			var Chat = require('../schemas.mongoose/chatSchema');
-			Chat.findById(id, function(err,doc){
-				if(err) console.log(err);
-				else return res.json(doc);
-			});
-
-		}else if(DATASOURCE == 'stamplay'){
-
-			db.Object('chatbox')
-			.get({ _id : id }, function(err,doc) {
-				if(err){
-					return console.log(err);
-				}else{
- 					var result = JSON.parse(doc)
-					result = result.data[0];
-					return res.json(result);
-				}
-			})
-
-		}
+		db.getChatBox({_id:id}).then((doc) => {return res.json(doc)});
 
 	}
 

@@ -1,4 +1,4 @@
-module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
+module.exports = function(io,express,BASEURL,PORT,db){
 
 // SOCKET CHEAT SHEET
 // // sending to sender-client only
@@ -25,13 +25,7 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 //  // sending to individual socketid
 //  socket.broadcast.to(socketid).emit('message', 'for your eyes only');
 
-	var mongoose  						= require('mongoose');
-
-	if(DATASOURCE == 'mongodb'){
-		var ChatRoom 					= require('../schemas.mongoose/chatRoomSchema');
-	}
-
-	var KingBot							= require('./chatbot_manager')(DATASOURCE,BASEURL,PORT);
+	var KingBot							= require('./chatbot_manager')(BASEURL,PORT,db);
 
 	var crypto 							= require('crypto');
 
@@ -41,61 +35,62 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 
 	var rooms = {};						//list of active rooms
 	var checkRooms = [];				//list of rooms that might be empty (and need their bots removed)
-	var userRecords = {};
+	var roomVars = {};		
+	var BOT_WAIT_TIME = 15000; 			//how long a bot will wait after a client has disconnected, before leaving the room.			
+	//var userRecords = {};
 
-//we need a mechanism to disconnect the bots when all the humans have
-//left the channel.  
-//so there will be a task runner that looks through empty rooms
-//and if there are no people in them, it disconnects the bots. 
-//for now it's setInterval
-
-	//setInterval(clearRooms, 1000*60*5);
 
 	function clearRooms(){
 //console.log('--------clearing empty rooms');
+
 		var emptyRooms = checkRooms.filter((room) => {		
 			//assumes room is empty, if it finds a patient, 
 			//it means the room is not empty - so don't add it
 			//to the list of rooms that are empty and need to be cleared
 			return rooms[room].reduce((isEmpty, client) => {
 						if(!isEmpty) return false;
-						if(client.source == 'patient') return false;
+						if(client.source == 'patient' && client.connected) return false;
 						return true;
 					}, true);
 		});
 		emptyRooms.forEach((room) => {
-			rooms[room].forEach(client => client.disconnect());
+			rooms[room].forEach(client => {	if(client.connected) client.disconnect(); });
 			delete rooms[room];
-			delete userRecords[room];
+			delete roomVars[room];
+			// delete userRecords[room];
 		});
 
 		checkRooms = [];
 	}
 
 	io.on('connect', function(socket){
-
 		// THIS EVENT ('register') IS EMITTED BY THE CHATBOX WHEN IT LOADS 
 		// (/endpoints.createchatbox/templates/js/chat_template.js)
 		socket.on('register', function(info){
-//console.log('-------registering');
-			var room = getRoom(info.sessionID,info.url,info.key);
-			createUserRecord(room);
-			userRecords[room]['chatboxId'] = info.key;
-			if(!rooms[room]) {
-				createRoom(room, info);	
-				KingBot.requestBot(room,info);
-				}
-			socket.source = 'patient';
-			joinRoom(room);
+			//info.key (chatbox key)
+			//info.sessionId (chat session token, this changes when a new chat is made)
+			//info.url (url that the snippet is embedded in)
+			//info.icon (image the user chose to represent them)
+			var roomName = generateRoomName(info.sessionID,info.url,info.key);
+			
+			// createUserRecord(room);
+			// userRecords[room]['chatboxId'] = info.key;
+			loadRoom(roomName,info).then(function(room){
+
+				roomVars[roomName] = room.userVariables || {};
+				KingBot.requestBot(roomName,info);    //this should be idempotent - bot wont join if he's already in this room.
+				socket.source = 'patient';
+				joinRoom(roomName);
+
+			});
+			
+			
 		});
 
 		socket.on('join room', function(data){
 //console.log('-------joining room');
 			var room = data.room;
 			socket.source = data.source;
-
-			if(!rooms[room]) rooms[room] = [];
-			rooms[room].push(socket);
 			joinRoom(room);
 		});
 
@@ -107,239 +102,79 @@ module.exports = function(io,DATASOURCE,express,BASEURL,PORT,db){
 		socket.on('message', function(data){
 //console.log('--------message: ',JSON.stringify(data).substring(0,20));
 			data.source = socket.source;
-			checkForUserData(data,socket.room);
-			if(data.message.body.text && data.message.body.text == 'RUNTIMEREPLACE'){
-console.log('in RUNTIMEREPLACE, data:',data, typeof data);
-				if(typeof data == 'string'){
-					data = JSON.parse(data);
-				}
-				data.message.body.text = runtimeReplaceMessage(data);
-console.log('data:',data);
-			}
-console.log('&&&&&&&&&&& in operator.js, sending msg, ',data);
-			socket.broadcast.to(socket.room).emit('message',data);
-			logChat(data,socket.room);
+			//checkForUserData(data,socket.room);
+
+
+			if(data.message.variable) {	roomVars[socket.room][data.message.variable] = data.message.body.text; }
+			var currentMessage = OperatorRuntimeReplace(data,roomVars[socket.room]);
+			socket.broadcast.to(socket.room).emit('message', currentMessage);
+			logChat(currentMessage,roomVars[socket.room],socket.room);
 		});
 
 		socket.on('disconnect', function(){
-//console.log('disconnecting: ' + socket.source, socket.id);
-			if(socket.source == 'patient') checkRooms.push(socket.room);
+console.log('disconnecting: ' + socket.source, socket.id);
+			if(socket.source == 'patient') {
+				checkRooms.push(socket.room);
+				setTimeout(clearRooms,BOT_WAIT_TIME);
+
+				}
 		});
 
-		// TO DO: make this a switch statement that looks at qCode and 
-		// creates a custom message for that qCode 
-		// right now the message being passed in above doesn't have qCode, that 
-		// needs adding
-		function runtimeReplaceMessage(msg){
-			var temp = '';
-			var userTemp = userRecords[socket.room]['customData'];
-			temp = 'So here is what we have so far. Your problem is "' + userTemp['get duration'] + '", it has been going on for "' + userTemp['get treatment'] + '", and you have treated it with "' + userTemp['user summary'] + '". Is that right?';
-console.log('temp runtimereplace: ',temp);
-			return temp;
-		}
 
-		function createUserRecord(roomId){
-			if(!(roomId in userRecords)){
-				// the var roomId is used as a unique key to save the Stamplay 
-				// record id for use in checkForUserData()
-				var tempObj = {
-					stamplayId: '',
-					chatRoomId: '',
-					email: '',
-					firstName: '',
-					customData: {}
-				};
-				userRecords[roomId] = tempObj;
-			}
-		}
-
-		function checkForUserData(message,roomId){
-			var source = message.source;
-			message = message.message;
-			// switch statement, map qCodes and body.text values to the 
-			// Stamplay field names used in userRecords[roomId] object
-			if(source == 'patient'){
-				switch(message.qCode){
-					case 'scored the email':
-						// user's email
-						userRecords[roomId]['email'] = message.body.text;
-						break;
-
-					case 'end': // TODO change to a more readable qCode
-						// user's first name
-						userRecords[roomId]['firstName'] = message.body.text;
-						break;
-					default:
-						// save to customData object field in user record
-						if(message.body.text){
-							var value = message.body.text;
-							userRecords[roomId]['customData'][message.qCode] = message.body.text;
-						}
-						break;
-				} // end switch
-				if(userRecords[roomId].stamplayId == ''){
-					// Stamplay doesn't allow creating a user record without
-					// an email address, so wait until we have an email addr to 
-					// add new user record
-					if(userRecords[roomId]['email'] != ''){
-						db.User.get({email: userRecords[roomId]['email']},function(err,result){
-							if(err){return err;}
-							result = JSON.parse(result);
-							if(result.data){
-								var data = result.data[0];
-								// insert result.id into userRecords
-								userRecords[roomId]['stamplayId'] = data.id;
-								// add user record to current chatRoom record
-								db.Object('chatroom')
-									.update(userRecords[roomId]['chatRoomId'],{'visitor_user_id': data.id},function(err,result){
-										result = JSON.parse(result);
-									});
-							}else{
-								// create new user
-								var data = {
-									"email": userRecords[roomId]['email'],
-									//"password": crypto.createHash(userRecords[roomId]['email']),
-									"password": "botpassword",
-									"firstName": userRecords[roomId]['firstName'],
-									"customData": userRecords[roomId]['customData']
-								};
-								db.User
-								.save(data,function(err,result){
-									if(err){return console.log('error saving user, error:',err);}
-									result = JSON.parse(result);
-									if(result.id){
-										userRecords[roomId]['stamplayId'] = result.id;
-									}
-									// add user id to current chatroom.visitor_user_id
-									db.Object('chatroom')
-										.update(userRecords[roomId]['chatRoomId'],{visitor_user_id: result.id},function(err,result){
-											result = JSON.parse(result);
-										});
-								});
-							}
-						});
-
-					}
-				}else{
-					var data = {
-						"firstName": userRecords[roomId]['firstName'],
-						"customData": userRecords[roomId]['customData']
-					};
-					db.User.update(userRecords[roomId]['stamplayId'],data,function(err,result){
-						if(err) return console.log('err',err);
-					});
-				}
-			} // end if()
+		function OperatorRuntimeReplace(data,variables){
+			var temp = JSON.stringify(data);
+				temp = temp.replace(/\$_(.+?)_\$/g, function(whole,variable){
+					return variables[variable];
+				});
+			
+			return JSON.parse(temp);
+			
 		}
 
 
 		function joinRoom(room){
 //console.log('-------in joinRoom()');
+			if(!rooms[room]) rooms[room] = [];
+			rooms[room].push(socket);
 			socket.room = room;
 			socket.join(room);
 			getChatHistory();
 
 		}
 
-		function createRoom(room,info){
-//console.log('-------running createRoom()');
-			if(DATASOURCE == 'mongodb'){
-				chatroom = new ChatRoom();
-				chatroom.url = info.url;
-				chatroom.room = room;
-				chatroom.key = info.key;
-				chatroom.sessionID = info.sessionID;
-				chatroom.save();
-			}else if(DATASOURCE == 'stamplay'){
-				var chatroom = {
-					'url': info.url,
-					'room': room,
-					'key': info.key,
-					'sessionID': info.sessionID,
-					'parent_chatbox': info.key
-				}
-				db.Object('chatroom').get({room: room},function(err,result){
-					if(err) return console.log(err);
-					result = JSON.parse(result);
-//console.log('--result.data.length: ',result.data.length);
-					if(result.data.length == 0){
-//console.log('--creating new room',chatroom);
-						db.Object("chatroom")
-						.save(chatroom, function(err,success) {
-							if(err) return console.log('--ERROR unable to create a room: ',err);
-							success = JSON.parse(success);
-							userRecords[room]['chatRoomId'] = success.id;
-						});
-					}else{
-//console.log('--room already existed: result',result);
-						userRecords[room]['chatRoomId'] = result.data.id;
-					}
-				});
-			}
-		}
+		function loadRoom(roomId,info){
+			return new Promise(function(resolve,reject){
+				var chatroom = {};
+					chatroom.url = info.url;
+					chatroom.room = roomId;
+					chatroom.key = info.key;
+					chatroom.sessionID = info.sessionID;
+				db.setChatRoom(chatroom).then((doc)=>resolve(doc));
 
 
-		function logChat(message, room){
-			if(DATASOURCE == 'mongodb'){
-				ChatRoom.findOne({'room':room}).then(function(chatroom){
-					chatroom.messages.push(message);
-					chatroom.save();
-				});
-			}else if(DATASOURCE == 'stamplay'){
-//console.log('room id: ',room);
-				db.Object("chatroom")
-				.get({room: room},function(err,result){
-					if(err) return console.log(err);
-					result = JSON.parse(result);
-					if(result.data.length == 0){
-						return console.log('ERROR: unable to load room to log a chat');
-					}else{
-						var roomId = result.data[0].id;
-						var messages = result.data[0].messages || [];
-						if(typeof message == 'object')
-							message = JSON.stringify(message);
-						messages.push(message);
-						db.Object("chatroom").patch(roomId,{messages: messages},function(err,success){
-							if(err) 
-								console.log('ERROR logChat(): ',err);
-							else 
-								console.log('message logged to room successfully');
-						});
-					}
 				});
 			}
+
+
+		function logChat(message, userVars, room){
+			db.getChatRoom({room:room}).then(function(chatroom){
+				chatroom.messages.push(message);
+				chatroom.userVariables = userVars;
+				db.setChatRoom(chatroom);
+			});
+
 		}
 
 		function getChatHistory(){
-			if(DATASOURCE == 'mongodb'){
-				ChatRoom.findOne({'room':socket.room}).then(function(chatroom){
-					io.to(socket.id).emit('history', chatroom.messages);
-				});
-			}else if(DATASOURCE == 'stamplay'){
-//console.log('-------in getChatHistory() -- DATASOURCE==stamplay');
-				db.Object("chatroom")
-				.get({room: socket.room},function(err,result){
-					result = JSON.parse(result);
-//console.log('--loaded ' + result.data.length + ' chatRoom records from stamplay');
-					if(result.data[0]){
-						var messages = result.data[0].messages || [];
-					}else{
-						var messages = [];
-					}
-					if(messages.length > 0){
-						messages = messages.map(function(e){
-							return JSON.parse(e);
-						});
-					}
-//console.log('--var messages is ',typeof messages,', and length: ' + messages.length + ', and first message is type: '+ typeof messages[0]);
-					io.to(socket.id).emit('history', messages);
-				});
-			}
+			db.getChatRoom({room:socket.room}).then((chatroom) => { io.to(socket.id).emit('history',chatroom.messages)});
 		}
 
 	}); /// end of io.on
 
-	function getRoom(id,url,key){
+
+
+
+	function generateRoomName(id,url,key){
 		var string = id + url + key;
 		return require('crypto').createHash('md5').update(string).digest("hex");
 	}

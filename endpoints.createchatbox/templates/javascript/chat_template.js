@@ -122,9 +122,10 @@ var ChatBox = function(info){
 
 
 	function setInput(responses){
+		console.log(responses);
 		getTemplate(responses.type, function(template){
 			var compiledTemplate = Handlebars.compile(template);
-			that.footer.innerHTML = compiledTemplate({responses:responses.body}).replace(/#pickle/g, that.instanceId);
+			that.footer.innerHTML = compiledTemplate({responses:responses.body,variable:responses.variable}).replace(/#pickle/g, that.instanceId);
 			
 		});
 

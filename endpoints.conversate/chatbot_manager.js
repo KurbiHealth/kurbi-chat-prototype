@@ -1,16 +1,13 @@
-module.exports = function(DATASOURCE,BASEURL, PORT){
-
+module.exports = function(BASEURL, PORT,db){
+	var serverURL = BASEURL;
+	if(PORT && PORT != 80) serverURL = BASEURL + ":" + PORT;
 	var KEEP_ALIVE_TIME = 1000*60*5;
-	console.log(BASEURL);
 	
 	var io = require('socket.io-client');
 
-	if(DATASOURCE == 'mongodb'){
-		var Bot = require('../schemas.mongoose/chatbotSchema.js');
-	}
-
 	var service = {};
-	var responses = require('../endpoints.chatbot/responses2.demo.js')('Madison Area Wellness Collective',BASEURL);
+	var bots = {};
+
 	service.requestBot = requestBot;
 	service.connections = [];
 
@@ -20,53 +17,144 @@ module.exports = function(DATASOURCE,BASEURL, PORT){
 	// console.log('----------------------------------');
 	// console.log('---- removing bots ---------------');
 	// removeOldBots();
-	// },1000*60*5);
+	// },KEEP_ALIVE_TIME);
+
+
 
 
 	function requestBot(room,info){
-		removeOldBots();
-		var connection = {};
-		connection.socket = io.connect('http://localhost:'+PORT, {forceNew:true});
-		connection.lastMessage = new Date();
+		var domain = extractDomain(info.url);
+		var bot = null;
+		var chatData = {};
 
-		connection.socket.on('connect', function(){
-			console.log('connecting bot');
-			
-			connection.socket.emit('join room', {'room':room, 'source':'bot'});
-			
-			//connection.socket.emit('message', responses['welcome']);	
-			
-			connection.socket.on('history', (data) => {
-//console.log('\n--in chatbot_manager.js, requestBot(), var history: ',data);
-				if(!data || data.length == 0) connection.socket.emit('message',responses['welcome']);
-			});
+		chatData.roomKey = room;
+		chatData.boxKey = info.key;
 
-			connection.socket.on('start', () => { connection.socket.emit('message', responses['avatar']) });
-			
-			connection.socket.on('message', function(data){
-//console.log(data);
-				reply(data.message);	
-			});
+		loadRoom(chatData).then(loadBox).then(function(sessionData){
+			//removeOldBots();
+			if(!bots[room]) {
+					bots[room] = {};
+					bots[room].socket = io.connect('http://localhost:'+PORT, {forceNew:true});
+					bots[room].lastMessage = new Date();
+					
+				var connection = bots[room];
+				
+				var botInfo = sessionData.box.getBot(domain);
+				var bot = new getBot(connection, botInfo);
+				if(!sessionData.room.userVariables) sessionData.room.userVariables = {};
+				var userVariables = sessionData.room.userVariables;
+				console.log('loaded variables, ', userVariables);
+				connection.socket.on('history', (data) => {
+						if(!data || data.length == 0) {
+							bot.reply({qCode:'welcome'}, userVariables, 1);
+						}
+					});
+				connection.socket.on('start', () => { 
+						bot.reply({qCode:'avatar'}, userVariables, 1);
+						
+					});
 
-			function reply(msg){
-				var waitTime = Math.floor(Math.random()*2500+1000);
-				setTimeout(function(){
-//console.log('replying to,', msg);
-					if(msg && responses[msg.qCode]) {
-//console.log('chosen response:', responses[msg.qCode]);
-						//if(msg.qCode)
-						connection.socket.emit('message',responses[msg.qCode]);
-						reply(responses[msg.qCode].message);
-					}
+				connection.socket.on('message', function(data){
+						//save any variables
+						if(data.message.variable) {	userVariables[data.message.variable] = data.message.body.text; }
+						bot.reply(data.message, userVariables);	
+					});
 
-				}, waitTime);
+				connection.socket.on('connect', function(){
+					connection.socket.emit('join room', {'room':room, 'source':'bot'});
+
+				});
+
+				connection.socket.on('disconnect', () => {
+						delete bots[room];
+					});
+
+				service.connections.push(connection);
 			}
-
 
 		});
 
-		service.connections.push(connection);
-		
+
+	}
+
+	function loadRoom(data){
+		return new Promise(function(resolve,reject){
+			db.getChatRoom({room:data.roomKey}).then((doc) => {
+				data.room = doc;
+				resolve(data);
+			});
+		});
+	}
+
+	function loadBox(data){
+		return new Promise(function(resolve,reject){
+			var query = {_id:data.boxKey};
+			db.getChatBox(query).then((doc) => {
+				data.box = doc;
+				resolve(data);
+			});
+			
+			
+		});
+	}
+
+	function getBot(connection, botInfo){
+		this.reply = reply;
+
+				function reply(msg, userVariables, waitTime){
+					if(!waitTime) waitTime = Math.floor(Math.random()*2500+1000);
+					setTimeout(function(){
+						if(msg) {
+							getResponse(null,msg.qCode,botInfo,function(rawResponse){
+								var response = runtimeReplace(rawResponse,userVariables);
+								if(response) {
+									connection.socket.emit('message', response);
+									reply(response);
+								}
+							});
+							
+						}
+
+					}, waitTime);
+				}
+
+				function getResponse(prompt,qcode,bot, callback){
+
+					if(bot)
+						db.getBotDialog({owner:bot.owner,name:bot.name,qcode:qcode}).then((doc)=>{callback(doc);});
+					else 
+						callback(require('../endpoints.chatbot/noPermission.js')('Kurbi Health Services',serverURL)[qcode]);
+					
+
+				}
+
+				function runtimeReplace(data,variables){
+					var temp = JSON.stringify(data);
+						temp = temp.replace(/\[_(.+?)_\]/g, function(whole,variable){
+							return variables[variable];
+						});
+					
+					return JSON.parse(temp);
+					
+				}
+
+	}
+
+
+	function extractDomain(url) {
+	    var domain;
+	    //find & remove protocol (http, ftp, etc.) and get domain
+	    if (url.indexOf("://") > -1) {
+	        domain = url.split('/')[2];
+	    }
+	    else {
+	        domain = url.split('/')[0];
+	    }
+
+	    //find & remove port number
+	    domain = domain.split(':')[0];
+
+	    return domain;
 	}
 
 	function removeOldBots(){

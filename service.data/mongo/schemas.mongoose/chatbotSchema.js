@@ -4,12 +4,8 @@ var ObjectId 	 = Schema.Types.ObjectId;
 
 var chatbotSchema   = new Schema({
     	   	
-  	key: 				String,
-	prompt: 			String,
-	promptID: 			String,
-	message: 			{},
-	responses: 			[],
-	name: 				String,
+	owner: 			{type:ObjectId, ref:'provider'},
+	name: 			String,
 	
 	
 });

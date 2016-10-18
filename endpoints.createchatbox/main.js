@@ -3,17 +3,10 @@ var Handlebars 						= require('handlebars');
 var Less 							= require('less');
 var fs 								= require('fs');
 
-module.exports = function(router,DATASOURCE,db,BASEURL,PORT,ENV){
+module.exports = function(router,db,BASEURL,PORT,ENV){
 
 	var URL = BASEURL;
 	if(PORT && ENV != 'prod') URL += ":" + PORT;
-
-	if(DATASOURCE == 'mongodb'){
-		
-		var Chat 	= require('../schemas.mongoose/chatSchema');
-		
-
-	}
 
 	var globFunc = require('../sharedFunctions/chatCreateFunctions')();
 
@@ -28,8 +21,50 @@ module.exports = function(router,DATASOURCE,db,BASEURL,PORT,ENV){
 // this endpoint is called by the backend, to generate a chatbox and a corresponding snippet
 	router
 		.route('/chatbox')
-			.post(createSnippet)
-			.put(updateChatBox);
+			.get(getChatboxes)
+			.post(createChatbox)
+			.put(updateChatbox);
+
+	router
+		.route('/style')
+			.get(getStyles)
+			.post(createStyle)
+			.put(updateStyle);
+
+	router
+		.route('/bot')
+			.get(getBots)
+			.post(createBot);
+
+	router
+		.route('/convert')
+			.get(createBotFromFile);
+
+
+function createBotFromFile(req,res){
+	var serverURL = BASEURL;
+	if(PORT && PORT != 80) serverURL = BASEURL + ":" + PORT;
+	var responses = require('../endpoints.chatbot/responses2.demo.js')('Madison Area Wellness Collective',serverURL);
+	for(var key in responses) {
+
+		var message = responses[key];
+		message.qcode = key;
+		message.owner = "58041b251769e0406744deff";
+		message.name = "Hank";
+		message.version = "0.0.1";
+		db.createBotDialog(message);
+		
+		}
+		
+	    var bot = {};
+	    bot.owner = "58041b251769e0406744deff";
+	    bot.name = "Hank";
+	    db.createChatBot(bot);
+
+	return res.send(responses);
+}
+
+
 // -------------------------------------------
 
 	new Promise(loadTemplates).then(function(templates){
@@ -44,6 +79,97 @@ module.exports = function(router,DATASOURCE,db,BASEURL,PORT,ENV){
 	populateIconList(BASEURL);
 
 	return router;
+
+
+function getStyles(req,res){
+    db.getChatStyles({owner:req.user._id}).then((docs)=>res.json(docs));
+   
+}
+
+function createStyle(req,res){
+
+		if(req.body.avatar) var userAvatar = req.body.avatar;
+			else var userAvatar = '/backend/icons/PNG/mawc.png'; // https://lh6.ggpht.com/HZFQUEzeti5NttBAuyzCM-p6BjEQCZk5fq4ryopFFYvy6qPp8zMFzVHk1IdzWNLr4X7M=w300
+		if(req.body.headline) var userHeadline = req.body.headline;
+			else var userHeadline = 'Welcome';
+
+		var hbsData = {
+			headline: userHeadline,
+			icon_url: userAvatar
+		}
+		
+
+		var lessData = {};
+
+		if(req.body.color) lessData.headerColor = req.body.color;
+
+		var response = {};
+		var promises = [];
+		var configuration = { 
+							hbsData:hbsData,
+							lessData:lessData,
+							};
+
+		promises.push(compileHBS(hbsData,hbs));
+		promises.push(compileLESS(lessData,less));
+		
+		Promise.all(promises).then(function(results){	
+		   var style = {};
+		  	style.js = js.replace(/#SERVER_URL/g,URL);
+		   	style.html = results[0].replace(/#SERVER_URL/g,URL);
+			style.css = results[1];
+			style.owner = req.user._id;
+			style.configuration = configuration;
+		   db.setChatStyle(style).then((doc) => res.json(doc));
+		});
+}
+
+function updateStyle(req,res){
+	return res.json({okay:"okay"});
+}
+
+function getBots(req,res){
+	
+	db.getChatBots({owner:req.user._id}).then((docs) => {
+			return res.json(docs)
+		});
+}
+
+function createBot(req,res){
+	return res.json({okay:"okay"});
+}
+
+function getChatboxes(req,res){
+	var key = req.query.key;
+	
+	if(!key) db.getChatBoxes({owner:req.user._id}).then((docs) => {return res.json(docs)});
+	else db.getChatBox({_id:key}).then((doc) => {
+		var chosenStyle = doc.getStyle();
+		db.getChatStyle({_id:chosenStyle}).then((style) => {return res.json(style)});
+	});
+
+}
+
+
+function createChatbox(req,res){
+
+	var chatbox = {};
+    chatbox.owner 			= req.user._id;
+	chatbox.styles 			= [];
+	chatbox.bots 			= [];
+	chatbox.allowedPages 	= [];
+	chatbox.rule 			= "random";	
+	chatbox.snippet 		= createSnippet(chatbox._id);
+
+	db.createChatBox(chatbox)
+	
+
+	return res.json({okay:"okay"});
+}
+
+function updateChatbox(req,res){
+	return res.json({okay:"okay"});
+}
 
 
 /// General Work Flow  (createSnippet)
@@ -67,144 +193,81 @@ module.exports = function(router,DATASOURCE,db,BASEURL,PORT,ENV){
 //   and be harder to read, then returned to the backend to be displayed
 //   to the user.      
 
-	function createSnippet(req,res){
-		
-		if(req.body.avatar) var userAvatar = req.body.avatar;
-			else var userAvatar = '/backend/icons/PNG/mawc.png'; // https://lh6.ggpht.com/HZFQUEzeti5NttBAuyzCM-p6BjEQCZk5fq4ryopFFYvy6qPp8zMFzVHk1IdzWNLr4X7M=w300
-		if(req.body.headline) var userHeadline = req.body.headline;
-			else var userHeadline = 'Welcome';
+	function createSnippet(id){
+		var customSnippet = snippet.replace('#BANANA', id).replace(/#SERVER_URL/g,URL);
+		var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
+		return uglySnippet.code;	
 
-		var hbsData = {
-			headline: userHeadline,
-			icon_url: userAvatar
-		}
-		
-
-		var lessData = {};
-
-		if(req.body.color) lessData.headerColor = req.body.color;
-
-		var response = {};
-		var promises = [];
-
-
-		promises.push(compileHBS(hbsData,hbs));
-		promises.push(compileLESS(lessData,less));
-		
-		Promise.all(promises).then(function(results){		
-			if(DATASOURCE == 'mongodb'){
-				// Data Layer is Mongoose
-				var chat = new Chat();
-				chat.js = js
-					.replace(/#SERVER_URL/g,URL);
-				chat.html = results[0]
-					.replace(/#SERVER_URL/g,URL);
-				chat.css = results[1];
-				
-				chat.save(function(err){
-					
-					if(err) console.log(err);
-					else{
-						var customSnippet = snippet.replace('#BANANA', chat._id).replace(/#SERVER_URL/g,URL);
-						var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
-						return res.json({'snippet':uglySnippet.code});	
-					}
-					
-				});
-			}else if(DATASOURCE == 'stamplay'){
-				var chatObj = {};
-				chatObj.js = js
-					.replace(/#SERVER_URL/g,URL);
-				chatObj.html = results[0]
-					.replace(/#SERVER_URL/g,URL);
-				chatObj.css = results[1];
-				// Data Layer is Stamplay Node SDK
-				var data = {
-				    "js": chatObj.js,
-				    "html": chatObj.html,
-				    "css": chatObj.css
-				}
-				db.Object('chatbox').save(data, function(error, result){
-				    if(error) 
-				    	console.log(error);
-					else{
-						result = JSON.parse(result);
-						var customSnippet = snippet.replace('#BANANA', result.id).replace(/#SERVER_URL/g,URL);
-						var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
-						return res.json({'snippet':uglySnippet.code, 'chatBoxId': result.id});	
-					}
-				})
-			}
-
-		});
 	}
 
-	function updateChatBox(req,res){
-		var chatBoxId = req.body.chatBoxId;
-		if(req.body.avatar) var userAvatar = req.body.avatar;
-			else var userAvatar = '/backend/icons/PNG/mawc.png'; // https://lh6.ggpht.com/HZFQUEzeti5NttBAuyzCM-p6BjEQCZk5fq4ryopFFYvy6qPp8zMFzVHk1IdzWNLr4X7M=w300
-		if(req.body.headline) var userHeadline = req.body.headline;
-			else var userHeadline = 'Welcome';
 
-		var hbsData = {
-			headline: userHeadline,
-			icon_url: userAvatar
-		}
+
+	// function updateChatbox(req,res){
+	// 	var chatBoxId = req.body.chatBoxId;
+	// 	if(req.body.avatar) var userAvatar = req.body.avatar;
+	// 		else var userAvatar = '/backend/icons/PNG/mawc.png'; // https://lh6.ggpht.com/HZFQUEzeti5NttBAuyzCM-p6BjEQCZk5fq4ryopFFYvy6qPp8zMFzVHk1IdzWNLr4X7M=w300
+	// 	if(req.body.headline) var userHeadline = req.body.headline;
+	// 		else var userHeadline = 'Welcome';
+
+	// 	var hbsData = {
+	// 		headline: userHeadline,
+	// 		icon_url: userAvatar
+	// 	}
 		
-		var lessData = {};
+	// 	var lessData = {};
 
-		if(req.body.color) lessData.headerColor = req.body.color;
+	// 	if(req.body.color) lessData.headerColor = req.body.color;
 
-		var response = {};
-		var promises = [];
+	// 	var response = {};
+	// 	var promises = [];
 
-		promises.push(compileHBS(hbsData,hbs));
-		promises.push(compileLESS(lessData,less));
-		Promise.all(promises).then(function(results){		
-			if(DATASOURCE == 'mongodb'){
-				// Data Layer is Mongoose
-				var chat = new Chat();
-				chat.js = js
-					.replace(/#SERVER_URL/g,URL);
-				chat.html = results[0]
-					.replace(/#SERVER_URL/g,URL);
-				chat.css = results[1];
+	// 	promises.push(compileHBS(hbsData,hbs));
+	// 	promises.push(compileLESS(lessData,less));
+	// 	Promise.all(promises).then(function(results){		
+	// 		if(DATASOURCE == 'mongodb'){
+	// 			// Data Layer is Mongoose
+	// 			var chat = new Chat();
+	// 			chat.js = js
+	// 				.replace(/#SERVER_URL/g,URL);
+	// 			chat.html = results[0]
+	// 				.replace(/#SERVER_URL/g,URL);
+	// 			chat.css = results[1];
 				
-				chat.update(function(err){ // ?? not sure if update is correct, but I'm in a hurry
+	// 			chat.update(function(err){ // ?? not sure if update is correct, but I'm in a hurry
 					
-					if(err) console.log(err);
-					else{
-						var customSnippet = snippet.replace('#BANANA', chat._id).replace(/#SERVER_URL/g,URL);
-						var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
-						return res.json({'snippet':uglySnippet.code});	
-					}
+	// 				if(err) console.log(err);
+	// 				else{
+	// 					var customSnippet = snippet.replace('#BANANA', chat._id).replace(/#SERVER_URL/g,URL);
+	// 					var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
+	// 					return res.json({'snippet':uglySnippet.code});	
+	// 				}
 					
-				});
-			}else if(DATASOURCE == 'stamplay'){
-				var chatObj = {};
-				chatObj.js = js
-					.replace(/#SERVER_URL/g,URL);
-				chatObj.html = results[0]
-					.replace(/#SERVER_URL/g,URL);
-				chatObj.css = results[1];
-				// Data Layer is Stamplay Node SDK
-				var data = {
-				    "js": chatObj.js,
-				    "html": chatObj.html,
-				    "css": chatObj.css
-				}
-				db.Object('chatbox').update(chatBoxId, data, function(error, result){
-				    if(error) 
-				    	console.log(error);
-					else{
-						result = JSON.parse(result);
-						return res.sendStatus(200,'Completed successfully');	
-					}
-				})
-			}
+	// 			});
+	// 		}else if(DATASOURCE == 'stamplay'){
+	// 			var chatObj = {};
+	// 			chatObj.js = js
+	// 				.replace(/#SERVER_URL/g,URL);
+	// 			chatObj.html = results[0]
+	// 				.replace(/#SERVER_URL/g,URL);
+	// 			chatObj.css = results[1];
+	// 			// Data Layer is Stamplay Node SDK
+	// 			var data = {
+	// 			    "js": chatObj.js,
+	// 			    "html": chatObj.html,
+	// 			    "css": chatObj.css
+	// 			}
+	// 			db.Object('chatbox').update(chatBoxId, data, function(error, result){
+	// 			    if(error) 
+	// 			    	console.log(error);
+	// 				else{
+	// 					result = JSON.parse(result);
+	// 					return res.sendStatus(200,'Completed successfully');	
+	// 				}
+	// 			})
+	// 		}
 
-		});
-	}
+	// 	});
+	// }
 
 	function loadTemplates(resolve,reject){
 		//this just loads the templates as strings using: loadHBS, loadLESS, loadJS, and loadSnippet.
