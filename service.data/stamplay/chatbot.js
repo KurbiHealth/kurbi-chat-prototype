@@ -1,15 +1,15 @@
 module.exports = function(service,db) {
 	
-	service.getChatStyle = getChatStyle;
-	service.getChatStyles = getChatStyles;
-	service.setChatStyle = setChatStyle;
-	service.createChatStyle = createChatStyle;
+	service.getChatBot = getChatBot;
+	service.getChatBots = getChatBots;
+	service.setChatBot = setChatBot;
+	service.createChatBot = createChatBot;
 
-function getChatStyle(query){
-  
+
+function getChatBot(query){
   return new Promise(function(resolve,reject){
 
-  		db.Object('chatstyle').get(query,function(err,doc){
+  		db.Object('chatbot').get(query,function(err,doc){
   			if(err) reject(err);
   			else{
   				doc = JSON.parse(doc);
@@ -18,49 +18,46 @@ function getChatStyle(query){
   		});
 	
   });
-	
 }
 
-function getChatStyles(query){
+function getChatBots(query){
   return new Promise(function(resolve,reject){
 
-  		db.Object('chatstyle').get(query,function(err,docs){
+  		db.Object('chatbot').get(query,function(err,docs){
   			if(err) reject(err);
   			else{
   				docs = JSON.parse(docs);
   				resolve(docs.data);
   			}
   		});
-	
+
   });
-	
 }
 
-function createChatStyle(input){
+function createChatBot(input){
 	return new Promise(function(resolve,reject){
 
-		db.Object('chatstyle').save(input,function(err,doc){
+		db.Object('chatbot').save(input,function(err,doc){
 			if(err) reject(err);
 			else{
 				doc = JSON.parse(doc);
 				resolve(doc);
 			}
 		});
-
+		
 	});
 }
 
-function setChatStyle(input){
-
+function setChatBot(input){
 	return new Promise(function(resolve,reject){
 
-		db.Object('chatstyle').get({id: input.owner},function(err,doc){
+		db.Object('chatbot').get({id: input._id},function(err,doc){
 			if(err) reject(err);
 			else{
 				doc = JSON.parse(doc);
 				if(doc.data.length == 0){
 					// create new
-					db.Object('chatstyle').save(input,function(err,doc){
+					db.Object('chatbot').save(input,function(err,doc){
 						if(err) reject(err);
 						else{
 							doc = JSON.parse(doc);
@@ -78,3 +75,5 @@ function setChatStyle(input){
 
 } // end exports
 
+    
+ 
