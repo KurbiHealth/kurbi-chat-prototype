@@ -5,6 +5,10 @@ module.exports = function(router,DATASOURCE,db){
 	router
 		.route('/log')
 			.post(saveLog);
+    router			
+		.route('/error')
+			.post(receiveError);
+
 // -------------------------------------------
 
 	return router;
@@ -17,6 +21,13 @@ module.exports = function(router,DATASOURCE,db){
 			description: 'test of a logging' 
 		}
 	 */
+
+	function receiveError(req,res){
+		console.log("Error Transmitted");
+		console.log(req.body);
+		res.json({okay:'okay'});
+	 }
+
 
 	function saveLog(req,res){
 

@@ -83,7 +83,6 @@ function createBotFromFile(req,res){
 
 function getStyles(req,res){
     db.getChatStyles({owner:req.user._id}).then((docs)=>res.json(docs));
-   
 }
 
 function createStyle(req,res){
@@ -147,7 +146,6 @@ function createBot(req,res){
 function getChatboxes(req,res){
 	console.log('getting chatbox with key', req.query.key);
 	var key = req.query.key;
-	
 	if(!key) db.getChatBoxes({owner:req.user._id}).then((docs) => {return res.json(docs)});
 	else db.getChatBox({_id:key}).then((doc) => {
 		var chosenStyle = doc.getStyle();

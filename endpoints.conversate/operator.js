@@ -35,9 +35,9 @@ module.exports = function(io,express,BASEURL,PORT,db){
 
 	var rooms = {};						//list of active rooms
 	var checkRooms = [];				//list of rooms that might be empty (and need their bots removed)
-	var roomVars = {};		
+	var roomVars = {};					//will hold the user variables that are detected during chat.
 	var BOT_WAIT_TIME = 15000; 			//how long a bot will wait after a client has disconnected, before leaving the room.			
-	//var userRecords = {};
+
 
 
 	function clearRooms(){

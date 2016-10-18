@@ -15,7 +15,8 @@
     "socket.io": "^1.4.6",
     "socket.io-client": "^1.4.6",
     "stamplay": "^1.0.6",
-    "uglify-js": "^2.6.2"
+    "uglify-js": "^2.6.2",
+    "winston": "^2.2.0"
   },
   "devDependencies": {},
   "scripts": {

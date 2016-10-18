@@ -33,16 +33,47 @@ var ioServer 						= require('http').Server(app)
 var io 								= require('socket.io')(ioServer);
 var bodyParser 						= require('body-parser');
 var cors       						= require('cors');
+
 io.set('origins', '*:*');
 
-require('./service.data/dataService.js')(DATASOURCE).then(function(db){
-	//we are now connected to our data service, so it's safe to make data calls
 
+/**
+ * ----------------------------------------
+ * SET UP ERROR HANDLING
+ * ----------------------------------------
+ */
 
+var kurbiErrors 					= require('./service.error/main')();
+global.appError = kurbiErrors.error;
+
+process.on('unhandledRejection', kurbiErrors.ErrorHandler);
+
+function setupExpressErrorHandling(){
+	//this needs to be called after all the other app.use() 
+	app.use(kurbiErrors.httpErrorHandler);
+}
+
+/**
+ * ----------------------------------------
+ * SET UP EXPRESS UTILITIES
+ * ----------------------------------------
+ */
 
 app.use(bodyParser.urlencoded({ extended: true, parameterLimit:10000, limit:'5mb'}));
 app.use(bodyParser.json({parameterLimit:10000, limit:'5mb'}));
 app.use(cors());
+
+
+/**
+ * ----------------------------------------
+ * ATTACH THE DATASOURCe, THEN: Attach Routes
+ * ----------------------------------------
+ */
+
+
+require('./service.data/dataService.js')(DATASOURCE).then(function(db){
+	//we are now connected to our data service, so it's safe to make data calls
+
 
 
 var devUser = function(req,res,next){
@@ -152,6 +183,9 @@ app.use('/demo', express.static('apps.demo'));
 // Add all routes to root URL
 app.use('/',router);
 
+//ERROR HANDLER
+setupExpressErrorHandling();
+
 
 /**
  * ----------------------------------------
@@ -167,4 +201,6 @@ ioServer.listen(LISTENPORT, function(err,data){
 
 
 }); //end of the dataservice bracket.
+
+
 

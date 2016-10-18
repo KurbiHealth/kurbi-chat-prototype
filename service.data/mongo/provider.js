@@ -1,5 +1,6 @@
 module.exports = function(service) {
-	
+
+
 	var Provider = require('./schemas.mongoose/providerSchema');
 	service.getProvider = getProvider;
 	service.getProviders = getProviders;
@@ -36,6 +37,7 @@ function getProviders(query){
 
 function createProvider(input){
 	return new Promise(function(resolve,reject){
+
 		Provider.findOne({email:input.email}, function(err,doc){
 			if(err) reject(err);
 			else{
