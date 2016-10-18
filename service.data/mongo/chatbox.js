@@ -31,22 +31,17 @@ function getChatBox(query){
 
 function createChatBox(input){
 	return new Promise(function(resolve,reject){
-		ChatBox.findOne(input, function(err,doc){
+		var cb = new ChatBox(input);
+		cb.save(function(err,doc){
 			if(err) reject(err);
-			else{
-				if(!doc) {
-					doc = new ChatBox(input);
-					doc.save();
-				}
-				resolve(doc);
-			}
+			else resolve(doc);
 		});
 	});
 }
 
 function setChatBox(input){
 	return new Promise(function(resolve,reject){
-		ChatBox.findOne(input, function(err,doc){
+		ChatBox.findOne({_id:input._id}, function(err,doc){
 			if(err) reject(err);
 			else{
 				if(!doc) doc = new ChatBox(input);

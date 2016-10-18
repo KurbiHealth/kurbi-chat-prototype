@@ -39,16 +39,12 @@ function getChatBots(query){
 
 function createChatBot(input){
 	return new Promise(function(resolve,reject){
-		ChatBot.findOne(input, function(err,doc){
+		var cb = new ChatBot(input);
+		cb.save(function(err,doc){
 			if(err) reject(err);
-			else{
-				if(!doc) {
-					doc = new ChatBot(input);
-					doc.save();
-				}
-				resolve(doc);
-			}
+			else resolve(doc);
 		});
+		
 	});
 }
 

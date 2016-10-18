@@ -35,15 +35,10 @@ function getChatStyles(query){
 
 function createChatStyle(input){
 	return new Promise(function(resolve,reject){
-		ChatStyle.findOne(input, function(err,doc){
+		var cs = new ChatStyle(input);
+		cs.save(function(err,doc){
 			if(err) reject(err);
-			else{
-				if(!doc) {
-					doc = new ChatStyle(input);
-					doc.save();
-				}
-				resolve(doc);
-			}
+			else resolve(doc);
 		});
 	});
 }

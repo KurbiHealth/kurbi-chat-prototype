@@ -145,7 +145,7 @@ app.use('/demo', express.static('apps.demo'));
 
 
 // ---- STATIC ASSETS ----
-// app.use(express.static('static'));
+ app.use(express.static('static'));
 
 
 // IMPORTANT 

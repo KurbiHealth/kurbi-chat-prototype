@@ -145,6 +145,7 @@ function createBot(req,res){
 }
 
 function getChatboxes(req,res){
+	console.log('getting chatbox with key', req.query.key);
 	var key = req.query.key;
 	
 	if(!key) db.getChatBoxes({owner:req.user._id}).then((docs) => {return res.json(docs)});
@@ -165,9 +166,13 @@ function createChatbox(req,res){
 	chatbox.bots 			= [];
 	chatbox.allowedPages 	= [];
 	chatbox.rule 			= "random";	
-	chatbox.snippet 		= createSnippet(chatbox._id);
 
-	db.createChatBox(chatbox)
+	db.createChatBox(chatbox).then(function(doc){
+		var key = doc._id;
+		console.log(key);
+		doc.snippet = createSnippet(key);
+		db.setChatBox(doc).then((box) => {console.log(doc)});
+	});
 	
 
 	return res.json({okay:"okay"});

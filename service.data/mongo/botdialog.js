@@ -22,15 +22,10 @@ function getBotDialog(query){
 
 function createBotDialog(input){
 	return new Promise(function(resolve,reject){
-		BotDialog.findOne(input, function(err,doc){
+		var bd = new BotDialog(input, false);
+		bd.save(function(err,doc){
 			if(err) reject(err);
-			else{
-				if(!doc) {
-					doc = new BotDialog(input,false);
-					doc.save();
-				}
-				resolve(doc);
-			}
+			else resolve(doc);
 		});
 	});
 }
