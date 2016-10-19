@@ -49,16 +49,16 @@ function createBotFromFile(req,res){
 
 		var message = responses[key];
 		message.qcode = key;
-		message.owner = "58041b251769e0406744deff";
-		message.name = "Hank";
+		message.owner = "57699528f4924a7f641e4950";
+		message.name = "demoBot";
 		message.version = "0.0.1";
 		db.createBotDialog(message);
 		
 		}
 		
 	    var bot = {};
-	    bot.owner = "58041b251769e0406744deff";
-	    bot.name = "Hank";
+	    bot.owner = "57699528f4924a7f641e4950";
+	    bot.name = "demoBot";
 	    db.createChatBot(bot);
 
 	return res.send(responses);
@@ -115,15 +115,15 @@ console.log('hbsData',hbsData);
 
 		promises.push(compileHBS(hbsData,hbs));
 		promises.push(compileLESS(lessData,less));
-		
+	
 		Promise.all(promises).then(function(results){	
-		   var style = {};
+			var style = {};
 		  	style.js = js.replace(/#SERVER_URL/g,URL);
 		   	style.html = results[0].replace(/#SERVER_URL/g,URL);
 			style.css = results[1];
 			style.owner = req.user._id;
 			style.configuration = configuration;
-		   db.setChatStyle(style).then((doc) => res.json(doc));
+			db.setChatStyle(style).then((doc) => res.json(doc));
 		});
 }
 
@@ -167,7 +167,7 @@ function createChatbox(req,res){
 
 	db.createChatBox(chatbox).then(function(doc){
 		var key = doc._id;
-		console.log(key);
+		console.log('new chatbox id',key);
 		doc.snippet = createSnippet(key);
 		db.setChatBox(doc).then((box) => {console.log(doc)});
 	});

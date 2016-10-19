@@ -72,18 +72,19 @@ app.use(cors());
 
 
 require('./service.data/dataService.js')(DATASOURCE).then(function(db){
-	//we are now connected to our data service, so it's safe to make data calls
+//we are now connected to our data service, so it's safe to make data calls
 
 
 
 var devUser = function(req,res,next){
     var admin = {};
-	admin.email = "john@foolhardysoftworks.com";
+	admin.email = "matteckman@gmail.com";
 	admin.role = 'admin';
 	admin.enabled = true;
 	admin.chatboxes = [];
 	db.createProvider(admin).then(function(doc){
 		req.user = doc;
+console.log('user _id',doc._id);
 		next();
 	});
 

@@ -8,11 +8,6 @@ module.exports = function(DATASOURCE){
 
    });
 
-
-
- 	
- 
-
 }
 
 function connectDatasource(DATASOURCE){
@@ -36,6 +31,11 @@ function connectDatasource(DATASOURCE){
 	 	//build stamplay service
 	 	var service = {};
 	 	require('./stamplay/chatroom.js')(service,db);
+	 	require('./stamplay/chatbox.js')(service,db);
+		require('./stamplay/provider.js')(service,db);
+		require('./stamplay/botdialog.js')(service,db);
+		require('./stamplay/chatstyle.js')(service,db);
+		require('./stamplay/chatbot.js')(service,db);
 	 	resolve(service);
 	 });
 
@@ -55,11 +55,11 @@ function connectMongoDB(url){
 			conn.once('open', function(){
 			    resolve("Mongo Connected");
 			});
+
 	});
 	
-
-
 }
+
 
 function connectStamplay(){
 	return new Promise(function(resolve,reject){
@@ -67,7 +67,4 @@ function connectStamplay(){
 		var db = new Stamplay('kurbi', '7d99dc081cf607a09b09590cc2869bc3c39b1c3b176894fd0cca237e677213d0');	
 		resolve(db);
 	});
-	
-
-
 }

@@ -1,4 +1,116 @@
-module.exports = function(service) {
+module.exports = function(service,db) {
+
+	service.getProvider = getProvider;
+	service.getProviders = getProviders;
+	service.setProvider = setProvider;
+    service.createProvider = createProvider;
+
+
+
+function getProvider(input){
+  return new Promise(function(resolve,reject){
+
+  		db.User.get({email: input.email},function(err,doc){
+  			if(err) reject(err);
+  			else{
+  				doc = JSON.parse(doc);
+  				resolve(doc.data[0]);
+  			}
+  		});
 	
+  });
+}
+
+
+function getProviders(query){
+  return new Promise(function(resolve,reject){
+
+  		db.User.get(query,function(err,docs){
+  			if(err) reject(err);
+			else resolve(docs);
+  		});
+	
+  });
+}
+
+
+function createProvider(input){
+	return new Promise(function(resolve,reject){
+
+		db.User.get({email: input.email},function(err,doc){
+			if(err){reject(err);}
+			else{
+				doc = JSON.parse(doc);
+				if(doc.data && doc.data.length > 0){
+					resolve(doc.data[0]);
+				}else{
+					// create new user
+					var data = {
+						"email": input.email,
+						//"password": crypto.createHash(userRecords[roomId]['email']),
+						"password": "botpassword",
+						"role": input.role,
+						"enabled": input.enabled,
+						"chatboxes": input.chatboxes
+					};
+					db.User
+					.save(data,function(err,doc){
+						if(err){return console.log('error saving user, error:',err);}
+						doc = JSON.parse(doc);
+						resolve(doc.data[0]);
+					});
+				}
+			}
+		});
+
+	});
+}
+
+
+function setProvider(input){
+	return new Promise(function(resolve,reject){
+		
+		db.User.get({email: input.email},function(err,doc){
+			if(err){reject(err);}
+			else{
+				doc = JSON.parse(doc);
+				// if(!doc.data || doc.data.length == 0){
+				// 	// create new user
+				// 	var data = {
+				// 		"email": input.email,
+				// 		//"password": crypto.createHash(userRecords[roomId]['email']),
+				// 		"password": "botpassword",
+				// 		"role": input.role,
+				// 		"enabled": input.enabled,
+				// 		"chatboxes": input.chatboxes
+				// 	};
+				// 	db.User
+				// 	.save(data,function(err,doc){
+				// 		if(err){return console.log('error saving user, error:',err);}
+				// 		doc = JSON.parse(doc);
+				// 		resolve(doc.data[0]);
+				// 	});
+				// }else{
+					// overwrite existing user
+					var data = {
+						"email": input.email,
+						//"password": crypto.createHash(userRecords[roomId]['email']),
+						"password": "botpassword",
+						"role": input.role,
+						"enabled": input.enabled,
+						"chatboxes": input.chatboxes
+					};
+					db.User
+					.save(data,function(err,doc){
+						if(err){return console.log('error saving user, error:',err);}
+						doc = JSON.parse(doc);
+						resolve(doc.data[0]);
+					});
+				// }
+			}
+		});
+
+	});
+}
 
 } // end exports
