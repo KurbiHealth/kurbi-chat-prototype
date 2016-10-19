@@ -25,11 +25,14 @@ var chatSchema   = new Schema({
 
 chatSchema.methods.getBot = function(domain){
 	var bot = null;
+	console.log('requested domain', domain);
+	console.log('allowed domains', this.allowedPages);
 	if(this.allowedPages.indexOf(domain) > -1) {
 	    bot = {};
 		var index = Math.floor(Math.random(this.bots.length));
 		bot.owner = this.owner;
 		bot.name = this.bots[index];
+		console.log('fetching bot', bot);
 	}
 	return bot;
 }

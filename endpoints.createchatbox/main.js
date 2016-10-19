@@ -49,16 +49,20 @@ function createBotFromFile(req,res){
 
 		var message = responses[key];
 		message.qcode = key;
-		message.owner = "57699528f4924a7f641e4950";
-		message.name = "demoBot";
+		//message.owner = "57699528f4924a7f641e4950";
+		//message.name = "demoBot";
+		message.owner="58041b251769e0406744deff";
+		message.name = "Hank";
 		message.version = "0.0.1";
 		db.createBotDialog(message);
 		
 		}
 		
 	    var bot = {};
-	    bot.owner = "57699528f4924a7f641e4950";
-	    bot.name = "demoBot";
+	    //bot.owner = "57699528f4924a7f641e4950";
+	    //bot.name = "demoBot";
+	    message.owner="58041b251769e0406744deff";
+	    message.name = "Hank";
 	    db.createChatBot(bot);
 
 	return res.send(responses);
