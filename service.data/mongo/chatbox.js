@@ -5,8 +5,7 @@ module.exports = function(service) {
 	service.getChatBoxes = getChatBoxes;
 	service.setChatBox = setChatBox;
 	service.createChatBox = createChatBox;
-
-
+	service.getStyle = getStyle;
 
 
 function getChatBoxes(query){
@@ -54,6 +53,11 @@ function setChatBox(input){
 			}
 		});
 	});	
+}
+
+function getStyle(styles){
+	var index = Math.floor(Math.random(styles.length));
+	return styles[index];
 }
 
 } // end exports

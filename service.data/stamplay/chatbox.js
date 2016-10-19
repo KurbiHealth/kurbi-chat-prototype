@@ -4,6 +4,7 @@ module.exports = function(service,db) {
 	service.getChatBoxes = getChatBoxes;
 	service.setChatBox = setChatBox;
 	service.createChatBox = createChatBox;
+	service.getStyle = getStyle;
 
 function getChatBoxes(query){
 	_cleanApiFieldsForStamplay(query);
@@ -42,7 +43,7 @@ function getChatBox(query){
 function createChatBox(input){
 	_cleanApiFieldsForStamplay(input);
 	return new Promise(function(resolve,reject){
-		console.log('createChatBox', input);
+		//console.log('createChatBox', input);
 		db.Object('chatbox').save(input,function(err,doc){
 			if(err) reject(err);
 			else{
@@ -84,6 +85,12 @@ function setChatBox(input){
 		
 	});	
 }
+
+function getStyle(styles){
+	var index = Math.floor(Math.random(styles.length));
+	return styles[index];
+}
+
 function _cleanApiFieldsForStamplay(input){
 	if(input.owner) input.user_owner = input.owner;
 
