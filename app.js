@@ -78,7 +78,8 @@ require('./service.data/dataService.js')(DATASOURCE).then(function(db){
 
 var devUser = function(req,res,next){
     var admin = {};
-	admin.email = "matteckman@gmail.com";
+	//admin.email = "matteckman@gmail.com";
+	admin.email = "john@foolhardysoftworks.com";
 	admin.role = 'admin';
 	admin.enabled = true;
 	admin.chatboxes = [];
@@ -136,7 +137,7 @@ require('./endpoints.loadmessagetemplate/main.js')(router,db,BASEURL,PORT);
  * This manages the sockets that the chat boxes use to communicate with
  * the Bot and with (potentially) other human beings.
  */
-require('./endpoints.conversate/operator')(io,express,BASEURL,PORT,db);
+require('./endpoints.conversate/operator')(io,express,BASEURL,LISTENPORT,db);
 
 /**
  * ChatBot

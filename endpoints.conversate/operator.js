@@ -66,6 +66,7 @@ module.exports = function(io,express,BASEURL,PORT,db){
 	io.on('connect', function(socket){
 		// THIS EVENT ('register') IS EMITTED BY THE CHATBOX WHEN IT LOADS 
 		// (/endpoints.createchatbox/templates/js/chat_template.js)
+		console.log('connection to socket made', socket.id);
 		socket.on('register', function(info){
 			//info.key (chatbox key)
 			//info.sessionId (chat session token, this changes when a new chat is made)

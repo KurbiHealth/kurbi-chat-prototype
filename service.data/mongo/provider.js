@@ -24,7 +24,7 @@ function getProvider(input){
 
 function getProviders(query){
   return new Promise(function(resolve,reject){
-		Provider.findOne(query, function(err,docs){
+		Provider.find(query, function(err,docs){
 			if(err) reject(err);
 			else resolve(docs);
 		});
