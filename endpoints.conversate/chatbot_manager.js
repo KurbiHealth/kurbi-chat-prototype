@@ -33,8 +33,11 @@ module.exports = function(BASEURL, PORT,db){
 		chatData.roomKey = room;
 		chatData.boxKey = info.key;
 
-		loadRoom(chatData).then(loadBox).then(function(sessionData){
+		loadRoom(chatData)
+		.then(loadBox)
+		.then(function(sessionData){
 			//removeOldBots();
+			console.log('sessionData',sessionData);
 			sessionData.box.getBot(domain).then(function(botInfo){
 
 			if(!bots[room]) {
