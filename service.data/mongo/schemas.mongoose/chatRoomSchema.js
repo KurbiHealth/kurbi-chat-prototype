@@ -8,6 +8,7 @@ var chatRoomSchema   = new Schema({
 	key: 				String,
 	url: 				String,
 	sessionID:			String,
+	bot: 				{}, 		
 	room: 				{type:String, unique:true},
 	messages: 			[],
 	userVariables: 		{},

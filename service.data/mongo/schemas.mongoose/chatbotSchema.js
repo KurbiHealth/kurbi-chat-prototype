@@ -6,7 +6,7 @@ var chatbotSchema   = new Schema({
     	   	
 	owner: 			{type:ObjectId, ref:'provider'},
 	name: 			String,
-	
+	graph: 			String,
 	
 });
 

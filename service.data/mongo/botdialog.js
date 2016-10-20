@@ -2,9 +2,9 @@ module.exports = function(service) {
 	
 	var BotDialog = require('./schemas.mongoose/botDialogSchema');
 	service.getBotDialog = getBotDialog;
+	service.getBotDialogs = getBotDialogs;
 	service.setBotDialog = setBotDialog;
 	service.createBotDialog = createBotDialog;
-
 
 
 
@@ -13,6 +13,18 @@ function getBotDialog(query){
 		BotDialog.findOne(query, function(err,doc){
 			if(err) reject(err);
 			else resolve(doc);
+		});
+	
+  });
+	
+
+}
+
+function getBotDialogs(query){
+  return new Promise(function(resolve,reject){
+		BotDialog.find(query, function(err,docs){
+			if(err) reject(err);
+			else resolve(docs);
 		});
 	
   });
