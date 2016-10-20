@@ -47,7 +47,7 @@ function createChatRoom(input){
 						if(err) reject(err);
 						else{
 							doc = JSON.parse(doc);
-							resolve(doc.data[0]);
+							resolve(doc);
 						}
 					});
 				}else{
