@@ -25,12 +25,14 @@ function getChatBoxes(query){
 }
 
 function getChatBox(query){
+	console.log('getChatBox(), query: ',query)
 	_cleanApiFieldsForStamplay(query);
-  return new Promise(function(resolve,reject){
+	return new Promise(function(resolve,reject){
 		db.Object('chatbox').get(query,function(err,doc){
   			if(err) reject(err);
 			else{
 				doc = JSON.parse(doc);
+				console.log('doc.data',doc.data);
 				doc = doc.data[0];
 				_cleanStamplayFieldsForSave(doc);
 				resolve(doc);
