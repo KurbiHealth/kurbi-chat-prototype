@@ -74,10 +74,12 @@ function setChatRoom(input){
 			else {
 				doc = JSON.parse(doc);
 				if(doc.data.length == 0){
-					db.Object('chatroom').save(chatroom)
-					.then(function(res){
-						res = JSON.parse(res);
-						resolve(res.data[0]);
+					db.Object('chatroom').save(chatroom,function(err,doc){
+						if(err) reject(err)
+						else{
+							doc = JSON.parse(doc);
+							resolve(doc);
+						}
 					});
 				}else resolve(doc.data[0]);
 			}
