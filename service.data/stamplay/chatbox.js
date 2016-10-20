@@ -100,12 +100,13 @@ function getStyle(styles){
 
 function getBot(owner){
 	var that = this;
+	console.log('in getBot(), owner',owner);
 	return new Promise(function(resolve,reject){
 		db.Object('chatbot').get({'user_owner': owner},function(err,docs){
 			if(err) reject(err);
 			else{
 				docs = JSON.parse(docs);
-console.log('in getBot(), docs',docs);
+				console.log('docs',docs);
 				docs = docs.data;
 				var bot = {};
 				var index = Math.floor(Math.random()*docs.length);
