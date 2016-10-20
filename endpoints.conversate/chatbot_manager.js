@@ -35,6 +35,8 @@ module.exports = function(BASEURL, PORT,db){
 
 		loadRoom(chatData).then(loadBox).then(function(sessionData){
 			//removeOldBots();
+			sessionData.box.getBot(domain).then(function(botInfo){
+
 			if(!bots[room]) {
 					bots[room] = {};
 					bots[room].socket = io.connect('http://localhost:'+PORT, {forceNew:true});
@@ -42,7 +44,9 @@ module.exports = function(BASEURL, PORT,db){
 					
 				var connection = bots[room];
 				
-				var botInfo = sessionData.box.getBot(domain);
+				if(sessionData.room.bot) botInfo = sessionData.room.bot;
+				
+				console.log('bot info', botInfo);
 				var bot = new getBot(connection, botInfo);
 				if(!sessionData.room.userVariables) sessionData.room.userVariables = {};
 				var userVariables = sessionData.room.userVariables;
@@ -65,7 +69,8 @@ module.exports = function(BASEURL, PORT,db){
 
 				connection.socket.on('connect', function(){
 					connection.socket.emit('join room', {'room':room, 'source':'bot'});
-
+					sessionData.room.bot = botInfo;
+					sessionData.room.save();
 				});
 
 				connection.socket.on('disconnect', () => {
@@ -74,6 +79,10 @@ module.exports = function(BASEURL, PORT,db){
 
 				service.connections.push(connection);
 			}
+
+
+			});
+
 
 		});
 

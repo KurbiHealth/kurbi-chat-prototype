@@ -1,8 +1,10 @@
 module.exports = function(service) {
 	
 	var ChatBot = require('./schemas.mongoose/chatbotSchema');
+	var BotDialog = require('./schemas.mongoose/botDialogSchema');
 	service.getChatBot = getChatBot;
 	service.getChatBots = getChatBots;
+	service.deleteChatBot = deleteChatBot;
 	service.setChatBot = setChatBot;
 	service.createChatBot = createChatBot;
 
@@ -33,12 +35,28 @@ function getChatBots(query){
   });
 
 
+}
+function deleteChatBot(query){
+	return new Promise(function(resolve,reject){
+
+		BotDialog.remove({owner:query.owner, name:query.name}, function(err,removed){
+			if(err) reject(err);
+			else
+			ChatBot.remove({owner:query.owner, name:query.name}, function(err, removed){
+				if(err) reject(err);
+				else resolve();
+			});	
+		});
+		
+	});
+}
 	
 
-}
+
 
 function createChatBot(input){
 	return new Promise(function(resolve,reject){
+		console.log("creating, ", input);
 		var cb = new ChatBot(input);
 		cb.save(function(err,doc){
 			if(err) reject(err);

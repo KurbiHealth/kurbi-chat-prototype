@@ -35,11 +35,25 @@ module.exports = function(router,db,BASEURL,PORT,ENV){
 		.route('/bot')
 			.get(getBots)
 			.post(createBot);
+	router
+		.route('/deleteBot')
+			.post(deleteBot);
 
 	router
 		.route('/convert')
 			.get(createBotFromFile);
 
+
+function deleteBot(req,res){
+	console.log(req.body);
+
+	db.deleteChatBot({owner:req.user._id,name:req.body.name}).then(function(){
+
+	
+res.json({okay:"okay", body:req.body});
+	});
+
+}
 
 function createBotFromFile(req,res){
 	var serverURL = BASEURL;
@@ -61,8 +75,8 @@ function createBotFromFile(req,res){
 	    var bot = {};
 	    //bot.owner = "57699528f4924a7f641e4950";
 	    //bot.name = "demoBot";
-	    message.owner="58041b251769e0406744deff";
-	    message.name = "Hank";
+	    bot.owner="58041b251769e0406744deff";
+	    bot.name = "Hank";
 	    db.createChatBot(bot);
 
 	return res.send(responses);
@@ -144,6 +158,34 @@ function getBots(req,res){
 }
 
 function createBot(req,res){
+	var dialogs = req.body.questionJSON;
+	var graph = req.body.graphJSON;
+	var owner = req.user._id;
+	var name = req.body.name;
+	//first clear the bot with that name/owner
+	console.log('deleting the old bot');
+	db.deleteChatBot({owner:owner, name:name}).then(function(){
+
+	//then create chatbot
+	console.log('creating the new bot object');
+	db.createChatBot({owner:owner,name:name,graph:graph}).then((bot)=>{console.log('created', bot)});
+
+
+	//then create a new bot
+	console.log('creating the new bot dialog');
+	Object.keys(dialogs).forEach(function(key){
+		dialogs[key].owner = owner;
+		db.createBotDialog(dialogs[key])
+	});
+
+	});
+	
+
+	
+
+
+
+
 	return res.json({okay:"okay"});
 }
 
