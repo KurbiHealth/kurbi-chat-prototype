@@ -8,14 +8,14 @@ module.exports = function(service,db) {
 function getChatRoom(input){
 	console.log('in getChatRoom()');
 	return new Promise(function(resolve,reject){
-  		
-  		db.Object('chatroom').get({room:input.room}).then(function(doc){
-  			doc = JSON.parse(doc);
-  			resolve(doc.data[0]);
-  		},function(err){
-  			reject(err);
-  		});
-	
+  		db.Object('chatroom').get({room:input.room},function(err,doc){
+  			if(err) reject(err);
+  			else{
+  				doc = JSON.parse(doc);
+  				doc = doc.data[0];
+  				resolve(doc);
+  			}
+  		});	
   });
 
 }
