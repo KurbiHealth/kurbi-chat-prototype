@@ -90,7 +90,9 @@ function setChatBox(input){
 
 function getStyle(styles){
 	console.log('in getStyle(), styles',typeof styles,styles);
-	if(typeof styles == '')
+	if(typeof styles == 'string'){
+		return styles;
+	}
 	var index = Math.floor(Math.random(styles.length));
 	console.log('styles[index]',styles[index]);
 	return styles[index];
