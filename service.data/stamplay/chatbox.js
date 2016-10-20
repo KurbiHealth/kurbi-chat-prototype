@@ -34,7 +34,7 @@ function getChatBox(query){
 				doc = JSON.parse(doc);
 				doc = doc.data[0];
 				_cleanStamplayFieldsForSave(doc);
-				console.log('--doc',doc.substr(0,50) + '...');
+				console.log('--doc',doc);
 				resolve(doc);
 			}
   		});
