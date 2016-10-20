@@ -69,7 +69,7 @@ function setChatRoom(input){
 			'room': input.room,
 			'key': input.key,
 			'sessionID': input.sessionID,
-			'parent_chatbox': '["'+input.key+'"]',
+			//'parent_chatbox': '["'+input.key+'"]',
 		}
 		db.Object('chatroom').get({room:chatroom.room}, function(err,doc){
 			console.log('getting chatroom with room,',chatroom.room,'err:',err);
