@@ -163,6 +163,7 @@ function getChatboxes(req,res){
 function createChatbox(req,res){
 
 	var chatbox = {};
+console.log('req.user',req.user);
     chatbox.owner 			= req.user._id;
 	chatbox.styles 			= [];
 	chatbox.bots 			= [];
