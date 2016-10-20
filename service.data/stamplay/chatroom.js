@@ -61,11 +61,6 @@ function createChatRoom(input){
 	});
 }
 
-input: { 
-  url: 'http://chat.gokurbi.com/demo/provider.html',
-  room: '88aed09bc2659a64b18f457351f7eaba',
-  key: '58091f5b29b9ce2a7d7a75be',
-  sessionID: 'R92H8PHtnm11hIqE' }
 function setChatRoom(input){
 	console.log('in setChatRoom(), input:',input);
 	return new Promise(function(resolve,reject){
