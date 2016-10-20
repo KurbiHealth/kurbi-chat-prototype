@@ -77,8 +77,11 @@ function setChatRoom(input){
 			if(err) reject(err);
 			else {
 				doc = JSON.parse(doc);
+				console.log('chatroom doc',doc);
 				if(doc.data.length == 0){
+					console.log('chatroom not found');
 					db.Object('chatroom').save(chatroom,function(err,doc){
+						console.log('created chatroom, err:',err);
 						if(err) reject(err)
 						else{
 							doc = JSON.parse(doc);
