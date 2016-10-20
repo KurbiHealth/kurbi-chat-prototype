@@ -8,7 +8,7 @@ module.exports = function(service,db) {
 
 function getChatBoxes(query){
 	_cleanApiFieldsForStamplay(query);
-  return new Promise(function(resolve,reject){
+	return new Promise(function(resolve,reject){
 
   		db.Object('chatbox').get(query,function(err,docs){
   			if(err) reject(err);
@@ -34,7 +34,6 @@ function getChatBox(query){
 				doc = JSON.parse(doc);
 				doc = doc.data[0];
 				_cleanStamplayFieldsForSave(doc);
-				console.log('--doc',doc);
 				resolve(doc);
 			}
   		});

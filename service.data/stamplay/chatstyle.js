@@ -13,7 +13,6 @@ function getChatStyle(query){
   			if(err) reject(err);
   			else{
   				doc = JSON.parse(doc);
-  				console.log('doc.data[0]',doc.data[0]);
   				resolve(doc.data[0]);
   			}
   		});
