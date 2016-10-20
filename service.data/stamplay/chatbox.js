@@ -89,7 +89,9 @@ function setChatBox(input){
 }
 
 function getStyle(styles){
+	console.log('in getStyle(), styles',styles);
 	var index = Math.floor(Math.random(styles.length));
+	console.log('styles[index]',styles[index]);
 	return styles[index];
 }
 

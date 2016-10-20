@@ -180,12 +180,6 @@ function createBot(req,res){
 
 	});
 	
-
-	
-
-
-
-
 	return res.json({okay:"okay"});
 }
 
