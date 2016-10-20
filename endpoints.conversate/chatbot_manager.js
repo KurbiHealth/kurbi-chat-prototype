@@ -1,4 +1,4 @@
-module.exports = function(BASEURL, PORT,db){
+module.exports = function(BASEURL,PORT,db){
 	var serverURL = BASEURL;
 	if(PORT && PORT != 80) serverURL = BASEURL + ":" + PORT;
 
@@ -74,7 +74,7 @@ module.exports = function(BASEURL, PORT,db){
 				connection.socket.on('connect', function(){
 					connection.socket.emit('join room', {'room':room, 'source':'bot'});
 					sessionData.room.bot = botInfo;
-					sessionData.room.save();
+					db.setChatRoom(sessionData.room);
 				});
 
 				connection.socket.on('disconnect', () => {
