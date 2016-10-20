@@ -38,7 +38,8 @@ module.exports = function(BASEURL, PORT,db){
 		.then(function(sessionData){
 			//removeOldBots();
 			console.log('sessionData',sessionData);
-			sessionData.box.getBot(domain).then(function(botInfo){
+			//sessionData.box
+			db.getBot(domain).then(function(botInfo){
 
 			if(!bots[room]) {
 					bots[room] = {};
