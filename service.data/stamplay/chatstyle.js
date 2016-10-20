@@ -6,18 +6,19 @@ module.exports = function(service,db) {
 	service.createChatStyle = createChatStyle;
 
 function getChatStyle(query){
-
-  return new Promise(function(resolve,reject){
+	console.log('in getChatStyle(), query: ',query);
+	return new Promise(function(resolve,reject){
 
   		db.Object('chatstyle').get(query,function(err,doc){
   			if(err) reject(err);
   			else{
   				doc = JSON.parse(doc);
+  				console.log('doc.data[0]',doc.data[0].substr(0,50) + '...');
   				resolve(doc.data[0]);
   			}
   		});
 	
-  });
+	});
 	
 }
 

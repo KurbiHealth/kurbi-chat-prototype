@@ -32,9 +32,9 @@ function getChatBox(query){
   			if(err) reject(err);
 			else{
 				doc = JSON.parse(doc);
-				console.log('doc.data',doc.data);
 				doc = doc.data[0];
 				_cleanStamplayFieldsForSave(doc);
+				console.log('--doc',doc.substr(0,50) + '...');
 				resolve(doc);
 			}
   		});
