@@ -105,6 +105,7 @@ function getBot(owner){
 			if(err) reject(err);
 			else{
 				docs = JSON.parse(docs);
+console.log('in getBot(), docs',docs);
 				docs = docs.data;
 				var bot = {};
 				var index = Math.floor(Math.random()*docs.length);
