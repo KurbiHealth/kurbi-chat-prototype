@@ -63,7 +63,7 @@ function createChatRoom(input){
 
 
 function setChatRoom(input){
-	console.log('in setChatRoom()');
+	console.log('in setChatRoom(), input:',input);
 	return new Promise(function(resolve,reject){
 		var chatroom = {
 			'url': input.url,
