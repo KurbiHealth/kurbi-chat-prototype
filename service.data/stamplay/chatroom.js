@@ -6,8 +6,8 @@ module.exports = function(service,db) {
 	service.setChatRoom = setChatRoom;
 
 function getChatRoom(input){
-	
-  return new Promise(function(resolve,reject){
+	console.log('in getChatRoom()');
+	return new Promise(function(resolve,reject){
   		
   		db.Object('chatroom').get({room:input.room}).then(function(doc){
   			doc = JSON.parse(doc);
@@ -21,7 +21,8 @@ function getChatRoom(input){
 }
 
 function getChatRooms(query){
-  return new Promise(function(resolve,reject){
+	console.log('in getChatRooms()');
+	return new Promise(function(resolve,reject){
 		
   		db.Object('chatroom').get(query,function(err,docs){
   			if(err) reject(err);
@@ -36,6 +37,7 @@ function getChatRooms(query){
 }
 
 function createChatRoom(input){
+	console.log('in createChatRoom()');
 	return new Promise(function(resolve,reject){
 
 		db.Object('chatroom').get({room: input.room},function(err,doc){
@@ -61,6 +63,7 @@ function createChatRoom(input){
 
 
 function setChatRoom(input){
+	console.log('in setChatRoom()');
 	return new Promise(function(resolve,reject){
 		var chatroom = {
 			'url': input.url,
