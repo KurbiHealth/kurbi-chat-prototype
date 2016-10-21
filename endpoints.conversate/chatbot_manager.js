@@ -118,7 +118,7 @@ module.exports = function(BASEURL,PORT,db){
 	}
 
 	function getBot(connection, botInfo){
-		console.log('in getBot()');
+		console.log('in getBot(),botInfo:',botInfo);
 		this.reply = reply;
 
 				function reply(msg, userVariables, waitTime){
