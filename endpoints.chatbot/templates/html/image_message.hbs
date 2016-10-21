@@ -1,0 +1,48 @@
+{{#if self}}
+
+<div style="width:100%;display:block;height:100px;">
+
+
+<style type="text/css">
+
+	.kurbi-allmf-image {
+		height:100px;
+		width:auto;
+		margin-right:8px;
+		margin-top:4px;
+		margin-bottom:8px;
+		float:right;
+	}
+
+</style>
+
+
+<img class="kurbi-allmf-image" src="{{image}}"/>
+
+
+
+
+</div>
+
+
+{{else}}
+<div style="margin-top:120px;margin-bottom:100px;height:200px">
+
+
+<style type="text/css">
+
+	.kurbi-llmf-image {
+		height:200px;
+		width:auto;
+		margin-right:8px;
+		margin-top:4px;
+		margin-bottom:8px;
+	}
+
+</style>
+
+
+<img class="kurbi-llmf-image" src="{{image}}"/>
+
+</div>
+{{/if}}
