@@ -8,10 +8,10 @@ module.exports = function(service,db) {
 
 
 function getBotDialog(query){
-	console.log('in getBotDialog()');
+	console.log('in getBotDialog(), query: ',query);
 	return new Promise(function(resolve,reject){
-
   		db.Object('botdialog').get(query,function(err,doc){
+  			console.log('botdialog.get, err:',err,',doc: ',doc);
   			if(err) reject(err);
   			else{
   				doc = JSON.parse(doc);
