@@ -118,9 +118,11 @@ module.exports = function(BASEURL,PORT,db){
 	}
 
 	function getBot(connection, botInfo){
+		console.log('in getBot()');
 		this.reply = reply;
 
 				function reply(msg, userVariables, waitTime){
+					console.log('in reply()');
 					if(!waitTime) waitTime = Math.floor(Math.random()*2500+1000);
 					setTimeout(function(){
 						if(msg) {
@@ -138,7 +140,7 @@ module.exports = function(BASEURL,PORT,db){
 				}
 
 				function getResponse(prompt,qcode,bot, callback){
-
+					console.log('in getResponse()');
 					if(bot)
 						db.getBotDialog({owner:bot.owner,name:bot.name,qcode:qcode}).then((doc)=>{callback(doc);});
 					else 
@@ -148,6 +150,7 @@ module.exports = function(BASEURL,PORT,db){
 				}
 
 				function runtimeReplace(data,variables){
+					console.log('in runtimeReplace()');
 					var temp = JSON.stringify(data);
 						temp = temp.replace(/\[_(.+?)_\]/g, function(whole,variable){
 							return variables[variable];

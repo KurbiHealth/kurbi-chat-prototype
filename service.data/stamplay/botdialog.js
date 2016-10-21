@@ -8,7 +8,8 @@ module.exports = function(service,db) {
 
 
 function getBotDialog(query){
-  return new Promise(function(resolve,reject){
+	console.log('in getBotDialog()');
+	return new Promise(function(resolve,reject){
 
   		db.Object('botdialog').get(query,function(err,doc){
   			if(err) reject(err);
@@ -24,6 +25,7 @@ function getBotDialog(query){
 }
 
 function createBotDialog(input){
+	console.log('in createBotDialog()');
 	return new Promise(function(resolve,reject){
 		
 		var data = {
