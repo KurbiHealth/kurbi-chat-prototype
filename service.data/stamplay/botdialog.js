@@ -9,10 +9,10 @@ module.exports = function(service,db) {
 
 function getBotDialog(query){
 	console.log('in getBotDialog(), query: ',query);
-	if(query.owner){
-		query.user_owner = query.owner;
-		delete query.owner;
-	}
+	// if(query.owner){
+	// 	query.user_owner = query.owner;
+	// 	delete query.owner;
+	// }
 	return new Promise(function(resolve,reject){
   		db.Object('botdialog').get(query,function(err,doc){
   			console.log('botdialog.get, err:',err,',doc: ',doc);
