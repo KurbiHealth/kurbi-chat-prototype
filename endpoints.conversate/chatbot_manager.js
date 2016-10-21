@@ -52,14 +52,17 @@ module.exports = function(BASEURL,PORT,db){
 				
 				console.log('bot info', botInfo);
 				var bot = new getBot(connection, botInfo);
+				console.log('============bot',bot);
 				if(!sessionData.room.userVariables) sessionData.room.userVariables = {};
 				var userVariables = sessionData.room.userVariables;
 				console.log('loaded variables, ', userVariables);
+				
 				connection.socket.on('history', (data) => {
 						if(!data || data.length == 0) {
 							bot.reply({qCode:'welcome'}, userVariables, 1);
 						}
 					});
+				
 				connection.socket.on('start', () => { 
 						bot.reply({qCode:'avatar'}, userVariables, 1);
 						
