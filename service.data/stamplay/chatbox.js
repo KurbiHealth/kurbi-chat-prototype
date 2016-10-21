@@ -111,6 +111,9 @@ function getBot(owner){
 				var bot = {};
 				var index = Math.floor(Math.random()*docs.length);
 				bot.owner = docs[index].owner;
+				if(docs[index].user_owner){
+					bot.owner = docs[index].user_owner;
+				}
 				bot.name = docs[index].name;
 				console.log(index,bot.name);
 				resolve(bot);
