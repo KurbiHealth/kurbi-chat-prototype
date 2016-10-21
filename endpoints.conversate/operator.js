@@ -158,7 +158,9 @@ console.log('disconnecting: ' + socket.source, socket.id);
 
 
 		function logChat(message, userVars, room){
+			console.log('in logChat(), room:',room);
 			db.getChatRoom({room:room}).then(function(chatroom){
+				console.log('chatroom');
 				chatroom.messages.push(message);
 				chatroom.userVariables = userVars;
 				db.setChatRoom(chatroom);
