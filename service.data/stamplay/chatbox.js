@@ -98,7 +98,8 @@ function getStyle(styles){
 	return styles[index];
 }
 
-function getBot(owner){
+function getBot(box){
+	var owner = box.owner;
 	var that = this;
 	console.log('in getBot(), owner',owner);
 	return new Promise(function(resolve,reject){

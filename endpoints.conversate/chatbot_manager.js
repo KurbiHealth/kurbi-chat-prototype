@@ -39,7 +39,7 @@ module.exports = function(BASEURL,PORT,db){
 			//removeOldBots();
 			console.log('sessionData',sessionData);
 			//sessionData.box
-			db.getBot(sessionData.box.owner).then(function(botInfo){
+			db.getBot(sessionData.box).then(function(botInfo){
 
 			if(!bots[room]) {
 					bots[room] = {};
