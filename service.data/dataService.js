@@ -13,7 +13,7 @@ module.exports = function(DATASOURCE){
 function connectDatasource(DATASOURCE){
 	return new Promise(function(resolve,reject){
 
-	 if(DATASOURCE=='mongodb') connectMongoDB('mongodb://inferno:27017/kurbichat').then(function(msg){
+	 if(DATASOURCE=='mongodb') connectMongoDB('mongodb://localhost:27017/kurbichat').then(function(msg){
 	 	console.log(msg);
 	 	var service = {};
 	 	//build mongo service
