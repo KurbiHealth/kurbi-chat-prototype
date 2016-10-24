@@ -13,6 +13,9 @@ function getChatRoom(input){
   			else{
   				doc = JSON.parse(doc);
   				doc = doc.data[0];
+  				if(!doc.messages){
+  					doc.messages = [];
+  				}
   				resolve(doc);
   			}
   		});	
