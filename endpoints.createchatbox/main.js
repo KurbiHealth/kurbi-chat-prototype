@@ -65,7 +65,8 @@ function createBotFromFile(req,res){
 		message.qcode = key;
 		//message.owner = "57699528f4924a7f641e4950";
 		//message.name = "demoBot";
-		message.owner="58041b251769e0406744deff";
+		//message.owner="58041b251769e0406744deff";
+		message.owner="580e57b8de7ab85f033b4e41";
 		message.name = "Hank";
 		message.version = "0.0.1";
 		db.createBotDialog(message);
@@ -75,7 +76,8 @@ function createBotFromFile(req,res){
 	    var bot = {};
 	    //bot.owner = "57699528f4924a7f641e4950";
 	    //bot.name = "demoBot";
-	    bot.owner="58041b251769e0406744deff";
+	    //bot.owner="58041b251769e0406744deff";
+	    bot.owner="580e57b8de7ab85f033b4e41";
 	    bot.name = "Hank";
 	    db.createChatBot(bot);
 
