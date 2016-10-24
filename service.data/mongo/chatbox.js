@@ -6,6 +6,7 @@ module.exports = function(service) {
 	service.setChatBox = setChatBox;
 	service.createChatBox = createChatBox;
 	service.getStyle = getStyle;
+	service.getBot = getBot;
 
 
 function getChatBoxes(query){
