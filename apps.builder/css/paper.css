@@ -1,0 +1,8 @@
+#paper {
+    margin: 10px 0;
+    width: 800px;
+    display: block;
+    position: relative;
+    border: 1px solid lightgray;
+    background: url('/builder/images/grid2.gif');
+}

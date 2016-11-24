@@ -171,6 +171,8 @@ app.use('/backend',express.static('apps.providerconfig'));
  */
 app.use('/demo', express.static('apps.demo'));
 
+app.use('/builder', express.static('apps.builder'));
+
 /**
  * App to build bot conversations
  */

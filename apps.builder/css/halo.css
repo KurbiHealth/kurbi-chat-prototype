@@ -1,0 +1,18 @@
+.halo .handle.clone {
+    background-image: url("../images/clone.png");
+}
+.halo .handle.clone:hover {
+    background-image: url("../images/clone-hover.png");
+}
+.halo .handle.unlink {
+    background-image: url("../images/unlink.png");
+}
+.halo .handle.unlink:hover {
+    background-image: url("../images/unlink-hover.png");
+}
+.halo .handle.remove {
+    background-image: url("../images/remove.png");
+}
+.halo .handle.remove:hover {
+    background-image: url("../images/remove-hover.png");
+}
