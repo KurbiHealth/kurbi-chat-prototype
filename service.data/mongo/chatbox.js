@@ -6,6 +6,7 @@ module.exports = function(service) {
 	service.setChatBox = setChatBox;
 	service.createChatBox = createChatBox;
 	service.getStyle = getStyle;
+	service.getBot = getBot;
 
 
 function getChatBoxes(query){
@@ -58,6 +59,23 @@ function setChatBox(input){
 function getStyle(styles){
 	var index = Math.floor(Math.random(styles.length));
 	return styles[index];
+}
+
+function getBot(box){
+	var that = this;
+	return box.getBot();
+	// return new Promise(function(resolve,reject){
+	// ChatBot.find({owner:that.owner}, function(err, docs){
+	// 	if(err) reject(err);
+	// 	var bot = {};
+	// 	var index = Math.floor(Math.random()*docs.length);
+		
+	// 	bot.owner = docs[index].owner;
+	// 	bot.name = docs[index].name;
+	// 	console.log(index,bot.name);
+	// 	resolve(bot);
+	// })
+	// });
 }
 
 } // end exports

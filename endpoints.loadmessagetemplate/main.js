@@ -18,7 +18,7 @@ module.exports = function(router,db,BASEURL,PORT){
 	return router;
 
 	function getTemplate(req,res){
-
+		console.log('in getTemplate()');
 		var templateName = req.query.template;
 
 		var dir = './endpoints.loadmessagetemplate/templates/';

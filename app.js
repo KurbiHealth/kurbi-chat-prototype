@@ -78,19 +78,18 @@ require('./service.data/dataService.js')(DATASOURCE).then(function(db){
 
 var devUser = function(req,res,next){
     var admin = {};
-	//admin.email = "matteckman@gmail.com";
-	admin.email = "john@foolhardysoftworks.com";
+	admin.email = "matteckman@gmail.com";
+	// admin.email = "john@foolhardysoftworks.com";
 	admin.role = 'admin';
 	admin.enabled = true;
 	admin.chatboxes = [];
 	db.createProvider(admin).then(function(doc){
 		req.user = doc;
-console.log('user _id',doc._id);
 		next();
 	});
 
 }
-if(ENV == 'dev') app.use(devUser)
+if(ENV == 'dev' || ENV == 'prod') app.use(devUser)
 
 /**
  * ----------------------------------------

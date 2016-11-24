@@ -5,10 +5,11 @@ module.exports = function(service,db) {
 	service.setChatBox = setChatBox;
 	service.createChatBox = createChatBox;
 	service.getStyle = getStyle;
+	service.getBot = getBot;
 
 function getChatBoxes(query){
 	_cleanApiFieldsForStamplay(query);
-  return new Promise(function(resolve,reject){
+	return new Promise(function(resolve,reject){
 
   		db.Object('chatbox').get(query,function(err,docs){
   			if(err) reject(err);
@@ -25,8 +26,9 @@ function getChatBoxes(query){
 }
 
 function getChatBox(query){
+	console.log('getChatBox(), query: ',query)
 	_cleanApiFieldsForStamplay(query);
-  return new Promise(function(resolve,reject){
+	return new Promise(function(resolve,reject){
 		db.Object('chatbox').get(query,function(err,doc){
   			if(err) reject(err);
 			else{
@@ -87,8 +89,39 @@ function setChatBox(input){
 }
 
 function getStyle(styles){
+	console.log('in getStyle(), styles',typeof styles,styles);
+	if(typeof styles == 'string'){
+		return styles;
+	}
 	var index = Math.floor(Math.random(styles.length));
+	console.log('styles[index]',styles[index]);
 	return styles[index];
+}
+
+function getBot(box){
+	var owner = box.owner;
+	var that = this;
+	console.log('in getBot(), owner',owner);
+	return new Promise(function(resolve,reject){
+		db.Object('chatbot').get({'user_owner': owner},function(err,docs){
+			if(err) reject(err);
+			else{
+				docs = JSON.parse(docs);
+				console.log('docs',docs);
+				docs = docs.data;
+				var bot = {};
+				var index = Math.floor(Math.random()*docs.length);
+				bot.owner = docs[index].owner;
+				if(docs[index].user_owner){
+					bot.owner = docs[index].user_owner;
+				}
+				bot.name = docs[index].name;
+				console.log(index,bot.name);
+				resolve(bot);
+			}
+		});
+	});
+	
 }
 
 function _cleanApiFieldsForStamplay(input){
