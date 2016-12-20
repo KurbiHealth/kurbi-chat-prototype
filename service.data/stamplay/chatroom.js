@@ -75,7 +75,7 @@ function setChatRoom(input){
 		db.Object('chatroom').get({room:chatroom.room}, function(err,doc){
 			if(err) reject(appError(err,{file:"chatroom.js", info:"stamplay api"}));
 			else {
-				doc = JSON.parse(doc);
+				//doc = JSON.parse(doc);
 				if(doc.data.length == 0){
 					db.Object('chatroom').save(chatroom,function(err,doc){
 						if(err) reject(JSON.parse(err));

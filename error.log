@@ -51187,3 +51187,1546 @@
 
 1482250475923	 SERVER READY 
 
+
+
+1482259479554	 restart server
+1482259479729	 connecting data service
+1482259479839	 data service connected
+1482259479839	 using hardcoded user, devUser()
+1482259479839	 
+
+1482259479839	 connecting main routes
+1482259481613	 
+
+1482259481613	 creating chatbox routes
+1482259481613	 	/chatbox
+1482259481613	 	/style
+1482259481613	 	/bot
+1482259481613	 	/deleteBot
+1482259481613	 	/convert
+1482259481618	 ./endpoints.createchatbox 
+1482259481623	 ./endpoints.loadmessagetemplate 
+1482259482184	 ./endpoints.conversate/operator 
+1482259482189	 ./endpoints.receivecontactform 
+1482259482194	 ./endpoints.log 
+1482259482194	 
+
+1482259482194	 connecting static apps
+1482259482194	 ./backend 
+1482259482194	 ./demo 
+1482259482194	 ./builder 
+1482259482194	 
+
+1482259482194	 Error Handling 
+1482259482194	 
+
+1482259482194	 SERVER READY 
+
+
+
+1482259533069	 restart server
+1482259533154	 connecting data service
+1482259533224	 data service connected
+1482259533224	 using hardcoded user, devUser()
+1482259533224	 
+
+1482259533224	 connecting main routes
+1482259534666	 
+
+1482259534666	 creating chatbox routes
+1482259534666	 	/chatbox
+1482259534666	 	/style
+1482259534666	 	/bot
+1482259534666	 	/deleteBot
+1482259534666	 	/convert
+1482259534666	 ./endpoints.createchatbox 
+1482259534676	 ./endpoints.loadmessagetemplate 
+1482259535221	 ./endpoints.conversate/operator 
+1482259535232	 ./endpoints.receivecontactform 
+1482259535238	 ./endpoints.log 
+1482259535238	 
+
+1482259535238	 connecting static apps
+1482259535238	 ./backend 
+1482259535238	 ./demo 
+1482259535238	 ./builder 
+1482259535238	 
+
+1482259535238	 Error Handling 
+1482259535238	 
+
+1482259535238	 SERVER READY 
+
+
+
+1482259662030	 restart server
+1482259662120	 connecting data service
+1482259662195	 data service connected
+1482259662195	 using hardcoded user, devUser()
+1482259662195	 
+
+1482259662195	 connecting main routes
+1482259663634	 
+
+1482259663634	 creating chatbox routes
+1482259663634	 	/chatbox
+1482259663634	 	/style
+1482259663634	 	/bot
+1482259663634	 	/deleteBot
+1482259663634	 	/convert
+1482259663634	 ./endpoints.createchatbox 
+1482259663644	 ./endpoints.loadmessagetemplate 
+1482259664180	 ./endpoints.conversate/operator 
+1482259664190	 ./endpoints.receivecontactform 
+1482259664190	 ./endpoints.log 
+1482259664190	 
+
+1482259664190	 connecting static apps
+1482259664190	 ./backend 
+1482259664190	 ./demo 
+1482259664190	 ./builder 
+1482259664190	 
+
+1482259664190	 Error Handling 
+1482259664190	 
+
+1482259664190	 SERVER READY 
+
+
+
+1482259776964	 restart server
+1482259777064	 connecting data service
+1482259777154	 data service connected
+1482259777154	 using hardcoded user, devUser()
+1482259777154	 
+
+1482259777154	 connecting main routes
+1482259778674	 
+
+1482259778674	 creating chatbox routes
+1482259778674	 	/chatbox
+1482259778674	 	/style
+1482259778674	 	/bot
+1482259778674	 	/deleteBot
+1482259778674	 	/convert
+1482259778679	 ./endpoints.createchatbox 
+1482259778684	 ./endpoints.loadmessagetemplate 
+1482259779269	 ./endpoints.conversate/operator 
+1482259779274	 ./endpoints.receivecontactform 
+1482259779274	 ./endpoints.log 
+1482259779274	 
+
+1482259779274	 connecting static apps
+1482259779279	 ./backend 
+1482259779279	 ./demo 
+1482259779279	 ./builder 
+1482259779279	 
+
+1482259779279	 Error Handling 
+1482259779279	 
+
+1482259779279	 SERVER READY 
+
+
+
+1482259809130	 restart server
+1482259809220	 connecting data service
+1482259809285	 data service connected
+1482259809285	 using hardcoded user, devUser()
+1482259809290	 
+
+1482259809290	 connecting main routes
+1482259810791	 
+
+1482259810791	 creating chatbox routes
+1482259810791	 	/chatbox
+1482259810791	 	/style
+1482259810791	 	/bot
+1482259810791	 	/deleteBot
+1482259810791	 	/convert
+1482259810796	 ./endpoints.createchatbox 
+1482259810801	 ./endpoints.loadmessagetemplate 
+1482259811330	 ./endpoints.conversate/operator 
+1482259811335	 ./endpoints.receivecontactform 
+1482259811340	 ./endpoints.log 
+1482259811340	 
+
+1482259811340	 connecting static apps
+1482259811340	 ./backend 
+1482259811340	 ./demo 
+1482259811340	 ./builder 
+1482259811340	 
+
+1482259811340	 Error Handling 
+1482259811340	 
+
+1482259811340	 SERVER READY 
+
+1482259819468	 GET/img/favicon.png
+1482259829793	 GET/chatbox
+				 meta: {"query":{"key":"583c49634bb2eab840bae876"}}
+1482259831080	 SOCKET/register
+				 meta: {"key":"583c49634bb2eab840bae876","sessionID":"8dQDBvkjcz2dQ4Ax","url":"http://localhost:8080/demo/provider.html","icon":null}
+1482259888419	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259888424	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+ user, devUser()
+1482259849844	 
+
+1482259849844	 connecting main routes
+1482259851401	 
+
+1482259851401	 creating chatbox routes
+1482259851401	 	/chatbox
+1482259851401	 	/style
+1482259851406	 	/bot
+1482259851406	 	/deleteBot
+1482259851406	 	/convert
+1482259851406	 ./endpoints.createchatbox 
+1482259851416	 ./endpoints.loadmessagetemplate 
+1482259851966	 ./endpoints.conversate/operator 
+1482259851971	 ./endpoints.receivecontactform 
+1482259851976	 ./endpoints.log 
+1482259851976	 
+
+1482259851976	 connecting static apps
+1482259851976	 ./backend 
+1482259851976	 ./demo 
+1482259851976	 ./builder 
+1482259851976	 
+
+1482259851976	 Error Handling 
+1482259851976	 
+
+1482259851976	 SERVER READY 
+
+1482259886575	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259886575	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259887504	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259887504	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259889309	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259889319	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259890244	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259890254	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259891138	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259891138	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259892011	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259892011	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259892904	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259892992	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259892992	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259893757	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259893762	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259893837	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259894668	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259894683	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259894688	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259895585	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259895610	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259895625	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259895635	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259896517	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259896537	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259896587	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259896587	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259897425	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259897466	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259897485	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259897490	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259898331	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259898391	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259898406	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259898426	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259898453	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259899474	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259899547	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259899558	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259899574	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259899584	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259900510	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259900510	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259900515	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259901426	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259901466	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259901524	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259901549	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259901559	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259901639	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259902749	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259902769	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259902794	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259902819	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259902854	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259902854	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259904013	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259904018	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259904058	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259904063	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259904093	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259904108	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259905207	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259905247	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259905337	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259905337	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259905352	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259905352	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259905950	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259906090	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259906115	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259906596	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259906601	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259906611	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259906731	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259906901	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259907422	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259907452	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259907508	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259907543	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259907589	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259907634	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259908157	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259908242	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259908277	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259908332	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259908387	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259908402	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259909276	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259909491	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259909491	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259909682	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259909697	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259909707	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259910047	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259910267	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259910427	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259910432	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259910629	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259910634	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259910769	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259911009	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259911173	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259911183	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259911393	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259911403	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259911553	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259911728	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259911903	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259911903	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259912104	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259912104	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259912294	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259912424	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259912612	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259912612	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259912852	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259912857	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259912982	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259913119	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259913404	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259913404	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259913628	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259913633	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259913683	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259913843	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259914165	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259914175	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259914395	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259914425	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259914450	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259914537	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259914884	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259914889	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259915219	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259915224	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259915234	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259915279	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259915594	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259915599	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259916019	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259916043	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259916065	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259916120	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259916365	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259916365	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259916818	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259916828	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259916853	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259916902	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259917110	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259917110	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259917607	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259917612	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259917637	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259917692	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259917917	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259917917	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259918496	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259918531	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259918564	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259918646	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259918651	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259918681	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259919451	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259919676	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259919686	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259919746	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259919776	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259919791	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259920156	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259920446	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259920451	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259920521	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259920631	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259920631	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259920871	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259921387	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259921387	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259921568	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259921592	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259921612	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259921637	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259922177	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259922202	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259922427	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259922437	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259922467	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259922482	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259922935	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259922935	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259923302	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259923302	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259923307	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259923317	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259923717	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259923717	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259924242	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259924257	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259924382	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259924397	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259924467	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259924497	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259925014	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259925014	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259925162	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259925172	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259925232	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259925242	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259925923	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259925968	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259926056	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259926056	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259926071	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259926072	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259926852	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259926867	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259926982	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259927037	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259927037	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259927085	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259927773	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259927778	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259928018	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259928028	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259928028	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259928028	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259928690	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259928925	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259928960	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259928965	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259928975	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259928995	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259929635	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259929635	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259929830	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259929855	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259929865	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259929880	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259930685	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259930700	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259930830	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259930860	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259930885	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259930900	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259931400	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259931400	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259931560	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259931653	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259931678	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259931698	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259932186	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259932196	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259932261	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259932431	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259932436	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259932436	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259932947	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259932972	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259932987	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259933153	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259933308	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259933308	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259933704	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259933709	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259933739	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259933849	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259934094	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259934110	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259934507	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259934512	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259934597	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259934597	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259934883	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259934888	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259935316	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259935346	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259935416	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259935416	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259935637	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259935638	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259936047	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259936067	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259936190	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259936205	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259936395	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259936395	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259936767	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259936792	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259936912	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259936932	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259937140	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259937141	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259937502	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259937527	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259937651	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259937671	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259937906	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259937906	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259938334	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259938334	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259938454	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259938454	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259938678	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259938688	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259939103	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259939103	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259939235	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259939440	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259939440	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259939495	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259939813	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259939813	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259939973	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259940250	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259940255	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259940570	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259940570	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259941026	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259941031	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259941086	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259941501	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259941501	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259941822	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259941862	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259941877	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259941917	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259942335	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259942335	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259942590	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259942673	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259942678	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259942686	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259943153	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259943153	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259943321	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259943441	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259943481	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259943501	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259943967	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259943972	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259944067	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259944216	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259944274	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259944274	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259944698	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259944720	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259944785	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259944965	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259945015	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259945303	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259945458	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259945473	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259945503	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259945733	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259945768	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259946028	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259946188	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259946189	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259946314	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259946439	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259946494	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259946754	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259946964	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259946964	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259947114	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259947139	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259947215	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259947476	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259947696	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259947697	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259947844	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259947859	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259947944	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259948224	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259948472	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259948472	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259948647	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259948647	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259948692	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259948975	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259949325	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259949325	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259949450	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259949470	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259949485	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259949722	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259950166	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259950171	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259950343	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259950373	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259950383	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259950448	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259950932	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259950932	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259951162	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259951167	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259951229	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259951237	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259951851	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259951941	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259952001	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259952001	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259952001	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259952026	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259952696	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259952696	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259952892	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259952897	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259952922	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259952942	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259953686	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259953691	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259953889	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259953899	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259953914	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259953969	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259954648	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259954859	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259954869	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259954919	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259954969	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259954979	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+
+
+1482259957908	 restart server
+1482259958238	 connecting data service
+1482259958354	 data service connected
+1482259958354	 using hardcoded user, devUser()
+1482259958354	 
+
+1482259958354	 connecting main routes
+1482259960185	 
+
+1482259960185	 creating chatbox routes
+1482259960185	 	/chatbox
+1482259960185	 	/style
+1482259960185	 	/bot
+1482259960185	 	/deleteBot
+1482259960185	 	/convert
+1482259960190	 ./endpoints.createchatbox 
+1482259960200	 ./endpoints.loadmessagetemplate 
+1482259960739	 ./endpoints.conversate/operator 
+1482259960744	 ./endpoints.receivecontactform 
+1482259960749	 ./endpoints.log 
+1482259960749	 
+
+1482259960749	 connecting static apps
+1482259960749	 ./backend 
+1482259960749	 ./demo 
+1482259960749	 ./builder 
+1482259960749	 
+
+1482259960749	 Error Handling 
+1482259960749	 
+
+1482259960749	 SERVER READY 
+
+1482259961820	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259961866	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259961904	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259961921	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259961936	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259961942	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259962735	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259962735	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259962914	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259962923	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259962929	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259962982	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259963601	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259963820	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259963875	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259963895	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259963905	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259963945	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259964313	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259964620	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259964689	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259964701	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259964761	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259964772	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259965067	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259965507	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259965532	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259965700	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259965701	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259965731	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259965780	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259966285	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259966305	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259966472	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259966502	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259966527	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259966757	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259967176	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259967178	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259967376	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259967426	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259967426	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259967476	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259967916	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259967916	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259968093	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259968237	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259968259	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259968293	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259968723	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259968737	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259968822	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259969017	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259969027	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259969052	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259969536	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259969551	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259969581	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259969836	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259969846	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259969846	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259970371	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259970371	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259970376	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259970646	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259970671	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259970691	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259971182	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259971187	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259971217	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259971430	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259971496	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259971501	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259971938	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259971963	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259972059	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259972180	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259972255	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259972265	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259972676	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259972786	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259972815	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259973124	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259973139	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259973174	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259973479	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259973514	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259973617	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259973894	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259973919	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259974025	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259974362	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259974362	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259974444	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259974691	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259974691	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259974826	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259975167	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259975172	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259975229	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259975442	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259975442	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259975587	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259975927	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259975932	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259976036	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259976176	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259976186	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259976281	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259976696	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259976696	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259976826	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259976974	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259976999	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259977024	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259977455	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259977465	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259977630	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259977725	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259977735	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259977785	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259978482	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259978485	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259978538	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259978581	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259978814	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259978869	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259979302	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259979306	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259979450	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259979487	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259979584	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259979624	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259980098	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259980103	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259980228	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259980278	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259980294	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259980379	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259980873	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259980881	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259981040	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259981045	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259981050	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259981105	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259981676	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259981676	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259981889	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259981909	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259981924	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259981929	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259982464	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259982469	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259982774	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259982789	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259982819	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259982824	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259983204	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259983209	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259983544	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259983549	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259983639	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259983639	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259983925	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259983945	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259984350	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259984350	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259984449	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259984459	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259984674	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259984674	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259985096	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259985116	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259985246	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259985256	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259985446	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259985451	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259986021	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259986021	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259986211	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259986241	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259986261	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259986276	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259987187	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259987260	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259987279	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259987305	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259987320	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259987336	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259988091	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259988322	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259988391	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259988486	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259988499	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259988510	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259988844	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259989063	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259989113	 GET/chatbox
+				 meta: {"query":{"key":"583c49634bb2eab840bae876"}}
+1482259989158	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259989265	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259989285	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259989295	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259989590	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259989795	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259989876	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259990056	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259990061	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259990081	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259990316	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259990545	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259990616	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259990860	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259990906	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259990906	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259991046	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259991272	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259991296	 SOCKET/register
+				 meta: {"key":"583c49634bb2eab840bae876","sessionID":"y5Pzg5Pb9iXzWRmB","url":"http://localhost:8080/demo/provider.html","icon":null}
+1482259991348	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259991618	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259991697	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259991706	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}
+1482259991788	 GET/driver
+				 meta: {"query":{"phone":"2055427441"}}

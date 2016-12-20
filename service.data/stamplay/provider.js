@@ -40,7 +40,7 @@ function createProvider(input){
 		db.User.get({email: input.email},function(err,doc){
 			if(err){reject(err);}
 			else{
-				doc = JSON.parse(doc);
+				//doc = JSON.parse(doc);
 				if(doc.data && doc.data.length > 0){
 					resolve(doc.data[0]);
 				}else{
