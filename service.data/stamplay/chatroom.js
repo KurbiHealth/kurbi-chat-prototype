@@ -6,13 +6,13 @@ module.exports = function(service,db) {
 	service.setChatRoom = setChatRoom;
 
 function getChatRoom(input){
-	console.log('in getChatRoom()');
 	return new Promise(function(resolve,reject){
   		db.Object('chatroom').get({room:input.room},function(err,doc){
-  			if(err) reject(err);
+  			if(err) reject(appError(err,{file:"chatroom.js", info:"stamplay api"}));
   			else{
   				doc = JSON.parse(doc);
   				doc = doc.data[0];
+
   				if(!doc.messages){
   					doc.messages = [];
   				}
@@ -24,11 +24,10 @@ function getChatRoom(input){
 }
 
 function getChatRooms(query){
-	console.log('in getChatRooms()');
 	return new Promise(function(resolve,reject){
 		
   		db.Object('chatroom').get(query,function(err,docs){
-  			if(err) reject(err);
+  			if(err) reject(appError(err,{file:"chatroom.js", info:"stamplay api"}));
   			else{
   				docs = JSON.parse(docs);
   				resolve(docs.data);
@@ -40,16 +39,15 @@ function getChatRooms(query){
 }
 
 function createChatRoom(input){
-	console.log('in createChatRoom()');
 	return new Promise(function(resolve,reject){
 
 		db.Object('chatroom').get({room: input.room},function(err,doc){
-			if(err) reject(err);
+			if(err) reject(appError(err,{file:"chatroom.js", info:"stamplay api"}));
 			else{
 				doc = JSON.parse(doc);
 				if(!doc.data){
 					db.Object('chatroom').save(input,function(err,doc){
-						if(err) reject(err);
+						if(err) reject(appError(err,{file:"chatroom.js", info:"stamplay api"}));
 						else{
 							doc = JSON.parse(doc);
 							resolve(doc);
@@ -65,7 +63,7 @@ function createChatRoom(input){
 }
 
 function setChatRoom(input){
-	console.log('in setChatRoom(), input:',input);
+
 	return new Promise(function(resolve,reject){
 		var chatroom = {
 			'url': input.url,
@@ -75,22 +73,25 @@ function setChatRoom(input){
 			//'parent_chatbox': '["'+input.key+'"]',
 		}
 		db.Object('chatroom').get({room:chatroom.room}, function(err,doc){
-			console.log('getting chatroom with room,',chatroom.room,'err:',err);
-			if(err) reject(err);
+			if(err) reject(appError(err,{file:"chatroom.js", info:"stamplay api"}));
 			else {
 				doc = JSON.parse(doc);
-				console.log('chatroom doc',doc);
 				if(doc.data.length == 0){
-					console.log('chatroom not found');
 					db.Object('chatroom').save(chatroom,function(err,doc){
-						console.log('created chatroom, err:',err);
-						if(err) reject(err)
+						if(err) reject(JSON.parse(err));
 						else{
 							doc = JSON.parse(doc);
 							resolve(doc);
 						}
 					});
-				}else resolve(doc.data[0]);
+				}else {
+					db.Object('chatroom').patch(doc.data[0].id, {messages:input.messages}, function(err,new_doc){
+						if(err) reject(appError(err,{file:"chatroom.js", info:"stamplay api"}));
+							else{
+								resolve(JSON.parse(new_doc));
+							}
+					})
+				}
 			}
 		});
 	});

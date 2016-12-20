@@ -6,17 +6,15 @@ module.exports = function(service,db) {
 	service.createChatStyle = createChatStyle;
 
 function getChatStyle(query){
-	console.log('in getChatStyle(), query: ',query);
+	console.log('in getChatStyle()');
 	return new Promise(function(resolve,reject){
-
   		db.Object('chatstyle').get(query,function(err,doc){
   			if(err) reject(err);
   			else{
   				doc = JSON.parse(doc);
   				resolve(doc.data[0]);
   			}
-  		});
-	
+  		});	
 	});
 	
 }

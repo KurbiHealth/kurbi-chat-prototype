@@ -14,48 +14,34 @@ module.exports = function(BASEURL,PORT,db){
 	service.requestBot = requestBot;
 	service.connections = [];
 
-	// setInterval(function(){
-	// console.log('---- printing bot connections ----');
-	// console.log(service.connections);
-	// console.log('----------------------------------');
-	// console.log('---- removing bots ---------------');
-	// removeOldBots();
-	// },KEEP_ALIVE_TIME);
-
-
-
-
 	function requestBot(room,info){
 		var domain = extractDomain(info.url);
 		var bot = null;
 		var chatData = {};
+		var botSessionId = makeKey();
 
 		chatData.roomKey = room;
 		chatData.boxKey = info.key;
-
+		
+		log('Creating Bot', {sessionID:botSessionId});
 		loadRoom(chatData)
 		.then(loadBox)
 		.then(function(sessionData){
 			//removeOldBots();
-			console.log('sessionData',sessionData);
 			//sessionData.box
 			db.getBot(sessionData.box).then(function(botInfo){
 
 			if(!bots[room]) {
 					bots[room] = {};
-					bots[room].socket = io.connect('http://localhost:'+PORT, {forceNew:true});
+					bots[room].socket = io.connect('http://localhost:'+PORT, {forceNew:true, query:{'sessionID':botSessionId}});
 					bots[room].lastMessage = new Date();
 					
 				var connection = bots[room];
-				
 				if(sessionData.room.bot) botInfo = sessionData.room.bot;
 				
-				console.log('bot info', botInfo);
 				var bot = new getBot(connection, botInfo);
-				console.log('============bot',bot);
 				if(!sessionData.room.userVariables) sessionData.room.userVariables = {};
 				var userVariables = sessionData.room.userVariables;
-				console.log('loaded variables, ', userVariables);
 				
 				connection.socket.on('history', (data) => {
 						if(!data || data.length == 0) {
@@ -118,16 +104,15 @@ module.exports = function(BASEURL,PORT,db){
 	}
 
 	function getBot(connection, botInfo){
-		console.log('in getBot(),botInfo:',botInfo);
 		this.reply = reply;
 
 				function reply(msg, userVariables, waitTime){
-					console.log('in reply()');
 					if(!waitTime) waitTime = Math.floor(Math.random()*2500+1000);
 					setTimeout(function(){
 						if(msg) {
 							getResponse(null,msg.qCode,botInfo,function(rawResponse){
 								var response = runtimeReplace(rawResponse,userVariables);
+								if(Object.keys(response).length === 0 && response.constructor === Object) response = null;
 								if(response) {
 									connection.socket.emit('message', response);
 									reply(response);
@@ -140,7 +125,6 @@ module.exports = function(BASEURL,PORT,db){
 				}
 
 				function getResponse(prompt,qcode,bot, callback){
-					console.log('in getResponse()');
 					if(bot)
 						db.getBotDialog({owner:bot.owner,name:bot.name,qcode:qcode}).then((doc)=>{callback(doc);});
 					else 
@@ -150,7 +134,6 @@ module.exports = function(BASEURL,PORT,db){
 				}
 
 				function runtimeReplace(data,variables){
-					console.log('in runtimeReplace()');
 					var temp = JSON.stringify(data);
 						temp = temp.replace(/\[_(.+?)_\]/g, function(whole,variable){
 							return variables[variable];
@@ -192,6 +175,15 @@ module.exports = function(BASEURL,PORT,db){
 		});
 	}
 
+	function makeKey(){
+		var text = "";
+		var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+		for( var i=0; i < 16; i++ )
+		    text += possible.charAt(Math.floor(Math.random() * possible.length));
+		
+		return text;	
+	}
 
 	return service;
 

@@ -8,22 +8,23 @@ module.exports = function(service,db) {
 
 
 function getBotDialog(query){
-	console.log('in getBotDialog(), query: ',query);
 	// if(query.owner){
 	// 	query.user_owner = query.owner;
 	// 	delete query.owner;
 	// }
 	return new Promise(function(resolve,reject){
+		query.qcode = encodeURIComponent(query.qcode);
   		db.Object('botdialog').get(query,function(err,doc){
-  			console.log('botdialog.get, err:',err,',doc: ',doc);
   			if(err) reject(err);
   			else{
   				doc = JSON.parse(doc);
   				doc = doc.data[0];
-  				_unpack(doc);
-  				if(doc.user_owner){
-  					doc.owner = doc.user_owner;
-  				}
+  				if(doc) {
+  					_unpack(doc);
+	  				if(doc.user_owner){
+	  					doc.owner = doc.user_owner;
+	  				}
+  				} else doc = {};
   				resolve(doc);
   			}
   		});
@@ -32,7 +33,6 @@ function getBotDialog(query){
 }
 
 function createBotDialog(input){
-	console.log('in createBotDialog()');
 	return new Promise(function(resolve,reject){
 		
 		var data = {
@@ -63,10 +63,12 @@ function createBotDialog(input){
 }
 
 function _unpack(input){
-	Object.keys(input.stuff).forEach((key) => {
-		input[key] = input.stuff[key];
-	});
-	delete input.stuff;
+	if(input.stuff){
+		Object.keys(input.stuff).forEach((key) => {
+			input[key] = input.stuff[key];
+		});
+		delete input.stuff;
+	}
 }
 
 } // end exports

@@ -25,12 +25,14 @@ module.exports = function(router,DATASOURCE,db){
 	function receiveError(req,res){
 		console.log("Error Transmitted");
 		console.log(req.body);
+		console.log(req.params);
+		console.log(req.query);
 		res.json({okay:'okay'});
 	 }
 
-
+//CANT DO THIS WAY, because SERVER SHUTS DOWN BEFORE IT WORKS
 	function saveLog(req,res){
-
+		console.log('IN SAVE LOG');
 		var log = req.body.log;
 		if(typeof log == 'string'){
 			log = JSON.parse(log);
@@ -43,13 +45,14 @@ module.exports = function(router,DATASOURCE,db){
 		}
 
 		if(DATASOURCE == 'stamplay'){
-
+			console.log('DETECTED STAMPLAY');
 			db.Object('logs')
 			.save( { log: log, source: source, alert: alert }, function(err,doc) {
 				if(err){
 					console.log('error attempting to log',err);
 					return res.sendStatus(500,'error attempting to log: ' + err);
 				}else{
+					console.log('successfully logged to stamplay');
 					return res.sendStatus(200,'Logged successfully');
 				}
 			})

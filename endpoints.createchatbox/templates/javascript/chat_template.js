@@ -69,12 +69,12 @@ var ChatBox = function(info){
 	setup();
 
 	function start(){
-		socket.emit('start');
+		socket.emit('start',that.info);
 	}
 
 	function end(){
 		clearKey();
-		socket.emit('end');
+		socket.emit('end',that.info);
 		that.banner.parentNode.removeChild(that.banner);
 	}
 
@@ -219,7 +219,7 @@ var ChatBox = function(info){
 
 	function setupSocket(){
 		if(!socket){
-			socket = io(serverURL);
+			socket = io(serverURL, {query:{'sessionID':info.sessionID}});
 			socket.emit('register', that.info);
 			socket.on('history', addHistory);
 			socket.on('message', addMessage);
@@ -249,12 +249,17 @@ function params(apikey){
 			}
 console.log('info',info);
 	loadJQuery(that, init);
+
 }
 
 function init(local){
 
 	local.chatbox = chatFactory(local);
-	
+		$.ajaxSetup({
+    beforeSend: function(xhr) {
+        xhr.setRequestHeader('x-kurbi-header', info.sessionID );
+		    }
+		});
 }
 
 function getPatientIcon(){

@@ -19,38 +19,46 @@ module.exports = function(router,db,BASEURL,PORT,ENV){
 // -------------------------------------------
 // ROUTE DEFINITION
 // this endpoint is called by the backend, to generate a chatbox and a corresponding snippet
+	log('\n');
+	log('creating chatbox routes');
+	//this decides if we'll load the chat style from the database or generate it fresh
+	//it's so we can modify the snippet code while in DEV mode.
+	var _getUserChat = (ENV=='dev') ? debugGetUserChat : getChatboxes;
 	router
 		.route('/chatbox')
-			.get(getChatboxes)
+			.get(_getUserChat)
 			.post(createChatbox)
 			.put(updateChatbox);
-
+	log('\t/chatbox');
 	router
 		.route('/style')
 			.get(getStyles)
 			.post(createStyle)
 			.put(updateStyle);
+	log('\t/style');
 
 	router
 		.route('/bot')
 			.get(getBots)
 			.post(createBot);
+	log('\t/bot');
+
 	router
 		.route('/deleteBot')
 			.post(deleteBot);
+	log('\t/deleteBot');
 
 	router
 		.route('/convert')
 			.get(createBotFromFile);
-
-
-function deleteBot(req,res){
-	console.log(req.body);
-
-	db.deleteChatBot({owner:req.user._id,name:req.body.name}).then(function(){
+	log('\t/convert');
 
 	
-res.json({okay:"okay", body:req.body});
+
+function deleteBot(req,res){
+	// log("deleteBot()", {body:req.body,user:req.user});
+	db.deleteChatBot({owner:req.user._id,name:req.body.name}).then(function(){
+	res.json({okay:"okay", body:req.body});
 	});
 
 }
@@ -117,7 +125,7 @@ function createStyle(req,res){
 			icon_url: userAvatar,
 			icon_urlb: 'http://chat.gokurbi.com/backend/icons/PNG/mawc.png',
 			server_url: URL,
-			server_close_button: URL + '/img/icons/button_close.png'
+			server_close_button: URL + '/img/icons/button_close.png',
 		}
 console.log('hbsData',hbsData);
 		var lessData = {};
@@ -186,16 +194,55 @@ function createBot(req,res){
 }
 
 function getChatboxes(req,res){
-	console.log('getting chatbox with key', req.query.key);
+
+
 	var key = req.query.key;
 	if(!key) db.getChatBoxes({owner:req.user._id}).then((docs) => {return res.json(docs)});
 	else db.getChatBox({_id:key}).then((doc) => {
 		var chosenStyle = db.getStyle(doc.styles);
+		//if(chosenStyle)  //need to load some sort of default style
 		db.getChatStyle({_id:chosenStyle}).then((style) => {return res.json(style)});
 	});
 
 
-}
+}	
+
+function debugGetUserChat(req,res){
+		var key = req.query.key;
+		if(!key) db.getChatBoxes({owner:req.user._id}).then((docs) => {return res.json(docs)});
+		else{
+		//this is to force it to recompile the html/css every time
+		var lTemps = new Promise(globFunc.loadTemplates);
+		var url = BASEURL;
+		if(PORT) url += ":" + PORT; 
+		lTemps.then(function(template){
+			var hbsData = {
+				headline: 'debug mode',
+				icon_urlb: url + '/img/icons/juggernaut.png',
+				server_url: url,
+				server_close_button: url + '/img/icons/button_close.png'
+
+			}
+			var lessData = {
+				
+			}
+
+			var response = {};
+			var promises = [];
+			promises.push(globFunc.compileHBS(hbsData,template.hbs));
+			promises.push(globFunc.compileLESS(lessData,template.less));
+
+			Promise.all(promises).then(function(results){
+
+				response.js = template.js.replace(/#SERVER_URL/g,url);
+				response.css = results[1];
+				response.html = results[0].replace(/#SERVER_URL/g,url);
+				return res.json(response);
+			
+			});
+		});
+		}
+	}
 
 
 function createChatbox(req,res){

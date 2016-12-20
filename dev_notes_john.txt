@@ -129,3 +129,29 @@ There is now an abstract data layer above the database layer. This can be found 
 
 
 
+/////////////
+Nov 28
+Need a default style to be chosen, when a chatbox has no style attached.
+main.js(194)
+
+Stamplay.Object.get -- needs the fields to be URIencoded to remove white space.  
+
+To Do:
+Document Creation
+Better dev logging.
+
+Provider app: this needs to be able to:
+create chat boxes
+create styles
+create bots
+attach styles/bots to a chatbox
+
+Bot Builder temp:
+Needs a free-response field?
+
+Bot Builder real:
+Needs to be built!
+
+DONE:
+Error Logging? (stamplay endpoint) 
+Stamplay History not working.

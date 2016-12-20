@@ -38,10 +38,9 @@ module.exports = function(io,express,BASEURL,PORT,db){
 	var roomVars = {};					//will hold the user variables that are detected during chat.
 	var BOT_WAIT_TIME = 15000; 			//how long a bot will wait after a client has disconnected, before leaving the room.			
 
-
+	var winston 				= require('winston');
 
 	function clearRooms(){
-//console.log('--------clearing empty rooms');
 
 		var emptyRooms = checkRooms.filter((room) => {		
 			//assumes room is empty, if it finds a patient, 
@@ -66,14 +65,15 @@ module.exports = function(io,express,BASEURL,PORT,db){
 	io.on('connect', function(socket){
 		// THIS EVENT ('register') IS EMITTED BY THE CHATBOX WHEN IT LOADS 
 		// (/endpoints.createchatbox/templates/js/chat_template.js)
-		console.log('connection to socket made', socket.id);
+
 		socket.on('register', function(info){
 			//info.key (chatbox key)
 			//info.sessionId (chat session token, this changes when a new chat is made)
 			//info.url (url that the snippet is embedded in)
 			//info.icon (image the user chose to represent them)
 			var roomName = generateRoomName(info.sessionID,info.url,info.key);
-			
+
+
 			// createUserRecord(room);
 			// userRecords[room]['chatboxId'] = info.key;
 			loadRoom(roomName,info).then(function(room){
@@ -82,30 +82,24 @@ module.exports = function(io,express,BASEURL,PORT,db){
 				KingBot.requestBot(roomName,info);    //this should be idempotent - bot wont join if he's already in this room.
 				socket.source = 'patient';
 				joinRoom(roomName);
-
 			});
 			
 			
 		});
 
 		socket.on('join room', function(data){
-//console.log('-------joining room');
 			var room = data.room;
 			socket.source = data.source;
 			joinRoom(room);
 		});
 
 		socket.on('start', function(){
-//console.log('--------starting');
 			socket.broadcast.to(socket.room).emit('start');
 		});
 
 		socket.on('message', function(data){
-//console.log('--------message: ',JSON.stringify(data).substring(0,20));
 			data.source = socket.source;
 			//checkForUserData(data,socket.room);
-
-
 			if(data.message.variable) {	roomVars[socket.room][data.message.variable] = data.message.body.text; }
 			var currentMessage = OperatorRuntimeReplace(data,roomVars[socket.room]);
 			socket.broadcast.to(socket.room).emit('message', currentMessage);
@@ -113,7 +107,6 @@ module.exports = function(io,express,BASEURL,PORT,db){
 		});
 
 		socket.on('disconnect', function(){
-console.log('disconnecting: ' + socket.source, socket.id);
 			if(socket.source == 'patient') {
 				checkRooms.push(socket.room);
 				setTimeout(clearRooms,BOT_WAIT_TIME);
@@ -134,7 +127,6 @@ console.log('disconnecting: ' + socket.source, socket.id);
 
 
 		function joinRoom(room){
-//console.log('-------in joinRoom()');
 			if(!rooms[room]) rooms[room] = [];
 			rooms[room].push(socket);
 			socket.room = room;
@@ -158,9 +150,10 @@ console.log('disconnecting: ' + socket.source, socket.id);
 
 
 		function logChat(message, userVars, room){
-			console.log('in logChat(), room:',room);
 			db.getChatRoom({room:room}).then(function(chatroom){
-				console.log('chatroom');
+				if(!chatroom.messages) 
+					chatroom.messages = [];
+				
 				chatroom.messages.push(message);
 				chatroom.userVariables = userVars;
 				db.setChatRoom(chatroom);
