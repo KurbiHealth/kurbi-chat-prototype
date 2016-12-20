@@ -13,8 +13,7 @@ function getChatBoxes(query){
 
   		db.Object('chatbox').get(query,function(err,docs){
   			if(err) reject(err);
-			else{
-				docs = JSON.parse(docs);
+			else{				
 				docs = docs.data;
 				// docs.forEach(function(doc){
 				// 	_cleanStamplayFieldsForSave(doc);
@@ -31,8 +30,7 @@ function getChatBox(query){
 	return new Promise(function(resolve,reject){
 		db.Object('chatbox').get(query,function(err,doc){
   			if(err) reject(err);
-			else{
-				doc = JSON.parse(doc);
+			else{				
 				doc = doc.data[0];
 				_cleanStamplayFieldsForSave(doc);
 				resolve(doc);
@@ -47,8 +45,7 @@ function createChatBox(input){
 	return new Promise(function(resolve,reject){
 		db.Object('chatbox').save(input,function(err,doc){
 			if(err) reject(err);
-			else{
-				doc = JSON.parse(doc);
+			else{				
 				_cleanStamplayFieldsForSave(doc);
 				resolve(doc);
 			}
@@ -67,8 +64,7 @@ function setChatBox(input){
 			// create new chatbox
 			db.Object('chatbox').save(input,function(err,doc){
 				if(err) reject(err);
-				else{
-					doc = JSON.parse(doc);
+				else{					
 					_cleanStamplayFieldsForSave(doc);
 					resolve(doc);
 				}
@@ -77,8 +73,7 @@ function setChatBox(input){
 			var id = input._id;
 			delete input._id;
 			if(input.id) delete input.id;
-			db.Object('chatbox').patch(id,input,function(err,doc){
-				doc = JSON.parse(doc);
+			db.Object('chatbox').patch(id,input,function(err,doc){				
 				_cleanStamplayFieldsForSave(doc);
 				resolve(doc);
 			});
@@ -101,8 +96,7 @@ function getBot(box){
 	return new Promise(function(resolve,reject){
 		db.Object('chatbot').get({'user_owner': owner},function(err,docs){
 			if(err) reject(err);
-			else{
-				docs = JSON.parse(docs);
+			else{				
 				docs = docs.data;
 				var bot = {};
 				var index = Math.floor(Math.random()*docs.length);

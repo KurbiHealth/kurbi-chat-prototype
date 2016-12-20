@@ -13,11 +13,11 @@ function getBotDialog(query){
 	// 	delete query.owner;
 	// }
 	return new Promise(function(resolve,reject){
-		query.qcode = encodeURIComponent(query.qcode);
+		
   		db.Object('botdialog').get(query,function(err,doc){
   			if(err) reject(err);
   			else{
-  				doc = JSON.parse(doc);
+  				
   				doc = doc.data[0];
   				if(doc) {
   					_unpack(doc);
@@ -52,7 +52,7 @@ function createBotDialog(input){
 		db.Object('botdialog').save(data,function(err,doc){
 			if(err) reject(err);
 			else{
-				doc = JSON.parse(doc);
+				
 				doc = doc.data[0];
 				_unpack(doc);
 				resolve(doc);

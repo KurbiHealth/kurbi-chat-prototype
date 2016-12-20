@@ -13,7 +13,6 @@ function getProvider(input){
   		db.User.get({email: input.email},function(err,doc){
   			if(err) reject(err);
   			else{
-  				doc = JSON.parse(doc);
   				resolve(doc.data[0]);
   			}
   		});
@@ -40,7 +39,6 @@ function createProvider(input){
 		db.User.get({email: input.email},function(err,doc){
 			if(err){reject(err);}
 			else{
-				//doc = JSON.parse(doc);
 				if(doc.data && doc.data.length > 0){
 					resolve(doc.data[0]);
 				}else{
@@ -56,7 +54,6 @@ function createProvider(input){
 					db.User
 					.save(data,function(err,doc){
 						if(err){return console.log('error saving user, error:',err);}
-						doc = JSON.parse(doc);
 						resolve(doc.data[0]);
 					});
 				}
@@ -73,7 +70,6 @@ function setProvider(input){
 		db.User.get({email: input.email},function(err,doc){
 			if(err){reject(err);}
 			else{
-				doc = JSON.parse(doc);
 				// if(!doc.data || doc.data.length == 0){
 				// 	// create new user
 				// 	var data = {
@@ -87,7 +83,6 @@ function setProvider(input){
 				// 	db.User
 				// 	.save(data,function(err,doc){
 				// 		if(err){return console.log('error saving user, error:',err);}
-				// 		doc = JSON.parse(doc);
 				// 		resolve(doc.data[0]);
 				// 	});
 				// }else{
@@ -103,7 +98,6 @@ function setProvider(input){
 					db.User
 					.save(data,function(err,doc){
 						if(err){return console.log('error saving user, error:',err);}
-						doc = JSON.parse(doc);
 						resolve(doc.data[0]);
 					});
 				// }
