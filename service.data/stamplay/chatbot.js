@@ -11,8 +11,7 @@ function getChatBot(query){
 
   		db.Object('chatbot').get(query,function(err,doc){
   			if(err) reject(err);
-  			else{
-  				doc = JSON.parse(doc);
+  			else{  		
   				resolve(doc.data[0]);
   			}
   		});
@@ -25,8 +24,7 @@ function getChatBots(query){
 
   		db.Object('chatbot').get(query,function(err,docs){
   			if(err) reject(err);
-  			else{
-  				docs = JSON.parse(docs);
+  			else{  		
   				resolve(docs.data);
   			}
   		});
@@ -39,8 +37,7 @@ function createChatBot(input){
 
 		db.Object('chatbot').save(input,function(err,doc){
 			if(err) reject(err);
-			else{
-				doc = JSON.parse(doc);
+			else{		
 				resolve(doc);
 			}
 		});
@@ -53,14 +50,12 @@ function setChatBot(input){
 
 		db.Object('chatbot').get({id: input._id},function(err,doc){
 			if(err) reject(err);
-			else{
-				doc = JSON.parse(doc);
+			else{		
 				if(doc.data.length == 0){
 					// create new
 					db.Object('chatbot').save(input,function(err,doc){
 						if(err) reject(err);
-						else{
-							doc = JSON.parse(doc);
+						else{					
 							resolve(doc);
 						}
 					});

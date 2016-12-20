@@ -9,8 +9,7 @@ function getChatRoom(input){
 	return new Promise(function(resolve,reject){
   		db.Object('chatroom').get({room:input.room},function(err,doc){
   			if(err) reject(appError(err,{file:"chatroom.js", info:"stamplay api"}));
-  			else{
-  				doc = JSON.parse(doc);
+  			else{  				
   				doc = doc.data[0];
 
   				if(!doc.messages){
@@ -29,7 +28,6 @@ function getChatRooms(query){
   		db.Object('chatroom').get(query,function(err,docs){
   			if(err) reject(appError(err,{file:"chatroom.js", info:"stamplay api"}));
   			else{
-  				docs = JSON.parse(docs);
   				resolve(docs.data);
   			}
   		});
@@ -43,13 +41,11 @@ function createChatRoom(input){
 
 		db.Object('chatroom').get({room: input.room},function(err,doc){
 			if(err) reject(appError(err,{file:"chatroom.js", info:"stamplay api"}));
-			else{
-				doc = JSON.parse(doc);
+			else{				
 				if(!doc.data){
 					db.Object('chatroom').save(input,function(err,doc){
 						if(err) reject(appError(err,{file:"chatroom.js", info:"stamplay api"}));
-						else{
-							doc = JSON.parse(doc);
+						else{							
 							resolve(doc);
 						}
 					});
@@ -74,13 +70,11 @@ function setChatRoom(input){
 		}
 		db.Object('chatroom').get({room:chatroom.room}, function(err,doc){
 			if(err) reject(appError(err,{file:"chatroom.js", info:"stamplay api"}));
-			else {
-				doc = JSON.parse(doc);
+			else {				
 				if(doc.data.length == 0){
 					db.Object('chatroom').save(chatroom,function(err,doc){
-						if(err) reject(JSON.parse(err));
-						else{
-							doc = JSON.parse(doc);
+						if(err) reject(err);
+						else{							
 							resolve(doc);
 						}
 					});
@@ -88,7 +82,7 @@ function setChatRoom(input){
 					db.Object('chatroom').patch(doc.data[0].id, {messages:input.messages}, function(err,new_doc){
 						if(err) reject(appError(err,{file:"chatroom.js", info:"stamplay api"}));
 							else{
-								resolve(JSON.parse(new_doc));
+								resolve(new_doc);
 							}
 					})
 				}
