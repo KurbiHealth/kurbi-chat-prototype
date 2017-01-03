@@ -79,7 +79,7 @@ function setChatRoom(input){
 						}
 					});
 				}else {
-					db.Object('chatroom').patch(doc.data[0].id, {messages:input.messages}, function(err,new_doc){
+					db.Object('chatroom').patch(doc.data[0].id, {messages:input.messages, userVariables:input.userVariables}, function(err,new_doc){
 						if(err) reject(appError(err,{file:"chatroom.js", info:"stamplay api"}));
 							else{
 								resolve(new_doc);

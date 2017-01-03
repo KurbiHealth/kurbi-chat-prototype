@@ -38,7 +38,6 @@ module.exports = function(io,express,BASEURL,PORT,db){
 	var roomVars = {};					//will hold the user variables that are detected during chat.
 	var BOT_WAIT_TIME = 15000; 			//how long a bot will wait after a client has disconnected, before leaving the room.			
 
-	var winston 				= require('winston');
 
 	function clearRooms(){
 
