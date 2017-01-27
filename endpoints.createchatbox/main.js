@@ -66,7 +66,9 @@ function deleteBot(req,res){
 function createBotFromFile(req,res){
 	var serverURL = BASEURL;
 	if(PORT && PORT != 80) serverURL = BASEURL + ":" + PORT;
+
 	var responses = require('../endpoints.chatbot/responses2.demo.js')('Madison Area Wellness Collective',serverURL);
+	
 	for(var key in responses) {
 
 		var message = responses[key];
@@ -75,19 +77,19 @@ function createBotFromFile(req,res){
 		//message.name = "demoBot";
 		//message.owner="58041b251769e0406744deff";
 		message.owner="580e57b8de7ab85f033b4e41";
-		message.name = "Hank";
+		message.name = "demoBot";
 		message.version = "0.0.1";
 		db.createBotDialog(message);
 		
-		}
+	}
 		
-	    var bot = {};
-	    //bot.owner = "57699528f4924a7f641e4950";
-	    //bot.name = "demoBot";
-	    //bot.owner="58041b251769e0406744deff";
-	    bot.owner="580e57b8de7ab85f033b4e41";
-	    bot.name = "Hank";
-	    db.createChatBot(bot);
+    var bot = {};
+    //bot.owner = "57699528f4924a7f641e4950";
+    //bot.name = "demoBot";
+    //bot.owner="58041b251769e0406744deff";
+    bot.owner="580e57b8de7ab85f033b4e41";
+    bot.name = "demoBot";
+    db.createChatBot(bot);
 
 	return res.send(responses);
 }
@@ -266,9 +268,33 @@ console.log('req.user',req.user);
 	return res.json({okay:"okay"});
 }
 
-function updateChatbox(req,res){
-	return res.json({okay:"okay"});
-}
+	function updateChatbox(req,res){
+
+		var chatbox = {};
+console.log('req.body',typeof req.body,req.body);
+console.log('req.user',req.user);
+		if(req.user)
+			var user = req.user;
+		else
+			var user = {};
+		chatbox._id 			= req.body.chatbox_id ? req.body.chatbox_id : '';
+	    chatbox.owner 			= user._id ? user._id : '';
+		chatbox.styles 			= req.body.styles ? req.body.styles : '';
+		chatbox.bots 			= req.body.bots ? req.body.bots : '';
+		chatbox.allowedPages 	= req.body.allowedPages ? req.body.allowedPages : '';
+		chatbox.documents		= req.body.documents ? req.body.documents : '';
+		chatbox.rule 			= req.body.rule ? req.body.rule : '';	
+console.log('chatbox obj',chatbox);
+		db.setChatBox(chatbox).then(function(doc){
+			// if(typeof doc == 'string'){ doc = JSON.parse(doc); }
+// console.log('---doc',doc);
+			// if(doc.error)
+			// 	return res.json({error:doc.error});
+			// else
+			return res.json({okay:doc});
+		});
+
+	}
 
 
 /// General Work Flow  (createSnippet)
@@ -299,74 +325,6 @@ function updateChatbox(req,res){
 
 	}
 
-
-
-	// function updateChatbox(req,res){
-	// 	var chatBoxId = req.body.chatBoxId;
-	// 	if(req.body.avatar) var userAvatar = req.body.avatar;
-	// 		else var userAvatar = '/backend/icons/PNG/mawc.png'; // https://lh6.ggpht.com/HZFQUEzeti5NttBAuyzCM-p6BjEQCZk5fq4ryopFFYvy6qPp8zMFzVHk1IdzWNLr4X7M=w300
-	// 	if(req.body.headline) var userHeadline = req.body.headline;
-	// 		else var userHeadline = 'Welcome';
-
-	// 	var hbsData = {
-	// 		headline: userHeadline,
-	// 		icon_url: userAvatar
-	// 	}
-		
-	// 	var lessData = {};
-
-	// 	if(req.body.color) lessData.headerColor = req.body.color;
-
-	// 	var response = {};
-	// 	var promises = [];
-
-	// 	promises.push(compileHBS(hbsData,hbs));
-	// 	promises.push(compileLESS(lessData,less));
-	// 	Promise.all(promises).then(function(results){		
-	// 		if(DATASOURCE == 'mongodb'){
-	// 			// Data Layer is Mongoose
-	// 			var chat = new Chat();
-	// 			chat.js = js
-	// 				.replace(/#SERVER_URL/g,URL);
-	// 			chat.html = results[0]
-	// 				.replace(/#SERVER_URL/g,URL);
-	// 			chat.css = results[1];
-				
-	// 			chat.update(function(err){ // ?? not sure if update is correct, but I'm in a hurry
-					
-	// 				if(err) console.log(err);
-	// 				else{
-	// 					var customSnippet = snippet.replace('#BANANA', chat._id).replace(/#SERVER_URL/g,URL);
-	// 					var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
-	// 					return res.json({'snippet':uglySnippet.code});	
-	// 				}
-					
-	// 			});
-	// 		}else if(DATASOURCE == 'stamplay'){
-	// 			var chatObj = {};
-	// 			chatObj.js = js
-	// 				.replace(/#SERVER_URL/g,URL);
-	// 			chatObj.html = results[0]
-	// 				.replace(/#SERVER_URL/g,URL);
-	// 			chatObj.css = results[1];
-	// 			// Data Layer is Stamplay Node SDK
-	// 			var data = {
-	// 			    "js": chatObj.js,
-	// 			    "html": chatObj.html,
-	// 			    "css": chatObj.css
-	// 			}
-	// 			db.Object('chatbox').update(chatBoxId, data, function(error, result){
-	// 			    if(error) 
-	// 			    	console.log(error);
-	// 				else{
-	// 					result = JSON.parse(result);
-	// 					return res.sendStatus(200,'Completed successfully');	
-	// 				}
-	// 			})
-	// 		}
-
-	// 	});
-	// }
 
 	function loadTemplates(resolve,reject){
 		//this just loads the templates as strings using: loadHBS, loadLESS, loadJS, and loadSnippet.

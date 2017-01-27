@@ -12,9 +12,11 @@
  * 		DATASOURCE 	= stamplay|mongodb 
  * 		BASEURL 	= http://kchat:LISTENPORT|http://chat.gokurbi.com|http://public.foolhardysoftworks.com:LISTENPORT
  * 		ENV 		= prod|dev|local
- * 
- * LOCAL (MATT'S): PORT=8080 DATASOURCE=stamplay BASEURL=http://kchat:8080 ENV=local node app.js
- * PROD: LISTENPORT=3000 DATASOURCE=stamplay BASEURL=http://chat.gokurbi.com ENV=prod forever app.js
+ *
+ * LOCAL (MATT'S):  
+ * 		LISTENPORT=8080 PORT=8180 DATASOURCE=stamplay BASEURL=http://kchat:8080 ENV=local node app.js
+ * PROD: 
+ * 		LISTENPORT=3000 DATASOURCE=stamplay BASEURL=http://chat.gokurbi.com ENV=prod forever start app.js
  */
 
 var ENV 		= process.env.ENV 			|| 'prod';
@@ -166,6 +168,7 @@ log('./endpoints.loadmessagetemplate ');
  */
 require('./endpoints.conversate/operator')(io,express,BASEURL,LISTENPORT,db);
 log('./endpoints.conversate/operator ');
+
 /**
  * ChatBot
  * This endpoint sends messages and accepts responses from chat boxes
