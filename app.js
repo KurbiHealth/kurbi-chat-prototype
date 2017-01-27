@@ -119,8 +119,8 @@ var devUser = function(req,res,next){
 		next();
 	});
 	
-
 }
+
 if(ENV == 'dev' || ENV == 'prod') {
 	log("using hardcoded user, devUser()");
 	app.use(devUser);

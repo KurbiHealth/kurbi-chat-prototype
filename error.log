@@ -1671,3 +1671,37 @@
 
 1485535227829	 PUT/chatbox
 				 meta: {"body":{"chatbox_id":"5887c7d42db6c92956a22c62","styles":"5887b9882db6c92956a22c55","bots":"demoBot","allowedPages":"chat.gokurbi.com","documents":"[]","rule":"random"}}
+
+
+1485537707140	 restart server
+1485537707152	 connecting data service
+1485537707168	 data service connected
+1485537707169	 
+
+1485537707169	 connecting main routes
+1485537707326	 
+
+1485537707326	 creating chatbox routes
+1485537707327	 	/chatbox
+1485537707327	 	/style
+1485537707327	 	/bot
+1485537707327	 	/deleteBot
+1485537707327	 	/convert
+1485537707328	 ./endpoints.createchatbox 
+1485537707332	 ./endpoints.loadmessagetemplate 
+1485537707371	 ./endpoints.conversate/operator 
+1485537707371	 ./endpoints.receivecontactform 
+1485537707372	 ./endpoints.log 
+1485537707372	 
+
+1485537707372	 connecting static apps
+1485537707372	 ./backend 
+1485537707372	 ./demo 
+1485537707373	 ./builder 
+1485537707373	 
+
+1485537707373	 Error Handling 
+1485537707373	 
+
+1485537707373	 SERVER READY 
+
