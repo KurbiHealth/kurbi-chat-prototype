@@ -166,7 +166,7 @@ function shutdown(msg, err){
 	if(err.stack) err.meta.stack = err.stack;
 	err.meta.source = "server";
 	winston.log('error', msg, err.meta, function(err){
-	process.exit(1);
+		process.exit(1);
 	});
 }
 
