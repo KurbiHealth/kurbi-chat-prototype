@@ -161,12 +161,13 @@ function appError(msg, meta){
 function shutdown(msg, err){
 	//we encountered an unexpected error... we have no idea what might be broken
 	//so shutdown the server! 
-	if(!err) err = {}; 
+	if(!err) err = {};
+console.log('err',err);    
 	if(!err.meta || err.meta == null) err.meta = {};
 	if(err.stack) err.meta.stack = err.stack;
 	err.meta.source = "server";
 	winston.log('error', msg, err.meta, function(err){
-	process.exit(1);
+		process.exit(1);
 	});
 }
 
