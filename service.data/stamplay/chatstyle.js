@@ -11,7 +11,16 @@ function getChatStyle(query){
   		db.Object('chatstyle').get(query,function(err,doc){
   			if(err) reject(err);
   			else{
-  				resolve(doc.data[0]);
+  				if(typeof doc == 'string')
+  					doc = JSON.parse(doc);
+  				if(doc.data){
+  					var length = doc.data.length;
+  					if(length > 0){
+  						resolve(doc.data[0]);
+  					}else{
+  						resolve('no styles found');
+  					}
+  				}
   			}
   		});	
 	});
