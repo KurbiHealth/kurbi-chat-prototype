@@ -16,7 +16,7 @@ console.log('getBotDialog -- query: ',query);
 	return new Promise(function(resolve,reject){
 		if(typeof query == 'string')
 			query = JSON.parse(query);
-		if(query.qcode != 'undefined' && query.qcode.search(' ') > -1){
+		if(query.qcode != 'undefined'){ // && query.qcode.indexOf(' ') > -1
 			query.qcode = encodeURI(query.qcode);
 		}
 
