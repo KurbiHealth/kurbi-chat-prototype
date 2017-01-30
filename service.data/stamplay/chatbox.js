@@ -145,7 +145,7 @@ console.log('index: ',index, 'docs',docs);
 function _cleanApiFieldsForStamplay(input){
 	// clean owner
 	if(input.owner) input.user_owner = input.owner;
-	delete input.owner;
+	// delete input.owner;
 
 	// clean styles
 	if(input.styles){
