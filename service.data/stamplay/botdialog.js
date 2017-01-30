@@ -14,7 +14,12 @@ function getBotDialog(query){
 	// }
 console.log('getBotDialog -- query: ',query);
 	return new Promise(function(resolve,reject){
-		
+		if(typeof query == 'string')
+			query = JSON.parse(query);
+		if(query.qcode.search(' ') > -1){
+			query.qcode = encodeURI(query.qcode);
+		}
+
   		db.Object('botdialog').get(query,function(err,doc){
   			if(err) reject(err);
   			else{
