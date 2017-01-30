@@ -114,10 +114,35 @@ var devUser = function(req,res,next){
 	admin.role = 'admin';
 	admin.enabled = true;
 	admin.chatboxes = [];
-	db.createProvider(admin).then(function(doc){
-		req.user = doc;
-		next();
-	});
+	// db.createProvider(admin).then(function(doc){
+	// 	req.user = doc;
+	// 	next();
+	// });
+	req.user = {
+      "_id": "57699528f4924a7f641e4950",
+      "email": "matteckman@gmail.com",
+      "password": "$2a$12$3CKMLBaQONjgjznfldd.oOfl3bQmUaUnsJ/40B38L/oOD8QEFHVfW",
+      "displayName": "matteckman",
+      "givenRole": "571670d1c961e8ec69779144",
+      "appId": "kurbi",
+      "__v": 0,
+      "customData": {
+        "email me": "Yes, that's right",
+        "ask for email": "It hurts more when I ride my bike.",
+        "you got it": "Yes, that's right",
+        "user summary": "Professional Care",
+        "get treatment": "Longer than a week",
+        "get duration": "back pain"
+      },
+      "firstName": "Matt",
+      "dt_update": "2016-08-17T16:26:05.315Z",
+      "dt_create": "2016-06-21T19:27:36.880Z",
+      "emailVerified": true,
+      "verificationCode": "7420e16a731fe06f7deb",
+      "profileImg": "",
+      "id": "57699528f4924a7f641e4950"
+    };
+    next();
 	
 }
 
