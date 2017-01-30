@@ -30,10 +30,14 @@ function getChatBox(query){
 	return new Promise(function(resolve,reject){
 		db.Object('chatbox').get(query,function(err,doc){
   			if(err) reject(err);
-			else{				
-				doc = doc.data[0];
-				_cleanStamplayFieldsForSave(doc);
-				resolve(doc);
+			else{
+				if(doc.data && doc.data.length > 0){
+					doc = doc.data[0];
+					_cleanStamplayFieldsForSave(doc);
+					resolve(doc);
+				}else{
+					reject(doc);
+				}
 			}
   		});
 	
@@ -58,7 +62,7 @@ function setChatBox(input){
 console.log('in setChatBox, input:',input);
 
 	_cleanApiFieldsForStamplay(input);
-	
+
 	return new Promise(function(resolve,reject){
 
 		_cleanStamplayFieldsForSave(input);
@@ -77,7 +81,7 @@ console.log('in setChatBox, input:',input);
 			var id = input._id;
 			delete input._id;
 			if(input.id) delete input.id;
-log('id',id);
+
 			// db.Object('chatbox').get({'id': id}).then(function(result){
 				// merge the existing record with new values
 				
