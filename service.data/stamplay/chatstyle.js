@@ -6,7 +6,7 @@ module.exports = function(service,db) {
 	service.createChatStyle = createChatStyle;
 
 function getChatStyle(query){
-	console.log('in getChatStyle()');
+	// console.log('in getChatStyle()');
 	return new Promise(function(resolve,reject){
   		db.Object('chatstyle').get(query,function(err,doc){
   			if(err) reject(err);

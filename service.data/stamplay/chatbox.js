@@ -35,9 +35,9 @@ function getChatBox(query){
 					doc = JSON.parse(doc);
 				if(doc.data)
 					var length = doc.data.length;
-console.log('-----------------');
-console.log('doc: ',length,doc);
-console.log('-----------------');
+// console.log('-----------------');
+// console.log('doc: ',length,doc);
+// console.log('-----------------');
 				if(doc.data && length > 0){
 					doc = doc.data[0];
 					_cleanStamplayFieldsForSave(doc);
@@ -109,7 +109,7 @@ log('doc',doc);
 }
 
 function getStyle(styles){
-console.log('styles: ',typeof styles, styles);
+// console.log('styles: ',typeof styles, styles);
 	if(typeof styles == 'string'){
 		return styles;
 	}
