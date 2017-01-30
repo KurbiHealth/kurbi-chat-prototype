@@ -73,10 +73,10 @@ function createBotFromFile(req,res){
 
 		var message = responses[key];
 		message.qcode = key;
-		//message.owner = "57699528f4924a7f641e4950";
+		message.owner = "57699528f4924a7f641e4950";
 		//message.name = "demoBot";
 		//message.owner="58041b251769e0406744deff";
-		message.owner="580e57b8de7ab85f033b4e41";
+		// message.owner="580e57b8de7ab85f033b4e41";
 		message.name = "demoBot";
 		message.version = "0.0.1";
 		db.createBotDialog(message);
@@ -255,7 +255,7 @@ console.log('req.user',req.user);
 	chatbox.styles 			= [];
 	chatbox.bots 			= [];
 	chatbox.allowedPages 	= [];
-	chatbox.rule 			= "random";	
+	chatbox.rule 			= "random";	s
 
 	db.createChatBox(chatbox).then(function(doc){
 		var key = doc._id;
