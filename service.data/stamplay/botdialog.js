@@ -17,7 +17,8 @@ function getBotDialog(query){
   		db.Object('botdialog').get(query,function(err,doc){
   			if(err) reject(err);
   			else{
-  				
+  				if(typeof doc == 'string')
+					doc = JSON.parse(doc);
   				doc = doc.data[0];
   				if(doc) {
   					_unpack(doc);
