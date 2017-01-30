@@ -460,3 +460,1248 @@
 				 meta: {"_id":"5806781bfbe7bc397d833a8e","owner":"57699528f4924a7f641e4950","name":"demoBot","version":"0.0.1","qcode":"get symptom","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2016-10-18T19:29:31.026Z","dt_create":"2016-10-18T19:29:31.026Z","__v":0,"id":"5806781bfbe7bc397d833a8e","message":{"type":"text message","body":{"displayName":"Madison Area Wellness Collective","text":"So, let's talk about your situation. What seems to be bothering you?"},"qCode":null,"meta":null},"responses":{"type":"small free response","body":{"buttonText":"Add Details","prompt":"Type in your main symptom in the box below:","message":{"type":"text message","qCode":"get duration","variable":"symptom","body":{"text":""}}}}}
 1482261264222	 GET/template
 				 meta: {"query":{"client":"web","version":"1","template":"small free response"}}
+
+
+1484929875082	 restart server
+1484929875095	 connecting data service
+1484929875107	 data service connected
+1484929875107	 
+
+1484929875108	 connecting main routes
+1484929875241	 
+
+1484929875241	 creating chatbox routes
+1484929875242	 	/chatbox
+1484929875242	 	/style
+1484929875242	 	/bot
+1484929875242	 	/deleteBot
+1484929875242	 	/convert
+1484929875244	 ./endpoints.createchatbox 
+1484929875249	 ./endpoints.loadmessagetemplate 
+1484929875281	 ./endpoints.conversate/operator 
+1484929875283	 ./endpoints.receivecontactform 
+1484929875284	 ./endpoints.log 
+1484929875284	 
+
+1484929875284	 connecting static apps
+1484929875285	 ./backend 
+1484929875285	 ./demo 
+1484929875285	 ./builder 
+1484929875285	 
+
+1484929875285	 Error Handling 
+1484929875285	 
+
+1484929875285	 SERVER READY 
+
+
+
+1484938301541	 restart server
+1484938301553	 connecting data service
+1484938301564	 data service connected
+1484938301564	 
+
+1484938301564	 connecting main routes
+1484938301685	 
+
+1484938301685	 creating chatbox routes
+1484938301685	 	/chatbox
+1484938301688	 	/style
+1484938301688	 	/bot
+1484938301688	 	/deleteBot
+1484938301688	 	/convert
+1484938301689	 ./endpoints.createchatbox 
+1484938301690	 ./endpoints.loadmessagetemplate 
+1484938301723	 ./endpoints.conversate/operator 
+1484938301723	 ./endpoints.receivecontactform 
+1484938301724	 ./endpoints.log 
+1484938301724	 
+
+1484938301724	 connecting static apps
+1484938301724	 ./backend 
+1484938301724	 ./demo 
+1484938301724	 ./builder 
+1484938301725	 
+
+1484938301725	 Error Handling 
+1484938301725	 
+
+1484938301725	 SERVER READY 
+
+1484938508285	 GET/img/favicon.png
+
+
+1485377024854	 restart server
+1485377024879	 connecting data service
+1485377024896	 data service connected
+1485377024896	 
+
+1485377024896	 connecting main routes
+1485377025120	 
+
+1485377025120	 creating chatbox routes
+1485377025121	 	/chatbox
+1485377025121	 	/style
+1485377025121	 	/bot
+1485377025124	 	/deleteBot
+1485377025124	 	/convert
+1485377025126	 ./endpoints.createchatbox 
+1485377025127	 ./endpoints.loadmessagetemplate 
+1485377025193	 ./endpoints.conversate/operator 
+1485377025193	 ./endpoints.receivecontactform 
+1485377025194	 ./endpoints.log 
+1485377025194	 
+
+1485377025194	 connecting static apps
+1485377025194	 ./backend 
+1485377025195	 ./demo 
+1485377025195	 ./builder 
+1485377025195	 
+
+1485377025195	 Error Handling 
+1485377025195	 
+
+1485377025195	 SERVER READY 
+
+1485377656733	 PUT/chatbox
+1485377656768	 	 level: error, == ENDPOINT ERROR ==
+				 meta: {"stack":"TypeError: Cannot read property '_id' of undefined\n    at updateChatbox (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/endpoints.createchatbox/main.js:276:33)\n    at Layer.handle [as handle_request] (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:131:13)\n    at next (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:125:14)\n    at next (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:125:14)\n    at Route.dispatch (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at /Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/index.js:277:22\n    at Function.process_params (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/index.js:330:12)\n    at next (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/index.js:271:10)","source":"server"}
+
+
+1485377738291	 restart server
+1485377738306	 connecting data service
+1485377738316	 data service connected
+1485377738316	 
+
+1485377738316	 connecting main routes
+1485377738327	 	 level: error, == GENERAL ERROR ==
+				 meta: {"stack":"SyntaxError: Unexpected identifier\n    at exports.runInThisContext (vm.js:53:16)\n    at Module._compile (module.js:387:25)\n    at Object.Module._extensions..js (module.js:422:10)\n    at Module.load (module.js:357:32)\n    at Function.Module._load (module.js:314:12)\n    at Module.require (module.js:367:17)\n    at require (internal/module.js:16:19)\n    at /Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/app.js:152:1\n    at process._tickCallback (node.js:402:9)\n    at Function.Module.runMain (module.js:449:11)","source":"server"}
+
+
+1485377742451	 restart server
+1485377742464	 connecting data service
+1485377742474	 data service connected
+1485377742474	 
+
+1485377742474	 connecting main routes
+1485377742481	 	 level: error, == GENERAL ERROR ==
+				 meta: {"stack":"SyntaxError: Unexpected identifier\n    at exports.runInThisContext (vm.js:53:16)\n    at Module._compile (module.js:387:25)\n    at Object.Module._extensions..js (module.js:422:10)\n    at Module.load (module.js:357:32)\n    at Function.Module._load (module.js:314:12)\n    at Module.require (module.js:367:17)\n    at require (internal/module.js:16:19)\n    at /Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/app.js:152:1\n    at process._tickCallback (node.js:402:9)\n    at Function.Module.runMain (module.js:449:11)","source":"server"}
+
+
+1485377862215	 restart server
+1485377862228	 connecting data service
+1485377862238	 data service connected
+1485377862239	 
+
+1485377862239	 connecting main routes
+1485377862246	 	 level: error, == GENERAL ERROR ==
+				 meta: {"stack":"SyntaxError: Unexpected identifier\n    at exports.runInThisContext (vm.js:53:16)\n    at Module._compile (module.js:387:25)\n    at Object.Module._extensions..js (module.js:422:10)\n    at Module.load (module.js:357:32)\n    at Function.Module._load (module.js:314:12)\n    at Module.require (module.js:367:17)\n    at require (internal/module.js:16:19)\n    at /Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/app.js:152:1\n    at process._tickCallback (node.js:402:9)\n    at Function.Module.runMain (module.js:449:11)","source":"server"}
+
+
+1485377913430	 restart server
+1485377913443	 connecting data service
+1485377913456	 data service connected
+1485377913456	 
+
+1485377913456	 connecting main routes
+1485377913585	 
+
+1485377913585	 creating chatbox routes
+1485377913586	 	/chatbox
+1485377913586	 	/style
+1485377913586	 	/bot
+1485377913589	 	/deleteBot
+1485377913589	 	/convert
+1485377913590	 ./endpoints.createchatbox 
+1485377913591	 ./endpoints.loadmessagetemplate 
+1485377913624	 ./endpoints.conversate/operator 
+1485377913625	 ./endpoints.receivecontactform 
+1485377913625	 ./endpoints.log 
+1485377913625	 
+
+1485377913625	 connecting static apps
+1485377913626	 ./backend 
+1485377913626	 ./demo 
+1485377913626	 ./builder 
+1485377913626	 
+
+1485377913626	 Error Handling 
+1485377913626	 
+
+1485377913626	 SERVER READY 
+
+1485377918516	 PUT/chatbox
+
+
+1485377985185	 restart server
+1485377985199	 connecting data service
+1485377985209	 data service connected
+1485377985209	 
+
+1485377985209	 connecting main routes
+1485377985343	 
+
+1485377985343	 creating chatbox routes
+1485377985343	 	/chatbox
+1485377985346	 	/style
+1485377985346	 	/bot
+1485377985346	 	/deleteBot
+1485377985346	 	/convert
+1485377985348	 ./endpoints.createchatbox 
+1485377985348	 ./endpoints.loadmessagetemplate 
+1485377985380	 ./endpoints.conversate/operator 
+1485377985381	 ./endpoints.receivecontactform 
+1485377985381	 ./endpoints.log 
+1485377985381	 
+
+1485377985381	 connecting static apps
+1485377985382	 ./backend 
+1485377985382	 ./demo 
+1485377985382	 ./builder 
+1485377985382	 
+
+1485377985382	 Error Handling 
+1485377985382	 
+
+1485377985382	 SERVER READY 
+
+1485378001365	 PUT/chatbox
+
+
+1485378050568	 restart server
+1485378050580	 connecting data service
+1485378050591	 data service connected
+1485378050591	 
+
+1485378050591	 connecting main routes
+1485378050724	 
+
+1485378050724	 creating chatbox routes
+1485378050725	 	/chatbox
+1485378050725	 	/style
+1485378050728	 	/bot
+1485378050728	 	/deleteBot
+1485378050728	 	/convert
+1485378050729	 ./endpoints.createchatbox 
+1485378050730	 ./endpoints.loadmessagetemplate 
+1485378050762	 ./endpoints.conversate/operator 
+1485378050762	 ./endpoints.receivecontactform 
+1485378050763	 ./endpoints.log 
+1485378050763	 
+
+1485378050763	 connecting static apps
+1485378050763	 ./backend 
+1485378050763	 ./demo 
+1485378050764	 ./builder 
+1485378050764	 
+
+1485378050764	 Error Handling 
+1485378050764	 
+
+1485378050764	 SERVER READY 
+
+1485378055536	 PUT/chatbox
+1485378163560	 PUT/chatbox
+				 meta: {"body":{"_id":"'5887c7d42db6c92956a22c62'","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485378229882	 restart server
+1485378229896	 connecting data service
+1485378229907	 data service connected
+1485378229907	 
+
+1485378229907	 connecting main routes
+1485378230040	 
+
+1485378230040	 creating chatbox routes
+1485378230041	 	/chatbox
+1485378230041	 	/style
+1485378230044	 	/bot
+1485378230044	 	/deleteBot
+1485378230044	 	/convert
+1485378230045	 ./endpoints.createchatbox 
+1485378230046	 ./endpoints.loadmessagetemplate 
+1485378230077	 ./endpoints.conversate/operator 
+1485378230078	 ./endpoints.receivecontactform 
+1485378230078	 ./endpoints.log 
+1485378230078	 
+
+1485378230078	 connecting static apps
+1485378230079	 ./backend 
+1485378230079	 ./demo 
+1485378230079	 ./builder 
+1485378230079	 
+
+1485378230079	 Error Handling 
+1485378230079	 
+
+1485378230079	 SERVER READY 
+
+1485378251604	 PUT/chatbox
+				 meta: {"body":{"_id":"'5887c7d42db6c92956a22c62'","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485378291584	 restart server
+1485378291597	 connecting data service
+1485378291607	 data service connected
+1485378291607	 
+
+1485378291607	 connecting main routes
+1485378291743	 
+
+1485378291743	 creating chatbox routes
+1485378291743	 	/chatbox
+1485378291743	 	/style
+1485378291744	 	/bot
+1485378291744	 	/deleteBot
+1485378291744	 	/convert
+1485378291745	 ./endpoints.createchatbox 
+1485378291749	 ./endpoints.loadmessagetemplate 
+1485378291785	 ./endpoints.conversate/operator 
+1485378291785	 ./endpoints.receivecontactform 
+1485378291786	 ./endpoints.log 
+1485378291786	 
+
+1485378291786	 connecting static apps
+1485378291786	 ./backend 
+1485378291786	 ./demo 
+1485378291786	 ./builder 
+1485378291787	 
+
+1485378291787	 Error Handling 
+1485378291787	 
+
+1485378291787	 SERVER READY 
+
+1485378302156	 PUT/chatbox
+				 meta: {"body":{"_id":"'5887c7d42db6c92956a22c62'","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485378381512	 restart server
+1485378381524	 connecting data service
+1485378381534	 data service connected
+1485378381534	 
+
+1485378381534	 connecting main routes
+1485378381665	 
+
+1485378381665	 creating chatbox routes
+1485378381665	 	/chatbox
+1485378381668	 	/style
+1485378381668	 	/bot
+1485378381669	 	/deleteBot
+1485378381669	 	/convert
+1485378381670	 ./endpoints.createchatbox 
+1485378381671	 ./endpoints.loadmessagetemplate 
+1485378381702	 ./endpoints.conversate/operator 
+1485378381702	 ./endpoints.receivecontactform 
+1485378381703	 ./endpoints.log 
+1485378381703	 
+
+1485378381703	 connecting static apps
+1485378381703	 ./backend 
+1485378381703	 ./demo 
+1485378381703	 ./builder 
+1485378381704	 
+
+1485378381704	 Error Handling 
+1485378381704	 
+
+1485378381704	 SERVER READY 
+
+1485378387488	 PUT/chatbox
+				 meta: {"body":{"_id":"'5887c7d42db6c92956a22c62'","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485378438137	 restart server
+1485378438150	 connecting data service
+1485378438163	 data service connected
+1485378438163	 
+
+1485378438163	 connecting main routes
+1485378438295	 
+
+1485378438295	 creating chatbox routes
+1485378438295	 	/chatbox
+1485378438295	 	/style
+1485378438296	 	/bot
+1485378438296	 	/deleteBot
+1485378438296	 	/convert
+1485378438297	 ./endpoints.createchatbox 
+1485378438302	 ./endpoints.loadmessagetemplate 
+1485378438338	 ./endpoints.conversate/operator 
+1485378438339	 ./endpoints.receivecontactform 
+1485378438339	 ./endpoints.log 
+1485378438339	 
+
+1485378438339	 connecting static apps
+1485378438340	 ./backend 
+1485378438340	 ./demo 
+1485378438340	 ./builder 
+1485378438340	 
+
+1485378438340	 Error Handling 
+1485378438340	 
+
+1485378438340	 SERVER READY 
+
+1485378442520	 PUT/chatbox
+				 meta: {"body":{"_id":"'5887c7d42db6c92956a22c62'","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485378470034	 restart server
+1485378470048	 connecting data service
+1485378470060	 data service connected
+1485378470060	 
+
+1485378470060	 connecting main routes
+1485378470188	 
+
+1485378470188	 creating chatbox routes
+1485378470188	 	/chatbox
+1485378470191	 	/style
+1485378470191	 	/bot
+1485378470192	 	/deleteBot
+1485378470192	 	/convert
+1485378470193	 ./endpoints.createchatbox 
+1485378470193	 ./endpoints.loadmessagetemplate 
+1485378470225	 ./endpoints.conversate/operator 
+1485378470226	 ./endpoints.receivecontactform 
+1485378470226	 ./endpoints.log 
+1485378470226	 
+
+1485378470226	 connecting static apps
+1485378470227	 ./backend 
+1485378470227	 ./demo 
+1485378470227	 ./builder 
+1485378470227	 
+
+1485378470227	 Error Handling 
+1485378470227	 
+
+1485378470227	 SERVER READY 
+
+1485378472627	 PUT/chatbox
+				 meta: {"body":{"_id":"'5887c7d42db6c92956a22c62'","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485378490102	 restart server
+1485378490115	 connecting data service
+1485378490124	 data service connected
+1485378490124	 
+
+1485378490124	 connecting main routes
+1485378490266	 
+
+1485378490266	 creating chatbox routes
+1485378490267	 	/chatbox
+1485378490267	 	/style
+1485378490267	 	/bot
+1485378490267	 	/deleteBot
+1485378490267	 	/convert
+1485378490268	 ./endpoints.createchatbox 
+1485378490272	 ./endpoints.loadmessagetemplate 
+1485378490307	 ./endpoints.conversate/operator 
+1485378490307	 ./endpoints.receivecontactform 
+1485378490308	 ./endpoints.log 
+1485378490308	 
+
+1485378490308	 connecting static apps
+1485378490308	 ./backend 
+1485378490308	 ./demo 
+1485378490308	 ./builder 
+1485378490308	 
+
+1485378490308	 Error Handling 
+1485378490308	 
+
+1485378490309	 SERVER READY 
+
+1485378493224	 PUT/chatbox
+				 meta: {"body":{"_id":"'5887c7d42db6c92956a22c62'","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+1485378493243	 	 level: error, == ENDPOINT ERROR ==
+				 meta: {"stack":"ReferenceError: id is not defined\n    at Object.setChatBox (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/service.data/stamplay/chatbox.js:58:34)\n    at updateChatbox (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/endpoints.createchatbox/main.js:288:6)\n    at Layer.handle [as handle_request] (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:131:13)\n    at next (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:125:14)\n    at next (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:125:14)\n    at Route.dispatch (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at /Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/index.js:277:22\n    at Function.process_params (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/index.js:330:12)","source":"server"}
+
+
+1485378510142	 restart server
+1485378510154	 connecting data service
+1485378510164	 data service connected
+1485378510164	 
+
+1485378510164	 connecting main routes
+1485378510295	 
+
+1485378510295	 creating chatbox routes
+1485378510295	 	/chatbox
+1485378510295	 	/style
+1485378510298	 	/bot
+1485378510299	 	/deleteBot
+1485378510299	 	/convert
+1485378510300	 ./endpoints.createchatbox 
+1485378510301	 ./endpoints.loadmessagetemplate 
+1485378510332	 ./endpoints.conversate/operator 
+1485378510333	 ./endpoints.receivecontactform 
+1485378510333	 ./endpoints.log 
+1485378510333	 
+
+1485378510333	 connecting static apps
+1485378510334	 ./backend 
+1485378510334	 ./demo 
+1485378510334	 ./builder 
+1485378510334	 
+
+1485378510334	 Error Handling 
+1485378510334	 
+
+1485378510334	 SERVER READY 
+
+1485378512541	 PUT/chatbox
+				 meta: {"body":{"_id":"'5887c7d42db6c92956a22c62'","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485378556574	 restart server
+1485378556590	 connecting data service
+1485378556601	 data service connected
+1485378556601	 
+
+1485378556601	 connecting main routes
+1485378556727	 
+
+1485378556728	 creating chatbox routes
+1485378556728	 	/chatbox
+1485378556728	 	/style
+1485378556732	 	/bot
+1485378556733	 	/deleteBot
+1485378556733	 	/convert
+1485378556734	 ./endpoints.createchatbox 
+1485378556735	 ./endpoints.loadmessagetemplate 
+1485378556772	 ./endpoints.conversate/operator 
+1485378556772	 ./endpoints.receivecontactform 
+1485378556773	 ./endpoints.log 
+1485378556773	 
+
+1485378556773	 connecting static apps
+1485378556774	 ./backend 
+1485378556774	 ./demo 
+1485378556774	 ./builder 
+1485378556774	 
+
+1485378556774	 Error Handling 
+1485378556774	 
+
+1485378556774	 SERVER READY 
+
+1485378558941	 PUT/chatbox
+				 meta: {"body":{"chatbox_id":"'5887c7d42db6c92956a22c62'","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485378642030	 restart server
+1485378642043	 connecting data service
+1485378642054	 data service connected
+1485378642054	 
+
+1485378642054	 connecting main routes
+1485378642188	 
+
+1485378642188	 creating chatbox routes
+1485378642189	 	/chatbox
+1485378642189	 	/style
+1485378642192	 	/bot
+1485378642192	 	/deleteBot
+1485378642192	 	/convert
+1485378642193	 ./endpoints.createchatbox 
+1485378642194	 ./endpoints.loadmessagetemplate 
+1485378642226	 ./endpoints.conversate/operator 
+1485378642227	 ./endpoints.receivecontactform 
+1485378642227	 ./endpoints.log 
+1485378642227	 
+
+1485378642227	 connecting static apps
+1485378642228	 ./backend 
+1485378642228	 ./demo 
+1485378642228	 ./builder 
+1485378642228	 
+
+1485378642228	 Error Handling 
+1485378642228	 
+
+1485378642228	 SERVER READY 
+
+1485378650241	 PUT/chatbox
+				 meta: {"body":{"chatbox_id":"'5887c7d42db6c92956a22c62'","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485379316072	 restart server
+1485379316086	 connecting data service
+1485379316097	 data service connected
+1485379316098	 
+
+1485379316098	 connecting main routes
+1485379316229	 
+
+1485379316229	 creating chatbox routes
+1485379316230	 	/chatbox
+1485379316232	 	/style
+1485379316233	 	/bot
+1485379316233	 	/deleteBot
+1485379316233	 	/convert
+1485379316234	 ./endpoints.createchatbox 
+1485379316235	 ./endpoints.loadmessagetemplate 
+1485379316268	 ./endpoints.conversate/operator 
+1485379316269	 ./endpoints.receivecontactform 
+1485379316269	 ./endpoints.log 
+1485379316269	 
+
+1485379316269	 connecting static apps
+1485379316269	 ./backend 
+1485379316270	 ./demo 
+1485379316270	 ./builder 
+1485379316270	 
+
+1485379316270	 Error Handling 
+1485379316270	 
+
+1485379316270	 SERVER READY 
+
+1485379319382	 PUT/chatbox
+				 meta: {"body":{"chatbox_id":"'5887c7d42db6c92956a22c62'","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485379383736	 restart server
+1485379383755	 connecting data service
+1485379383767	 data service connected
+1485379383767	 
+
+1485379383767	 connecting main routes
+1485379383898	 
+
+1485379383898	 creating chatbox routes
+1485379383899	 	/chatbox
+1485379383899	 	/style
+1485379383899	 	/bot
+1485379383899	 	/deleteBot
+1485379383899	 	/convert
+1485379383901	 ./endpoints.createchatbox 
+1485379383905	 ./endpoints.loadmessagetemplate 
+1485379383940	 ./endpoints.conversate/operator 
+1485379383941	 ./endpoints.receivecontactform 
+1485379383941	 ./endpoints.log 
+1485379383941	 
+
+1485379383941	 connecting static apps
+1485379383942	 ./backend 
+1485379383942	 ./demo 
+1485379383942	 ./builder 
+1485379383942	 
+
+1485379383942	 Error Handling 
+1485379383942	 
+
+1485379383942	 SERVER READY 
+
+1485379386658	 PUT/chatbox
+				 meta: {"body":{"chatbox_id":"'5887c7d42db6c92956a22c62'","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485379409615	 restart server
+1485379409630	 connecting data service
+1485379409640	 data service connected
+1485379409640	 
+
+1485379409640	 connecting main routes
+1485379409775	 
+
+1485379409775	 creating chatbox routes
+1485379409776	 	/chatbox
+1485379409776	 	/style
+1485379409776	 	/bot
+1485379409776	 	/deleteBot
+1485379409776	 	/convert
+1485379409777	 ./endpoints.createchatbox 
+1485379409781	 ./endpoints.loadmessagetemplate 
+1485379409814	 ./endpoints.conversate/operator 
+1485379409814	 ./endpoints.receivecontactform 
+1485379409815	 ./endpoints.log 
+1485379409815	 
+
+1485379409815	 connecting static apps
+1485379409815	 ./backend 
+1485379409815	 ./demo 
+1485379409815	 ./builder 
+1485379409815	 
+
+1485379409815	 Error Handling 
+1485379409815	 
+
+1485379409815	 SERVER READY 
+
+1485379415780	 PUT/chatbox
+				 meta: {"body":{"chatbox_id":"'5887c7d42db6c92956a22c62'","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485379463108	 restart server
+1485379463120	 connecting data service
+1485379463132	 data service connected
+1485379463132	 
+
+1485379463132	 connecting main routes
+1485379463262	 
+
+1485379463262	 creating chatbox routes
+1485379463262	 	/chatbox
+1485379463265	 	/style
+1485379463265	 	/bot
+1485379463265	 	/deleteBot
+1485379463265	 	/convert
+1485379463267	 ./endpoints.createchatbox 
+1485379463267	 ./endpoints.loadmessagetemplate 
+1485379463299	 ./endpoints.conversate/operator 
+1485379463299	 ./endpoints.receivecontactform 
+1485379463300	 ./endpoints.log 
+1485379463300	 
+
+1485379463300	 connecting static apps
+1485379463300	 ./backend 
+1485379463300	 ./demo 
+1485379463300	 ./builder 
+1485379463300	 
+
+1485379463300	 Error Handling 
+1485379463300	 
+
+1485379463300	 SERVER READY 
+
+1485379466774	 PUT/chatbox
+				 meta: {"body":{"chatbox_id":"'5887c7d42db6c92956a22c62'","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485379501146	 restart server
+1485379501159	 connecting data service
+1485379501170	 data service connected
+1485379501170	 
+
+1485379501171	 connecting main routes
+1485379501305	 
+
+1485379501305	 creating chatbox routes
+1485379501306	 	/chatbox
+1485379501306	 	/style
+1485379501306	 	/bot
+1485379501306	 	/deleteBot
+1485379501306	 	/convert
+1485379501307	 ./endpoints.createchatbox 
+1485379501311	 ./endpoints.loadmessagetemplate 
+1485379501346	 ./endpoints.conversate/operator 
+1485379501346	 ./endpoints.receivecontactform 
+1485379501347	 ./endpoints.log 
+1485379501347	 
+
+1485379501347	 connecting static apps
+1485379501347	 ./backend 
+1485379501347	 ./demo 
+1485379501347	 ./builder 
+1485379501348	 
+
+1485379501348	 Error Handling 
+1485379501348	 
+
+1485379501348	 SERVER READY 
+
+1485379646962	 PUT/chatbox
+				 meta: {"body":{"chatbox_id":"'5887c7d42db6c92956a22c62'","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+1485379715974	 PUT/chatbox
+				 meta: {"body":{"chatbox_id":"5887c7d42db6c92956a22c62","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485379732428	 restart server
+1485379732440	 connecting data service
+1485379732454	 data service connected
+1485379732454	 
+
+1485379732454	 connecting main routes
+1485379732583	 
+
+1485379732583	 creating chatbox routes
+1485379732583	 	/chatbox
+1485379732584	 	/style
+1485379732584	 	/bot
+1485379732584	 	/deleteBot
+1485379732584	 	/convert
+1485379732585	 ./endpoints.createchatbox 
+1485379732589	 ./endpoints.loadmessagetemplate 
+1485379732622	 ./endpoints.conversate/operator 
+1485379732622	 ./endpoints.receivecontactform 
+1485379732623	 ./endpoints.log 
+1485379732623	 
+
+1485379732623	 connecting static apps
+1485379732623	 ./backend 
+1485379732623	 ./demo 
+1485379732623	 ./builder 
+1485379732624	 
+
+1485379732624	 Error Handling 
+1485379732624	 
+
+1485379732624	 SERVER READY 
+
+1485379738089	 PUT/chatbox
+				 meta: {"body":{"chatbox_id":"5887c7d42db6c92956a22c62","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485379802928	 restart server
+1485379802941	 connecting data service
+1485379802951	 data service connected
+1485379802951	 
+
+1485379802951	 connecting main routes
+1485379803084	 
+
+1485379803085	 creating chatbox routes
+1485379803085	 	/chatbox
+1485379803085	 	/style
+1485379803089	 	/bot
+1485379803089	 	/deleteBot
+1485379803089	 	/convert
+1485379803091	 ./endpoints.createchatbox 
+1485379803092	 ./endpoints.loadmessagetemplate 
+1485379803124	 ./endpoints.conversate/operator 
+1485379803125	 ./endpoints.receivecontactform 
+1485379803125	 ./endpoints.log 
+1485379803125	 
+
+1485379803125	 connecting static apps
+1485379803125	 ./backend 
+1485379803125	 ./demo 
+1485379803126	 ./builder 
+1485379803126	 
+
+1485379803126	 Error Handling 
+1485379803126	 
+
+1485379803126	 SERVER READY 
+
+1485379805337	 PUT/chatbox
+				 meta: {"body":{"chatbox_id":"5887c7d42db6c92956a22c62","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485380388838	 restart server
+1485380388851	 connecting data service
+1485380388862	 data service connected
+1485380388862	 
+
+1485380388862	 connecting main routes
+1485380388991	 
+
+1485380388991	 creating chatbox routes
+1485380388991	 	/chatbox
+1485380388991	 	/style
+1485380388992	 	/bot
+1485380388992	 	/deleteBot
+1485380388992	 	/convert
+1485380388996	 ./endpoints.createchatbox 
+1485380388997	 ./endpoints.loadmessagetemplate 
+1485380389029	 ./endpoints.conversate/operator 
+1485380389030	 ./endpoints.receivecontactform 
+1485380389030	 ./endpoints.log 
+1485380389030	 
+
+1485380389031	 connecting static apps
+1485380389031	 ./backend 
+1485380389031	 ./demo 
+1485380389031	 ./builder 
+1485380389031	 
+
+1485380389031	 Error Handling 
+1485380389031	 
+
+1485380389031	 SERVER READY 
+
+1485380391952	 PUT/chatbox
+				 meta: {"body":{"chatbox_id":"5887c7d42db6c92956a22c62","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+
+
+1485380427333	 restart server
+1485380427345	 connecting data service
+1485380427356	 data service connected
+1485380427356	 
+
+1485380427356	 connecting main routes
+1485380427484	 
+
+1485380427484	 creating chatbox routes
+1485380427484	 	/chatbox
+1485380427484	 	/style
+1485380427487	 	/bot
+1485380427487	 	/deleteBot
+1485380427487	 	/convert
+1485380427489	 ./endpoints.createchatbox 
+1485380427489	 ./endpoints.loadmessagetemplate 
+1485380427523	 ./endpoints.conversate/operator 
+1485380427523	 ./endpoints.receivecontactform 
+1485380427524	 ./endpoints.log 
+1485380427524	 
+
+1485380427524	 connecting static apps
+1485380427524	 ./backend 
+1485380427524	 ./demo 
+1485380427524	 ./builder 
+1485380427524	 
+
+1485380427524	 Error Handling 
+1485380427524	 
+
+1485380427524	 SERVER READY 
+
+1485380429629	 PUT/chatbox
+				 meta: {"body":{"chatbox_id":"5887c7d42db6c92956a22c62","user":"{_id:''}","styles":"['5887b9882db6c92956a22c55']","bots":"['demoBot']","allowedPages":"['chat.gokurbi.com']","documents":"[]","rule":"random"}}
+1485380429647	 	 level: error, == ENDPOINT ERROR ==
+				 meta: {"stack":"SyntaxError: Unexpected token '\n    at Object.parse (native)\n    at updateChatbox (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/endpoints.createchatbox/main.js:282:69)\n    at Layer.handle [as handle_request] (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:131:13)\n    at next (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:125:14)\n    at next (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:125:14)\n    at Route.dispatch (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at /Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/index.js:277:22\n    at Function.process_params (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/index.js:330:12)","source":"server"}
+
+
+1485443736536	 restart server
+1485443736557	 connecting data service
+1485443736574	 data service connected
+1485443736574	 
+
+1485443736574	 connecting main routes
+1485443736763	 
+
+1485443736764	 creating chatbox routes
+1485443736764	 	/chatbox
+1485443736764	 	/style
+1485443736767	 	/bot
+1485443736767	 	/deleteBot
+1485443736767	 	/convert
+1485443736769	 ./endpoints.createchatbox 
+1485443736770	 ./endpoints.loadmessagetemplate 
+1485443736820	 ./endpoints.conversate/operator 
+1485443736821	 ./endpoints.receivecontactform 
+1485443736822	 ./endpoints.log 
+1485443736822	 
+
+1485443736822	 connecting static apps
+1485443736822	 ./backend 
+1485443736822	 ./demo 
+1485443736822	 ./builder 
+1485443736822	 
+
+1485443736822	 Error Handling 
+1485443736822	 
+
+1485443736823	 SERVER READY 
+
+1485443743151	 PUT/chatbox
+				 meta: {"body":{"chatbox_id":"5887c7d42db6c92956a22c62","user":"{_id:''}","styles":"5887b9882db6c92956a22c55","bots":"demoBot","allowedPages":"chat.gokurbi.com","documents":"[]","rule":"random"}}
+1485443743168	 	 level: error, == ENDPOINT ERROR ==
+				 meta: {"stack":"SyntaxError: Unexpected token b\n    at Object.parse (native)\n    at updateChatbox (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/endpoints.createchatbox/main.js:282:69)\n    at Layer.handle [as handle_request] (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:131:13)\n    at next (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:125:14)\n    at next (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:125:14)\n    at Route.dispatch (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at /Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/index.js:277:22\n    at Function.process_params (/Applications/MAMP/htdocs/Kurbi2/kurbi-chat-prototype/node_modules/express/lib/router/index.js:330:12)","source":"server"}
+
+
+1485443934252	 restart server
+1485443934266	 connecting data service
+1485443934277	 data service connected
+1485443934277	 
+
+1485443934277	 connecting main routes
+1485443934407	 
+
+1485443934408	 creating chatbox routes
+1485443934408	 	/chatbox
+1485443934408	 	/style
+1485443934412	 	/bot
+1485443934412	 	/deleteBot
+1485443934412	 	/convert
+1485443934414	 ./endpoints.createchatbox 
+1485443934414	 ./endpoints.loadmessagetemplate 
+1485443934449	 ./endpoints.conversate/operator 
+1485443934449	 ./endpoints.receivecontactform 
+1485443934450	 ./endpoints.log 
+1485443934450	 
+
+1485443934450	 connecting static apps
+1485443934450	 ./backend 
+1485443934450	 ./demo 
+1485443934450	 ./builder 
+1485443934451	 
+
+1485443934451	 Error Handling 
+1485443934451	 
+
+1485443934451	 SERVER READY 
+
+1485443943610	 PUT/chatbox
+				 meta: {"body":{"chatbox_id":"5887c7d42db6c92956a22c62","user":"{_id:''}","styles":"5887b9882db6c92956a22c55","bots":"demoBot","allowedPages":"chat.gokurbi.com","documents":"[]","rule":"random"}}
+
+
+1485463905956	 restart server
+1485463905977	 connecting data service
+1485463905993	 data service connected
+1485463905993	 
+
+1485463905993	 connecting main routes
+1485463906198	 
+
+1485463906198	 creating chatbox routes
+1485463906199	 	/chatbox
+1485463906202	 	/style
+1485463906202	 	/bot
+1485463906203	 	/deleteBot
+1485463906203	 	/convert
+1485463906204	 ./endpoints.createchatbox 
+1485463906205	 ./endpoints.loadmessagetemplate 
+1485463906264	 ./endpoints.conversate/operator 
+1485463906265	 ./endpoints.receivecontactform 
+1485463906266	 ./endpoints.log 
+1485463906266	 
+
+1485463906266	 connecting static apps
+1485463906266	 ./backend 
+1485463906266	 ./demo 
+1485463906266	 ./builder 
+1485463906267	 
+
+1485463906267	 Error Handling 
+1485463906267	 
+
+1485463906267	 SERVER READY 
+
+
+
+1485463958032	 restart server
+1485463958044	 connecting data service
+1485463958054	 data service connected
+1485463958054	 
+
+1485463958054	 connecting main routes
+1485463958188	 
+
+1485463958188	 creating chatbox routes
+1485463958188	 	/chatbox
+1485463958189	 	/style
+1485463958191	 	/bot
+1485463958192	 	/deleteBot
+1485463958192	 	/convert
+1485463958193	 ./endpoints.createchatbox 
+1485463958194	 ./endpoints.loadmessagetemplate 
+1485463958226	 ./endpoints.conversate/operator 
+1485463958226	 ./endpoints.receivecontactform 
+1485463958227	 ./endpoints.log 
+1485463958227	 
+
+1485463958227	 connecting static apps
+1485463958227	 ./backend 
+1485463958227	 ./demo 
+1485463958227	 ./builder 
+1485463958228	 
+
+1485463958228	 Error Handling 
+1485463958228	 
+
+1485463958228	 SERVER READY 
+
+
+
+1485463999691	 restart server
+1485463999705	 connecting data service
+1485463999715	 data service connected
+1485463999715	 
+
+1485463999716	 connecting main routes
+1485463999844	 
+
+1485463999844	 creating chatbox routes
+1485463999845	 	/chatbox
+1485463999845	 	/style
+1485463999845	 	/bot
+1485463999845	 	/deleteBot
+1485463999845	 	/convert
+1485463999846	 ./endpoints.createchatbox 
+1485463999850	 ./endpoints.loadmessagetemplate 
+1485463999883	 ./endpoints.conversate/operator 
+1485463999884	 ./endpoints.receivecontactform 
+1485463999884	 ./endpoints.log 
+1485463999884	 
+
+1485463999884	 connecting static apps
+1485463999884	 ./backend 
+1485463999885	 ./demo 
+1485463999885	 ./builder 
+1485463999885	 
+
+1485463999885	 Error Handling 
+1485463999885	 
+
+1485463999885	 SERVER READY 
+
+
+
+1485464017387	 restart server
+1485464017400	 connecting data service
+1485464017410	 data service connected
+1485464017410	 
+
+1485464017410	 connecting main routes
+1485464017540	 
+
+1485464017541	 creating chatbox routes
+1485464017541	 	/chatbox
+1485464017541	 	/style
+1485464017541	 	/bot
+1485464017541	 	/deleteBot
+1485464017541	 	/convert
+1485464017543	 ./endpoints.createchatbox 
+1485464017547	 ./endpoints.loadmessagetemplate 
+1485464017580	 ./endpoints.conversate/operator 
+1485464017581	 ./endpoints.receivecontactform 
+1485464017581	 ./endpoints.log 
+1485464017581	 
+
+1485464017581	 connecting static apps
+1485464017582	 ./backend 
+1485464017582	 ./demo 
+1485464017582	 ./builder 
+1485464017582	 
+
+1485464017582	 Error Handling 
+1485464017582	 
+
+1485464017582	 SERVER READY 
+
+
+
+1485464072683	 restart server
+1485464072701	 connecting data service
+1485464072717	 data service connected
+1485464072717	 
+
+1485464072717	 connecting main routes
+1485464072895	 
+
+1485464072895	 creating chatbox routes
+1485464072896	 	/chatbox
+1485464072899	 	/style
+1485464072899	 	/bot
+1485464072899	 	/deleteBot
+1485464072899	 	/convert
+1485464072901	 ./endpoints.createchatbox 
+1485464072902	 ./endpoints.loadmessagetemplate 
+1485464072948	 ./endpoints.conversate/operator 
+1485464072948	 ./endpoints.receivecontactform 
+1485464072949	 ./endpoints.log 
+1485464072949	 
+
+1485464072949	 connecting static apps
+1485464072949	 ./backend 
+1485464072950	 ./demo 
+1485464072950	 ./builder 
+1485464072950	 
+
+1485464072950	 Error Handling 
+1485464072950	 
+
+1485464072950	 SERVER READY 
+
+
+
+1485464110521	 restart server
+1485464110534	 connecting data service
+1485464110544	 data service connected
+1485464110544	 
+
+1485464110544	 connecting main routes
+1485464110676	 
+
+1485464110676	 creating chatbox routes
+1485464110677	 	/chatbox
+1485464110677	 	/style
+1485464110677	 	/bot
+1485464110677	 	/deleteBot
+1485464110677	 	/convert
+1485464110678	 ./endpoints.createchatbox 
+1485464110682	 ./endpoints.loadmessagetemplate 
+1485464110717	 ./endpoints.conversate/operator 
+1485464110717	 ./endpoints.receivecontactform 
+1485464110718	 ./endpoints.log 
+1485464110718	 
+
+1485464110718	 connecting static apps
+1485464110718	 ./backend 
+1485464110718	 ./demo 
+1485464110718	 ./builder 
+1485464110718	 
+
+1485464110718	 Error Handling 
+1485464110718	 
+
+1485464110718	 SERVER READY 
+
+
+
+1485535220328	 restart server
+1485535220350	 connecting data service
+1485535220367	 data service connected
+1485535220367	 
+
+1485535220367	 connecting main routes
+1485535220566	 
+
+1485535220566	 creating chatbox routes
+1485535220567	 	/chatbox
+1485535220567	 	/style
+1485535220570	 	/bot
+1485535220570	 	/deleteBot
+1485535220570	 	/convert
+1485535220572	 ./endpoints.createchatbox 
+1485535220573	 ./endpoints.loadmessagetemplate 
+1485535220649	 ./endpoints.conversate/operator 
+1485535220650	 ./endpoints.receivecontactform 
+1485535220651	 ./endpoints.log 
+1485535220651	 
+
+1485535220651	 connecting static apps
+1485535220651	 ./backend 
+1485535220651	 ./demo 
+1485535220651	 ./builder 
+1485535220652	 
+
+1485535220652	 Error Handling 
+1485535220652	 
+
+1485535220652	 SERVER READY 
+
+1485535227829	 PUT/chatbox
+				 meta: {"body":{"chatbox_id":"5887c7d42db6c92956a22c62","styles":"5887b9882db6c92956a22c55","bots":"demoBot","allowedPages":"chat.gokurbi.com","documents":"[]","rule":"random"}}
+
+
+1485537707140	 restart server
+1485537707152	 connecting data service
+1485537707168	 data service connected
+1485537707169	 
+
+1485537707169	 connecting main routes
+1485537707326	 
+
+1485537707326	 creating chatbox routes
+1485537707327	 	/chatbox
+1485537707327	 	/style
+1485537707327	 	/bot
+1485537707327	 	/deleteBot
+1485537707327	 	/convert
+1485537707328	 ./endpoints.createchatbox 
+1485537707332	 ./endpoints.loadmessagetemplate 
+1485537707371	 ./endpoints.conversate/operator 
+1485537707371	 ./endpoints.receivecontactform 
+1485537707372	 ./endpoints.log 
+1485537707372	 
+
+1485537707372	 connecting static apps
+1485537707372	 ./backend 
+1485537707372	 ./demo 
+1485537707373	 ./builder 
+1485537707373	 
+
+1485537707373	 Error Handling 
+1485537707373	 
+
+1485537707373	 SERVER READY 
+
