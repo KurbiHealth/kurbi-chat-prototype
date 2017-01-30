@@ -172,7 +172,7 @@ function _cleanApiFieldsForStamplay(input){
 
 	// clean bots
 	if(input.bots){
-		input.bots = ['5806781a4e19e52f7d5cdaf0'];
+		input.bots = ['588f93b31961261f5614c13c'];
 		// var bots = [];
 		// if(typeof input.bots == 'string'){
 		// 	bots = bots.replace(',','');
