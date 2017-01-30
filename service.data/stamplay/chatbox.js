@@ -76,13 +76,13 @@ console.log('in setChatBox, input:',input);
 			var id = input._id;
 			delete input._id;
 			if(input.id) delete input.id;
-console.log('id',id);
+log('id',id);
 			// db.Object('chatbox').get({'id': id}).then(function(result){
 				// merge the existing record with new values
 				
 				db.Object('chatbox').patch(id,input,function(err,doc){
-console.log('err',err);
-console.log('doc',doc);			
+log('err',err);
+log('doc',doc);			
 					if(err){
 						reject(err);
 					}else{
