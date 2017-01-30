@@ -32,7 +32,7 @@ function getChatBox(query){
   			if(err) reject(err);
 			else{
 console.log('-----------------');
-console.log('doc: ',doc);
+console.log('doc: ',doc.data.length,doc);
 console.log('-----------------');
 				if(doc.data && doc.data.length > 0){
 					doc = doc.data[0];
@@ -105,6 +105,7 @@ log('doc',doc);
 }
 
 function getStyle(styles){
+console.log('styles: ',typeof styles, styles);
 	if(typeof styles == 'string'){
 		return styles;
 	}
