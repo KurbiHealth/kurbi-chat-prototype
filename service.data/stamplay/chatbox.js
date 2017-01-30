@@ -129,6 +129,7 @@ function getBot(box){
 				docs = docs.data;
 				var bot = {};
 				var index = Math.floor(Math.random()*docs.length);
+console.log('index: ',index, 'docs',docs);
 				bot.owner = docs[index].owner;
 				if(docs[index].user_owner){
 					bot.owner = docs[index].user_owner;
