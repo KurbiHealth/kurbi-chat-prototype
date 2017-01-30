@@ -58,6 +58,7 @@ function setChatBox(input){
 console.log('in setChatBox, input:',input);
 
 	_cleanApiFieldsForStamplay(input);
+	
 	return new Promise(function(resolve,reject){
 
 		_cleanStamplayFieldsForSave(input);

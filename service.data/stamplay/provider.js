@@ -39,7 +39,7 @@ function createProvider(input){
 		db.User.get({email: input.email},function(err,doc){
 			if(err){reject(err);}
 			else{
-		log('doc in service.data/stamplay/provider.js',doc);
+return console.log('doc in service.data/stamplay/provider.js',doc);
 				if(doc.data && doc.data.length > 0){
 					resolve(doc.data[0]);
 				}else{
