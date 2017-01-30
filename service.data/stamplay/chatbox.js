@@ -123,7 +123,9 @@ function getBot(box){
 	return new Promise(function(resolve,reject){
 		db.Object('chatbot').get({'user_owner': owner},function(err,docs){
 			if(err) reject(err);
-			else{				
+			else{
+				if(typeof docs == 'string')
+					docs = JSON.parse(docs);		
 				docs = docs.data;
 				var bot = {};
 				var index = Math.floor(Math.random()*docs.length);
