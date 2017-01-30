@@ -9,9 +9,10 @@ function getChatRoom(input){
 	return new Promise(function(resolve,reject){
   		db.Object('chatroom').get({room:input.room},function(err,doc){
   			if(err) reject(appError(err,{file:"chatroom.js", info:"stamplay api"}));
-  			else{  				
+  			else{  
+  				if(typeof doc == 'string')
+					doc = JSON.parse(doc);				
   				doc = doc.data[0];
-
   				if(!doc.messages){
   					doc.messages = [];
   				}
