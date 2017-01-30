@@ -163,7 +163,8 @@ function shutdown(msg, err){
 	//so shutdown the server!  
 	if(!err.meta) err.meta = {};
 	if(err.stack) err.meta.stack = err.stack;
-
+	if(!err.meta)
+		err.meta = {};
 	err.meta.source = "server";
 	winston.log('error', msg, err.meta, function(err){
 	process.exit(1);
