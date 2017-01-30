@@ -39,7 +39,7 @@ console.log('-----------------');
 					_cleanStamplayFieldsForSave(doc);
 					resolve(doc);
 				}else{
-					reject(doc);
+					resolve('no chatbox found');
 				}
 			}
   		});
