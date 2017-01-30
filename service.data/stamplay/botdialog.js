@@ -12,6 +12,7 @@ function getBotDialog(query){
 	// 	query.user_owner = query.owner;
 	// 	delete query.owner;
 	// }
+console.log('getBotDialog -- query: ',query);
 	return new Promise(function(resolve,reject){
 		
   		db.Object('botdialog').get(query,function(err,doc){
