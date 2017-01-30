@@ -31,6 +31,9 @@ function getChatBox(query){
 		db.Object('chatbox').get(query,function(err,doc){
   			if(err) reject(err);
 			else{
+console.log('-----------------');
+console.log('doc: ',doc);
+console.log('-----------------');
 				if(doc.data && doc.data.length > 0){
 					doc = doc.data[0];
 					_cleanStamplayFieldsForSave(doc);
