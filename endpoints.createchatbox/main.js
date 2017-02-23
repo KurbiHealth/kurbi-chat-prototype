@@ -68,7 +68,7 @@ function createBotFromFile(req,res){
 	if(PORT && PORT != 80) serverURL = BASEURL + ":" + PORT;
 
 	if(!req.body.fileName || req.body.fileName == '')
-		var botFileName = '../endpoints.chatbot/responses2.demo.js';
+		var botFileName = '../endpoints.chatbot/demoBot.js';
 	else
 		var botFileName = '../endpoints.chatbot/' + req.body.fileName;
 
