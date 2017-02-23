@@ -139,7 +139,7 @@ function ErrorHandler(err, promise){
 }
 
 function httpErrorHandler(err,req,res,next){
-	res.status(500).send('Server Error: ',err);
+	res.status(500).send('Server Error: ',err.toString());
 	if(!err.handled) 
 		shutdown('== ENDPOINT ERROR ==',err);
 	else

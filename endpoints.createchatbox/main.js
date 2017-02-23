@@ -101,7 +101,7 @@ function createBotFromFile(req,res){
     bot.name = "demoBot";
     db.createChatBot(bot);
 
-	return res.send(responses);
+	return res.status(200).send(responses);
 }
 
 
