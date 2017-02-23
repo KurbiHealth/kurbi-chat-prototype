@@ -7,8 +7,8 @@ module.exports = function(name,URL){
 			type:'welcome message', 
 			body:{
 				displayName:name, 
-				text:"Thanks for visiting our website. We know how confusing it can be to find the answers and care you need. We’d love for you to choose on our members, but more than that we’d like to help you find someone that is the best fit for your needs and interests.\n\nWould you mind answering a couple of questions to help us point you in the right direction?\nIMPORTANT: This chat is anonymous until the end, but if at that point you choose to share private information with us, please know that you are legally sharing this with a HIPAA-compliant vendor. Click on 'Privacy Policy' in the footer of this page for more information.",
-				image: URL+'/backend/icons/PNG/mawc.png',
+				text:"Thanks for visiting our website. We're eager to get to know you, and hopefully help you find the information you need!",
+				image: URL+'/backend/icons/PNG/robertson-logo.png',
 			}
 
 		},
@@ -16,7 +16,7 @@ module.exports = function(name,URL){
 			type:'response welcome',
 			body:{
 				yes:{
-					text: "Ok, let's go",
+					text: "Let's Chat!",
 					id: 'begin',
 					message: {
 						type: "text message",
@@ -49,19 +49,76 @@ module.exports = function(name,URL){
 
 	responses['avatar'] = chooseAvatar('get symptom');
 
-	// ---- CHAIN OF QUESTIONS ----
+	// ---- GET SPECIALTY OF INTEREST ----
 
-	responses['get symptom'] = {
-		message: textMessage(name,"So, let's talk about your situation. What seems to be bothering you?",null, null),
+	responses['get specialty'] = {
+		message: textMessage(name,"What are you struggling with?",null,null),
+		responses:{
+			type:'response list text',
+			variable: 'specialty',
+			body:[
+				{text:"Chronic Pain", message:textMessage(null,"Chronic Pain","get bio chronic pain",null)},
+				{text:"Low Back Pain", message:textMessage(null,"Low Back Pain","get bio low back pain",null)},
+				{text:"Neck Pain", message:textMessage(null,"Neck Pain","get bio neck pain",null)}
+			],
+		}
+	}
+
+	// ---- BIOS ----
+
+	responses['get bio chronic pain'] = {
+		message: textMessage(name,"Chronic Pain Specialists", null,null),
+		responses:{
+			type:'specialty bio',
+			variable: 'specialtyChosen',
+			body:[
+				{text:"Contact Me", message:textMessage(null,"Contact Me","contact me",null)},
+				{text:"Read More", message:textMessage(null,"Read More", "ask question", null)},
+			],
+		}
+	}
+
+	responses['get bio low back pain'] = {
+		message: textMessage(name,"Low Back Pain Specialists", null,null),
+		responses:{
+			type:'specialty bio',
+			variable: 'specialtyChosen',
+			body:[
+				{text:"Contact Me", message:textMessage(null,"Contact Me","contact me",null)},
+				{text:"Read More", message:textMessage(null,"Read More", "ask question", null)},
+			],
+		}
+	}
+
+	responses['get bio neck pain'] = {
+		message: textMessage(name,"Neck Pain Specialists", null,null),
+		responses:{
+			type:'specialty bio',
+			variable: 'specialtyChosen',
+			body:[
+				{text:"Contact Me", message:textMessage(null,"Contact Me","contact me",null)},
+				{text:"Read More", message:textMessage(null,"Read More", "ask question", null)},
+			],
+		}
+	}
+
+	// HERE HAVE A FUNCTION KICKED OFF IN OPERATOR.JS -> contactMe
+	responses['contact me'] = {
+		message: {
+			type:'text message', 
+			body:{
+				displayName: contactMe, 
+				text: 'Gret! We look forward to talking with you about [_specialtyChosen_].'
+			}
+		},
 		responses:{
 			type:'small free response',
 			body:{
 				buttonText:"Add Details",
-				prompt:"Type in your main symptom in the box below:",
+				prompt:"Type in your email in the box below:",
 				message:{
 					type:"text message",
-					qCode:"get duration",
-					variable: "symptom",
+					qCode:"end",
 					body:{
 						text:"",
 					}
@@ -70,90 +127,7 @@ module.exports = function(name,URL){
 		}
 	}
 
-	responses['get duration'] = {
-		message: textMessage(name,"How long has it been bothering you?",null,null),
-		responses:{
-			type:'response list text',
-			variable: 'symptomDuration',
-			body:[
-				{text:"A day or so", message:textMessage(null,"A day or so","get treatment",null)},
-				{text:"About a week", message:textMessage(null,"About a week", "get treatment", null)},
-				{text:"Longer than a week", message:textMessage(null,"Longer than a week", "get treatment", null)},
-			],
-		}
-	}
-
-	responses['get treatment'] = {
-		message: textMessage(name,"What have you done the most for treatment?", null,null),
-		responses:{
-			type:'response list text',
-			variable: 'treatmentType',
-			body:[
-				{text:"Professional Care", message:textMessage(null,"Professional Care","user summary",null)},
-				{text:"Self-Care", message:textMessage(null,"Self-Care", "user summary", null)},
-				{text:"I've done nothing", message:textMessage(null,"Procrastination", "user summary", null)},
-			],
-		}
-	}
-
-
-	// HERE HAVE A FUNCTION KICKED OFF IN OPERATOR.JS, THAT SENDS SUMMARY OF 
-	// QUESTIONS ASKED FROM USER
-	responses['user summary'] = {
-		message: {
-			type:'text message', 
-			body:{
-				displayName: name, 
-				text: 'So here is what we have so far. Your problem is [_symptom_], it has been going on for [_symptomDuration_], and you have treated it with [_treatmentType_]. Is that right?'			}
-
-		},
-		responses:{
-			type:'response list text',
-			body:[
-				{text:"Yes, that's right", message:textMessage(null,"Yes, that's right","you got it",null)},
-				{text:"No, not quite", message:textMessage(null,"No, not quite", "you dont got it", null)},
-				],
-		}
-	}
-
-
-	// ---- FINAL QUESTIONS ----
-
-	responses['you got it'] = {
-		message: textMessage(name,"OK, great! Is there anything you'd like to add to help us understand what's going on?", null,null),
-		responses:{
-			type:'large free response',
-			body:{
-				buttonText:"Add Details",
-				prompt:"Type in the box below:",
-				message:{
-					type:"text message",
-					qCode:"ask question",
-					body:{
-						text:"",
-					}
-				}
-			},
-		}
-	}
-
-	responses['you dont got it'] = {
-		message: textMessage(name,"OK, can you help us understand what's going on by typing in some details?", null,null),
-		responses:{
-			type:'large free response',
-			body:{
-				buttonText:"Add Details",
-				prompt:"Type in the box below:",
-				message:{
-					type:"text message",
-					qCode:"ask question",
-					body:{
-						text:"",
-					}
-				}
-			},
-		}	
-	}
+	// ---- FINISH ----
 
 	responses['ask question'] = {
 		message: textMessage(name,"Thanks for sharing that! As you can see, we're actually not talking with you live. It's a bummer because we're sure you're a really nice person. We'd love to meet you soon. But first, is it okay to email with feedback on our conversation?", null,null),
@@ -188,31 +162,13 @@ module.exports = function(name,URL){
 		}
 	}
 
-	responses['scored the email'] = {
-		message: textMessage(name,"What would you like to be called?",null, null),
-		responses:{
-			type:'small free response',
-			body:{
-				buttonText:"Add Name",
-				prompt:"Type in your first name in the box below:",
-				message:{
-					type:"text message",
-					qCode:"end",
-					body:{
-						text:"",
-					}
-				}
-			},
-		}
-	}
-
 	responses['end'] = {
 		message:{
 			type:'end message', 
 			body:{
 				displayName:name, 
 				text:"Well, this is the end of our chat. Thanks a lot for taking the time to get to know us. We hope that the answers we find for you are helpful. Look for a summary of our conversation in your email inbox momentarily. If we happened to get something wrong or if there is something else you'd like to add follow the instructions to revisit our chat session.\n\n We wish you all the best!",
-				image: URL+'/backend/icons/PNG/mawc.png',
+				image: URL+'/backend/icons/PNG/robertson-logo.png',
 			}
 
 		},

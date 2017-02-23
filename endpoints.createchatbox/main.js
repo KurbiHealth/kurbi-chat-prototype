@@ -50,7 +50,7 @@ module.exports = function(router,db,BASEURL,PORT,ENV){
 
 	router
 		.route('/convert')
-			.get(createBotFromFile);
+			.post(createBotFromFile);
 	log('\t/convert');
 
 	
@@ -67,8 +67,18 @@ function createBotFromFile(req,res){
 	var serverURL = BASEURL;
 	if(PORT && PORT != 80) serverURL = BASEURL + ":" + PORT;
 
-	var responses = require('../endpoints.chatbot/responses2.demo.js')('Madison Area Wellness Collective',serverURL);
-	
+	if(!req.body.fileName || req.body.fileName == '')
+		var botFileName = '../endpoints.chatbot/responses2.demo.js';
+	else
+		var botFileName = '../endpoints.chatbot/' + req.body.fileName;
+
+	if(!req.body.orgName || req.body.orgName == '')
+		var orgName = 'Madison Area Wellness Collective';
+	else
+		var orgName = req.body.orgName;
+
+	var responses = require(botFileName)(orgName,serverURL);
+
 	for(var key in responses) {
 
 		var message = responses[key];

@@ -1705,3 +1705,72 @@
 
 1485537707373	 SERVER READY 
 
+
+
+1487704187400	 restart server
+1487704187423	 connecting data service
+1487704187441	 data service connected
+1487704187441	 
+
+1487704187441	 connecting main routes
+1487704187641	 
+
+1487704187641	 creating chatbox routes
+1487704187642	 	/chatbox
+1487704187642	 	/style
+1487704187645	 	/bot
+1487704187645	 	/deleteBot
+1487704187645	 	/convert
+1487704187647	 ./endpoints.createchatbox 
+1487704187648	 ./endpoints.loadmessagetemplate 
+1487704187704	 ./endpoints.conversate/operator 
+1487704187705	 ./endpoints.receivecontactform 
+1487704187705	 ./endpoints.log 
+1487704187705	 
+
+1487704187705	 connecting static apps
+1487704187706	 ./backend 
+1487704187706	 ./demo 
+1487704187706	 ./builder 
+1487704187706	 
+
+1487704187706	 Error Handling 
+1487704187706	 
+
+1487704187706	 SERVER READY 
+
+1487704199074	 GET/img/favicon.png
+
+
+1487704234886	 restart server
+1487704234899	 connecting data service
+1487704234910	 data service connected
+1487704234911	 
+
+1487704234911	 connecting main routes
+1487704235043	 
+
+1487704235043	 creating chatbox routes
+1487704235043	 	/chatbox
+1487704235044	 	/style
+1487704235044	 	/bot
+1487704235044	 	/deleteBot
+1487704235044	 	/convert
+1487704235045	 ./endpoints.createchatbox 
+1487704235050	 ./endpoints.loadmessagetemplate 
+1487704235083	 ./endpoints.conversate/operator 
+1487704235083	 ./endpoints.receivecontactform 
+1487704235083	 ./endpoints.log 
+1487704235083	 
+
+1487704235084	 connecting static apps
+1487704235084	 ./backend 
+1487704235084	 ./demo 
+1487704235084	 ./builder 
+1487704235084	 
+
+1487704235084	 Error Handling 
+1487704235084	 
+
+1487704235084	 SERVER READY 
+

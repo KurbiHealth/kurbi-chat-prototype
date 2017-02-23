@@ -92,7 +92,7 @@ INSTALL
 
 First, run `npm install` to make sure you have all depencies. Then (in the root folder) run 
 
-`PORT=8080 DATASOURCE=stamplay BASEURL=http://kchat:8080 ENV=local node app.js`.
+`PORT=3000 DATASOURCE=stamplay BASEURL=http://kchat:3000 ENV=local node app.js`.
 
 NOTE: change BASEURL's value to your local url you're using for testing.
 
