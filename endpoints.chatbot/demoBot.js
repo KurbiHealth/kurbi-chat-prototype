@@ -128,7 +128,7 @@ module.exports = function(name,URL){
 				prompt:"Type in the box below:",
 				message:{
 					type:"text message",
-					qCode:"ask for email",
+					qCode:"ask question",
 					body:{
 						text:"",
 					}
@@ -146,7 +146,7 @@ module.exports = function(name,URL){
 				prompt:"Type in the box below:",
 				message:{
 					type:"text message",
-					qCode:"ask for email",
+					qCode:"ask question",
 					body:{
 						text:"",
 					}
@@ -155,18 +155,18 @@ module.exports = function(name,URL){
 		}	
 	}
 
-	responses['ask for email'] = {
+	responses['ask question'] = {
 		message: textMessage(name,"Thanks for sharing that! As you can see, we're actually not talking with you live. It's a bummer because we're sure you're a really nice person. We'd love to meet you soon. But first, is it okay to email with feedback on our conversation?", null,null),
 		responses:{
 			type:'response list text',
 			body:[
 				{text:"Yes, that's awesome", message:textMessage(null,"Yes, that's right","email me",null)},
-				{text:"No thanks", message:textMessage(null,"No, not quite", "dont fucking email me", null)},
+				{text:"No thanks", message:textMessage(null,"No, not quite", "dont email me", null)},
 				],
 		}
 	}
 
-	responses['dont fucking email me'] = {
+	responses['dont email me'] = {
 		message: textMessage(name,"Thank you for chatting with me.", "end",null),			
 	}
 
