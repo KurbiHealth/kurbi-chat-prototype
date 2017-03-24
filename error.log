@@ -4878,3 +4878,539 @@
 
 1490321704501	 SERVER READY 
 
+
+
+1490322228541	 restart server
+1490322228632	 connecting data service
+1490322228711	 data service connected
+1490322228711	 using hardcoded user, devUser()
+1490322228711	 
+
+1490322228711	 connecting main routes
+1490322230073	 
+
+1490322230073	 creating chatbox routes
+1490322230073	 	/chatbox
+1490322230073	 	/style
+1490322230073	 	/bot
+1490322230073	 	/deleteBot
+1490322230073	 	/convert
+1490322230075	 ./endpoints.createchatbox 
+1490322230088	 ./endpoints.loadmessagetemplate 
+1490322230643	 ./endpoints.conversate/operator 
+1490322230648	 ./endpoints.receivecontactform 
+1490322230650	 ./endpoints.log 
+1490322230650	 
+
+1490322230650	 connecting static apps
+1490322230651	 ./backend 
+1490322230651	 ./demo 
+1490322230651	 ./builder 
+1490322230651	 
+
+1490322230651	 Error Handling 
+1490322230651	 
+
+1490322230651	 SERVER READY 
+
+1490322233299	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322233986	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322235145	 GET/chatbox
+				 meta: {"query":{"key":"58d479b9f6dccc741735cf43"}}
+1490322235780	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322236396	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322238721	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322238984	 SOCKET/register
+				 meta: {"key":"58d479b9f6dccc741735cf43","sessionID":"f3ZSxMOM3DwqSzEg","url":"http://localhost:8080/demo/provider.html","icon":null}
+1490322239270	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322239624	 Creating Bot
+				 meta: {"sessionID":"4HVGzEAZn96qAu6R"}
+1490322240575	 SOCKET/join room
+				 meta: {"room":"75ed6d1be7825439fffe722f8c623d83","source":"bot"}
+1490322241710	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322241730	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"welcome message"}}
+1490322241750	 	 level: error, == ENDPOINT ERROR ==
+				 meta: {"stack":"ReferenceError: temlateName is not defined\n    at getTemplate (Z:\\kurbi\\kurbi-chat-prototype\\endpoints.loadmessagetemplate\\main.js:22:18)\n    at Layer.handle [as handle_request] (Z:\\kurbi\\kurbi-chat-prototype\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (Z:\\kurbi\\kurbi-chat-prototype\\node_modules\\express\\lib\\router\\route.js:131:13)\n    at Route.dispatch (Z:\\kurbi\\kurbi-chat-prototype\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (Z:\\kurbi\\kurbi-chat-prototype\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at Z:\\kurbi\\kurbi-chat-prototype\\node_modules\\express\\lib\\router\\index.js:277:22\n    at Function.process_params (Z:\\kurbi\\kurbi-chat-prototype\\node_modules\\express\\lib\\router\\index.js:330:12)\n    at next (Z:\\kurbi\\kurbi-chat-prototype\\node_modules\\express\\lib\\router\\index.js:271:10)\n    at Function.handle (Z:\\kurbi\\kurbi-chat-prototype\\node_modules\\express\\lib\\router\\index.js:176:3)\n    at router (Z:\\kurbi\\kurbi-chat-prototype\\node_modules\\express\\lib\\router\\index.js:46:12)","source":"server"}
+
+
+1490322262155	 restart server
+1490322262244	 connecting data service
+1490322262329	 data service connected
+1490322262329	 using hardcoded user, devUser()
+1490322262329	 
+
+1490322262329	 connecting main routes
+1490322264185	 
+
+1490322264185	 creating chatbox routes
+1490322264185	 	/chatbox
+1490322264185	 	/style
+1490322264186	 	/bot
+1490322264186	 	/deleteBot
+1490322264186	 	/convert
+1490322264187	 ./endpoints.createchatbox 
+1490322264196	 ./endpoints.loadmessagetemplate 
+1490322264671	 ./endpoints.conversate/operator 
+1490322264677	 ./endpoints.receivecontactform 
+1490322264679	 ./endpoints.log 
+1490322264680	 
+
+1490322264680	 connecting static apps
+1490322264680	 ./backend 
+1490322264680	 ./demo 
+1490322264680	 ./builder 
+1490322264680	 
+
+1490322264680	 Error Handling 
+1490322264680	 
+
+1490322264680	 SERVER READY 
+
+1490322267980	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322268529	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322270711	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322271262	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322273735	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322274326	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322276761	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322277301	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322279303	 GET/chatbox
+				 meta: {"query":{"key":"58d479b9f6dccc741735cf43"}}
+1490322279761	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322280302	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322282752	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322283322	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322285696	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322286237	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322288423	 GET/chatbox
+				 meta: {"query":{"key":"58d479b9f6dccc741735cf43"}}
+1490322288756	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322289389	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322290791	 SOCKET/register
+				 meta: {"key":"58d479b9f6dccc741735cf43","sessionID":"f3ZSxMOM3DwqSzEg","url":"http://localhost:8080/demo/provider.html","icon":null}
+1490322291444	 Creating Bot
+				 meta: {"sessionID":"6HprqP1HkKXlLRWc"}
+1490322291718	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322292156	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"welcome message"}}
+1490322292170	 	 level: error, == GENERAL ERROR ==
+				 meta: {"stack":"TypeError: path must be a string\n    at TypeError (native)\n    at Object.fs.readFile (fs.js:250:11)\n    at Z:\\kurbi\\kurbi-chat-prototype\\sharedFunctions\\chatCreateFunctions.js:66:7\n    at getTemplate (Z:\\kurbi\\kurbi-chat-prototype\\endpoints.loadmessagetemplate\\main.js:75:3)\n    at Layer.handle [as handle_request] (Z:\\kurbi\\kurbi-chat-prototype\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (Z:\\kurbi\\kurbi-chat-prototype\\node_modules\\express\\lib\\router\\route.js:131:13)\n    at Route.dispatch (Z:\\kurbi\\kurbi-chat-prototype\\node_modules\\express\\lib\\router\\route.js:112:3)\n    at Layer.handle [as handle_request] (Z:\\kurbi\\kurbi-chat-prototype\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at Z:\\kurbi\\kurbi-chat-prototype\\node_modules\\express\\lib\\router\\index.js:277:22\n    at Function.process_params (Z:\\kurbi\\kurbi-chat-prototype\\node_modules\\express\\lib\\router\\index.js:330:12)","source":"server"}
+1490322292271	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+
+
+1490322376255	 restart server
+1490322376346	 connecting data service
+1490322376441	 data service connected
+1490322376441	 using hardcoded user, devUser()
+1490322376442	 
+
+1490322376442	 connecting main routes
+1490322377789	 
+
+1490322377789	 creating chatbox routes
+1490322377790	 	/chatbox
+1490322377790	 	/style
+1490322377790	 	/bot
+1490322377790	 	/deleteBot
+1490322377790	 	/convert
+1490322377791	 ./endpoints.createchatbox 
+1490322377802	 ./endpoints.loadmessagetemplate 
+1490322378274	 ./endpoints.conversate/operator 
+1490322378279	 ./endpoints.receivecontactform 
+1490322378282	 ./endpoints.log 
+1490322378282	 
+
+1490322378282	 connecting static apps
+1490322378283	 ./backend 
+1490322378283	 ./demo 
+1490322378283	 ./builder 
+1490322378283	 
+
+1490322378283	 Error Handling 
+1490322378283	 
+
+1490322378283	 SERVER READY 
+
+1490322380432	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322381029	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322383243	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322383819	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322384782	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322386748	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322387725	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322389706	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322390720	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322392695	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322393217	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+
+
+1490322397401	 restart server
+1490322397492	 connecting data service
+1490322397580	 data service connected
+1490322397580	 using hardcoded user, devUser()
+1490322397580	 
+
+1490322397580	 connecting main routes
+1490322399130	 
+
+1490322399130	 creating chatbox routes
+1490322399130	 	/chatbox
+1490322399131	 	/style
+1490322399131	 	/bot
+1490322399131	 	/deleteBot
+1490322399131	 	/convert
+1490322399132	 ./endpoints.createchatbox 
+1490322399142	 ./endpoints.loadmessagetemplate 
+1490322399609	 ./endpoints.conversate/operator 
+1490322399615	 ./endpoints.receivecontactform 
+1490322399618	 ./endpoints.log 
+1490322399618	 
+
+1490322399618	 connecting static apps
+1490322399619	 ./backend 
+1490322399619	 ./demo 
+1490322399619	 ./builder 
+1490322399619	 
+
+1490322399619	 Error Handling 
+1490322399619	 
+
+1490322399619	 SERVER READY 
+
+1490322401995	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322402547	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322404729	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322405267	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322407693	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322408245	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322410714	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322411222	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322413681	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322414184	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322416711	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322417254	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322419694	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322420262	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322422704	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322423225	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322425688	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322426254	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322428724	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322429274	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322431746	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322432277	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322434716	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322435232	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322437668	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322438185	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322439724	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322440748	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322442693	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322443248	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322445743	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322446301	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322448676	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322449214	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322451696	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322452250	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322454681	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322455196	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322456749	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322457674	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322460069	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322460716	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322462774	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322463740	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322465711	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322466747	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322468740	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322469685	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322471717	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322472738	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322474696	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322475709	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322477720	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322478234	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322480716	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322481230	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322483728	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322484279	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322486676	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322487212	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322489673	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322490198	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322492668	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322493220	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+
+
+1490322497281	 restart server
+1490322497381	 connecting data service
+1490322497476	 data service connected
+1490322497476	 using hardcoded user, devUser()
+1490322497476	 
+
+1490322497476	 connecting main routes
+1490322498825	 
+
+1490322498825	 creating chatbox routes
+1490322498825	 	/chatbox
+1490322498825	 	/style
+1490322498825	 	/bot
+1490322498826	 	/deleteBot
+1490322498826	 	/convert
+1490322498827	 ./endpoints.createchatbox 
+1490322498838	 ./endpoints.loadmessagetemplate 
+1490322499327	 ./endpoints.conversate/operator 
+1490322499333	 ./endpoints.receivecontactform 
+1490322499337	 ./endpoints.log 
+1490322499337	 
+
+1490322499337	 connecting static apps
+1490322499337	 ./backend 
+1490322499338	 ./demo 
+1490322499338	 ./builder 
+1490322499338	 
+
+1490322499338	 Error Handling 
+1490322499338	 
+
+1490322499338	 SERVER READY 
+
+
+
+1490322522279	 restart server
+1490322522375	 connecting data service
+1490322522475	 data service connected
+1490322522475	 using hardcoded user, devUser()
+1490322522476	 
+
+1490322522476	 connecting main routes
+1490322523893	 
+
+1490322523893	 creating chatbox routes
+1490322523893	 	/chatbox
+1490322523894	 	/style
+1490322523894	 	/bot
+1490322523894	 	/deleteBot
+1490322523894	 	/convert
+1490322523895	 ./endpoints.createchatbox 
+1490322523906	 ./endpoints.loadmessagetemplate 
+1490322524404	 ./endpoints.conversate/operator 
+1490322524409	 ./endpoints.receivecontactform 
+1490322524415	 ./endpoints.log 
+1490322524415	 
+
+1490322524415	 connecting static apps
+1490322524415	 ./backend 
+1490322524416	 ./demo 
+1490322524416	 ./builder 
+1490322524416	 
+
+1490322524416	 Error Handling 
+1490322524416	 
+
+1490322524416	 SERVER READY 
+
+1490322531846	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322532373	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322532546	 GET/chatbox
+				 meta: {"query":{"key":"58d479b9f6dccc741735cf43"}}
+1490322533896	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322534703	 GET/driver
+				 meta: {"query":{"phone":"7758305354"}}
+1490322534984	 SOCKET/register
+				 meta: {"key":"58d479b9f6dccc741735cf43","sessionID":"f3ZSxMOM3DwqSzEg","url":"http://localhost:8080/demo/provider.html","icon":null}
+1490322535630	 Creating Bot
+				 meta: {"sessionID":"2VTVE7ulC19Xz98q"}
+1490322536387	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"welcome message"}}
+1490322536575	 SOCKET/join room
+				 meta: {"room":"75ed6d1be7825439fffe722f8c623d83","source":"bot"}
+
+
+1490322574384	 restart server
+1490322574477	 connecting data service
+1490322574570	 data service connected
+1490322574570	 using hardcoded user, devUser()
+1490322574570	 
+
+1490322574570	 connecting main routes
+1490322575866	 
+
+1490322575866	 creating chatbox routes
+1490322575867	 	/chatbox
+1490322575867	 	/style
+1490322575867	 	/bot
+1490322575867	 	/deleteBot
+1490322575867	 	/convert
+1490322575868	 ./endpoints.createchatbox 
+1490322575877	 ./endpoints.loadmessagetemplate 
+1490322576646	 ./endpoints.conversate/operator 
+1490322576651	 ./endpoints.receivecontactform 
+1490322576655	 ./endpoints.log 
+1490322576655	 
+
+1490322576655	 connecting static apps
+1490322576655	 ./backend 
+1490322576655	 ./demo 
+1490322576655	 ./builder 
+1490322576656	 
+
+1490322576656	 Error Handling 
+1490322576656	 
+
+1490322576656	 SERVER READY 
+
+1490322591355	 GET/chatbox
+				 meta: {"query":{"key":"58d479b9f6dccc741735cf43"}}
+1490322594447	 GET/chatbox
+				 meta: {"query":{"key":"58d479b9f6dccc741735cf43"}}
+1490322596638	 SOCKET/register
+				 meta: {"key":"58d479b9f6dccc741735cf43","sessionID":"f3ZSxMOM3DwqSzEg","url":"http://localhost:8080/demo/provider.html","icon":null}
+1490322597366	 Creating Bot
+				 meta: {"sessionID":"S24kxiJ1aKeFGwWC"}
+1490322598090	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"welcome message"}}
+1490322598364	 SOCKET/join room
+				 meta: {"room":"75ed6d1be7825439fffe722f8c623d83","source":"bot"}
+1490322598525	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"response welcome"}}
+
+
+1490322617343	 restart server
+1490322617464	 connecting data service
+1490322617582	 data service connected
+1490322617582	 using hardcoded user, devUser()
+1490322617582	 
+
+1490322617582	 connecting main routes
+1490322618933	 
+
+1490322618933	 creating chatbox routes
+1490322618933	 	/chatbox
+1490322618933	 	/style
+1490322618933	 	/bot
+1490322618933	 	/deleteBot
+1490322618933	 	/convert
+1490322618935	 ./endpoints.createchatbox 
+1490322618944	 ./endpoints.loadmessagetemplate 
+1490322619391	 ./endpoints.conversate/operator 
+1490322619396	 ./endpoints.receivecontactform 
+1490322619400	 ./endpoints.log 
+1490322619400	 
+
+1490322619400	 connecting static apps
+1490322619400	 ./backend 
+1490322619400	 ./demo 
+1490322619400	 ./builder 
+1490322619401	 
+
+1490322619401	 Error Handling 
+1490322619401	 
+
+1490322619401	 SERVER READY 
+
