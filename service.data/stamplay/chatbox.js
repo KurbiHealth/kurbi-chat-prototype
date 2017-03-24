@@ -32,8 +32,13 @@ function getChatBox(query){
   			if(err) reject(err);
 			else{				
 				doc = doc.data[0];
-				_cleanStamplayFieldsForSave(doc);
-				resolve(doc);
+				if(doc){
+					_cleanStamplayFieldsForSave(doc);
+					resolve(doc);	
+				} else{
+					resolve({});
+				}
+				
 			}
   		});
 	

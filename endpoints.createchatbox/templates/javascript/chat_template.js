@@ -272,7 +272,9 @@ function chatFactory(local){
 	
 	var parent = document.getElementsByClassName('kurbi-chat-parent')[0];
 	var visible = false;
-	var bannerVisible = true;
+
+	var bannerVisible = JSON.parse(localStorage.getItem("bannerVisible"));
+	console.log(bannerVisible);
 	var clicked = {};
 		clicked['button'] = toggleChat;
 		clicked['kurbi-banner-sure'] = toggleChat;
@@ -301,6 +303,14 @@ function chatFactory(local){
 	 				bannerNoThanks.innerHTML = "No thank you";
 
 	 				d.getElementById('kurbi-chat-close-button').addEventListener('click', clicked['kurbi-close-button']);
+	 				setTimeout(function(){
+	 					if(bannerVisible){
+	 						banner.style.left="0px";
+	 					}else {
+	 						banner.style.left="-256px";
+	 					}
+
+	 				}, 500);
 	 				
 	 	}
 	 attachToDom('kurbi-backdrop', parent);
@@ -310,6 +320,7 @@ function chatFactory(local){
 	function toggleBanner(e){
 		console.log('toggleBanner clicked');
 		bannerVisible = !bannerVisible;
+
 		var banner  = d.getElementsByClassName('kurbi-chat-banner')[0];
 		if(bannerVisible){
 			banner.style.left="0px";
@@ -317,6 +328,7 @@ function chatFactory(local){
 		if(!bannerVisible){
 			banner.style.left="-265px";
 		}
+		localStorage.setItem("bannerVisible", bannerVisible);
 		//visible = !visible;
 		//toggleChat();
 	}
