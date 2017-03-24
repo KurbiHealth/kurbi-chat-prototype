@@ -18,7 +18,7 @@ module.exports = function(router,db,BASEURL,PORT){
 	return router;
 
 	function getTemplate(req,res){
-		var templateArray = ("red." + req.query.template).split(".");
+		var templateArray = req.query.template.split(".");
 		var templateName = templateArray[templateArray.length - 1];
 		var templatePath = templateArray.slice(0,templateArray.length-1).join("/");
 
