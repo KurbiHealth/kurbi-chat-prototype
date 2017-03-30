@@ -44,9 +44,11 @@ $(document).ready(init);
 		});
 
 		$.get('/backend/boxes.hbs', function(temp){
+			console.log('loading boxes');
 				$.get('http://'+window.location.host + '/chatbox', function(data){
+					console.log('bacon')
 					$('.boxes').html(Handlebars.compile(temp)({boxes:data}));
-					console.log(data);
+					console.log('boxes', data);
 					$('#createBox').on('submit', function(e){
 						e.preventDefault();
 						var input = {};

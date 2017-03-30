@@ -1,7 +1,7 @@
-<div style="margin-top:120px;position:relative;">
+<div style="margin-top:80px;position:relative;">
 
 <style type="text/css">
-/*	.kurbi-vadfea-grandparent {
+	.kurbi-vadfea-grandparent {
 		display:flex;
 		flex-wrap:nowrap;
 		flex-direction:row;
@@ -9,48 +9,38 @@
 		align-items:stretch;
 		width:100%;
 	}
-	i could not get this style to apply for no reason i could figure out.
-*/	
+	.kurbi-vadfea-img-container {
+		margin-right:5px;
+		display: inline-block;
+	}
 	.kurbi-vadfea-displayName {
+		display: inline-block;
+		font-size:14px;
 		font-weight:bold;
-		font-size:1.5em;
-		margin-bottom:15px;
+		line-height: 40px;
 		color:#000000;
 	}
+	.kurbi-vadfea-body {
+		margin-top: 10px;
+	}
 	.kurbi-vadfea-text {
-		font-size:1.4em;
+		font-size: 15px;
 		color:#222222;
 		font-weight:lighter;
 		white-space:pre-wrap;
-		line-height: 1.8em;
+		line-height: 1.6;
 	}
-	.kurbi-vadfea-img-container {
-		
-		width:380px;
-		overflow:hidden;
-		margin-left:10px;
-		margin-right:10px;
-	}
-	.kurbi-vadfea-body {
-		flex-grow:1;
-		height:100%;
-	}
-	.kurbi-vadfea-img {
-		width:100%;
-		height:auto;
-	}
+	
 </style>
 
-<div class=".kurbi-vadfea-grandparent" style="display:flex; flex-direction:row;align-items:flex-start;">
-	<div class="kurbi-vadfea-img-container">
-		<img class="kurbi-vadfea-img" src="{{image}}" />
-	</div>
-	<div class="kurbi-vadfea-body">
+<div class="kurbi-vadfea-grandparent">
+	<div class="kurbi-vadfea-parent">
+		<div class="kurbi-vadfea-img-container">
+			<img class="kurbi-vadfea-img" src="{{image}}" width="40" height="40" alt="{{displayName}}" />
+		</div><!-- /.kurbi-vadfea-img-container -->
 		<div class="kurbi-vadfea-displayName">{{displayName}}</div>
-		<div class="kurbi-vadfea-text">{{text}}</div>
-	</div>
-</div>
-
-
-
-</div>
+		<div class="kurbi-vadfea-body">
+			<div class="kurbi-vadfea-text">{{text}}</div>
+		</div><!-- /.kurbi-vadfea-body -->
+	</div><!-- /.kurbi-vadfea-parent -->
+</div><!-- /.kurbi-vadfea-grandparent -->

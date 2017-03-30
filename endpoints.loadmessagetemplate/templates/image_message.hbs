@@ -1,44 +1,33 @@
 {{#if self}}
 
-<div style="width:100%;display:block;height:100px;margin-top:40px;">
+	<div style="padding-top:40px;display:block;">
 
+	<style type="text/css">
+		.kurbi-allmf-image {
+			width: auto;
+			height:60px;
+		}
+	</style>
 
-<style type="text/css">
-	.kurbi-allmf-image {
-		height:100px;
-		width:auto;
-		margin-right:8px;
-		margin-top:4px;
-		margin-bottom:8px;
-		float:right;
-	}
-</style>
+		<img class="kurbi-allmf-image" src="{{image}}"/>
 
-
-<img class="kurbi-allmf-image" src="{{image}}"/>
-
-
-
-
-</div>
+	</div>
 
 
 {{else}}
-<div style="margin-top:40px;margin-bottom:100px;height:200px">
 
+	<div style="padding-top:40px;display:block;">
 
-<style type="text/css">
-	.kurbi-llmf-image {
-		height:200px;
-		width:auto;
-		margin-right:8px;
-		margin-top:4px;
-		margin-bottom:8px;
-	}
-</style>
+		<style type="text/css">
+			.kurbi-llmf-image {
+				width:auto;
+				height:60px;
+				
+			}
+		</style>
 
+		<img class="kurbi-llmf-image" src="{{image}}"/>
 
-<img class="kurbi-llmf-image" src="{{image}}"/>
+	</div>
 
-</div>
 {{/if}}

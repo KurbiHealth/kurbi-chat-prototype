@@ -3,41 +3,29 @@
 .kurbi-ppdf-parent {
 	display:flex;
 	flex-direction:row;
-	justify-content:center;
-	align-items:center;
+	justify-content:left;
+	align-items:left;
 	flex-wrap:wrap;
 	width:100%;
 }
 .kurbi-ppdf-yes {
-	line-height:50px;
-	height:50px;
-	margin-right:8px;
-	margin-top:4px;
-	margin-bottom:8px;
-	color:white;
-	padding-left:10px;
-	padding-right:10px;
-	min-width:150px;
-//	background-color:#0c4dc0;
-	background-color: #229CBD;
-	text-align: center;
-	font-weight: bold;
+	margin-bottom:10px;
+	padding: 5px 10px;
+	width: 296px;
+	font-size: 16px;
+	text-align: left;
+	color: #ffffff;
+	background: #DE5C68;
 	cursor:pointer;
 }
 .kurbi-ppdf-no {
-	line-height:50px;
-	height:50px;
-	margin-right:8px;
-	margin-top:4px;
-	margin-bottom:8px;
-	color:black;
-	padding-left:10px;
-	padding-right:10px;
-	min-width:150px;
-	background-color:white;
-	text-align: center;
-	box-shadow: 1px 2px 2px #cccccc;
-	font-weight: bold;
+	padding: 3px 10px;
+	width: 296px;
+	font-size: 16px;
+	text-align: left;
+	color: #DE5C68;
+	background: #ffffff;
+	border: 2px solid #DE5C68;
 	cursor:pointer;
 }
 </style>
@@ -52,13 +40,9 @@ kurbi.attachClickHandler['#pickle']('ppdf', function(data, chatbox){
 });
 this.parentNode.removeChild(this);
 "/>
-<div class='kurbi-ppdf-parent'>
-
- <div class='kurbi-ppdf-yes' onclick="kurbi.click['#pickle']('ppdf', {{json responses.yes}})">{{responses.yes.text}}</div>
-
- <div class='kurbi-ppdf-no' onclick="kurbi.click['#pickle']('ppdf', {{json responses.no}})">{{responses.no.text}}</div>
-
-</div>
-
+	<div class='kurbi-ppdf-parent'>
+		<div class='kurbi-ppdf-yes' onclick="kurbi.click['#pickle']('ppdf', {{json responses.yes}})">{{responses.yes.text}}</div>
+		<div class='kurbi-ppdf-no' onclick="kurbi.click['#pickle']('ppdf', {{json responses.no}})">{{responses.no.text}}</div>
+	</div><!-- /.kurbi-ppdf-parent -->
 
 </div>

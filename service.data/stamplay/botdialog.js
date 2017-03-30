@@ -12,19 +12,12 @@ function getBotDialog(query){
 	// 	query.user_owner = query.owner;
 	// 	delete query.owner;
 	// }
-console.log('getBotDialog -- query: ',query);
 	return new Promise(function(resolve,reject){
-		if(typeof query == 'string')
-			query = JSON.parse(query);
-		if(query.qcode != 'undefined'){ // && query.qcode.indexOf(' ') > -1
-			query.qcode = encodeURI(query.qcode);
-		}
-
+		
   		db.Object('botdialog').get(query,function(err,doc){
   			if(err) reject(err);
   			else{
-  				if(typeof doc == 'string')
-					doc = JSON.parse(doc);
+  				
   				doc = doc.data[0];
   				if(doc) {
   					_unpack(doc);

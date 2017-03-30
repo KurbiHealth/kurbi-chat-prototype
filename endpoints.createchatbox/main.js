@@ -137,7 +137,9 @@ function createStyle(req,res){
 			icon_url: userAvatar,
 			icon_urlb: 'http://chat.gokurbi.com/backend/icons/PNG/mawc.png',
 			server_url: URL,
-			server_close_button: URL + '/img/icons/button_close.png',
+			server_close_button: URL + '/img/icons/close-white.png',
+			server_dots_button: URL + '/img/icons/dots-white.png',
+			// server_close_button: URL + '/img/icons/button_close.png',
 		}
 console.log('hbsData',hbsData);
 		var lessData = {};
@@ -232,7 +234,9 @@ function debugGetUserChat(req,res){
 				headline: 'debug mode',
 				icon_urlb: url + '/img/icons/juggernaut.png',
 				server_url: url,
-				server_close_button: url + '/img/icons/button_close.png'
+				// server_close_button: url + '/img/icons/button_close.png'
+				server_close_button: url + '/img/icons/close-white.png',
+				server_dots_button: url + '/img/icons/dots-white.png'
 
 			}
 			var lessData = {
@@ -265,7 +269,7 @@ console.log('req.user',req.user);
 	chatbox.styles 			= [];
 	chatbox.bots 			= [];
 	chatbox.allowedPages 	= [];
-	chatbox.rule 			= "random";	s
+	chatbox.rule 			= "random";
 
 	db.createChatBox(chatbox).then(function(doc){
 		var key = doc._id;

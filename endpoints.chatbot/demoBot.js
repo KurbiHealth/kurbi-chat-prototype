@@ -7,7 +7,7 @@ module.exports = function(name,URL){
 			type:'welcome message', 
 			body:{
 				displayName:name, 
-				text:"Thanks for visiting our website. We know how confusing it can be to find the answers and care you need. We’d love for you to choose on our members, but more than that we’d like to help you find someone that is the best fit for your needs and interests.\n\nWould you mind answering a couple of questions to help us point you in the right direction?\nIMPORTANT: This chat is anonymous until the end, but if at that point you choose to share private information with us, please know that you are legally sharing this with a HIPAA-compliant vendor. Click on 'Privacy Policy' in the footer of this page for more information.",
+				text:"We know how confusing it can be to find the answers to health questions. If that's what brought you here, we’d love to help you connect with our members.\n\nChatting with us is completely anonymous because your privacy is very important.\n\nTo get started, simply click \"Let\'s Chat\" button and follow the prompts.",
 				image: URL+'/backend/icons/PNG/mawc.png',
 			}
 

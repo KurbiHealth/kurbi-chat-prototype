@@ -188,7 +188,8 @@ var ChatBox = function(info){
 	function hide(){
 		
 		this.box.style.height='0px';
-		this.box.style.top="-500px";
+		// this.box.style.top="-664px";
+		this.box.style.bottom="-1000px";
 		this.backdrop.style.height='0px';
 
 	}
@@ -203,9 +204,10 @@ var ChatBox = function(info){
 
 		if(socket){
 			
-			this.box.style.height='100vh';
-			this.box.style.paddingBottom='25px';
-			this.box.style.top="0px";
+			this.box.style.height='600px';
+			this.box.style.paddingBottom='20px';
+			// this.box.style.top="0px";
+			this.box.style.bottom="50px";
 			this.backdrop.style.height="100vh";
 			this.content.scrollTop = this.content.scrollHeight;
 
@@ -284,8 +286,8 @@ function chatFactory(local){
 	 if(!connectToButton('kurbi-chat')) {
 	 				//setup banner
 	 				var banner = attachToDom('kurbi-chat-banner', parent);
-	 				var bannerIconContainer = attachToDom('kurbi-banner-icon-container', banner);
-	 				var bannerIcon = attachToDom('kurbi-banner-icon', bannerIconContainer, 'img');
+	 				// var bannerIconContainer = attachToDom('kurbi-banner-icon-container', banner);
+	 				// var bannerIcon = attachToDom('kurbi-banner-icon', bannerIconContainer, 'img');
 	 				var bannerContent = attachToDom('kurbi-banner-content', banner);
 	 				var bannerHeader = attachToDom('kurbi-banner-header', bannerContent);
 	 				var bannerQuestion = attachToDom('kurbi-banner-question', bannerContent);
@@ -294,11 +296,11 @@ function chatFactory(local){
 	 				var bannerNoThanks = attachToDom('kurbi-banner-nope', bannerButtons);
 	 				var bannerHandle = attachToDom('kurbi-banner-handle', banner);
 
-	 				bannerIcon.src = "http://chat.gokurbi.com/demo/img/logo.png";
+	 				// bannerIcon.src = "http://chat.gokurbi.com/demo/img/logo.png";
 	 				bannerHeader.innerHTML = "Madison Area Wellness Collective";
-	 				bannerQuestion.innerHTML = "Can I help you find what you're looking for?";
+	 				bannerQuestion.innerHTML = "Are you looking for something specific? Maybe we can help!";
 	 				bannerSure.innerHTML = "Sure!";
-	 				bannerNoThanks.innerHTML = "No thank you";
+	 				bannerNoThanks.innerHTML = "No Thanks";
 
 	 				d.getElementById('kurbi-chat-close-button').addEventListener('click', clicked['kurbi-close-button']);
 	 				
@@ -315,7 +317,7 @@ function chatFactory(local){
 			banner.style.left="0px";
 		}
 		if(!bannerVisible){
-			banner.style.left="-265px";
+			banner.style.left="-258px";
 		}
 		//visible = !visible;
 		//toggleChat();
