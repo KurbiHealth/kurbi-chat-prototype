@@ -18,9 +18,11 @@ module.exports = function(router,db,BASEURL,PORT){
 	return router;
 
 	function getTemplate(req,res){
-		var templateName = req.query.template;
+		var templateArray = req.query.template.split(".");
+		var templateName = templateArray[templateArray.length - 1];
+		var templatePath = templateArray.slice(0,templateArray.length-1).join("/");
 
-		var dir = './endpoints.loadmessagetemplate/templates/';
+		var dir = './endpoints.loadmessagetemplate/templates/'+templatePath +"/";
 		var filename = null;
 
 		switch(templateName){

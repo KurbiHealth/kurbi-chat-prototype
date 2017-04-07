@@ -30,21 +30,16 @@ function getChatBox(query){
 	return new Promise(function(resolve,reject){
 		db.Object('chatbox').get(query,function(err,doc){
   			if(err) reject(err);
-			else{
-				if(typeof doc == 'string')
-					doc = JSON.parse(doc);
-				if(doc.data)
-					var length = doc.data.length;
-// console.log('-----------------');
-// console.log('doc: ',length,doc);
-// console.log('-----------------');
-				if(doc.data && length > 0){
-					doc = doc.data[0];
+
+			else{				
+				doc = doc.data[0];
+				if(doc){
 					_cleanStamplayFieldsForSave(doc);
-					resolve(doc);
-				}else{
-					resolve('no chatbox found');
+					resolve(doc);	
+				} else{
+					resolve({});
 				}
+				
 			}
   		});
 	

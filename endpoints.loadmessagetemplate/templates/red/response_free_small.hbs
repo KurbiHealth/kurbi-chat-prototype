@@ -1,21 +1,21 @@
 <div>
 <style type="text/css">
-
 .kurbi-kkrm-prompt{
 	font-size:1.3em;
 	color:#888888;
-	font-family:sans-serif;
 	margin-bottom:30px;
 }
-
-
 .kurbi-kkrm-input{
 	width:90%;
 	margin-left:5%;
 	height:50px;
 	border:none;
+	font-family:monospace;
+	font-weight:bold;
+	color:#888888;
+	font-size:1.2em;
+	border: 2px solid #90cdde;
 }
-
 .kurbi-kkrm-parent {
 	display:flex;
 	flex-direction:row;
@@ -24,7 +24,6 @@
 	flex-wrap:wrap;
 	width:100%;
 }
-
 .kurbi-kkrm-child {
 	line-height:50px;
 	height:50px;
@@ -35,34 +34,31 @@
 	padding-left:10px;
 	padding-right:10px;
 	min-width:150px;
-	background-color:#00aaff;
+	//	background-color:#85a6df;
+		background-color: #90cdde;
 	text-align: center;
-	font-family:sans-serif;
+	cursor:pointer;
+	font-size:1.3em;
+	border-radius:5px;	
 }
-
 .kurbi-kkrm-icon {
-	height:50px;
+	height:45px;
 	width:auto;
 	margin-right:8px;
-	margin-top:4px;
+	margin-top:7px;
 	margin-bottom:8px;
 }
-
-
 </style>
 
 
-<img src="http://public.foolhardysoftworks.com:9000/backend/icons/PNG/small-image.png" onload="
-
+<img src="#SMALL_IMAGE_URL" onload="
 var input = this.parentNode.getElementsByClassName('kurbi-kkrm-input')[0];
 kurbi.attachClickHandler['#pickle']('kkrm', function(data, chatbox){
-
 	data.body.text = input.value;
 	chatbox.sendMessage(data);
+	
 });
-
 this.parentNode.removeChild(this);
-
 "/>
 
 <div>
@@ -73,7 +69,7 @@ this.parentNode.removeChild(this);
  	{{responses.buttonText}}
  </div>
 
- <img class="kurbi-kkrm-icon" src="http://public.foolhardysoftworks.com:9000/backend/icons/PNG/small-image.png" onload="this.onload=null; this.src=kurbi.getPatientIcon();"/>
+ <img class="kurbi-kkrm-icon" src="#SMALL_IMAGE_URL" onload="this.onload=null; this.src=kurbi.getPatientIcon();"/>
 
 </div>
 

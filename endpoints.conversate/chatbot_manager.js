@@ -9,7 +9,7 @@ module.exports = function(BASEURL,PORT,db){
 	var service = {};
 
 	var bots = {};
-
+	var documents = require('../service.documents/main.js');
 
 	service.requestBot = requestBot;
 	service.connections = [];
@@ -67,7 +67,9 @@ module.exports = function(BASEURL,PORT,db){
 				});
 
 				connection.socket.on('disconnect', () => {
-						delete bots[room];
+					documents('charlie','be gone',userVariables);
+					
+					delete bots[room];
 					});
 
 				service.connections.push(connection);
