@@ -190,10 +190,19 @@ var ChatBox = function(info){
 	function getTemplate(templateName, callback){
 		if(that.template[templateName]) callback(that.template[templateName]);
 		else{
-			$.get(serverURL+'/template', {client:kurbi.client_id, version:kurbi.version, template:templateName}, function(res){
-						that.template[templateName] = res;
-						callback(that.template[templateName]);
-					});
+			$.ajax({
+				url: 			serverURL+'/template',
+			    contentType: 	"application/x-www-form-urlencoded; charset=UTF-8",
+			    data : 			{client:kurbi.client_id, version:kurbi.version, template:templateName},
+			    success : 		function(res) {
+							        that.template[templateName] = res;
+									callback(that.template[templateName]);
+			   					 },
+			});
+			// $.get(serverURL+'/template', {client:kurbi.client_id, version:kurbi.version, template:templateName}, function(res){
+			// 			that.template[templateName] = res;
+			// 			callback(that.template[templateName]);
+			// 		});
 		}
 	}
 
