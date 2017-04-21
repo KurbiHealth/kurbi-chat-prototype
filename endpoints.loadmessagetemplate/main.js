@@ -18,6 +18,9 @@ module.exports = function(router,db,BASEURL,PORT){
 	return router;
 
 	function getTemplate(req,res){
+		if(req.query.theme) req.query.template = req.query.theme + "." + req.query.template;
+		// else req.query.template = "mawc." + req.query.template;
+
 		var templateArray = req.query.template.split(".");
 		var templateName = templateArray[templateArray.length - 1];
 		var templatePath = templateArray.slice(0,templateArray.length-1).join("/");
@@ -73,7 +76,7 @@ module.exports = function(router,db,BASEURL,PORT){
 		}
 		
 
-		new Promise(globFunc.loadHBS(filename))
+		globFunc.loadFile(filename)
 		.then(function(template){
 
 			res.send(template.replace(/#SMALL_IMAGE_URL/g, serverURL+'/backend/icons/PNG/small-image.png'));

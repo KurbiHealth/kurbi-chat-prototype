@@ -52,7 +52,7 @@ module.exports = function(io,express,BASEURL,PORT,db){
 					}, true);
 		});
 		emptyRooms.forEach((room) => {
-			rooms[room].forEach(client => {	if(client.connected) client.disconnect(); });
+			if(rooms && rooms[room]) rooms[room].forEach(client => {	if(client.connected) client.disconnect(); });
 			delete rooms[room];
 			delete roomVars[room];
 			// delete userRecords[room];

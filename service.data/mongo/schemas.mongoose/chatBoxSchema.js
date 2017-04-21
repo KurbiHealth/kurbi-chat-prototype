@@ -45,15 +45,11 @@ chatBoxSchema.methods.getStyle = function(){
 
 chatBoxSchema.methods.getBot = function(){
 	var that = this;
+	var index = Math.floor(Math.random()*that.bots.length);
+	var botName = that.bots[index];
 	return new Promise(function(resolve,reject){
-	ChatBot.find({owner:that.owner}, function(err, docs){
+	ChatBot.findOne({owner:that.owner, name:botName}, function(err, bot){
 		if(err) reject(err);
-		var bot = {};
-		var index = Math.floor(Math.random()*docs.length);
-		
-		bot.owner = docs[index].owner;
-		bot.name = docs[index].name;
-		console.log(index,bot.name);
 		resolve(bot);
 	})
 	});
