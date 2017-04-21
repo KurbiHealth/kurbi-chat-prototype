@@ -92,6 +92,7 @@ io.use(session);
 
 app.use(bodyParser.urlencoded({ extended: true, parameterLimit:10000, limit:'5mb'}));
 app.use(bodyParser.json({parameterLimit:10000, limit:'5mb'}));
+app.options('/template', cors());
 app.use(cors());
 
 
