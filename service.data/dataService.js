@@ -50,7 +50,7 @@ function connectMongoDB(url){
 			db.connect(url);
 			var conn = db.connection;
 			conn.on('error', function(err){
-				reject("Mongo Error");
+				reject(err);
 			});
 			conn.once('open', function(){
 			    resolve("Mongo Connected");

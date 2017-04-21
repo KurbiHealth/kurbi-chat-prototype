@@ -89,17 +89,19 @@ function setProvider(input){
 				// }else{
 					// overwrite existing user
 					var data = {
-						"email": input.email,
+						// "email": input.email,
 						//"password": crypto.createHash(userRecords[roomId]['email']),
-						"password": "botpassword",
+						"password": input.password,
 						"role": input.role,
 						"enabled": input.enabled,
 						"chatboxes": input.chatboxes
 					};
+					console.log('saving user', doc);
 					db.User
-					.save(data,function(err,doc){
+					.update(doc.data[0]._id, data, function(err,doc){
 						if(err){return console.log('error saving user, error:',err);}
-						resolve(doc.data[0]);
+						console.log('much success');
+						resolve(doc);
 					});
 				// }
 			}

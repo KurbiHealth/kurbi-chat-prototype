@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body style="width:100vw;height:100vh;">
+	<div id="backdrop" style="position:fixed;background-color:red;top:0;bottom:0;left:0;right:0;display:none;opacity:0;"></div>
+	<div id="config_panel" style="width:100vw;height:650px;background-color:rgba(0,150,180,0.8);position:absolute;-webkit-transition: top .5s;z-index:10;">
+		<div style="display:flex; flex-direction:row;">
+		<div style="width:40vw;margin-left:10vw;margin-right:10vw;padding-top:30px;padding-bottom:30px; display:flex;justify-content:center;align-items:stretch;flex-direction:column;">
+				<select id="provider-list" style="margin-bottom:10px;height:30px;line-height:30px;"></select>	
+				<input id="input.page" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="http://target-page.com"></input>
+				<input id="input.hbs.headline" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="headline text"></input>
+				<input id="input.hbs.icon_url" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="chat main icon URL"></input>
+				<input id="input.hbs.icon_urlb" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="bot icon URL"></input>
+				<input id="input.less.headerColor" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="#0088ff"></input>
+				<input id="input.js.#ICON_UR" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="banner icon url"></input>
+				<input id="input.js.#BANNER_HEADER" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="banner header"></input>
+				<input id="input.js.#BANNER_QUESTION" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="banner question"></input>
+				<input id="input.js.#BANNER_YES" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="banner affirmative text"></input>
+				<input id="input.js.#BANNER_NO" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="banner negative text"></input>
+				<select id="input.template" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="chatbox template">
+					<option value="default">MAWC Original</option>
+					<option value="floating">MAWC New</option>
+				</select>
+				<select id="input.bots" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="available bots"></select>			
+		</div>
+		<div style="width:40vw;margin-left:10vw;margin-right:10vw;padding-top:30px;padding-bottom:30px; display:flex;justify-content:center;align-items:stretch;flex-direction:column;">
+			<input id="input.password" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="password"></input>
+			<div id="submit" style="background-color:white;text-align:center;margin-bottom:10px;height:30px;line-height:30px;;">preview chat</div>
+			<div id="publish" style="background-color:white;text-align:center;margin-bottom:10px;height:30px;line-height:30px;;">publish chat</div>
+			<br>
+			<input id="filename-bot" style="visibility:hidden;" placeholder="filename" type="file"></input>
+			<div id="upload-bot" style="background-color:white;text-align:center;margin-bottom:10px;height:30px;line-height:30px;;">upload bot</div>
+			<br>
+			<div>snippet:</div>
+			<div id="last-snippet" style="background-color:white;text-align:left;font-size:.8em;overflow-y:scroll;"></div>
+		</div>
+		</div>
+	</div>
+	<div class="kurbi-chat-parent" style="top: 0px; left: 0px; position:absolute"></div>
+	<iframe id="myiframe" src="https://www.w3schools.com" style="width:100%;height:100%;"></iframe>
+
+	<div id="upload-modal" style="display:none;height:100vh;width:100vw;">
+	<div style="position:fixed;background-color:rgba(50,50,50,.8);top:0;left:0;bottom:0;right:0;z-index:10;"></div>
+	<div class="curtain" style="position:fixed;top:0;left:0;bottom:0;right:0;display:flex;justify-content:center;align-items:center;z-index:20;">
+	<div class="modal-box" style="background-color:white;width:500px;height:300px;display:flex;justify-content:space-around;flex-direction:column;align-items:stretch;padding-left:1vw;padding-right:1vw;z-index:30;">
+		<div id="selected-file" style="font-size:2.4em;text-align:center;">ERROR</div>
+		<div id="submit-file" style="font-size:2.4em;text-align:center;background-color:orange;cursor:pointer;">SUBMIT</div>
+		<div id="submit-msg" style="font-size:2.4em;text-align:center;visibility:hidden;">Doh</div>
+
+	</div>
+	</div>
+	</div>
+
+
+	<div id="publish-modal" style="display:none;height:100vh;width:100vw;">
+	<div style="position:fixed;background-color:rgba(50,50,50,.8);top:0;left:0;bottom:0;right:0;z-index:10;"></div>
+	<div class="curtain" style="position:fixed;top:0;left:0;bottom:0;right:0;display:flex;justify-content:center;align-items:center;z-index:20;">
+	<div class="modal-box" style="background-color:white;width:500px;height:300px;display:flex;justify-content:space-around;flex-direction:column;align-items:stretch;padding-left:1vw;padding-right:1vw;z-index:30;">	
+		<input id="organization-name" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="Bot's Name in Chat"></input>
+		<div style="font-size:2.0em;text-align:center;">Publish to: <span class="currentProvider"></span>?</div>
+		<div id="submit-publish" style="font-size:2.4em;text-align:center;background-color:orange;cursor:pointer;">SUBMIT</div>
+		<div id="submit-publish-msg" style="font-size:2.4em;text-align:center;visibility:hidden;overflow-y:scroll;">Doh</div>
+	</div>
+	</div>
+	</div>
+
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="bower_components/crypto-js/crypto-js.js"></script>
+<script type="text/javascript" src="localBot.js"></script>
+<script type="text/javascript" src="demo_snippet.js"></script>
+<script type="text/javascript" src="configure.js"></script>
+<script type="text/javascript" src="publish.js"></script>
+<script type="text/javascript" src="uploadBot.js"></script>
+<script type="text/javascript" src="index.js"></script>
+
+</html>

@@ -1,0 +1,75 @@
+{{#if self}}
+
+<div style="margin-top:40px;display:block;">
+
+
+<style type="text/css">
+	.kurbi-aqetrt-parent{
+		display:flex;
+		flex-direction:row;
+		justify-content:flex-end;
+		align-items:center;
+		width:100%;
+	}
+	.kurbi-aqetrt-patient-icon {
+		flex-grow:0;
+		height:45px;
+		width:auto;
+		margin-right:8px;
+	}
+	.kurbi-aqetrt-text{
+		flex-grow:0;
+		font-size:1.3em;
+		color:white;
+		min-height:50px;
+		min-width:150px;
+//		background-color:#0c4dc0;
+		background-color: #229CBD;
+		text-align: center;
+		border-radius:5px;
+		padding-left:15px;
+		padding-right:15px;
+		padding-top:12px;
+		padding-bottom:12px;
+		margin-right:20px;
+		overflow: auto;
+
+	}
+</style>
+
+<div class="kurbi-aqetrt-parent">
+	<div class="kurbi-aqetrt-text">{{text}}</div>
+	<img class="kurbi-aqetrt-patient-icon" src="#SMALL_IMAGE_URL" onload="this.onload=null; this.src=kurbi.getPatientIcon();"/>
+</div>
+
+
+</div>
+
+
+{{else}}
+
+
+
+<div style="margin-top:40px;display:block;">
+
+
+<style type="text/css">
+	.kurbi-qetrt-displayName {
+		font-weight:bold;
+		font-size:1.0em;
+		margin-bottom:15px;
+		margin-top:15px;
+		color:#444444;
+	}
+	.kurbi-qetrt-text{
+		font-size:1.8em;
+		color:#666666;
+	}
+</style>
+
+<div class="kurbi-qetrt-displayName">{{displayName}}</div>
+<div class="kurbi-qetrt-text">{{text}}</div>
+
+</div>
+
+{{/if}}

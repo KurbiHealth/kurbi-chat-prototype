@@ -1,0 +1,63 @@
+<div style="margin-top:120px;position:relative;">
+
+<style type="text/css">
+/*	.kurbi-hnmk-grandparent {
+		display:flex;
+		flex-wrap:nowrap;
+		flex-direction:row;
+		justify-content:flex-start;
+		align-items:stretch;
+		width:100%;
+	}
+	i could not get this style to apply for no reason i could figure out.
+*/	
+	.kurbi-hnmk-displayName {
+		font-weight:bold;
+		font-size:1.5em;
+		margin-bottom:15px;
+		color:#000000;
+	}
+	.kurbi-hnmk-text {
+		font-size:1.4em;
+		font-weight:lighter;
+		white-space:pre-wrap;
+		line-height: 1.8em;
+	}
+	.kurbi-hnmk-img-container {
+		
+		width:250px;
+		overflow:hidden;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	.kurbi-hnmk-body {
+		flex-grow:1;
+		height:100%;
+	}
+	.kurbi-hnmk-img {
+		width:100%;
+		height:auto;
+	}
+	@media (max-width: 992px) {
+		
+		.kurbi-hnmk-img-container {
+			margin-left:0px;
+			margin-right:5px;
+		}
+	}
+	
+</style>
+
+<div class=".kurbi-hnmk-grandparent" style="display:flex; flex-direction:row;align-items:flex-start;">
+	<div class="kurbi-hnmk-img-container">
+		<img class="kurbi-hnmk-img" src="{{image}}" width="40" height="40" alt="{{displayName}}" />
+	</div>
+	<div class="kurbi-hnmk-body">
+		<div class="kurbi-hnmk-displayName">{{displayName}}</div>
+		<div class="kurbi-hnmk-text">{{text}}</div>
+	</div>
+</div>
+
+
+
+</div>

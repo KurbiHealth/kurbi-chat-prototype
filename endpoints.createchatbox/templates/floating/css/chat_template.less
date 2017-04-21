@@ -1,0 +1,252 @@
+.kurbi-chat-parent {
+	font-family:sans-serif;
+	font-size:12px;
+	@media (max-height: 950px){
+		font-size:11px;
+	}
+}
+
+.kurbi-chat-box {
+	display:flex;
+	justify-content:flex-start;
+	align-items:stretch;
+	flex-direction:column;
+	position:fixed;
+	/*top:-200px;*/
+	bottom: -800px;
+	right:50px;
+	width: 370px;
+	height:0px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+	background-color:@bodyColor;
+	z-index:5;
+	-webkit-transition: height .4s, top .4s;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	-webkit-box-shadow: 2px 0px 20px 4px rgba(30,35,63,0.4);
+	-moz-box-shadow: 2px 0px 20px 4px rgba(30,35,63,0.4);
+	box-shadow: 2px 0px 20px 4px rgba(30,35,63,0.4);
+}
+
+.kurbi-chat-container {
+	z-index: 1;
+	display:flex;
+	position:relative;
+	flex-grow:1;
+	flex-direction:column;
+	align-items:stretch;
+	padding: 20px 20px 0px 20px;
+}
+
+
+
+.kurbi-chat-header {
+	z-index: 10;
+	position:relative;
+	width:100%;
+	height:50px;
+	text-align: center;
+	background: @headerColor;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+}
+
+.kurbi-chat-header-dots{
+	position: absolute;
+	top: 16px;
+	left: 16px
+}
+
+.pb-kurbi {
+	font-size: 1.1em;
+	line-height: 52px;
+	color: #ffffff;
+}
+
+.kurbi-chat-header-close{
+	position: absolute;
+	top: 16px;
+	right: 16px
+}
+
+.user-headline {
+	font-size: 1.3em;
+	font-weight: bold;
+	line-height: 75px;
+	float: left;
+	margin-left: 70px;
+}
+
+.user-avatar {
+	position: absolute;
+  top: 15px;
+  left: 15px;
+	max-width: 44px;
+	max-height: 45px;
+}
+
+.kurbi-chat-header h5{
+	line-height:50px;
+	margin:0px;
+	margin-left:5%;
+}
+
+.kurbi-chat-footer{
+	flex-grow:0;
+	flex-shrink:0;
+	width:100%;
+	margin-top:20px;
+
+}
+
+.kurbi-input-field {
+	width:100%;
+	line-height:@inputHeight;
+	background-color:@inputColor;
+	border:none;
+	box-shadow: none;
+}
+
+.kurbi-chat-body {
+	flex-grow:1;
+	overflow-y:scroll;
+}
+
+.kurbi-chat-body::-webkit-scrollbar { 
+    display: none; 
+}
+
+.kurbi-chat-closed{
+	height:0;
+	bottom:-1000px;
+}
+
+.kurbi-chat-open{
+	height:600px;
+	padding-bottom:20px;
+	bottom:50px;
+}
+
+/* Begin Banner styles*/
+
+.kurbi-chat-banner {
+	position:fixed;
+	background-color: @bkgdColor;
+
+	width:270px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+
+/*	background-color:@bannerColor;
+	height:170px;*/
+	left:-350px;
+	top:22vh;
+	/*border-top: 5px solid #cccccc;*/
+	/*border-bottom: 5px solid #cccccc;*/
+	border-top: none;
+	border-bottom: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 10px 0;
+
+	top:;
+
+	z-index:2;
+	-webkit-transition: left .4s;
+	-webkit-box-shadow: 2px 4px 20px 4px rgba(30,35,63,0.4);
+	-moz-box-shadow: 2px 4px 20px 4px rgba(30,35,63,0.4);
+	box-shadow: 2px 4px 20px 4px rgba(30,35,63,0.4);
+}
+.kurbi-chat-banner-closed{
+	left:-258px;
+}
+
+.kurbi-chat-banner-open{
+	left:0;
+}
+
+.kurbi-banner-handle {
+	position:absolute;
+	top:0;
+	right:0px;
+	width:12px;
+	background-color: @headerColor;
+	height:100%;
+	cursor: pointer;
+}
+
+.kurbi-banner-icon-container{
+	height:100%;
+	width:25%;
+	float:left;
+	background-color: @bkgdColor;
+	display: none;
+}
+
+.kurbi-banner-icon{
+	width:50%;
+	height:auto;
+	margin-left:25%;
+	display: none;
+}
+
+.kurbi-banner-content{
+	margin:0 auto;
+	width:75%;
+	
+}
+
+.kurbi-banner-header{
+	display:block;
+	color:@bannerHeaderColor;
+	font-size:1.05em;
+	margin-bottom:10px;
+}
+
+.kurbi-banner-question{
+	display:block;
+  font-weight: 300;
+	font-size:1.25em;
+	font-weight:bold;
+	margin-bottom:13px;
+}
+
+.kurbi-banner-buttons{
+	display:block;
+}
+
+.kurbi-banner-sure{
+	display:inline-block;
+	width:35%;
+	text-align:center;
+	height:25px;
+	line-height:25px;
+	background-color: @kurbiPink;
+	color:white;
+	font-size:1.2em;
+	cursor: pointer;
+}
+
+.kurbi-banner-nope{
+	display:inline-block;
+	width:50%;
+	text-align:center;
+	height:25px;
+	line-height:25px;
+	font-size:1em;
+	color:@kurbiPink;
+	cursor: pointer;
+}
+
+/* This is the backdrop overlay on the screen */
+.kurbi-backdrop {
+	position:fixed;
+	/*background-color: #808080;
+	opacity:.8;*/
+	height:0px;
+	left:0px;
+	right:0px;
+	z-index:1;
+
+}

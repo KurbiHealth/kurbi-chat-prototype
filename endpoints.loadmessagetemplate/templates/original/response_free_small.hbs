@@ -1,0 +1,78 @@
+<div>
+<style type="text/css">
+.kurbi-kkrm-prompt{
+	font-size:1.3em;
+	color:#888888;
+	margin-bottom:30px;
+}
+.kurbi-kkrm-input{
+	width:90%;
+	margin-left:5%;
+	height:50px;
+	border:none;
+	font-family:monospace;
+	font-weight:bold;
+	color:#888888;
+	font-size:1.2em;
+	border: 2px solid #90cdde;
+}
+.kurbi-kkrm-parent {
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	flex-wrap:wrap;
+	width:100%;
+}
+.kurbi-kkrm-child {
+	line-height:50px;
+	height:50px;
+	margin-right:8px;
+	margin-top:4px;
+	margin-bottom:8px;
+	color:white;
+	padding-left:10px;
+	padding-right:10px;
+	min-width:150px;
+	//	background-color:#85a6df;
+		background-color: #90cdde;
+	text-align: center;
+	cursor:pointer;
+	font-size:1.3em;
+	border-radius:5px;	
+}
+.kurbi-kkrm-icon {
+	height:45px;
+	width:auto;
+	margin-right:8px;
+	margin-top:7px;
+	margin-bottom:8px;
+}
+</style>
+
+
+<img src="#SMALL_IMAGE_URL" onload="
+var input = this.parentNode.getElementsByClassName('kurbi-kkrm-input')[0];
+kurbi.attachClickHandler['#pickle']('kkrm', function(data, chatbox){
+	data.body.text = input.value;
+	chatbox.sendMessage(data);
+	
+});
+this.parentNode.removeChild(this);
+"/>
+
+<div>
+<div class='kurbi-kkrm-prompt'>{{responses.prompt}}</div>
+<textarea class='kurbi-kkrm-input'></textarea>
+<div class='kurbi-kkrm-parent'>
+ <div class='kurbi-kkrm-child' onclick="kurbi.click['#pickle']('kkrm', {{json responses.message}})">
+ 	{{responses.buttonText}}
+ </div>
+
+ <img class="kurbi-kkrm-icon" src="#SMALL_IMAGE_URL" onload="this.onload=null; this.src=kurbi.getPatientIcon();"/>
+
+</div>
+
+
+
+</div>

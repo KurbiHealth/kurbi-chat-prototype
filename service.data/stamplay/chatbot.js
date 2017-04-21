@@ -47,8 +47,7 @@ function createChatBot(input){
 
 function setChatBot(input){
 	return new Promise(function(resolve,reject){
-
-		db.Object('chatbot').get({id: input._id},function(err,doc){
+		db.Object('chatbot').get({owner: input.owner, name: input.name},function(err,doc){
 			if(err) reject(err);
 			else{		
 				if(doc.data.length == 0){
