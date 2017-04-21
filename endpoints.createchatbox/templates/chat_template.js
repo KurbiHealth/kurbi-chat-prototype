@@ -314,11 +314,11 @@ function params(apikey, useIo){
 function init(local){
 
 	local.chatbox = chatFactory(local);
-		$.ajaxSetup({
-    beforeSend: function(xhr) {
-        xhr.setRequestHeader('x-kurbi-header', info.sessionID );
-		    }
-		});
+		// $.ajaxSetup({
+  //   beforeSend: function(xhr) {
+  //       xhr.setRequestHeader('x-kurbi-header', info.sessionID );
+		//     }
+		// });
 }
 
 function getPatientIcon(){
