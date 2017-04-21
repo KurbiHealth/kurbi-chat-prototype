@@ -4,7 +4,7 @@
 	scope.kurbi.runSnippet = function(config){
 		//var serverURL = 'http://chat.gokurbi.com';
 	//var serverURL = 'http://kchat:8080'
-	var serverURL = 'http://public.foolhardysoftworks.com:8180';
+	var serverURL = window.location.origin;
 	if(!config) config={};
 console.log('---in snippet_template.js----');
 
