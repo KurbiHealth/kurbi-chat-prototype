@@ -29,19 +29,26 @@
 	var defaultConfig = {
 		"template":"default",
 			"hbs":{
+					"headline" 					:"",
+					"icon_url" 					:"",
+					"icon_urlb"					:"",
+					"server_close_button" 		:""
 			
 				},
 
 			"less":{
-			
+					"headerColor" 				:""		
 			},
 			"js":{
-			
+					"#BANNER_ICON_URL"			:"",
+					"#BANNER_HEADER"			:"",
+					"#BANNER_QUESTION"			:"",
+					"#BANNER_YES"				:"",
+					"#BANNER_NO"				:""
 			}
 	
 	}
-
-
+	
 
 	$('.modal-box').on('click', function(e){
 		e.stopPropagation();
@@ -61,17 +68,22 @@ function getConfig(){
 		while(kurbiParents.length > 0){
 			kurbiParents[0].remove();
 		}
-		var config = JSON.parse(JSON.stringify(defaultConfig));
-
-		Object.keys(config.hbs).forEach(function(key){
+		var templateConfig = JSON.parse(JSON.stringify(defaultConfig));
+		var config = {
+			"template":"default",
+			"hbs":{},
+			"less":{},
+			"js":{}
+		}
+		Object.keys(templateConfig.hbs).forEach(function(key){
 			var input = document.getElementById("input.hbs."+key);
 			if(input && input.value.trim().length > 0)	config.hbs[key] =  input.value;
 		});
-		Object.keys(config.less).forEach(function(key){
+		Object.keys(templateConfig.less).forEach(function(key){
 			 var input = document.getElementById("input.less."+key);
 			 if(input && input.value.trim().length > 0) config.less[key] = input.value;
 		});
-		Object.keys(config.js).forEach(function(key){
+		Object.keys(templateConfig.js).forEach(function(key){
 			var input = document.getElementById("input.js."+key);
 			if(input && input.value.trim().length > 0)	config.js[key] = input.value;
 		});
@@ -85,7 +97,7 @@ function getConfig(){
 		config.provider = provider.value;
 		config.organization = organization.value;
 		iframe.src = config.page;
-
+		console.log(config);
 		var configString = CryptoJS.AES.encrypt(JSON.stringify(config),password.value).toString();
 		return encodeURIComponent(configString);
 }
