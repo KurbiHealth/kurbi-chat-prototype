@@ -8184,3 +8184,178 @@
 
 1490906780554	 GET/chatbox
 				 meta: {"query":{"key":"58caea93c06d630417b31067"}}
+1490906896407	 SOCKET/register
+				 meta: {"key":"58caea93c06d630417b31067","sessionID":"MsptEeu2hxZ3sdXL","url":"http://kchat:8080/demo/provider.html","icon":null}
+1490906897141	 Creating Bot
+				 meta: {"sessionID":"ik8d6wAIXWetu2R3"}
+1490906897443	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"welcome message"}}
+1490906897458	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"response welcome"}}
+1490906898035	 SOCKET/join room
+				 meta: {"room":"7072c1ffa22b1a07e4b80580ca1fd15d","source":"bot"}
+
+
+1490966653959	 restart server
+1490966653987	 connecting data service
+1490966654003	 data service connected
+1490966654003	 using hardcoded user, devUser()
+1490966654003	 
+
+1490966654003	 connecting main routes
+1490966654246	 
+
+1490966654246	 creating chatbox routes
+1490966654246	 	/chatbox
+1490966654246	 	/style
+1490966654247	 	/bot
+1490966654247	 	/deleteBot
+1490966654247	 	/convert
+1490966654248	 ./endpoints.createchatbox 
+1490966654249	 ./endpoints.loadmessagetemplate 
+1490966654324	 ./endpoints.conversate/operator 
+1490966654325	 ./endpoints.receivecontactform 
+1490966654325	 ./endpoints.log 
+1490966654325	 
+
+1490966654325	 connecting static apps
+1490966654325	 ./backend 
+1490966654326	 ./demo 
+1490966654326	 ./builder 
+1490966654326	 
+
+1490966654326	 Error Handling 
+1490966654326	 
+
+1490966654326	 SERVER READY 
+
+1490966655866	 GET/chatbox
+				 meta: {"query":{"key":"58caea93c06d630417b31067"}}
+1490966657276	 SOCKET/register
+				 meta: {"key":"58caea93c06d630417b31067","sessionID":"MsptEeu2hxZ3sdXL","url":"http://kchat:8080/demo/provider.html","icon":null}
+1490966658023	 Creating Bot
+				 meta: {"sessionID":"VJVPZNrdo5v9R9CW"}
+1490966658319	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"welcome message"}}
+1490966658335	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"response welcome"}}
+1490966658916	 SOCKET/join room
+				 meta: {"room":"7072c1ffa22b1a07e4b80580ca1fd15d","source":"bot"}
+1490983825861	 GET/chatbox
+				 meta: {"query":{"key":"58caea93c06d630417b31067"}}
+1490983829760	 SOCKET/register
+				 meta: {"key":"58caea93c06d630417b31067","sessionID":"MsptEeu2hxZ3sdXL","url":"http://kchat:8080/demo/provider.html","icon":null}
+1490983830498	 Creating Bot
+				 meta: {"sessionID":"DpwrEVVr5EitcHdr"}
+1490983830800	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"welcome message"}}
+1490983830817	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"response welcome"}}
+1490983844244	 SOCKET/start
+				 meta: {"key":"58caea93c06d630417b31067","sessionID":"MsptEeu2hxZ3sdXL","url":"http://kchat:8080/demo/provider.html","icon":null}
+1490983844569	 SOCKET/message
+				 meta: {"_id":"588fa67b1961261f5614c153","owner":"57699528f4924a7f641e4950","name":"demoBot","version":"0.0.1","qcode":"avatar","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-01-30T20:47:55.589Z","dt_create":"2017-01-30T20:47:55.589Z","__v":0,"id":"588fa67b1961261f5614c153","message":{"type":"text message","body":{"displayName":"Madison Area Wellness Collective","text":"Our chat is completely anonymous, so let's start by choosing an avatar you'd like to represent you."}},"responses":{"type":"response list icons","body":[{"id":1,"message":{"body":{"image":"http://chat.gokurbi.com/backend/icons/PNG/icon-1.png"},"meta":1,"qCode":"get symptom","type":"image message"},"url":"http://chat.gokurbi.com/backend/icons/PNG/icon-1.png"},{"id":2,"message":{"body":{"image":"http://chat.gokurbi.com/backend/icons/PNG/icon-2.png"},"meta":2,"qCode":"get symptom","type":"image message"},"url":"http://chat.gokurbi.com/backend/icons/PNG/icon-2.png"},{"id":3,"message":{"body":{"image":"http://chat.gokurbi.com/backend/icons/PNG/icon-3.png"},"meta":3,"qCode":"get symptom","type":"image message"},"url":"http://chat.gokurbi.com/backend/icons/PNG/icon-3.png"},{"id":4,"message":{"body":{"image":"http://chat.gokurbi.com/backend/icons/PNG/icon-4.png"},"meta":4,"qCode":"get symptom","type":"image message"},"url":"http://chat.gokurbi.com/backend/icons/PNG/icon-4.png"},{"id":5,"message":{"body":{"image":"http://chat.gokurbi.com/backend/icons/PNG/icon-5.png"},"meta":5,"qCode":"get symptom","type":"image message"},"url":"http://chat.gokurbi.com/backend/icons/PNG/icon-5.png"},{"id":6,"message":{"body":{"image":"http://chat.gokurbi.com/backend/icons/PNG/icon-6.png"},"meta":6,"qCode":"get symptom","type":"image message"},"url":"http://chat.gokurbi.com/backend/icons/PNG/icon-6.png"},{"id":7,"message":{"body":{"image":"http://chat.gokurbi.com/backend/icons/PNG/icon-7.png"},"meta":7,"qCode":"get symptom","type":"image message"},"url":"http://chat.gokurbi.com/backend/icons/PNG/icon-7.png"},{"id":8,"message":{"body":{"image":"http://chat.gokurbi.com/backend/icons/PNG/icon-8.png"},"meta":8,"qCode":"get symptom","type":"image message"},"url":"http://chat.gokurbi.com/backend/icons/PNG/icon-8.png"},{"id":9,"message":{"body":{"image":"http://chat.gokurbi.com/backend/icons/PNG/icon-9.png"},"meta":9,"qCode":"get symptom","type":"image message"},"url":"http://chat.gokurbi.com/backend/icons/PNG/icon-9.png"},{"id":10,"message":{"body":{"image":"http://chat.gokurbi.com/backend/icons/PNG/icon-10.png"},"meta":10,"qCode":"get symptom","type":"image message"},"url":"http://chat.gokurbi.com/backend/icons/PNG/icon-10.png"},{"id":11,"message":{"body":{"image":"http://chat.gokurbi.com/backend/icons/PNG/icon-11.png"},"meta":11,"qCode":"get symptom","type":"image message"},"url":"http://chat.gokurbi.com/backend/icons/PNG/icon-11.png"},{"id":12,"message":{"body":{"image":"http://chat.gokurbi.com/backend/icons/PNG/icon-12.png"},"meta":12,"qCode":"get symptom","type":"image message"},"url":"http://chat.gokurbi.com/backend/icons/PNG/icon-12.png"}]}}
+1490983844574	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"text message"}}
+1490983844575	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"response list icons"}}
+1490983846237	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"image message"}}
+1490983846255	 SOCKET/message
+				 meta: {"message":{"body":{"image":"http://chat.gokurbi.com/backend/icons/PNG/icon-1.png","displayName":"","self":true},"meta":1,"qCode":"get symptom","type":"image message","userId":"MsptEeu2hxZ3sdXL"}}
+1490983847664	 SOCKET/message
+				 meta: {"_id":"588fa67b7e7ab52e565ececa","owner":"57699528f4924a7f641e4950","name":"demoBot","version":"0.0.1","qcode":"get symptom","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-01-30T20:47:55.573Z","dt_create":"2017-01-30T20:47:55.573Z","__v":0,"id":"588fa67b7e7ab52e565ececa","message":{"type":"text message","body":{"displayName":"Madison Area Wellness Collective","text":"So, let's talk about your situation. What seems to be bothering you?"},"qCode":null,"meta":null},"responses":{"type":"small free response","body":{"buttonText":"Add Details","prompt":"Type in your main symptom in the box below:","message":{"type":"text message","qCode":"get duration","variable":"symptom","body":{"text":""}}}}}
+1490983847672	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"small free response"}}
+1490983856891	 SOCKET/message
+				 meta: {"message":{"type":"text message","qCode":"get duration","variable":"symptom","body":{"text":"Knee pain","displayName":"","self":true},"userId":"MsptEeu2hxZ3sdXL"}}
+1490983860607	 SOCKET/message
+				 meta: {"_id":"588fa67bd8aa408b1480c1f1","owner":"57699528f4924a7f641e4950","name":"demoBot","version":"0.0.1","qcode":"get duration","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-01-30T20:47:55.595Z","dt_create":"2017-01-30T20:47:55.595Z","__v":0,"id":"588fa67bd8aa408b1480c1f1","message":{"type":"text message","body":{"displayName":"Madison Area Wellness Collective","text":"How long has it been bothering you?"},"qCode":null,"meta":null},"responses":{"type":"response list text","variable":"symptomDuration","body":[{"message":{"meta":null,"qCode":"get treatment","body":{"text":"A day or so","displayName":null},"type":"text message"},"text":"A day or so"},{"message":{"meta":null,"qCode":"get treatment","body":{"text":"About a week","displayName":null},"type":"text message"},"text":"About a week"},{"message":{"meta":null,"qCode":"get treatment","body":{"text":"Longer than a week","displayName":null},"type":"text message"},"text":"Longer than a week"}]}}
+1490983860613	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"response list text"}}
+1490983863501	 SOCKET/message
+				 meta: {"message":{"meta":null,"qCode":"get treatment","body":{"text":"About a week","displayName":"","self":true},"type":"text message","variable":"symptomDuration","userId":"MsptEeu2hxZ3sdXL"}}
+1490983865114	 SOCKET/message
+				 meta: {"_id":"588fa67b2db6c92956a22e4b","owner":"57699528f4924a7f641e4950","name":"demoBot","version":"0.0.1","qcode":"get treatment","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-01-30T20:47:55.607Z","dt_create":"2017-01-30T20:47:55.607Z","__v":0,"id":"588fa67b2db6c92956a22e4b","message":{"type":"text message","body":{"displayName":"Madison Area Wellness Collective","text":"What have you done the most for treatment?"},"qCode":null,"meta":null},"responses":{"type":"response list text","variable":"treatmentType","body":[{"message":{"meta":null,"qCode":"user summary","body":{"text":"Professional Care","displayName":null},"type":"text message"},"text":"Professional Care"},{"message":{"meta":null,"qCode":"user summary","body":{"text":"Self-Care","displayName":null},"type":"text message"},"text":"Self-Care"},{"message":{"meta":null,"qCode":"user summary","body":{"text":"Procrastination","displayName":null},"type":"text message"},"text":"I've done nothing"}]}}
+1490983872248	 SOCKET/message
+				 meta: {"message":{"meta":null,"qCode":"user summary","body":{"text":"Self-Care","displayName":"","self":true},"type":"text message","variable":"treatmentType","userId":"MsptEeu2hxZ3sdXL"}}
+1490983873761	 SOCKET/message
+				 meta: {"_id":"588fa67bd8aa408b1480c1f2","owner":"57699528f4924a7f641e4950","name":"demoBot","version":"0.0.1","qcode":"user summary","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-01-30T20:47:55.600Z","dt_create":"2017-01-30T20:47:55.600Z","__v":0,"id":"588fa67bd8aa408b1480c1f2","message":{"type":"text message","body":{"displayName":"Madison Area Wellness Collective","text":"So here is what we have so far. Your problem is Knee pain, it has been going on for About a week, and you have treated it with Self-Care. Is that right?"}},"responses":{"type":"response list text","body":[{"message":{"meta":null,"qCode":"you got it","body":{"text":"Yes, that's right","displayName":null},"type":"text message"},"text":"Yes, that's right"},{"message":{"meta":null,"qCode":"you dont got it","body":{"text":"No, not quite","displayName":null},"type":"text message"},"text":"No, not quite"}]}}
+1490983876792	 SOCKET/message
+				 meta: {"message":{"meta":null,"qCode":"you got it","body":{"text":"Yes, that's right","displayName":"","self":true},"type":"text message","userId":"MsptEeu2hxZ3sdXL"}}
+1490983880020	 SOCKET/message
+				 meta: {"_id":"588fa67b2db6c92956a22e4a","owner":"57699528f4924a7f641e4950","name":"demoBot","version":"0.0.1","qcode":"you got it","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-01-30T20:47:55.592Z","dt_create":"2017-01-30T20:47:55.592Z","__v":0,"id":"588fa67b2db6c92956a22e4a","message":{"type":"text message","body":{"displayName":"Madison Area Wellness Collective","text":"OK, great! Is there anything you'd like to add to help us understand what's going on?"},"qCode":null,"meta":null},"responses":{"type":"large free response","body":{"buttonText":"Add Details","prompt":"Type in the box below:","message":{"type":"text message","qCode":"ask for email","body":{"text":""}}}}}
+1490983880026	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"large free response"}}
+1490983888653	 SOCKET/message
+				 meta: {"message":{"type":"text message","qCode":"ask for email","body":{"text":"Nope that is it.","displayName":"","self":true},"userId":"MsptEeu2hxZ3sdXL"}}
+1490983890372	 SOCKET/message
+				 meta: {"_id":"588fa67bd8aa408b1480c1f3","owner":"57699528f4924a7f641e4950","name":"demoBot","version":"0.0.1","qcode":"ask for email","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-01-30T20:47:55.603Z","dt_create":"2017-01-30T20:47:55.603Z","__v":0,"id":"588fa67bd8aa408b1480c1f3","message":{"type":"text message","body":{"displayName":"Madison Area Wellness Collective","text":"Thanks for sharing that! As you can see, we're actually not talking with you live. It's a bummer because we're sure you're a really nice person. We'd love to meet you soon. But first, is it okay to email with feedback on our conversation?"},"qCode":null,"meta":null},"responses":{"type":"response list text","body":[{"message":{"meta":null,"qCode":"email me","body":{"text":"Yes, that's right","displayName":null},"type":"text message"},"text":"Yes, that's awesome"},{"message":{"meta":null,"qCode":"dont fucking email me","body":{"text":"No, not quite","displayName":null},"type":"text message"},"text":"No thanks"}]}}
+1490983896311	 SOCKET/message
+				 meta: {"message":{"meta":null,"qCode":"email me","body":{"text":"Yes, that's right","displayName":"","self":true},"type":"text message","userId":"MsptEeu2hxZ3sdXL"}}
+1490983899651	 SOCKET/message
+				 meta: {"_id":"588fa67b2db6c92956a22e4c","owner":"57699528f4924a7f641e4950","name":"demoBot","version":"0.0.1","qcode":"email me","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-01-30T20:47:55.614Z","dt_create":"2017-01-30T20:47:55.614Z","__v":0,"id":"588fa67b2db6c92956a22e4c","message":{"type":"text message","body":{"displayName":"Madison Area Wellness Collective","text":"OK, great! This is exciting. We use an app called Kurbi for these conversations. It'll make sure you stay anonymous so that your information and identity aren't used inappropriately. If you're happy with my feedback you can rate me and share your contact information so that we can set up a time to talk in person."},"qCode":null,"meta":null},"responses":{"type":"small free response","body":{"buttonText":"Add Details","prompt":"Type in your email in the box below:","message":{"type":"text message","qCode":"scored the email","body":{"text":""}}}}}
+1490983907719	 SOCKET/message
+				 meta: {"message":{"type":"text message","qCode":"scored the email","body":{"text":"steve.roettger@gmail.com","displayName":"","self":true},"userId":"MsptEeu2hxZ3sdXL"}}
+1490983911332	 SOCKET/message
+				 meta: {"_id":"588fa67b7e7ab52e565ececb","owner":"57699528f4924a7f641e4950","name":"demoBot","version":"0.0.1","qcode":"scored the email","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-01-30T20:47:55.595Z","dt_create":"2017-01-30T20:47:55.594Z","__v":0,"id":"588fa67b7e7ab52e565ececb","message":{"type":"text message","body":{"displayName":"Madison Area Wellness Collective","text":"What would you like to be called?"},"qCode":null,"meta":null},"responses":{"type":"small free response","body":{"buttonText":"Add Name","prompt":"Type in your first name in the box below:","message":{"type":"text message","qCode":"end","body":{"text":""}}}}}
+1490983916899	 SOCKET/message
+				 meta: {"message":{"type":"text message","qCode":"end","body":{"text":"Steve","displayName":"","self":true},"userId":"MsptEeu2hxZ3sdXL"}}
+1490983918599	 SOCKET/message
+				 meta: {"_id":"588fa67b1961261f5614c155","owner":"57699528f4924a7f641e4950","name":"demoBot","version":"0.0.1","qcode":"end","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-01-30T20:47:55.599Z","dt_create":"2017-01-30T20:47:55.599Z","__v":0,"id":"588fa67b1961261f5614c155","message":{"type":"end message","body":{"displayName":"Madison Area Wellness Collective","text":"Well, this is the end of our chat. Thanks a lot for taking the time to get to know us. We hope that the answers we find for you are helpful. Look for a summary of our conversation in your email inbox momentarily. If we happened to get something wrong or if there is something else you'd like to add follow the instructions to revisit our chat session.\n\n We wish you all the best!","image":"http://chat.gokurbi.com/backend/icons/PNG/mawc.png"}},"responses":{"type":"response end","body":{"bye":{"text":"End Chat Session","id":"end"}}}}
+1490983918604	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"end message"}}
+1490983918605	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"response end"}}
+1490983986253	 SOCKET/end
+				 meta: {"key":"58caea93c06d630417b31067","sessionID":"MsptEeu2hxZ3sdXL","url":"http://kchat:8080/demo/provider.html","icon":null}
+1490983989081	 GET/chatbox
+				 meta: {"query":{"key":"58caea93c06d630417b31067"}}
+1490984017837	 SOCKET/register
+				 meta: {"key":"58caea93c06d630417b31067","sessionID":"b4a60Boe8EF1By8N","url":"http://kchat:8080/demo/provider.html","icon":null}
+1490984018456	 Creating Bot
+				 meta: {"sessionID":"gnXk22Ht4pe12esh"}
+1490984019337	 SOCKET/join room
+				 meta: {"room":"e7776dd429ee71d24ae31dcc61e63bf0","source":"bot"}
+1490984019933	 SOCKET/message
+				 meta: {"_id":"588fa67b2db6c92956a22e49","owner":"57699528f4924a7f641e4950","name":"demoBot","version":"0.0.1","qcode":"welcome","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-01-30T20:47:55.586Z","dt_create":"2017-01-30T20:47:55.586Z","__v":0,"id":"588fa67b2db6c92956a22e49","message":{"type":"welcome message","body":{"displayName":"Madison Area Wellness Collective","text":"Thanks for visiting our website. We know how confusing it can be to find the answers and care you need. We’d love for you to choose on our members, but more than that we’d like to help you find someone that is the best fit for your needs and interests.\n\nWould you mind answering a couple of questions to help us point you in the right direction?\nIMPORTANT: This chat is anonymous until the end, but if at that point you choose to share private information with us, please know that you are legally sharing this with a HIPAA-compliant vendor. Click on 'Privacy Policy' in the footer of this page for more information.","image":"http://chat.gokurbi.com/backend/icons/PNG/mawc.png"}},"responses":{"type":"response welcome","body":{"yes":{"text":"Ok, let's go","id":"begin","message":{"type":"text message","qCode":null,"meta":"yes","body":{"text":"Okay, let's go"}}},"no":{"text":"I'd rather not","id":"cancel","message":{"type":"text message","qCode":null,"meta":"no","body":{"text":"I'd rather not"}}}}}}
+1490984019942	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"welcome message"}}
+1490984019942	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"response welcome"}}
+
+
+1492532386412	 restart server
+1492532386442	 connecting data service
+1492532386458	 data service connected
+1492532386458	 using hardcoded user, devUser()
+1492532386458	 
+
+1492532386458	 connecting main routes
+1492532386708	 
+
+1492532386708	 creating chatbox routes
+1492532386709	 	/chatbox
+1492532386709	 	/style
+1492532386709	 	/bot
+1492532386709	 	/deleteBot
+1492532386709	 	/convert
+1492532386710	 ./endpoints.createchatbox 
+1492532386711	 ./endpoints.loadmessagetemplate 
+1492532386780	 ./endpoints.conversate/operator 
+1492532386781	 ./endpoints.receivecontactform 
+1492532386782	 ./endpoints.log 
+1492532386782	 
+
+1492532386782	 connecting static apps
+1492532386783	 ./backend 
+1492532386783	 ./demo 
+1492532386783	 ./builder 
+1492532386783	 
+
+1492532386783	 Error Handling 
+1492532386783	 
+
+1492532386783	 SERVER READY 
+
+1492532400947	 GET/img/favicon.png
