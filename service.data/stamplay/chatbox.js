@@ -62,19 +62,19 @@ function createChatBox(input){
 }
 
 function setChatBox(input){
-
-console.log('in setChatBox, input:',input);
-
-	_cleanApiFieldsForStamplay(input);
+	var box = JSON.parse(JSON.stringify(input));
+console.log('in setChatBox, input:',box);
+	
+	_cleanApiFieldsForStamplay(box);
 
 	return new Promise(function(resolve,reject){
 
-		//_cleanStamplayFieldsForSave(input);
-		var id = input._id;
-		delete input._id;
-		delete input.id;
+		//_cleanStamplayFieldsForSave(box);
+		var id = box._id;
+		delete box._id;
+		delete box.id;
 
-		db.Object('chatbox').update(id,input,function(err,doc){
+		db.Object('chatbox').update(id,box,function(err,doc){
 			if(err) reject(err);
 			else resolve(doc);
 		})

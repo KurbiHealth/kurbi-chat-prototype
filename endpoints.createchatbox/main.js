@@ -154,6 +154,7 @@ function simplePublish(req,res){
 				chatbox.allowedPages 	= [];
 				chatbox.rule 			= "random";
 				return db.createChatBox(chatbox).then((doc)=>{
+					console.log('arRRRRRRrr')
 					chatbox = doc;
 					return globFunc.loadSnippet(chatbox._id,URL);
 				});
