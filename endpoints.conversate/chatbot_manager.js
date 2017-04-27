@@ -9,7 +9,7 @@ module.exports = function(BASEURL,PORT,db){
 	var service = {};
 
 	var bots = {};
-
+	var documents = require('../service.documents/main.js');
 
 	service.requestBot = requestBot;
 	service.connections = [];
@@ -30,7 +30,7 @@ module.exports = function(BASEURL,PORT,db){
 			//removeOldBots();
 			//sessionData.box
 			db.getBot(sessionData.box).then(function(botInfo){
-
+			console.log(botInfo);
 			if(!bots[room]) {
 					bots[room] = {};
 					bots[room].socket = io.connect('http://localhost:'+PORT, {forceNew:true, query:{'sessionID':botSessionId}});
@@ -67,7 +67,9 @@ module.exports = function(BASEURL,PORT,db){
 				});
 
 				connection.socket.on('disconnect', () => {
-						delete bots[room];
+					documents('charlie','be gone',userVariables);
+					
+					delete bots[room];
 					});
 
 				service.connections.push(connection);
@@ -128,7 +130,7 @@ module.exports = function(BASEURL,PORT,db){
 					if(bot)
 						db.getBotDialog({owner:bot.owner,name:bot.name,qcode:qcode}).then((doc)=>{callback(doc);});
 					else 
-						callback(require('../endpoints.chatbot/noPermission.js')('Kurbi Health Services',serverURL)[qcode]);
+						callback(require('../endpoints.chatbot/noPermission-mawc-1.js')('Kurbi Health Services',serverURL)[qcode]);
 					
 
 				}

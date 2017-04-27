@@ -8359,3 +8359,2087 @@
 1492532386783	 SERVER READY 
 
 1492532400947	 GET/img/favicon.png
+
+
+1493134840137	 restart server
+1493134840169	 connecting data service
+1493134840182	 data service connected
+1493134840182	 using hardcoded user, devUser()
+1493134840182	 
+
+1493134840182	 connecting main routes
+1493134840447	 	 level: error, == GENERAL ERROR ==
+				 meta: {"stack":"Error: Cannot find module 'crypto-js'\n    at Function.Module._resolveFilename (module.js:470:15)\n    at Function.Module._load (module.js:418:25)\n    at Module.require (module.js:498:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.createchatbox/main.js:5:22)\n    at Module._compile (module.js:571:32)\n    at Object.Module._extensions..js (module.js:580:10)\n    at Module.load (module.js:488:32)\n    at tryModuleLoad (module.js:447:12)\n    at Function.Module._load (module.js:439:3)","source":"server"}
+
+
+1493134869451	 restart server
+1493134869462	 connecting data service
+1493134869470	 data service connected
+1493134869470	 using hardcoded user, devUser()
+1493134869470	 
+
+1493134869470	 connecting main routes
+1493134869628	 
+
+1493134869628	 creating chatbox routes
+1493134869628	 	/chatbox
+1493134869629	 	/style
+1493134869629	 	/bot
+1493134869629	 	/deleteBot
+1493134869629	 	/convert
+1493134869629	 	/providers
+1493134869629	 	/preview_chat_box
+1493134869629	 	/bot_files
+1493134869629	 	/bot_from_file
+1493134869629	 ./endpoints.createchatbox 
+1493134869630	 ./endpoints.loadmessagetemplate 
+1493134869675	 ./endpoints.conversate/operator 
+1493134869675	 ./endpoints.receivecontactform 
+1493134869676	 ./endpoints.log 
+1493134869676	 
+
+1493134869676	 connecting static apps
+1493134869676	 ./backend 
+1493134869676	 ./demo 
+1493134869676	 ./builder 
+1493134869676	 ./preview 
+1493134869677	 
+
+1493134869677	 Error Handling 
+1493134869677	 
+
+1493134869677	 SERVER READY 
+
+1493135001678	 GET/favicon.ico
+1493135040192	 GET/
+1493135045552	 GET/deom
+1493135776709	 GET/botbuilder
+1493135791163	 GET/style
+1493135791183	 GET/chatbox
+1493135791185	 GET/bot
+1493135791656	 	 level: error, == GENERAL ERROR ==
+				 meta: {"stack":"Error: Can't set headers after they are sent.\n    at ServerResponse.setHeader (_http_outgoing.js:367:11)\n    at ServerResponse.header (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/response.js:719:10)\n    at ServerResponse.send (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/response.js:164:12)\n    at ServerResponse.json (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/response.js:250:15)\n    at db.getChatBoxes.then (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.createchatbox/main.js:383:77)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","source":"server"}
+
+
+1493150414333	 restart server
+1493150414354	 connecting data service
+1493150414370	 data service connected
+1493150414370	 using hardcoded user, devUser()
+1493150414370	 
+
+1493150414370	 connecting main routes
+1493150414675	 
+
+1493150414675	 creating chatbox routes
+1493150414675	 	/chatbox
+1493150414676	 	/style
+1493150414676	 	/bot
+1493150414676	 	/deleteBot
+1493150414676	 	/convert
+1493150414676	 	/providers
+1493150414676	 	/preview_chat_box
+1493150414676	 	/bot_files
+1493150414676	 	/bot_from_file
+1493150414676	 ./endpoints.createchatbox 
+1493150414677	 ./endpoints.loadmessagetemplate 
+1493150414749	 ./endpoints.conversate/operator 
+1493150414750	 ./endpoints.receivecontactform 
+1493150414750	 ./endpoints.log 
+1493150414750	 
+
+1493150414750	 connecting static apps
+1493150414751	 ./backend 
+1493150414751	 ./demo 
+1493150414751	 ./builder 
+1493150414751	 ./preview 
+1493150414751	 
+
+1493150414751	 Error Handling 
+1493150414751	 
+
+1493150414751	 SERVER READY 
+
+1493150478018	 GET/bot_files
+1493150478024	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2B1bST7nhMNKrlT3xngyrre1tHidMboxNs%2BMSaixXW0T8qPsN1uh844"}}
+1493150478046	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+
+
+1493226658662	 restart server
+1493226658686	 connecting data service
+1493226658702	 data service connected
+1493226658702	 using hardcoded user, devUser()
+1493226658702	 
+
+1493226658702	 connecting main routes
+1493226659012	 
+
+1493226659012	 creating chatbox routes
+1493226659013	 	/chatbox
+1493226659013	 	/style
+1493226659013	 	/bot
+1493226659013	 	/deleteBot
+1493226659013	 	/convert
+1493226659013	 	/providers
+1493226659013	 	/preview_chat_box
+1493226659013	 	/bot_files
+1493226659013	 	/bot_from_file
+1493226659014	 ./endpoints.createchatbox 
+1493226659015	 ./endpoints.loadmessagetemplate 
+1493226659094	 ./endpoints.conversate/operator 
+1493226659095	 ./endpoints.receivecontactform 
+1493226659095	 ./endpoints.log 
+1493226659095	 
+
+1493226659095	 connecting static apps
+1493226659096	 ./backend 
+1493226659096	 ./demo 
+1493226659096	 ./builder 
+1493226659096	 ./preview 
+1493226659096	 
+
+1493226659096	 Error Handling 
+1493226659096	 
+
+1493226659096	 SERVER READY 
+
+
+
+1493226751576	 restart server
+1493226751594	 connecting data service
+1493226751608	 data service connected
+1493226751608	 using hardcoded user, devUser()
+1493226751609	 
+
+1493226751609	 connecting main routes
+1493226751874	 
+
+1493226751874	 creating chatbox routes
+1493226751874	 	/chatbox
+1493226751874	 	/style
+1493226751874	 	/bot
+1493226751874	 	/deleteBot
+1493226751875	 	/convert
+1493226751875	 	/providers
+1493226751875	 	/preview_chat_box
+1493226751875	 	/bot_files
+1493226751875	 	/bot_from_file
+1493226751875	 ./endpoints.createchatbox 
+1493226751876	 ./endpoints.loadmessagetemplate 
+1493226751935	 ./endpoints.conversate/operator 
+1493226751936	 ./endpoints.receivecontactform 
+1493226751937	 ./endpoints.log 
+1493226751937	 
+
+1493226751937	 connecting static apps
+1493226751937	 ./backend 
+1493226751937	 ./demo 
+1493226751937	 ./builder 
+1493226751937	 ./preview 
+1493226751937	 
+
+1493226751937	 Error Handling 
+1493226751937	 
+
+1493226751937	 SERVER READY 
+
+
+
+1493226803632	 restart server
+1493226803645	 connecting data service
+1493226803653	 data service connected
+1493226803653	 using hardcoded user, devUser()
+1493226803653	 
+
+1493226803653	 connecting main routes
+1493226803808	 
+
+1493226803808	 creating chatbox routes
+1493226803808	 	/chatbox
+1493226803809	 	/style
+1493226803809	 	/bot
+1493226803809	 	/deleteBot
+1493226803809	 	/convert
+1493226803809	 	/providers
+1493226803809	 	/preview_chat_box
+1493226803809	 	/bot_files
+1493226803809	 	/bot_from_file
+1493226803809	 ./endpoints.createchatbox 
+1493226803810	 ./endpoints.loadmessagetemplate 
+1493226803847	 ./endpoints.conversate/operator 
+1493226803847	 ./endpoints.receivecontactform 
+1493226803847	 ./endpoints.log 
+1493226803847	 
+
+1493226803847	 connecting static apps
+1493226803848	 ./backend 
+1493226803848	 ./demo 
+1493226803848	 ./builder 
+1493226803848	 ./preview 
+1493226803848	 
+
+1493226803848	 Error Handling 
+1493226803848	 
+
+1493226803848	 SERVER READY 
+
+
+
+1493226809846	 restart server
+1493226809856	 connecting data service
+1493226809864	 data service connected
+1493226809864	 using hardcoded user, devUser()
+1493226809864	 
+
+1493226809864	 connecting main routes
+1493226810023	 
+
+1493226810023	 creating chatbox routes
+1493226810023	 	/chatbox
+1493226810023	 	/style
+1493226810023	 	/bot
+1493226810023	 	/deleteBot
+1493226810023	 	/convert
+1493226810024	 	/providers
+1493226810024	 	/preview_chat_box
+1493226810024	 	/bot_files
+1493226810024	 	/bot_from_file
+1493226810024	 ./endpoints.createchatbox 
+1493226810024	 ./endpoints.loadmessagetemplate 
+1493226810057	 ./endpoints.conversate/operator 
+1493226810057	 ./endpoints.receivecontactform 
+1493226810058	 ./endpoints.log 
+1493226810058	 
+
+1493226810058	 connecting static apps
+1493226810058	 ./backend 
+1493226810058	 ./demo 
+1493226810058	 ./builder 
+1493226810058	 ./preview 
+1493226810058	 
+
+1493226810058	 Error Handling 
+1493226810058	 
+
+1493226810058	 SERVER READY 
+
+
+
+1493226923738	 restart server
+1493226923750	 connecting data service
+1493226923758	 data service connected
+1493226923758	 using hardcoded user, devUser()
+1493226923758	 
+
+1493226923758	 connecting main routes
+1493226923912	 
+
+1493226923912	 creating chatbox routes
+1493226923912	 	/chatbox
+1493226923912	 	/style
+1493226923912	 	/bot
+1493226923913	 	/deleteBot
+1493226923913	 	/convert
+1493226923913	 	/providers
+1493226923913	 	/preview_chat_box
+1493226923913	 	/bot_files
+1493226923913	 	/bot_from_file
+1493226923913	 ./endpoints.createchatbox 
+1493226923914	 ./endpoints.loadmessagetemplate 
+1493226923947	 ./endpoints.conversate/operator 
+1493226923947	 ./endpoints.receivecontactform 
+1493226923947	 ./endpoints.log 
+1493226923948	 
+
+1493226923948	 connecting static apps
+1493226923948	 ./backend 
+1493226923948	 ./demo 
+1493226923948	 ./builder 
+1493226923948	 ./preview 
+1493226923948	 
+
+1493226923948	 Error Handling 
+1493226923948	 
+
+1493226923948	 SERVER READY 
+
+1493227128869	 GET/bot_files
+1493227128874	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2B66t%2Bva0%2F2CjykbsdM6IVJYDr0g6iXbAYmXZFsj%2FJ7MZw3h0NE97GK"}}
+1493227128895	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493227164402	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-2.js"}}
+1493227169174	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX185+OIv0FKwUldf4GdpFDQQs83GFT1rhx08+t9CK8BjgLc5lZa1JZxRilr8OkJ7DsO84yoFoNmW23zhd1+LGxsGXceIOu06XiyISy1kpMyYUVxy0VJEFFjEi09cZrZI9+DbNlWpH1MV1t+2ZQeiujUwVE1nEVapGw4DVeR8BhGirCFWOxnwJLE/8fLBM8CTvMpT2p2tS8EGyC0MqAxa1umWa58zyIcia/OuFyxnm6hbcYgeuyhdY/nw+9md+RaFOZuBQNSBebGnqaAXzv3uOPxwyXE8bMenC7Y=","key":"preview"}}
+1493227239049	 GET/bot_files
+1493227239056	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2BzxyMOj3QH6SGRsuXqwjL5YEdbHwwmOn8FnPpuRxcRc4VDJj%2B0ucF4"}}
+1493227239061	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493227297230	 GET/bot_from_file
+				 meta: {"query":{"file":"noPermission-mawc-2.js"}}
+1493227308487	 GET/simple_publish
+				 meta: {"query":{"config":"U2FsdGVkX19i9xGHkNjVESIADaBxbL8O1LoDRMNHepyaop5KNsDW99O%2FSH8q57J3XFjvNuujCMK%2FCoVuQ%2BVrMCCL9IqCNLQqMMyF2K6G9BIBWLC3ciDJzf6gbTKjhtkEIJDtrvUm6LpQO7fYHBMhDsWr6LmZyXNuCLno8QEsvaere1jNGyftn64vAIWjn0Vmva8uSZ1wQd%2BDkDkgU9cu4MNvOhog7WyHRM0nbCfMbymeJd%2F5iICq%2F7ML1Q90JueMMh0Ir46pdDs%2BAD31dlcU1zt3WCl1IeKZbJsMbUO8zkQaj9YQri3FcTRaUDkwSUay"}}
+1493229221047	 GET/css/app.css
+1493229221063	 GET/js/app.js
+1493229223290	 GET/css/app.css
+1493229223298	 GET/js/app.js
+1493229223349	 GET/js/app.js
+1493229235776	 GET/css/app.css
+1493229235783	 GET/js/app.js
+1493229235809	 GET/js/app.js
+
+
+1493230519946	 restart server
+1493230519963	 connecting data service
+1493230519978	 data service connected
+1493230519978	 using hardcoded user, devUser()
+1493230519978	 
+
+1493230519978	 connecting main routes
+1493230520245	 
+
+1493230520245	 creating chatbox routes
+1493230520245	 	/chatbox
+1493230520246	 	/style
+1493230520246	 	/bot
+1493230520246	 	/deleteBot
+1493230520246	 	/convert
+1493230520246	 	/providers
+1493230520246	 	/preview_chat_box
+1493230520246	 	/bot_files
+1493230520246	 	/bot_from_file
+1493230520247	 ./endpoints.createchatbox 
+1493230520247	 ./endpoints.loadmessagetemplate 
+1493230520308	 ./endpoints.conversate/operator 
+1493230520309	 ./endpoints.receivecontactform 
+1493230520310	 ./endpoints.log 
+1493230520310	 
+
+1493230520310	 connecting static apps
+1493230520310	 ./backend 
+1493230520310	 ./demo 
+1493230520310	 ./builder 
+1493230520310	 ./preview 
+1493230520310	 
+
+1493230520310	 Error Handling 
+1493230520310	 
+
+1493230520311	 SERVER READY 
+
+1493230633714	 GET/sockjs-node/info
+				 meta: {"query":{"t":"1493230633707"}}
+1493230889782	 GET/sockjs-node/info
+				 meta: {"query":{"t":"1493230889731"}}
+1493231401866	 GET/sockjs-node/info
+				 meta: {"query":{"t":"1493231401800"}}
+1493231533382	 GET/chatbox
+				 meta: {"query":{"key":"5900d72f024905d8591757e8"}}
+1493231541721	 GET/chatbox
+				 meta: {"query":{"key":"5900d72f024905d8591757e8"}}
+
+
+1493232079301	 restart server
+1493232079327	 connecting data service
+1493232079355	 data service connected
+1493232079356	 using hardcoded user, devUser()
+1493232079356	 
+
+1493232079356	 connecting main routes
+1493232079728	 
+
+1493232079728	 creating chatbox routes
+1493232079729	 	/chatbox
+1493232079729	 	/style
+1493232079729	 	/bot
+1493232079729	 	/deleteBot
+1493232079729	 	/convert
+1493232079730	 	/providers
+1493232079730	 	/preview_chat_box
+1493232079730	 	/bot_files
+1493232079730	 	/bot_from_file
+1493232079730	 ./endpoints.createchatbox 
+1493232079731	 ./endpoints.loadmessagetemplate 
+1493232079815	 ./endpoints.conversate/operator 
+1493232079816	 ./endpoints.receivecontactform 
+1493232079817	 ./endpoints.log 
+1493232079817	 
+
+1493232079817	 connecting static apps
+1493232079817	 ./backend 
+1493232079818	 ./demo 
+1493232079818	 ./builder 
+1493232079818	 ./preview 
+1493232079818	 
+
+1493232079818	 Error Handling 
+1493232079818	 
+
+1493232079818	 SERVER READY 
+
+1493232210787	 SOCKET/register
+				 meta: {"key":"5900d72f024905d8591757e8","sessionID":"ZnyXBxQPKr6yMPoX","url":"http://localhost:8080/demo/provider.html","icon":null,"useIo":true}
+1493232211520	 Creating Bot
+				 meta: {"sessionID":"q7aYltuQm58AijST"}
+1493232212420	 SOCKET/join room
+				 meta: {"room":"e6c9eac433e9561d60b02e6ad0d74dc7","source":"bot"}
+1493232212998	 SOCKET/message
+				 meta: {"_id":"5900d72e024905d8591757e7","owner":"57168b7e0c470b4c02881aa1","name":"noPermission-mawc-2.js","version":"0.0.1","qcode":"welcome","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-04-26T17:21:50.123Z","dt_create":"2017-04-26T17:21:50.123Z","__v":0,"id":"5900d72e024905d8591757e7","message":{"type":"mawc.end message","body":{"displayName":"Steve Test Bot","text":"Sorry, this website does not have permission to use this service.","image":"http://kchat:8080/backend/icons/PNG/mawc.png"}},"responses":{"type":"mawc.response end","body":{"bye":{"text":"End Chat Session","id":"end"}}}}
+1493232213014	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"mawc.end message"}}
+1493232213015	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"mawc.response end"}}
+1493232245541	 SOCKET/end
+				 meta: {"key":"5900d72f024905d8591757e8","sessionID":"ZnyXBxQPKr6yMPoX","url":"http://localhost:8080/demo/provider.html","icon":null,"useIo":true}
+1493232247501	 GET/chatbox
+				 meta: {"query":{"key":"5900d72f024905d8591757e8"}}
+1493232251804	 SOCKET/register
+				 meta: {"key":"5900d72f024905d8591757e8","sessionID":"m4aTTXs0KsAO08Ow","url":"http://localhost:8080/demo/provider.html","icon":null,"useIo":true}
+1493232252392	 Creating Bot
+				 meta: {"sessionID":"MqAu92fic2vBl9wm"}
+1493232253278	 SOCKET/join room
+				 meta: {"room":"82b3db27decfb1ac5a84406f5b631e31","source":"bot"}
+1493232253859	 SOCKET/message
+				 meta: {"_id":"5900d72e024905d8591757e7","owner":"57168b7e0c470b4c02881aa1","name":"noPermission-mawc-2.js","version":"0.0.1","qcode":"welcome","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-04-26T17:21:50.123Z","dt_create":"2017-04-26T17:21:50.123Z","__v":0,"id":"5900d72e024905d8591757e7","message":{"type":"mawc.end message","body":{"displayName":"Steve Test Bot","text":"Sorry, this website does not have permission to use this service.","image":"http://kchat:8080/backend/icons/PNG/mawc.png"}},"responses":{"type":"mawc.response end","body":{"bye":{"text":"End Chat Session","id":"end"}}}}
+1493232253867	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"mawc.end message"}}
+1493232253867	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"mawc.response end"}}
+1493232262480	 	 level: debug, Generating Documents
+1493232425898	 GET/sockjs-node/info
+				 meta: {"query":{"t":"1493232425891"}}
+1493232847231	 GET/bot_files
+1493232847242	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19hU6WBlEGFJpHG1gGYHHUpYcjsED722YAGiUYdWnXPN%2BAPTHByvlsW"}}
+1493232847251	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493232871753	 GET/bot_files
+1493232871754	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19WI5%2BvuKzbtuEG13vW%2B7nihBzJEVYIQMfGqEHx93plKoZT%2FyftLOt%2B"}}
+1493232871757	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493232948724	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-2.js"}}
+1493233674959	 GET/bot_files
+1493233674964	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19ROQxZl7Nr%2FsFzOaexCXOHebofakdB2YpWtVvlNqSS2WnlSaPocdU5"}}
+1493233674967	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493234504116	 GET/css/app.css
+1493234504151	 GET/js/app.js
+1493234633461	 GET/bot_files
+1493234633466	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19toTPiNygxGIp1%2BYSd6VS8UfgGSDByabNMNr2WN76IarTEyanTS14a"}}
+1493234633469	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493234683366	 GET/bot_files
+1493234683371	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19YZDAdLik0ACoeCjsV1PwLT%2FJBBlJxFMUJ%2Bw1kXg3biA3Fduiu7xzw"}}
+1493234683375	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493236490471	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493236537655	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+8++f+uz//jMictc1h4VrtPfqpSU690X53XqQQRBXTWpG/Vui5fbL6mXutSdnMX23fDeIMtRzUClkVSqlZ//RIyiwFDz33pXytlGsWdapi5aoIgrwsUHzzuf+PKpsGIdpZpd8hpzWvXIu0UNDY928CtechErHPD35kIHyDjFWsngHOkCv//UsFZCRgIzG3wPQwzJ4w9oIXvWxrWwYGIYoPDTgjEPkzBOaJFE0xhoty8doQmObHq4a3e5IiaYj/J3J0r6aR1xxoj0W8BMwoaMfuZ5Do4cy/g6+E0X74EHKF63ymdPGslBgh97aSTiN5Lh33nzf3WiwKuaBY4WlAxWhQgTJN2Zd+tPMWrXIgBj1b6lGiKrbv0VtAfpfkJNlOT1MJ+MveK+sc1Uj2Y4IXxvZhFXNGrNBuIB30q2w7jRsNVCvVqn+4ACj6SFCzWhcYaWDhBX2Kk/MrFlHfR27T3W5bM4CJ4WdltcOO/Sht4y7h2oKMlm9apdzy+SpUHb9BYCv2Q4t+dFB5AU4JFRgRHrVfmk1XxoLLa0XvO0GWDvuQ6F7Cy+ndLSOAtADfnYoCGtsx3/3dM0zfhYt4baAL4uPe2scgrixb2Tk4re8ywWajvWLGArlRDQYrD09L0xN+QGhNfUX8TrMyT7CsoY849EMqyHERsBZWooj5DR32vPNdfrws286zm/vMOarqWs3VCuvbdCYwC0EYFg==","key":"preview"}}
+1493236557489	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1814ZTLryKgp6wJ73oJ3jiJAGzdalv76DqSinOVHFY9ADU3HyICSdi4WV8LFO8IKPa7Op550Bnr0Y8q/lBQ4GVOKFROaxAFr7MThvkX1QjINX9TUQokHdUIYX3FLkgfPZXb7XRelgGkbXeJAxuH8cBni14kBIjQJjuX6Qxrllg7WhP5fZQ9FmHChMKkOCvjDuRqa0XE7FpA1oBvdaES0kdcK/D2vPqQ9ZjrPLMV93eAGk8vry/bflgR1XN2LjVXbbq7HcIZ0lxHa6sU1o7buKO/bfIaxzLE3vM8u14R7Zf13eS2FpflM6pTV7J32jvnZYDaEENeHUhQDX0GSpAnsPz9l9WhwuAu3glCnLNWiK3eNDzutCj1/IkZDoXh6UkzfAhSHNqg8HINIyjMA14df8fFZ1JiiX2gHFVDEuy/Ib4ePsd8/K/yGgCsj8FgojFt13PYocVr+3+Ip6IRLBhxLWTL4lAMlfCVikDdD/HEY4wRCJvw8FUhecY/5Lloo0ejL3PTz9sRRaTun+oIfWUxmawug1VIaMj/t0w=","key":"preview"}}
+1493236590814	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+jlOO3bGkUzlRfNWkihZdsL9pTQAxf9FbTQrdHYoF/guREQX7cdLzFdHXjXLR/lUudGHvBAtpHCI7NR7jb+SGbsM15tN+9BOAcWuMMC+y0SyDm00TFQXxzFbtaKDgsT2+sUNuDJxh2WCGyI6QLZUZGS7vNexWsvNJUBNHAFqVKTcsf5IsjKa8+scuQUA+ybc7VWVRghfR0qoqHhxwprLEzPf2ZC0lRtYJ3p+mUuAdbqhb7TgbbXn40iG/87UeNpW3PUJWv5vsJtwq3t4XLqO+5XXo2Y2M7n7gXgbveqtW255cNtmtqaIXM1aE4QalR271ZIQvcUTL/++m2/x3Hc9Mm7vyzjBALM1CZzjt6xw32pRtnjhQk+ZRJDqOJTn9N62kpR15OzBpeg6j7VbjJQ1RAE57sOy5iKuZlCjC4KkIm1qgU3gIN31MDzbjZosX5x7cUv6WP8EwwJiH1ZAPfdFWqNxc3JoHZctQ3kPO5+ZObiX3HFCqiut3jeui0qC+AdSlLuZ0yb9ECCVVfuoE/kBzzN8L+qQ1jpeVNTFLDLWbKwdVEPcghYOvF82LATliaXgPcrOuOWWZfwT8mtW+9IoHYMktDhoQtsnc=","key":"preview"}}
+1493236603331	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19r8ZhBROcUDTbv4h0vWwoIkgOt91ViBh9EMVRae34pdhGReV0NmNp6C/d1WevTeGgHuiG8cMucV+xuQt9Dlf2lj6XUdsTwH6G1rI01YkYrNwasQQmdgi/YE8jCrpTfY6Rv6VbSSmjayYmzExIrPIbUEPQ0BVJt61bNJ5SFzZtX00JAhQ2SzdtKwvZ+TMafOfrajlCfCI4PHnF7m3bMgnJG+HcxIbHAYyxdA789pFsblGteSeb5CVKiw4uthG7MLpl4n2wBbiS+d1i4+sxYZl8ttWUhMzB9xlvBaWIEia0+Tj4HzIbYTabgDsRibfWI1tGp9rIN+0BpjqFwwNN4HOcfjVPhvVgczx2NBAmooBlgWSaWWwDLN77yLGnZsc9FNwAHn/IatAgE64NOD76QaIeQ/85yCn7XiSOGasryaEK3ohOonxg6A2MzWf+G4/iS/trPwJ0qTD/uFlWQTx3sqOshW0cyBmQXeQW4KjlIP1QSVkKTUp9nxxtbGPKchJm4LnZXEv8EUzCC8+z+SAGFN2k2fwhtndwlFl2iFrZzjxlNjYwafshH+1o8exNCP0J7H8HH8OkHmxgHh5b0hNG0Iswvuq/1TrxSfkU=","key":"preview"}}
+1493236866280	 GET/bot_files
+1493236866287	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX183CTRsksvOAaHMoj7IxEG2u%2FDQWg2%2FSjfBsSgcdjcnzMSsaaVa%2F9AJ"}}
+1493236866291	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493237047597	 GET/bot_files
+1493237047598	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX18sxzh7Xtl%2BbUKNPRn6hoH3wiu4YVatOub6Fq0neiNHTOgPd2k9Ad%2Be"}}
+1493237047602	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493237049903	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+XFnU/WUBiomAWs6OGVlPueleH8axI6Sn30p0omUhORcla/MFjOxH+Y6OvCQ5j2kE/R2CAysxp4CBx1Ynch4mT40nEeg0HfmSfh/fEGv8OMyuPK8BTJcdjIOx1MoMEELoPI3Hg0CfYiM5iyKMDmhRNbd0QN9D8azqYuKYXOn+0vS5AkLDlv/dPeHAwZ9+fyql1Ow9qTMoNH1WZ65olXoMs+krIQO1ZfWp3/XNqYEfPgA9SdE152rj0sbuaJW759u9/ecTbL0er6HbSTSghPjIAIwBMyj4nOgPYvUsXqXL3zEVk5P2UNO5ORXToeElHsl2YNPL+wTcPP9DqMMxPa+Qpxf3imJv2DblHJ7U/Xz4y2rNRjY6Bx6+rC99bmcgqacHYNcVWSiGSuQ==","key":"preview"}}
+1493237175374	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+3Y7HNWQc2X8v+xO5HWLGD9Nj94iWJGkhUW7XDld16WtodPDjJ4MLXWY5TroP7U6XnMpxzZlIeS707F5lhuCrj8JwJlPlSQfgW5CV83OnCEt18CEIL7toZFcbsQ4EX1j3zRQqLqaZj6SWWUSnQDTgdGIjWyZml4d8TrgbBRuRtufc+/OU+x9UA5QxEOVr7LAJtJYmP8gANBJDCuRf58pZx0n90aBpXk6ydwquC5KNtOaPWWL82fB/eDHgdX5LZFnIzStPhR+AXGbQWxuXhAGj5NRJClOGGUiOpF2E3vUKh6p3Y8ATLGoLQRYhouVAd0hzBjwPq12A0MdGi6KCFRp3xNsNsvlClaBMOlYcBySDz46VbzWNodxxTEVkYtn5+WIGbE8Sy14vn4sN5z7ZAB2EeNN/BajF42VY7QM5y/A6g1VwFWWST9RwsARu4CvuVRCTi4YbYk3re9r2vlowKer/5wWgYXZv0oVCD5wLB3NMDzR2bCC4DCxVaqx4PBVDWQytcbghVJCvg9b9igg0pV+T6Kb9DkuzPthFxxy72HmsnycirOUZn29l5T33qd33a92MihRQs3CT4BRUIM88iA0K/lnotuLzVWBM=","key":"preview"}}
+1493237247581	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19ts0jc0YrwkQBgNEt6RocPM651+c2eBm2TJwyA5poIjWR5MvxnVlKTeVasDOwqbgDeVIOVXkzhkBNMCD5QgfyFuT9POAokq5ag7AvteNLLSqYMnpJBniGgs2HHLpyF0omolkw8eF0G5sI1LSlPf9xiSZNu9tuagLd0ZzIQFjFviwPDXeRwxQMhlECRGV2gD+xV3FLKev1uiAWvydRZQ4WPmfwsocCVXmC+aZO8/ewjwaoihOzvT342/2hNR84wn18HHMaxwKrUJbb67350ROLBNvavqG981QRzzHf4H66TqtZBXLbAF5GlxEiVnpRFN/bPUIOV+/4kAeqmnyk7lWsZavXtW8uOCY0taFwyCXvH080ZerG7GHOB6sT2UfN0DGnZr1xozLJb4GdoDKp28QfYPFVGPnxnyKGvKSeOK0C1XZpYOXe0h/TEofdpNs5C1J4eaQQgv85aNBR5xrkv371hyZfQimkS5h2g8uRPYrOx/WsI5hyK1rkK4hCKWnw3e+mmwfNYjJIvyLXhELL+6rym/G9ddIKZbXNIlkz/fcbFtRod+Mtm9baX5x5I4pu33b2sFqlpeQAwv3N4gh7EgCtg/Ozou08cHog=","key":"preview"}}
+1493237480534	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19EUGC3U2IBiKPOjSkUYFLz/GliB8T10GoFNxOSAZoFRYTjvXoDucUayu1PO+58nZEGO7r3wrysH684iARim1sqkrhM3vCA87ZBC2XmJF53yhTwoXC9DQC+16/fLF+oSCuPM6R+R42gtpHX0UwmuFt9OWIAhbzQNAbpcgSoKqs2xyp4utJEHIkbN6y/tYLNlwvrsM5lFnY70kt5/SnWu+SWCWCKV2/j9MyL0uAjyaFVPTiq6kMvWA2Kbvbcocue+363aomR+lCfFly7KHfiJ4I5xQH/1Tl8wkMMEqczKbW7fcb6hW7mL8QuoM/HzULkDKfjS1qhuK+qcOSF4uRxE0qnP1bUps7EbZXac4uqDROJdyn795o/ICxVLwnK8/dZOQRGVPahJr50PVxx7w4fUtsJdwZ4m9fNHasBCN/hSpJLat9GmOTU98YdzOY/V9G5/Dmi07YHpev4HC60i9fizMvIc3E2cqLITICnST5QQ8HwzdBVG5zeRpsah9wyPbomIlMojky0SwM/VCoQ6/55cpxvXP2x+EVsNFDFESPR0H7STAyy3scsC1hjPknQBt2qEKP8rC8mm7OZ+2NL1LfS6uxQf7QUJe3KelA=","key":"preview"}}
+1493237519795	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX18uOr1VpdfuTfniM0IoXgdFTQGqr7GBouvPwoT4CXdQ+5qhw57wA9x5TTBpA5igs5N3sJx0LE88SsFBjqN0F0nDtDl9e5P8mo5ttOn8NOEPWYnjXv7rViCTqey89M+6dSPr19NXPFAS/CemVBvFey3+7GW0Xk8r+8l1tIhDRWNMm4mkhVo1jVf/vtWGy+Tt/BiqvrcDMmek9pLf9URGQFuOJNl8BZMvy9WWuwczP0thbtIV4W/E4gLq66N0OCR/4Idog6cRPDNeVQxnlkSDhoFxI7SpTZnhNvmIF6hIm6XnIVZlD/iYZb628ILm67NyJwwqOGgwVCDajQkEawH6Ja7EuvZLEUo+Wb1xOpCjLZ34P0KCCWKv4/PfZUg3h4XtBYcqxcPSsITl+avpPOTIKGq1r1mJpqjooeCSzGbOQ1TqmwbdP/eiDWORGri3IY8gfZwBXbWlNmg9RMmd8cxizGUIjVYHRE9TIJ5rVUMRHGtTEkpgrOt94O/DJ8PN3lW6hoWIUj75lcWiAEy/x1BYqRJyZsmG0mCif6/zGIvLnHIU/oR4yHN4Dy9AmTNtnLb2j/aCdZ3bcK/MB8u44ByFTazM2twV9zj1b4c=","key":"preview"}}
+1493237541415	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19QnIKkOK9kV3c/QZWSbVdUByKI/fOR4+6SFV9MDqaGsyGx0VNkDLvJlwvmRM9aVw/8ygfDpHtcwe2efsa0q1QImb1YolUYNCmjccFy3t14rIWASRTEHYdsYvM/Dm1FhRqVZb1CQUwO4v+gtWlL16QQuI3JizdF77zry1ztTIC8ATGA6tah1W1mQqdqXMMGIu+vdEvdsN1xRoecOHcNbBUhR5kwXrCM5HvQ878fqkTCMKm638CY7uA71mZGzVjXFCuPx9ng3wYgTJrF4tClsqS+sSJgN8xyELFzM9cwClWIJsZUcnkcqlxQ2GL/VRfytshzavkPE+CXEFmyEEJ/pAzPflHmhgfMczxPcbK7RAEtzDZOQ/KX+rHZzzbNieGoy8hmaBsVRYdknuXrqa0ennDy/A/tDSfk+//U93mTe1YbuETR0u5CYE41kJRoINeiMPkO8/qCZ0/YXBe5jDRjKae7LMnbNcNx6kY+g/UbfEVl8GBUK8Yb0Ey361B3n5ta6fGWlMEHNpLW+sary8DGRYmM7LL4ctzno7fJtwl6Nl+sOcW1lJQUPugYlyRf3aBhD5rQWWO0/j1mixLdCxc4XroW2lzAwmR59aw=","key":"preview"}}
+1493237601895	 GET/bot_files
+1493237601900	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19xBZilpNbrhc35MtV4a%2FIi90OmwyEV5GGOYQyPIPpOKBo5%2FDPrYCr5"}}
+1493237601904	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493237610691	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493237612541	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+kZjhwU9IL0MEGhyop+TiT6UNnHtsdbuLQw739W48NYMiHK9sNE9uA3bkwe1KOZgW1GXKlJaOuyTJQ3HlWHcDW49bFf/hzyRsoCljMsSu9/wu5RHH2asTuRc61+/TJF+eApIxGC7dEe5cwZeGkTCvKhQjM6/g4/ssOKEGSsbkGwpijXO53LPQH6N606aN57rdwGeZocLVLknrv5nR8LwpEM1dRq++xENI=","key":"preview"}}
+1493237632743	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19ppWfEaJiEChAToM5E6GQPmxLjrrghZyA+tITPJIjZstNnaVo4OtasH20L4JKFtoo9xB7HfUchbQmg3tZEEaAT9wS+W5TEV7IGSocmwd15xKCHBedtLswt9W+bl+kkEPSGkjn48QVo7BLKSA0PxsZa0fJz7NkNFPR183gslIoc3wGEOcSlDdFbVEAHajxDlt8O16th9Mo0QLRxvbEPIeoADECEScuVeMM=","key":"preview"}}
+1493237641361	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/NlRDj0VYe3/n2GLj1AbS7dPgbFsoTXb/dR6Lm6WPirkT/UdpRRsAaHybO5s31gZg6BpT0HSCGoZkRyAH20mQuxBWWEHHwzSUISt6w8lbSrxNUIvH1oz5lTnnsd9NwozHrIcNd8FDoUMxLDfV4Pmb5mvkdtsvp0C9+dzD91AKCGnVVoMEC1txoaqLSW2p+Pnrdq6X1Yl9c6qcfpdppqh6rqJ3QihA4cLQ=","key":"preview"}}
+1493237650920	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/EH7vIpzXBFffkipDA+PeebnIcJroYdRjtDA9DmPft7XKITDg5K9o6zrWqb84jSg42nmq3Cysg1/J/I/bcNNpMNAf8+TbY8wgGiKmQvPl1otAZhaTr0YwwARYnxnO1yT70tmf2s57Jh0Tm0ZanOOjRDC34waM8lTiSUSgf5E78bTvKfxf5WLb/zFP+b/6KZyBWZlo2HencFOO1RNCxbIZ79bepcXfKeio=","key":"preview"}}
+1493237714993	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX188qM4dxM0phpauKMt59pN8y5/dYhVbckHKgAA8ABOmTusoNwI8SP3PxzEYd5vgI8/UdrYm20wAYA1spD3bW4qKecGp4NDmyseOvk4HwEn56gH+v8q2QRSSsSf31qjqE+2J2WWrj5WxREgLXALVJDYb4JcnO33DruVj+3if6P2zN+wXDsvcZtCe/x7aRw5/jOIn5gL9hAUHaeB5ynHcEgyO78uKHUGQtU3ezhb1Sp20vSP8WVUDVFiIF/M/loZ+IX/VMiIDIj/ch/LqDmRjVZkBwLfgcOLgtPx/ekGsTz3sH4Q7uKw6USWrcIiniwoq3z/nDhUgGPouNbQOYS5YDBz7LDAD3vNxzU8qbXr3LrspoI0r50dUcftHNTS+47Y98ET6hmAff+r9l/E9qNcq6AFCfGHV3HXGB1it2ZCSOtDESaiD6UhI6eRsiBfCljbMS8NmmFj2UaQHk2rbyZ9bYxbAQL3/rNL3hKu70TfDqDQReo+W8BAF0XAxmNaQcPcZm4zZZQpq3sxFUZXAx0Z7MYXs0QcuvAII9YkGXyZMKAc7TlmHD37b5K417QU/80r7tnaaCmusrUZ56yQyWVGBB656Jo1f2WbCa7Y=","key":"preview"}}
+1493238119929	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19GgJ4hyDVJ0jKnGkZpW95xZh2J5toEOQUUBHJfPpzsg3Y1k9/M5tDhggnN3cYKRhXQOKDtZCmEIKYCGZSvQ2GBvJAdKQIIBIRIZkaUcTj22KfG1iDQZZH2LmvXkMER+eGPYONBtsZ69VdP34jWDjmUkr7H6Sj82tpNTOyre8B66MNas36pwSZudcXVPuRkHl+pCpHAQCPepf7f4WEaahcPYUjO4AzwwOVFb8swAHCTHCy9qXey2hrxEP9gpz1NKtIfaaxY3l6U3CzR0u67EnwmG/qoAJPkkAZevcm5qdQBeCSUrDFoiLFCK9XeHEfmjOOdrWC3FKPlVQRc7lrFH3oFNk4zfl+6iKkbQrOHSsLJ4a9myLLf6IuNPpfNCTsaR7VXM07vewlrWifIL72sxODojQGvlOQJjV60K/YtlJXbQx3kQjcY2VIAozebafxHmelHBKb3UQn4TYHOKlA2+5+LmXd0yaoAXiEQt/rKHdtXPVNJPuDU2Ngx+gSIr7gZYzenpWsvtBYzJ9vs8vk+box4NS5TiNz7JPdRNtCjZ02zDHxVPGuFCwTktqu8q6ItswcTUArWh4qDAf9XUHCE4wYMczwxxLZ2qi4=","key":"preview"}}
+1493238123551	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493238123551	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493238123566	 GET/backend/icons/PNG/stvincent.png
+1493238157185	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19Q1uW4V0QdgQ7Azr/39GXHB3tGYjZnt81Q96O2hcB5WHwlynWHRIlILZhlmwgsNGCopHendNVHJtNlyKy21J7c9mJ/6W4JAgpMjuZGPZ39TbYGplT0CvH1Vm9jc19RZieHKTXqUGOq2rf9vsYBwU09RcXM/FFqU97EeXEzo2ezlewBYg7vF3Z2IdkCWXmteGdS+DMnFKKZcZRqX7/uWgiKKN+Fl8Lo3UmclXbdjoA0eXRc1Lb9jSKqnDRPLshRFeLXv51xLbTDzGrpW/mI7YjphEPrzYtulu2fGDRcrn1X4+2IuAQT/56acy2bT/RuKSi7gwehyoB361A7Zq+KqAE0czjR30ay6aFuR4nSz6MsUTrHlUcP1YHA3GBPPr5Q30XEgGveFavUEgdICiiMcxbCKCboXtRGkry2/k6B10OVFcFuByFz3hYGGGUeTU02maSpGTaRsV02QQMkVWPjgfNkHvPk6xvdLPxRXfqUYziXNk6ykXntbpVDEtb2s3WTyw583nm1tcUO2LYY8yi2CkIT7KA7eFWWZFtKkXIB4AFR0HxQdZmbzIv/HV7kcxToXpQVj5EZVyIkw7X+kETn2nSWRr6qWwvQ2T+qUM6IjeGr2i3ZM0vcbujiCJNcFNqR2QogLCrwQj1uIYu2serHkQl6vtqZxrfGdJw=","key":"preview"}}
+1493238160235	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493238160235	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493238160249	 GET/backend/icons/PNG/stvincent.png
+1493238446756	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19S3jNXzLK7xbasyQ/w2eZ2LvkRNIvURljq6yc2uFmt6OQD6TJr3AXIg7cfrAaxbaI/JQbyaCk0t8DTcO+IEjizDJRJncthEbbC0TPUEJm0gzj46g8M/PfJijvo+FKUK6DXy9H5AMRw/iINM6bF1KcU1LKQ+7XZCBaadIVwX9eeuzqCMJUU2zGbQ8HhSt64GdhKSQaofgZlBwBd4zmAYtH/YmmkK7ldNx25U9T7jzbPgAh8bQDFNvlUcpOpxQK0GZPtu5hg1OI9IYaHblOHbLRwhPNQ3jhi1YoXxl/HQT53f6RNpdinrlwPil/qRXWp1B5vv/XYogIOTPUiYbDYMEsSirPlFramhLRr1CiaHL8cojGZhxrm00dOOMvpsLFg2qT+XN+6qCs5/8teTUsORTzjZpn1ZptGE8eCO/2K5ZjUHnEuOxTWYbhnRvrRStRD9loF3qbwzWDv3Lye41tVoePjl/lP4qqpzRV0wxkdGQSQrGPh3qS2l60G5E+RCu2NgyACTcjwzyQ64QZxrqrGaHrzr2IOducsLulWoAIjgy2pj+e82GYZo5u46OuqRAXrFYjR2x+2xbDAk1kPPYW+9ToIxgcV8sEORIp3tGukLTYy3giIKk3SqvAcyHm9edkqdFq0lmQKSpcjOwg4vceZ93/ebVrK7LkJ850=","key":"preview"}}
+1493238451909	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493238451910	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493238451923	 GET/backend/icons/PNG/stvincent.png
+1493238586695	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/At+qQWbgSrXh60dpjL7oHntOPk+Rt8jMsPt4lGA7mJBL6iPDOrOyhsiXetTdErHIhf5A8DrCODwtSju0McV3whS6PjgVftarIhW6NagkoDzNA69I/HNBgAtpQ414GH2AkitQ/dViQENJQ3sNgzhBkQ7Zu+/vYxyAjvs2eqMJQPhRquk7F9nfNhPvyg98GyJv3O6kTsYy1MtZXEcpJ6RPMIXCMrP/UuCvHp+UsYKbn3bACmazca1GROgrZJJW+1Q3nk42RRJEMRR4WQwngc55Afb6ofhDE/5TriCRkfQhlfIjSsKX2Q6dikOIrokanRuDSV6qJl1oAGx7fHETrryQlMXDpnjofnulklK9nBAcm8/lSHpra34sAhMC614HMX7wp/cs/8d722eU85HM1zeqqrujyK803qhCLpJKiY53O1iLzV+anGFJZ5oUFKnJBx1/0/iwmZr424w3Gn0GaKRAtAnk4AMwqfvZ7eocTl0Rx26xZqQJZPdgaAFRcBBtzuWWNfrJBLnoiyhQH2ZnjFj7F+/MViotaRZPymltO5/DVV4Y25T1pvb9mwaARQq6IH2TKrDl7d9aYzsXh9wAehqtSTF5U+n6awmY8+gBOpWWNBnBDO+IE5NVrKv7PKk2Fnb2Terwnw2a/Z7lWqYSOzwjNOQuoe9EwWOw=","key":"preview"}}
+1493238589618	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493238589618	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493238589632	 GET/backend/icons/PNG/stvincent.png
+
+
+1493254652337	 restart server
+1493254652356	 connecting data service
+1493254652372	 data service connected
+1493254652372	 using hardcoded user, devUser()
+1493254652372	 
+
+1493254652372	 connecting main routes
+1493254652669	 
+
+1493254652669	 creating chatbox routes
+1493254652670	 	/chatbox
+1493254652670	 	/style
+1493254652670	 	/bot
+1493254652670	 	/deleteBot
+1493254652670	 	/convert
+1493254652670	 	/providers
+1493254652671	 	/preview_chat_box
+1493254652671	 	/bot_files
+1493254652671	 	/bot_from_file
+1493254652671	 ./endpoints.createchatbox 
+1493254652672	 ./endpoints.loadmessagetemplate 
+1493254652749	 ./endpoints.conversate/operator 
+1493254652750	 ./endpoints.receivecontactform 
+1493254652750	 ./endpoints.log 
+1493254652751	 
+
+1493254652751	 connecting static apps
+1493254652751	 ./backend 
+1493254652751	 ./demo 
+1493254652751	 ./builder 
+1493254652751	 ./preview 
+1493254652751	 
+
+1493254652751	 Error Handling 
+1493254652751	 
+
+1493254652751	 SERVER READY 
+
+1493254655796	 GET/sockjs-node/info
+				 meta: {"query":{"t":"1493254655787"}}
+1493254656219	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19JqFZWQ1jOQqaImRwjDhir3a+lbpGspJaRl2i2v/GWW2GTTArBTnkPalaEPaYUUkP/cUWHorRw0E2YzBKeNfOqope2bKo5c7k+pkM5z8FfeRDfVnuwGoXN0vdbGtegDlsze71n/goCtkwuMXVsD6g85zfVpk3wUJ003QonlG7L1VQhaGw22FVU9fJseTZr9EcYaMYbuFNP1//HkXA8Y+F2QVLR5DoScsMmdTumeVrsq1b8/7Vuhq9+AQfZotuLCl+rD7OMZAEdEn6p0V0DmJi0p/Gd3qYQzd9iIk+yArpupj8A2dvsMKQOjyKYVsBrqA+OA61utWKXi5P1loM/gZ1JSyZ/rhU271wjCn8Cuzbd4DyVxd1JhN5wkBSyHxZoxNvMHigyfDDLOYfOJ8vSoOdCKfksostmf38oUIjODy6Yp5/1udYyfRzVhiHX9jhANGdX/fJIIeON5D3sPyAMlbfaWKav2yYbhsXa/bNv0fOHEz5pi9eD5mnsiOA65RBib5k6uVJP7grv6n15/yq95beuuuF+x2pzafbgeDOGDVp11RoxGIsHgHVnwEH3yfCXoF4O3bvMYhbnUtWuI8r+F2kG431/tFo0WGbilJcFpoeAEdgiJr8etKTtT+hEOF18A6S2B6t7t9A7xEsuFopSqG5FuZj4//CSF/8=","key":"preview"}}
+1493254663848	 GET/sockjs-node/info
+				 meta: {"query":{"t":"1493254663841"}}
+1493254679330	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+/L1SispfMqEkwVOYIrpinyFRmeowG+AJVEVt84bCYpgOcUvronKqBSqzBuuLxhx5hCmYnrRk9vSKIdbgFlhp8F/n8LilpYOcAB8K2hfXOi8h1NG4E9pjzifusCFspabWAARCo8w6lp2MZcrJPJMP64x/aUDbAFMcQOeAS3LY5V+7WO8fWkWcWRNTkrEhcqhtZt2+Tn5HG0LNyjLmSXaJ6UTfm3WLnWmQs5Ewznkf0jssb4Maqm/77G9HJr1lT/5rZtX1fJdsQ1bV5HDuFFGiXt1a3s/HSVpv3YIXxRSZltZhElTduZnLrqnI0LoPiAWihSFDTaBrJaj/52upShWXdNKp6EFsZad9mTCkPgiRBuZeQCE74+3MM6lf4fATpYGeJzA0OgerWxCVxpvQ5nxk3UbCel6YjQQjmt6GjbanB0YWcpyARTSzxy4gYO86CoPTZbbwXanAXJVk8GEbMaLHAa+r59UCJU+pZwcN1o3smByGiG6A5mlHhYOkGmhhtcge/wi3bEDa20SSgE2EYUVTxFe8Fb5Ah0fdlioQ8fZFMPN8fyRQnTT+ED2PlOBQnNZRbWALARRfkb5j3R5B62C3js5LeMz88nVWEZ0Imdcgh7TcedwvPOVkX3j+viY1mv7Lvkaufl8dVxNQiC4coSHIonx/2z180+gg=","key":"preview"}}
+1493254679925	 GET/sockjs-node/info
+				 meta: {"query":{"t":"1493254679923"}}
+1493254712000	 GET/sockjs-node/info
+				 meta: {"query":{"t":"1493254711979"}}
+1493254738725	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19btqEysE3/5/94imR2JesH6BNbEv+eD7srUaIYeOpXvNuMYOShTeWlw3pIdXwZfItL3bdVVmtJlhAkIvwC3t00J2YGfaA5a9I0ZB1pijwhQjhfXZDO9Rm7BWsWF902VEOX3ikKuLgUoWII+txfgrNiqSu0jlSRMFQw/SWp8s804wk9zfWELrKRRD5fSz2qJby1iUgxB7/JbQ4DqiUNuuYAif8y0gmcoFdqrjknHrkgDKReKbs87WfFUxo0aH/vW06VLFfCSIRMGhu7sQzBJHqzYtQ1uQCOv3q/4x8YCG40J+bvj1BVyoh41Qz2bgvnLCEKGNftlo0IptPaSM7HmeQxi0AXc/Iilr2IAdoPGxm2Tg5nouFRJj6e/t223pnYT7bRc3ZGG9TdJRAxmfGeEfVrd6XOnMqdaO148xhavXBFwfeo/Fl9O+oiez/ExwEf8yaGwQLQ1eColp0/qwdycjyawKhFIuvsjztdoQDs+wX33Oyu/fdxzdymVVTmj+ZiLE2fVczZmp4lDx8PDKOn/GbiYB5ZJDxAwbuxAjDYO3lMjQtd7wCX7n03AyPVUlvgsw+0TWx7MHXSVOE+3MzHo0QI68omyx1yI6l5t29Rh0C7jFAOurIIp5O5XzmfpRR5L/iWrnHcdWb+S8w655hIuZjvy+B4n/YurfU=","key":"preview"}}
+1493254776062	 GET/sockjs-node/info
+				 meta: {"query":{"t":"1493254776059"}}
+1493254855908	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+8AUYaYprIVNI8LWfLmD7VK3n6YqyXfMD3RN01eh9w5J6+38XlkPtvFeeEmVzU8z+oaVbnqBXwiilVAeESlBQV35pBLMjULTgdHOY6ScKMc8ZFyuN4q9UOnmXvWvF0m/JbdidRy/fqe4CkT1yKDqR7SwXlQ9RwDeCxeVN7BIKMJNT4jZGoVDrm3xP6vznqYfkA1IVUJFZzEU7rDDruBFfVNlEhXDT7DuznhkDo5nh64wDyA36SAH1g8qMzRy/WE63jFzVrPAhDf1gzp0SR/ej3xjCKk9Q5ANFj99LssFDVZ2oQePoRTHzXkhYYbK8mxdsMaOY+1HHS8Nhrob5aUj9Oa7YjRDenRZ85UjOc+J+YFCTLfNbtfz0tPL+9g/SCtYtc/DpvthuEy0wh2pxRc4RJ9z298X9zRcj12ClcHXbcyu/VzyxNTAkuGP33DyPoqoFaBNfIwPsvHyzITl/DnJi5e9kNg0x7oBtUa8Q10S1NkNZQDZmck6FFn7E3vuEvrck9bIzzUb8HE4oww3QjfwApZGQAuiEZcShhJXFGfKH318o/P21LUcMWk6hUnSzTMHh+jVEvT490TjLt5IiJOXHWO8Esrqt9DsiCK5zg1QZ1vmYI7UcA8h4nV+lrlqrrFod6/iCyKAIAivjUmUsKifjtAgl6lAoEzyA=","key":"preview"}}
+1493254887902	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+RvEp0PSg8SDRbPE0elLOD6Sm1onTPxdbfi00lKaNfLMrsSqTHMkk8YfYhIeh8HJtZ9f5u8ANWK0JourGhFTZvyy2ebZbN5NHex4OCWVXZZwSoTkyTcOe0YtsiPYIKElKGufCNpzGI9ka2z2Ig/SuExWUaQVOC94o9vrbg6FYBUSTyn63Jduin2SD1UiRKVgpoeXN/IzBrSYp62cOALxek8kpaAVv8uJz1F3u/UgnX+d9alkPuay9x+JWazWRoky4t69fTA1HlQ7rGYDbh68i0OnizPbw1mMhvSOZOdhs7S5XW7NcYTGJK7B071YvvCg27P6J6ufFRgXrdsT1P95LWbVOdYw7exAbj9yClu5AY0oYvbB7U9ua8FtWWZimSDTbCMKcYZuiVGV6qQVPS7vhwU96VRr8RRiDfPBgSERfd1M6rb54nl76LljLFjgIBJPR3CvqR1YeaxGA3kFxliFEN73siFjuGhh/q6TJSOma7MrhGABrqEAQ0msweIMl+2OCBCiL7vELHn/d7t9m4BWUKGQDUcqUKFirOGss5dZiboMX5YaQajxSr/0ioSKGh5wGNS96HlYx4kXPlQJ/5DbCO2oehBIpVFHtYjuXPddTVGt/2jCjXFAhmkrc7WM6w1ZCMPIflEf79Rfv+3eJ0obt8D8BQ9DKKpys=","key":"preview"}}
+1493254902352	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/N7LlPvoez0H2XSJp8jalx9zFQjcAOpygUB6NarvfGcP/lMEcs8ryEBdp/UR0BxKX5GS/mS5AwrN7bHPCSjer4TXpL2sUbsUMBbDWF+1u9RsnPJeZVIcr93MCqCRTM8zc5vP4ry3zV9GTSDnaY9LhLP0vcOJnXPPaJKOvk/TdC2ghVVcWxweEVvCU6Ydsg52dA4KZ0L/nGnqtsNVkUjmiV0RZDXz7NasOL5Q955K6GzIbWKNeF+jwte8Ay2DrIbyrYZrDnO5c/B/D4iSkFgYhVTg9mQwBGrV6/KA9dAueDDP1Gn4B7h/cSQgmKSzNmAwwvONE0MfpV8onCSLeUJ2mUAvYmE4HcDsNYqIoBPtrJLqsPBoveOD0aJFV/bwi66c4hLLp86OVtov45kYGhuSUN8SgVza0nNHWwV7Epwnx5Ie31mhyJ1rEr5TWVXql2Rmzz52M5oYaWi0qx5pOu01ut4PWbBgRQst2RAJe7hq9Y1na5eF6MwkLaABT0rwU1u+UIW0JRtG8DZLNYfDc6N/LiHLI7sGIfAS4Msw3eTiM/DC1Vy0MsjptZnzuGJ3o5mB22j+n867+8Kq2sHGwDN0vx7MCLfcU1BZxW9ob9RuWfBrsGRFmuUje+X+JbXhgz8e/I7xWIpWo7Z8SuJvyzXsLGPw0+62EsmU8=","key":"preview"}}
+1493254904135	 GET/sockjs-node/info
+				 meta: {"query":{"t":"1493254904127"}}
+1493254914249	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493254914249	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493254914271	 GET/backend/icons/PNG/stvincent.png
+1493254976039	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+oyWB7xzZZ89lOfkc1MAPpn5lW5lSwzi5Hj+/2gko2MlZ76eqoA4L2B3Z5J+xJPEv5pDg4IWnruVGCkQ/eGSV/6IyOyTYEwepwSxg+Nsk8hjSVvyklVcSOK4dX/j4WnvlUMGQPlMBjcrGRG9nwCHXWVbtQN6m52aETA3EpDiak7zKzky4aMvaTQc5yxIZpVt8TzL+fqSZfY1KQRZBcVZU/mf+HD4l9IDaA0mGd63U7RnirczU+9nCe/vYWFo5CZ9hCIRRgrNrRE6LdYs9uIUIaE2fvYCg+3wVy5aP9iKDFS4nX7rWLLnUo/WUdGEk5a4lcPz3lJlJBJRXT0NPUPxnDoj0+fDLtvIh26flrk1dSYhn991jTUDdY9ejIy6DfU/zi9BtBcySffqCi445hVwhuM5qsMTar3CvBNDwr0e9To2OnpJ6zQ3ibcuLd2Q3Lmp0pzPMjCNHlRvkqnmuQfMQDdc58strzNhWhG1PEzYNSWBfgefy1Fv6nr2rNhLUDsFr+2yn08ywDVGtpNcf2rJ/FqYH8YmOlWFe5h8H53uZ4Otftz537GSvymtmIMFL229n9y2z9JJVs7KdP/xDl6wHWX7GiGL+ixs9C7OZ4y2Z8tH99U3nLxyYgs34jIqvWrtc8HNbkWHFJxlgf7/2v3W1ACMCzkALUnIU=","key":"preview"}}
+1493255000832	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+oVv/xlTVRGowLCR9kdXy6eYzRA2XrXpqRMKSPFnZmw73Qy5GOKjqzAn4DYQg6OdfrIsQ1fVBVAwIBxo6td0Mesaz19slDk4GimMxFiU783WtGHa6RpXVgvCOmmZEyefxwo9noxei7Yl6NhlGGCEncK1uy7YEQBfSVHeOFhJy3gmsW21DcCwEqEFMBj9Aw1hRNNcyRPgY2nNfvJiopB4ooJhp3noL0Xte5/VGn0p0nE6/G2U9bvuRCg5tFIIbWysW2N6jDtv+j7UPwEm4dXMjS6SFvD55ICH+D23K9mRSdUm4sSjjmQ2buQ3ysZ2bOt4MH8vUQVQpNTWo7itbJzktwuI2e20ZXFB8pURvrUuslcowPixo4zFjPolWQkrLusDRxu+FNfio13Rnujaqc8qqTuizbw0DEjb8UepSyCoLy1krxP5G0bWyDwQ76H0VYFSU/EDNXAXaLEpDKoQmAjBMTt41pgIzVdUdXadBEbmgotENZj77ccseMM+IGdvj3mYiqEmMvVsHOQ06cClvBD9fQ+kpvuqZS+ePpG/3JU/PZwW49kLmRPKkakZr0WHAmcydFwnH2z6fwUNvGSOc22b9A8MKziUr4D9FSzDGFACznQcDzLfGtUyc7fEMB6W3kPvZxILIsYEae7ySo1Lx5IMSCXLFSOQPX+74=","key":"preview"}}
+1493255013063	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493255013063	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493255013084	 GET/backend/icons/PNG/stvincent.png
+
+
+1493293295687	 restart server
+1493293295710	 connecting data service
+1493293295724	 data service connected
+1493293295724	 using hardcoded user, devUser()
+1493293295724	 
+
+1493293295724	 connecting main routes
+1493293296008	 
+
+1493293296008	 creating chatbox routes
+1493293296008	 	/chatbox
+1493293296008	 	/style
+1493293296008	 	/bot
+1493293296008	 	/deleteBot
+1493293296008	 	/convert
+1493293296008	 	/providers
+1493293296009	 	/preview_chat_box
+1493293296009	 	/bot_files
+1493293296009	 	/bot_from_file
+1493293296009	 ./endpoints.createchatbox 
+1493293296010	 ./endpoints.loadmessagetemplate 
+1493293296079	 ./endpoints.conversate/operator 
+1493293296080	 ./endpoints.receivecontactform 
+1493293296081	 ./endpoints.log 
+1493293296081	 
+
+1493293296081	 connecting static apps
+1493293296081	 ./backend 
+1493293296081	 ./demo 
+1493293296081	 ./builder 
+1493293296081	 ./preview 
+1493293296082	 
+
+1493293296082	 Error Handling 
+1493293296082	 
+
+1493293296082	 SERVER READY 
+
+1493293310996	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19DPWIQmXzAwlsrl7RcjOG5ZfKbPiJCAvqtQQ7qe3nMKqUpGGhbVK+VIviTe6CbLszh03T4TS4szmM6o3D9FsH6WpSNAGoB4AOrp3VAq/DqMeTPfDJZHYpUyX4EB5r9Z00Zb5kSvhD7W6Z/VOD3+iZJXLapP+FB+lPfUWSgLD4SBcy+v4HTOUu/fHixqO39A7IDTpawNmA7vHHLEYLWgNJli8Bk1/Il4KQWwiGg3mqZ7Fu7yAUcfva2dP0nG4gzLLwO5pXAZGgpivIS6mHNxScsQoh28+CbeGDF7+xn7DJFevH6Y0i0lRLdYAa1Yn+dhBwxOSifLUFNZFh3u0dGVAGPa+dmrnjvXzpSlqLGooUZA3gAWZE9H2vTXVBF/M78s0CE0D0wXXl12OrVviZidDA/3Pg58WacyKm1i8oy3ymOi7sXZHpgjMee5+txozQCENC+vJX51nqDcjjj1hUO+y6Y5ysx/2iIbmUAbGe3x9ZMNj4i7U51HgxgRTCgmkAVE2qUfRap9pTS8ZxGxvYz+2wypBqr1UjWY0RHg4B/8oV7ZwPi7A9asnIBXSSwC615Nqg/hQ5WRIj5I/4H25fJKEQIqvOqaBultahNBenaG6jEIcHETxp9mkU2vVizHxhsZvFj9FBxRfd7CeQ2BioDRQxR/RVMB44oaYc=","key":"preview"}}
+1493293313965	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+1Z/ThVeen0aivEzvFZtJRK3sqDcyKb76dyYCmQRy3FNvPzipUbPUvPDcPHWe+31SoQ/28be5zDFa7nSVULFuK3kkREmSWBYL8968KatSnZ2yOR/w2aHu3nEgSn6RMMt5wijDXXNSgWAFDKJWDGGPeOjleUq6K1Vx2DMwczykA7mkhKnB1Nk3RxBAW3nZ5O8epsWCLvNEQ8Nifv9QBg/UAkxvfcnrxmjcWlKHVY0A196N74h7ATw08JwjwoQ1XF+dUXsfBris9Iz+L3I8SdgUDGNQmipTa/SDeeSMfPvhRTeLLZgCx+BnLReu1R2PQuQOG0WD4NiolV7EhVZD+UitQ9Dh04DgdvKG53Rk8SNzrZvWcRoV394WqLpLlqf4+jgZ4gbVQK9q5niFOcF9HcTL1wota8Mav/t1WFwhh1AT4GQgrw3sfx+Pz4CPguq8IcjWNcxRIhikjq0wD0b5o3H4zB+LJaSdAHP8kdFLBqWaU+dabKxRQrXDj6ijd85eHhihFOGcyk6wP9XJdx09BA9YNazSAUrgjT1hy9lMkHpKjQ+cZe4nWgynCHSI8QzVs/K10I+n06a/3063ouLTlXcDXgf8NZUCtJOJ/ABeiUx2QMxH2RChcm1hGaJghibo1thR0BZ3t73HDexiwCxI6gCEj1ndmxvCxe8A=","key":"preview"}}
+1493293318855	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493293318856	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493293318870	 GET/backend/icons/PNG/stvincent.png
+1493293518316	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+uqx3dtgi7NjnjWeWPD6uaVrqvCqYoKpLEayzST1n8vNmkm43MnCM4tCtfw4ir9fM1NOXAK7SBoAb1OCknehUkxB+DelVzba57zObWNvkeY2teOsbPa4HcZFByEt8Vo8aXtH9m1CyivZVbfmnrm2CvXElixkjCjs65mK1hTaZVVQQhRI7J3pf3VTDBFtszFmyioWbvp5UeNUn9tbd2cktvI5Ihac6nx0EErkVzRryZTvPHziNO32PsW9BWAgSocb19nYMnN5wrbKRyWUGT1mQ7ajG0bBjY1S7iADB9AD7zIU5nO3DZnR0XdHQZVFjJtjfrQc/suEs4pvMqXhsKuxK3Bs2tL97Lk7hhiT2ufGr527YjFhNVHh2j8gvgcVjaaOm+gVEXqhKjiFvWNXqwau9LPhA7t/sxEWiZ2qvoTMP94vYiKEc3fK1CjL5TXyRcKjTBxz+4oC57HCoarz+N4F6psa21RdnP2QHGxPCyhVd0xNGnQvXjHvk/GjXtb72ixKWrlHtLSMcP/Zz5asZCPVRjSLaNJPLldG+cN2WY05Ve++cp3jBsyln4QlGACHn1ZJzS7I7eBWLpOPwokNxV131rhI2OgQcOFTK0N+clziLdVLRGusFqQ0aFeOf1aGe9/kOjmMZJiylEjQc1ON4vTelGPU/rmPFFHsg=","key":"preview"}}
+1493293525788	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493293525789	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493293525803	 GET/backend/icons/PNG/stvincent.png
+1493293656186	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19C7gjdo46bOSXpAQtb6KqrRY2C45QGJpiWFnOhiD3E6rXeG92HM101pmyHNzTXtqfnQq9jaklah0q11u2Edq/Hhw6Dt5Er1SAltaTkToM+t7t6Za1DSUKIytYT13xDwBOCg+a4YCSNSojCsfs3hmju2u7GXfFfk/rHc7JlTG9DzpN2NRV2fI5fiaIJI/tHnAI69NR66bj+hD1eAd8CSlDK8jKMl1o0NYaENXcMTrKocnijt3g0PZJ/QJH8DoxHMS9PzbhG09ScZmpi5eV6zTvvnVfoxoStjy0OwJBoRkTVfqynHW6dwZrNQV1cS1yFQHN5/vm4qsUA1lNQG5sjSILzyBsbanqN8fiMr8mUvCFMXkkOJxCE9x49WWovnTJh3xCteo+Ru17I/cmJIamzAynDz071GguBBTdVGnX87IyWVO24+FNfxvg4FsLRojgKNmueSu4exf52ehsv9Hnxbu+I7gQwmxU1yMwW9OQraQcIQ90HYLfkRCghLpsbbZzPo4PsL03tKIkPgNSdjx5IcfQmMCbOELoVv8RqzaNnlFjFcdKeGHZg9zYR625eFHzGgpBB2JQTJ55Xv0Eqn4D0cDkvte9yVnhcafYX/nNXNbBbVDF6Wu3wuAwaVkM7CMi/MFW5/5n8UGwAz44J9ARpflSw4tsrQCwLIPg=","key":"preview"}}
+1493293659810	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493293659810	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493293659829	 GET/backend/icons/PNG/stvincent.png
+1493293683077	 GET/bot_files
+1493293683081	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2B1CUotnBX633vz%2BiJCikkkC8RFpDHSfjaathlrmWu22mqrqkXaqBDM"}}
+1493293683111	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493293693266	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493293721320	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX184W7XYpD6bQdryKv7fj/CRHBWXrCo86ujgHHxRg89eDysoGdy0sYwB7dhtlwoM1hnwhZpcAmSj1w9vxNsfSn+EtpLzTMOxzXtMRWSkHkjBHWYLwiMufoxGwmkjyTbekp3TYwrUTT2BN/Zx3x2JAF6AMmaWlFN4VSZVIaMJqb5HUAyWbejyoVsnuUfqBTXD+NjhzLkt5ZPAvhJicvOBrhgnkSYZ+3qlx5fyh/qpBuC1af9HP0RODHfJ+r+fAcIdnXzZw5IceZlSo9fEQSy8+ac4v5G0raitd+ZEwwWOeT30y8+A69vtGdriAtDnqUMydtHNcoT6tJY6RehxLNc5qaw0i2beCKA65AJJVJK+q688gkA3nIM+MQs5j+RMl1L8Q+8Ah7mcHwdDcHYAhYYkS5DooT184Jyc72I=","key":"preview"}}
+1493293726679	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493293726679	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294050349	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19rgQZ6MuuUmj8iJFsAGMQgQaDqDKZEzfUZZaS9Kv1cPtRMW5D6wxo1chKygJy0zlzifwhQwNmLmJSKHLKEgJOJ3DNliwi8gLYNx4iWuhW4F33j+KMpgiED8N1WRftl1GkFRRsM25i9l5QxptqMoxOtNcZvbxTFcH8kla5xf6UnrDfnRa+LisTWZiKmtPht6hCoJ/iVsSogV82txIUyDXd0cOk2eiOWjr1mK2riWlZy5xsdwpC9wiIYQMuVCmVutRjZ66M2q08lTbCeLr/4kO2koQ2omzG8dWkTyNVMTSjCj0stjfO3sCj73kFGb3V7TwzvIirxrO+OZZ9qvjI+DcDfMbe0wTUzqG3aH6e3IK+YieumORkU7EZwCfoikRVWQBi4e9KsVih6OlHoSCezItRbXTAcF5wilio=","key":"preview"}}
+1493294053106	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493294053106	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294091050	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/UpZzESHsHUClPR2vx6e9O6eXm6Ep5GASlUGk0iuwxpM10aZRP6PSVAmlDrzFB2jkfXvyrYI6ZYoFIC9pSkqotkTokSSdbvgXBhobfh0aS4m7trRo0DvEvnJm7E4Qa0r+iO2+AkQ+gJ0DHp3gnj2sdWBqFU/3bVY1Bc7xt6NNNO7yQN3KZmhSu2JRloRP1Lo97oS6YAcSDXEJLmmsrtxkMOVzsx9y1yZXz4/X0d0gKUlt6/EPJjsWnPN04L8gR6yHeH9gFGa66dMUBRat5IFSAbxdG1KJE1n7JMNRRVAqajGFf05tLl+EYubFI4DhMLns6jhuC5NMWhGySWNUrkQX6PoFpUPnH52CmNr1Tatu5deMHj4zhOjhT4Tr4abzunoA+KKqXWM/7+/eB6wcrhqAedcUX4OPWHlY=","key":"preview"}}
+1493294093864	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493294093865	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294111794	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/IBl680mJiIrDlYIQIO+1VqVoa9huAqIenhl7sHBHGvC8FfcM/1BcbQBe5vWQ8Af/IR41Len/QUOSqGr+zIIYtOPdzfU1VhEn/K4cBJiHsZ3EqRWLyIkZL8jrWLDPO04+nRRAZu/xlbaXG7ZW5gqJW2rIrFhTik0OSBCjsUd3tmiL/jGfLRu0wzx9RaGsI9rWoQPMyCtRfLGdwBHRAvEBRcWDtcOGTWgkgsKC7+UU91d8T8FbaB4T6fXBYc0ENS71MPhdDe4o5KOaHHZOzr+vGRUC5Yqom6UXvJwx1qDPK1GcGehZ8/nvjDf6pDPvsLMJlPz5wNOnwLr8CIOGTrTaAyZ4he0730Mv0cxHf1yIMda4hLkOoflQKCFKwepy9E3IDZZyXYMKvqSW9+5f2SkxhrsM73jZmwII=","key":"preview"}}
+1493294116786	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493294116788	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294238637	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/IWRzXs0NFW1Dv3HvTy/QEK3zVIRp89dfODhb/HZiazShAGiarA9gvTmzWzNzB8Ua0LT4ESq2gSCxloKCs9u3IZ3vTpYNtvwcH82y5KLs+O9/HE7Ct0rt5HJAiTbFh0M710nTgKidFjObzRr30x8OMq7KCSFagJ+DgZtbqp68ShfpjstcLFHOzkbJ5MuFnnw+mkEow9OTKImXeStde3wu+y2ZqVnOU0ZxvBOXZ0BWKDEmgqncHS9lBUG9PDFMJ1eKBkqedDroGvmRpVtSBDgchA270Z/O7YuG4mXqpLFV5biw+JuuY3k9WojuUr1HmnKUwCa1VdNb0L+OjQrCmOsMwim4KzNqK612OQxYWBEHzHwCpmwRMUOFRRidZVBzAr2jGS1wh6zIQHAdFaqmsHMk+x1LT0fmDXQc=","key":"preview"}}
+1493294241347	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493294241347	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294250391	 GET/bot_files
+1493294250396	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2B2N6mXYtsxKRmwtsB%2FvlmUjVc0CyVP66JFGJ98vPeGs5w%2Bz7h1xlfa"}}
+1493294250400	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493294256462	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493294259572	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19uBJXRmo3chOw/gvAVnoFQ3IdglbXUivN3mmr49dedw9NeCpd6bwF6gYqjpRkpPzhKayOdcYbd1bPbzU9kFA5tdVL4pZurLKeMUE4TKENXEpLOV3+sSo/ktbdD0ZAyk3yLKSuZqHS6qwxIvwZJpnICK7OU3iRBPWwieZ1qaN/xv+LBg1Xh8ijONn5qqmr0S7vbLNdCXKAFsWoectxyuWSQ8ZdBHnMpZZc=","key":"preview"}}
+1493294263031	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493294263032	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294318022	 GET/sockjs-node/info
+				 meta: {"query":{"t":"1493294318020"}}
+1493294333132	 GET/bot_files
+1493294333137	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2Bcbf9%2FqLpP2Vb6IOQJtqx1ab3u%2F50Z41SkIX6GUyau5Lcjx06P44s1"}}
+1493294333142	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493294338455	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493294339757	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19Zl4khZVc2Y1ourqa+g0pzx74lepKpNak9sM2ttiM22aRZK8D6Q9xTyKCtqS+/aSdIssUMgHUyIvsjkqalpY9GcpIHrUhxFNn3CAX4yAfwVtBBCicgsFabVi15pfh9J03lcrLE19to9L0yshO34jvkrhEldcODHiXvILOIB2IUX7SN2e5Rs/KpwLUnKIAUO+pvZ7FXTjuU36pzYREbW/MHU82X4lyCtmU=","key":"preview"}}
+1493294342523	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493294342526	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294381372	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+nfQu2Qy40IXz+aXieRqVvhm2LNODlzmgJ59OnxmP/JCys/VW+ufq9T1aDlf+6Uy3F9bUHjKBrAv45a+gBbdITACBNbb0ViPOXleTOt3b9gZMPQLAtgeWLqar7WZIPrfXeT/CzcZ/LR8tOy4FmcIkW26t58S1SY4OFclKFMDR5sb3mId+DGoqJsoFtrp7jRyVFsCVSmhWCOSibpGWOPdTLlrBwf9OmMHI=","key":"preview"}}
+1493294383652	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493294383653	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294443120	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19d/DpmbIQiltoWkswHOsgoUZE+ip422C0u8D6glY8qYdM/nATAiaifxA29EoYUaP9Mtyxm9uxc2KmurUYmoU+7uz8YgjEAbZqYophGuEOyd0OPjYS2YVy/38U/IwvB9ESUjMCUCs2UJ1AqR5DXGvCQSfpye8IMXRoamvjXgnO0vBlwgYcbCeWHZlaFaPh6gLzTDyahfEkm+CwPAsX/2pu2+hepZH5rXsU=","key":"preview"}}
+1493294447803	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493294447807	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294458873	 GET/bot_files
+1493294458878	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19lQ9oQugRZL95HFT9KjTUPctoXzKMGe8Wmnn4k0S5MLbKM6BLMsC3j"}}
+1493294458884	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493294464631	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493294465356	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19LZDEWQAA6uFc3TAajsHTu2Zquvg6kgpoufxTSG8OtxGjrNbtvZObXpHM8ndbvXVeG5yasP+KcPIHunfYabbrvsocTL/AYhmTMiAyzWV3WzndlaM3salyQwMA3PmXQRpCgOpy4iEg/4To3chEF5UBrxFRWGrM31RPfJTG0K5wjCHR5iu8l+QuuIQZ3csZ5Bof/Njt1gK55esbK/NfvIoVFmtTKDVgEi7c=","key":"preview"}}
+1493294470775	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493294470776	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294529241	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19r8sk1lyLX4B3KEGzQXw2M+0QAONO776xHRiROnQN8TeFZvjBh+f+11B2g7ZfbTSheMRLPk4GwoqO10Yxwn9lYR0aIq/k7JMxG3byIcAqfY+xzVvXvDRmyKLQFFg9LAWfPvE+AUDiu+3UR5c79vHkwYMOimQj91OHpgP6FFCWVhZTMvBh18FyUOWBGYL6pH9riK8/uzk2ZejA2h0BILW7tTOkB4+H8q6E=","key":"preview"}}
+1493294533347	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493294533347	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294543569	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493294543569	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493294621005	 GET/bot_files
+1493294621007	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2B4gLmupTyhhxo3d3ZmSREw8MMKqjybSkQrxXTJ3ts%2FKIENf1eAJwQl"}}
+1493294621014	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX18xwOiyapqrHsylDHZmxrYIsIsOetv7yPuD6dk3ixb0TTm40l08/mynbycTtvlNXASVYnaFnhbVByPa2rCjDxnMYDjbn+8d7YBkH2JmdhtxTI5wGzvuRH/ostVQ3mnBHjKxMkrYO7p7reOHcnMwyOAYJopApzxrWJEPlsP47l0wyY2FTLzNWLFx16tIAPw3ja5CgSFVWYT+UVMZ3gufWjr6bfnbvviIPVM=","key":"preview"}}
+1493294621026	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493294625501	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"original.welcome message"}}
+1493294625502	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"original.response welcome"}}
+1493294636332	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493294641087	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+6S/5hnKsPuofQDAhKrS+WWZO4wQ8QFlwqpDzbNven/eZ4ayyzDdNjWpNNQ4lJk8bdlwsB96Uvm2ABK9fXQC6BVgMnAkEn03+W7lzRiq644JnMa0RSdE5wopMgP3jHhmrN9ndp84PrTWAlDa0S7/quL+GdWQt+k1u8LRm9WYEFCCIIPT4Lu55Pbk8g6jX7OJCsvmkBtOTvVkAOaLgZZ4rTestVFc46u9k=","key":"preview"}}
+1493294643983	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493294643984	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294646497	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493294646499	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493294685513	 GET/bot_files
+1493294685519	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2FQBtoabaP8AiC3%2BzEPaeA3XqUyr0Zolm6%2FJnWsTgc4fx0c%2BORfaqH7"}}
+1493294685523	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493294692167	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493294693535	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/OHt4zYUNiNA5g+G/7i2vxWRckJFbXPPmN1P0UpdpuudrzFYIFIWYEJr90PfGTxG+kEJZNJtOAwA2a0E6qfmfWMKbawDUJP8wtTXPCrhOBr5zADOeZhjblCJ5eWloo3cg6+7n77EWLnCtQ2VHQpvyHX6pnk3h1WDIeldtUjPT1Q7Iyt7rfo50JDqYblGc4zTrXV42DPaVrVB7EGpwio39Pgwe2lvrAElA=","key":"preview"}}
+1493294696035	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493294696036	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294697770	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493294697770	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493294722367	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+iOiOeZKj4zIeokn8iFDluUYWEmxZV86JDqsMoQVFOlcV7K1HRKqOv1Ugy1JPKOZYDqrseB1+fAG5shXEZgyJWCCgkGLVNBgPdEaXf0MFXSE5/CCd5cnQHFQUztRyZwRJ67M3Lg1J4koDxgrUQgJ8xRW4ZjgbKqJGrfDK9UfK9qDaIGmnjAbXQbr983JAtHNKeA7PKgRzvUeu3hZ+9fUyjfxhhBKoOLQY=","key":"preview"}}
+1493294726788	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493294726788	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294728314	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493294728314	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493294751395	 GET/bot_files
+1493294751400	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2Bd%2FJZZTBfudgj4v6%2BuEZxAiWTOIdEdjujAImpKUfHXoITqKEQv7YZF"}}
+1493294751406	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493294757443	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493294759020	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+PYnXEzZj0NNguZidhSQPS1BP54a7MV7KP1zXvDVWMf8HFvMpL7Mur/VVlEzDR35PQ5VJiBI4HHqSegDGNVvg+G12udTqSZH1N1+5MV2xHqz0D90j51O6HoIFObt+/30R8MRmxGO8/HiiiCqCZNSSlSUBGkFmFowK7uCGJzsMUmDDaBjeXB1rLes7dt3kUfwdLREiFEtIqFDV0JvVVYFSWk2hz7RUObw8=","key":"preview"}}
+1493294761632	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493294761635	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294763216	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493294763217	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493294852122	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX18uehnpUSN1qwkbTLWYUYAW21iL+SgBq6r8JYe8daCje9YbEmmg1Q3fj0BNtRjjDBaWU/U9qBy0bhkFH947XnZemx9pJeoNAUAgL0jJRHHDLtn4o5DV0s4whRjy8jABNhPHCfFVkEnB/UDD9X7kaC0dtxaCC99D8OC9tx7lgQCT5wpgqQeb6esr01mRF/X6mERNuSgpBamqY4gUIfQWb90DDc8Yjgl0s1g=","key":"preview"}}
+1493294854799	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493294854800	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493294856643	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493294856644	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493300578027	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493300614560	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX18/MSgZ0ZsTtKPt1WL8X254qMwdpmv8RPDXypUvHPKfOVNJ83Wr71nJlBgYv40T33MJnwLIolAXTjSuB2o4cCOeLEDXiKpYBsV+YaR8xG82UFziFHg58YdRQ78mD4MIcpxUUGXoSkWcTyQmN9c/6WPYBqcoPkezbF4jwB23rABdKcYAFNYtP7n2p7EblVg+M+nEKSofgEngkdLZhET14gn6jDGkN1xZPaA=","key":"preview"}}
+1493300616783	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493300616787	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493300618943	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493300618943	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493300620202	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493300746112	 GET/bot_files
+1493300746117	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2BVda7QQDEnaU5unTFtjhbLlRubMu1VdiS4F%2Fv%2FJJ194BHoFAfurDIu"}}
+1493300746123	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493300751794	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493300753989	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1857e2AXnWpwT+FHBW862yvGcpJzfrgi4CRUk2/XFyxkK/sw2llFrfAYfG4rscE9Bit1essjVq/Zkerqf2x/cNEs4CJqQ/jXH5uurdv5ZlzPgJfn4lZ3zamDOHQDWXgSdMIJLIwOB6mG9VbQJH8MmY8W60H4goKRM2W7zxMJ+6U/VXI0fdWVHaSbow465LnQ/qdD1hqD2iw29Vy3vMAOOUO45TCAp4Fv2s=","key":"preview"}}
+1493300757431	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493300757432	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493300760275	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493300760276	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493300762942	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493300921513	 GET/bot_files
+1493300921518	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2BwdQlm0HGyxOiSX18V5hKylE%2FY6StiqNFJD6NNCTKgtgwrSzpx9MjA"}}
+1493300921522	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493300927935	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493300930196	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19eWA61pXBCFfQlBa3elHsxaRKzMHhIbq/OWDax+cPUR0G452h8mQp7MDqKnhxYXUNDU+Z9HwFmBR72dxEOXFxZjU4RwUCC3uCNKeS1dctR3ebpRONiFJcoFJjhdFTSuctp0NWKra2lcvTmjXqxWo0bUgKW0Acahu8QilrM8aydB8yQzM5EYSDmBrDk/Pzvz5BDkiY6ycBczOcpCHLWbTWrv+2w3gZ+brU=","key":"preview"}}
+1493300933123	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493300933124	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493300938004	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493300938005	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493300943178	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493300985276	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX18/E54Ms1tKrQ+3q4IVGr/onTEr48MujPVWIcEQlI8NytqKMj6RykeOqdNWHNAJkMHt+3PmgXgryb1coOtQmI44TR5BJKBNG8nsP6JNMG6CACopE6uBpD/a3/jrG84wjmbpA5Qd4FcXLbrE6nd3CHw1ETXXTJKWe5RRIHrHE2R6lCJVjSP8kKK574a+D1YYYZbJGAhoDnXwfnldtyYwTPAo3VsHG2yThGE=","key":"preview"}}
+1493300990449	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493300990451	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493300992025	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493300992026	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493300993128	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493301051032	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX18tc7ULqS1hw2vxKrg8eNTJ3HuPHL01/C1f+bw8pzjwYhR56U11VJvInFfJpLU1KD+84VHrqda+7aciXIaZRtHkmNQGxzgMpjX4tq0NG5jae/QvjaWz24cwuqqTODmJ99/qtNLihOql1gvh2tB3tWXBN8P1eC9ttT5OU7HAzx0vXPAG3t4i/TPLIo/xKPO/r/MtDGdSH7jJNMN3Q2lzp7oKi9bCC0Kxmb8=","key":"preview"}}
+1493301054755	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493301054757	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493301056082	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493301056084	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493301057165	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493301217486	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/HtfPYzeEDEqK52UwonzyxjkUx9/+sooLdaZ2I8SseA4rMAr86xJfb49BdmjGm+ToEDfAYTq5GjrQAzhCc1ghDKAaKRj8lTcJvaK0u5dbjHHgXHs+zUZ3ci7hLBGMIz8zeCI1oy9968jkYAegPVixuSN2mZw4foK64ymUQdO4FEOh45sid6u1790zPc2xKhwsJ1vdIS/DTkuqK3+um/GEnrMD8LSSFaP0=","key":"preview"}}
+1493301221157	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493301221158	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493301222460	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493301222460	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493301223673	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493301300960	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19EvD1ULtbkapqJrfiqIXAv0Wn2wZUJbiGGaD+107SczjnUfi4pUFkDSYe0nkr5G477ylbuYCAR9CxyDp+re1Cl3HrBr6p2ZL8MsA+uDwcD7V8n+2W/Eeis/4J0xqLTgvj2wmTb52ZVo5wXro//WocuIedeChna216u0pUyfx9utME8HHlbla6G1PCxLsis6ON4IW/2bVTEy8z63iv6Ww7V/rGyZ3KKzec=","key":"preview"}}
+1493301305113	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493301305113	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493301306631	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493301306631	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493301307768	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493301315857	 GET/bot_files
+1493301315862	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19mRXXVUqgvAaf9I5liyO%2B7ILOu07FeA9EiqVAYywrqi7jWx6RveqVt"}}
+1493301315867	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493301320154	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493301321358	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/I0ZpcpDLBGzQngvX06xVNWmfQERzbYxR0jMlMICivO3vLmVdtMHXKn2dkOJoISipfhwYX61muIyhfP+wy2rwO74npvtA4HB6ow4SNuFhK0E3rwcqlVklSSoMoXDDtzoEQ8FyZioBm8IyywPNPKzH6oZStVIHW9RfsMa0r51817xZNojI/c1g+RqGFEXgFHu2m6F6E2lGT3fwZ2O6G3vFkdqmF99kxB8s=","key":"preview"}}
+1493301323731	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493301323731	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493301328130	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493301328130	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493301329974	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493301352711	 GET/bot_files
+1493301352717	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2FU7TzNaLxC1KNozrYRJ7YuJZOo5Z6wYU0y4%2B%2F6LJW1XVlkUR3zhG%2FR"}}
+1493301352722	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493301358213	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493301359411	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19ox5zrUjwvo47/aC3J9c721dW4VfIrkgH6CQ5kMerUQSZTPiXL/fjTYAIp8LyQsYlCRghqy0/etFQAx/ArfDfj413LKmHAFUWgW3xuc17uWcQ6UGEUmkPF4wTkLi/iuWrWrIZu/pRfZJdZwT25KvAXRGKkHBIY/JhRIW0yK375YlM0EkKsg+3sNXfnOx4EB5Xy4zf7OUEULoSvwVTJARTTigg51cMVGeU=","key":"preview"}}
+1493301365019	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493301365021	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493301369968	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493301369970	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493301376068	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+
+
+1493301469811	 restart server
+1493301469834	 connecting data service
+1493301469849	 data service connected
+1493301469849	 using hardcoded user, devUser()
+1493301469849	 
+
+1493301469849	 connecting main routes
+1493301470144	 
+
+1493301470144	 creating chatbox routes
+1493301470144	 	/chatbox
+1493301470145	 	/style
+1493301470145	 	/bot
+1493301470145	 	/deleteBot
+1493301470145	 	/convert
+1493301470145	 	/providers
+1493301470145	 	/preview_chat_box
+1493301470145	 	/bot_files
+1493301470145	 	/bot_from_file
+1493301470145	 ./endpoints.createchatbox 
+1493301470146	 ./endpoints.loadmessagetemplate 
+1493301470214	 ./endpoints.conversate/operator 
+1493301470214	 ./endpoints.receivecontactform 
+1493301470215	 ./endpoints.log 
+1493301470215	 
+
+1493301470215	 connecting static apps
+1493301470216	 ./backend 
+1493301470216	 ./demo 
+1493301470216	 ./builder 
+1493301470216	 ./preview 
+1493301470216	 
+
+1493301470216	 Error Handling 
+1493301470216	 
+
+1493301470216	 SERVER READY 
+
+1493301478561	 GET/bot_files
+1493301478565	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19jYhztrn2HJlKxTltXCZ%2BuXM1nF3IaczecKt%2F2M5eChbjv5XBSCqgd"}}
+1493301478587	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493301483643	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493301483650	 	 level: error, == ENDPOINT ERROR ==
+				 meta: {"stack":"ReferenceError: imageMessage is not defined\n    at module.exports (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.chatbot/demoBot-stv-2.js:102:12)\n    at getBotFromFile (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.createchatbox/main.js:234:28)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:131:13)\n    at Route.dispatch (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:277:22\n    at Function.process_params (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:330:12)\n    at next (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:271:10)\n    at Function.handle (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:176:3)","source":"server"}
+
+
+1493301495932	 restart server
+1493301495942	 connecting data service
+1493301495950	 data service connected
+1493301495950	 using hardcoded user, devUser()
+1493301495950	 
+
+1493301495950	 connecting main routes
+1493301496117	 
+
+1493301496117	 creating chatbox routes
+1493301496117	 	/chatbox
+1493301496117	 	/style
+1493301496117	 	/bot
+1493301496117	 	/deleteBot
+1493301496118	 	/convert
+1493301496118	 	/providers
+1493301496118	 	/preview_chat_box
+1493301496118	 	/bot_files
+1493301496118	 	/bot_from_file
+1493301496118	 ./endpoints.createchatbox 
+1493301496118	 ./endpoints.loadmessagetemplate 
+1493301496156	 ./endpoints.conversate/operator 
+1493301496156	 ./endpoints.receivecontactform 
+1493301496157	 ./endpoints.log 
+1493301496157	 
+
+1493301496157	 connecting static apps
+1493301496157	 ./backend 
+1493301496157	 ./demo 
+1493301496157	 ./builder 
+1493301496157	 ./preview 
+1493301496157	 
+
+1493301496157	 Error Handling 
+1493301496157	 
+
+1493301496157	 SERVER READY 
+
+1493301506064	 GET/bot_files
+1493301506069	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19TceMnn4XSGfKSgrBYkzLd3bzuArwCIf2DvZqYue9pz2A7bTap9XLF"}}
+1493301506091	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493301511169	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493301511175	 	 level: error, == ENDPOINT ERROR ==
+				 meta: {"stack":"ReferenceError: imageMessage is not defined\n    at module.exports (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.chatbot/demoBot-stv-2.js:102:12)\n    at getBotFromFile (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.createchatbox/main.js:234:28)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:131:13)\n    at Route.dispatch (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:277:22\n    at Function.process_params (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:330:12)\n    at next (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:271:10)\n    at Function.handle (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:176:3)","source":"server"}
+
+
+1493301572785	 restart server
+1493301572795	 connecting data service
+1493301572803	 data service connected
+1493301572803	 using hardcoded user, devUser()
+1493301572803	 
+
+1493301572803	 connecting main routes
+1493301572957	 
+
+1493301572957	 creating chatbox routes
+1493301572957	 	/chatbox
+1493301572957	 	/style
+1493301572957	 	/bot
+1493301572958	 	/deleteBot
+1493301572958	 	/convert
+1493301572958	 	/providers
+1493301572958	 	/preview_chat_box
+1493301572958	 	/bot_files
+1493301572958	 	/bot_from_file
+1493301572958	 ./endpoints.createchatbox 
+1493301572959	 ./endpoints.loadmessagetemplate 
+1493301572994	 ./endpoints.conversate/operator 
+1493301572995	 ./endpoints.receivecontactform 
+1493301572995	 ./endpoints.log 
+1493301572995	 
+
+1493301572995	 connecting static apps
+1493301572995	 ./backend 
+1493301572995	 ./demo 
+1493301572995	 ./builder 
+1493301572995	 ./preview 
+1493301572996	 
+
+1493301572996	 Error Handling 
+1493301572996	 
+
+1493301572996	 SERVER READY 
+
+1493301580360	 GET/bot_files
+1493301580364	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2BvyU8dS5PEjcC%2BeW3EQBXzfFYY9z6FNJI58n88Yv5A7Lx62vw0yTvd"}}
+1493301580386	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493301584450	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493301584457	 	 level: error, == ENDPOINT ERROR ==
+				 meta: {"stack":"ReferenceError: imageMessage is not defined\n    at module.exports (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.chatbot/demoBot-stv-2.js:102:12)\n    at getBotFromFile (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.createchatbox/main.js:234:28)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:131:13)\n    at Route.dispatch (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:277:22\n    at Function.process_params (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:330:12)\n    at next (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:271:10)\n    at Function.handle (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:176:3)","source":"server"}
+
+
+1493301640898	 restart server
+1493301640908	 connecting data service
+1493301640917	 data service connected
+1493301640917	 using hardcoded user, devUser()
+1493301640917	 
+
+1493301640917	 connecting main routes
+1493301641075	 
+
+1493301641075	 creating chatbox routes
+1493301641075	 	/chatbox
+1493301641075	 	/style
+1493301641075	 	/bot
+1493301641075	 	/deleteBot
+1493301641076	 	/convert
+1493301641076	 	/providers
+1493301641076	 	/preview_chat_box
+1493301641076	 	/bot_files
+1493301641076	 	/bot_from_file
+1493301641076	 ./endpoints.createchatbox 
+1493301641077	 ./endpoints.loadmessagetemplate 
+1493301641112	 ./endpoints.conversate/operator 
+1493301641113	 ./endpoints.receivecontactform 
+1493301641113	 ./endpoints.log 
+1493301641113	 
+
+1493301641113	 connecting static apps
+1493301641113	 ./backend 
+1493301641113	 ./demo 
+1493301641119	 ./builder 
+1493301641120	 ./preview 
+1493301641120	 
+
+1493301641120	 Error Handling 
+1493301641120	 
+
+1493301641120	 SERVER READY 
+
+1493301647906	 GET/bot_files
+1493301647911	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19GefrhLia1a1pNoi9GCJdVvfmL4s3g%2FdLLvxO9JJFaRLCy2MLVGXjK"}}
+1493301647932	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493301652536	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493301654441	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19oHgZUXdlaQFx39RMFtv8Z1cGSlnZaAi374H/mZ07P647HzOLmNZdqvfQLMmW4bQcVA6tlr75PCRoc6RuUhUMsbiSSWpDP8cA/BXwYBPXn6eh87XzDwAVv7lnsP5KiwHTyNQEgGf4uPHMRMM4PpUei3KqvPaz7+u321lmYaHM+4XriLqYEbOZaENfrxAxlYC+zzrtiKa76iZbPhQqCBDoBBY2RrmgLWxQ=","key":"preview"}}
+1493301659411	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493301659412	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493301661500	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493301661501	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493301664021	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493301664031	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493301664037	 	 level: error, == GENERAL ERROR ==
+				 meta: {"stack":"TypeError: path must be a string or Buffer\n    at Object.fs.readFile (fs.js:274:11)\n    at /Users/steveroettger/Dev/kurbi-chat-prototype/sharedFunctions/chatCreateFunctions.js:102:8\n    at Object.loadFile (/Users/steveroettger/Dev/kurbi-chat-prototype/sharedFunctions/chatCreateFunctions.js:101:10)\n    at getTemplate (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.loadmessagetemplate/main.js:79:12)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:131:13)\n    at Route.dispatch (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:277:22\n    at Function.process_params (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:330:12)","source":"server"}
+1493301664038	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+
+
+1493301822172	 restart server
+1493301822182	 connecting data service
+1493301822191	 data service connected
+1493301822191	 using hardcoded user, devUser()
+1493301822191	 
+
+1493301822191	 connecting main routes
+1493301822350	 
+
+1493301822350	 creating chatbox routes
+1493301822350	 	/chatbox
+1493301822350	 	/style
+1493301822350	 	/bot
+1493301822351	 	/deleteBot
+1493301822351	 	/convert
+1493301822351	 	/providers
+1493301822351	 	/preview_chat_box
+1493301822351	 	/bot_files
+1493301822351	 	/bot_from_file
+1493301822351	 ./endpoints.createchatbox 
+1493301822352	 ./endpoints.loadmessagetemplate 
+1493301822387	 ./endpoints.conversate/operator 
+1493301822388	 ./endpoints.receivecontactform 
+1493301822388	 ./endpoints.log 
+1493301822388	 
+
+1493301822388	 connecting static apps
+1493301822388	 ./backend 
+1493301822388	 ./demo 
+1493301822389	 ./builder 
+1493301822389	 ./preview 
+1493301822389	 
+
+1493301822389	 Error Handling 
+1493301822389	 
+
+1493301822389	 SERVER READY 
+
+1493301828512	 GET/bot_files
+1493301828517	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19glLels3Lwa12Ugxm5Yozi5aw4EPQgjpcu1GSQhx3ggUJMzPRSXtWh"}}
+1493301828538	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493301832367	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493301834142	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/PKg9tzkV4JPl/5wG2XuptXY8QcOJMS1yiAP4FT3vepkyt+VYh9zg4xfnUslie0hvVh1SBEL8b+eYWMxibyqtdp1TnZLsiukYANAwjAFWeDqZpqmOWHqT2/PrgccLyxvbPYKV/YLd7+cytlYpl0jOR01OZeR6qlE2AcXH8iUDTWX9KepNZ6XCuHBA8RsuQdPJOIIMNhTOJBKbXaVpSqIBfkBz7vadxTfA=","key":"preview"}}
+1493301838364	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493301838365	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493301839847	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493301839849	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493301840982	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493301840990	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493301840994	 	 level: error, == GENERAL ERROR ==
+				 meta: {"stack":"TypeError: path must be a string or Buffer\n    at Object.fs.readFile (fs.js:274:11)\n    at /Users/steveroettger/Dev/kurbi-chat-prototype/sharedFunctions/chatCreateFunctions.js:102:8\n    at Object.loadFile (/Users/steveroettger/Dev/kurbi-chat-prototype/sharedFunctions/chatCreateFunctions.js:101:10)\n    at getTemplate (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.loadmessagetemplate/main.js:79:12)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:131:13)\n    at Route.dispatch (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:277:22\n    at Function.process_params (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:330:12)","source":"server"}
+1493301840996	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+
+
+1493301978914	 restart server
+1493301978925	 connecting data service
+1493301978933	 data service connected
+1493301978933	 using hardcoded user, devUser()
+1493301978933	 
+
+1493301978933	 connecting main routes
+1493301979092	 
+
+1493301979092	 creating chatbox routes
+1493301979092	 	/chatbox
+1493301979092	 	/style
+1493301979092	 	/bot
+1493301979092	 	/deleteBot
+1493301979092	 	/convert
+1493301979093	 	/providers
+1493301979093	 	/preview_chat_box
+1493301979093	 	/bot_files
+1493301979093	 	/bot_from_file
+1493301979093	 ./endpoints.createchatbox 
+1493301979093	 ./endpoints.loadmessagetemplate 
+1493301979129	 ./endpoints.conversate/operator 
+1493301979129	 ./endpoints.receivecontactform 
+1493301979129	 ./endpoints.log 
+1493301979129	 
+
+1493301979130	 connecting static apps
+1493301979130	 ./backend 
+1493301979130	 ./demo 
+1493301979130	 ./builder 
+1493301979130	 ./preview 
+1493301979130	 
+
+1493301979130	 Error Handling 
+1493301979130	 
+
+1493301979130	 SERVER READY 
+
+1493302604554	 GET/bot_files
+1493302604560	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX18xCF%2BIkEBDkpWX2vB0ExMQ83ORJZ3%2BG%2BJw1RhUsjJebuCHbtZpH%2Bq4"}}
+1493302604583	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493302610114	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493302611934	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+RY4mAWRP8dNVW5xAvFqtdrheXYmBgWA+aWeq2wzB+qXuTuqQabqemH7eVZPyyux+aVHpnctj5eMLNPzEZIbqa3yDYtQrxqXX20/LyG+RxQy/c6AXe+zEsRxfABRS1kd1xOb5FFKzsTtqlaUDsVelLwI93KawKiZQ089K7xduBjujjJv0nAprBoCFds2p6ua7bi9U105CjZThdbzryOdAavIMEDY2/LXA=","key":"preview"}}
+1493302614635	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493302614636	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493302616826	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493302616827	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493302618086	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493302618093	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493302618098	 	 level: error, == GENERAL ERROR ==
+				 meta: {"stack":"TypeError: path must be a string or Buffer\n    at Object.fs.readFile (fs.js:274:11)\n    at /Users/steveroettger/Dev/kurbi-chat-prototype/sharedFunctions/chatCreateFunctions.js:102:8\n    at Object.loadFile (/Users/steveroettger/Dev/kurbi-chat-prototype/sharedFunctions/chatCreateFunctions.js:101:10)\n    at getTemplate (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.loadmessagetemplate/main.js:79:12)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:131:13)\n    at Route.dispatch (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:277:22\n    at Function.process_params (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:330:12)","source":"server"}
+1493302618099	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+
+
+1493302672250	 restart server
+1493302672260	 connecting data service
+1493302672267	 data service connected
+1493302672267	 using hardcoded user, devUser()
+1493302672268	 
+
+1493302672268	 connecting main routes
+1493302672423	 
+
+1493302672423	 creating chatbox routes
+1493302672423	 	/chatbox
+1493302672424	 	/style
+1493302672424	 	/bot
+1493302672424	 	/deleteBot
+1493302672424	 	/convert
+1493302672424	 	/providers
+1493302672424	 	/preview_chat_box
+1493302672424	 	/bot_files
+1493302672424	 	/bot_from_file
+1493302672424	 ./endpoints.createchatbox 
+1493302672425	 ./endpoints.loadmessagetemplate 
+1493302672458	 ./endpoints.conversate/operator 
+1493302672458	 ./endpoints.receivecontactform 
+1493302672459	 ./endpoints.log 
+1493302672459	 
+
+1493302672459	 connecting static apps
+1493302672459	 ./backend 
+1493302672459	 ./demo 
+1493302672459	 ./builder 
+1493302672459	 ./preview 
+1493302672459	 
+
+1493302672459	 Error Handling 
+1493302672459	 
+
+1493302672459	 SERVER READY 
+
+1493302682511	 GET/bot_files
+1493302682515	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19k9PWtngSTevpovl2sl%2FGYfasZfAlSGPSSO0WfivuVDCe9vC4yAEWd"}}
+1493302682539	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493302686601	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493302690318	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19v9j9YnI4ELlx0Ns1QsAXcFVmXoNt88KvTidY7He9WtFQ9lgmiG2zsJ09fEQMA0pEJiI71bIeJMxqD3LmatsNDv2o8a7LiIs3yPVxQC668Kmr5vkiCd70RdTbnlea+yRppi/Hi/jDDXBManYanm9ljLJirTbXn6j8yTsylVRq39u2T3PT6MSgNbvGycHFP/oWFTcOIHYkkBwKMnsXNLPN5JzM81hBuY4M=","key":"preview"}}
+1493302694894	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493302694896	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493302696231	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493302696232	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493302697365	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493302697373	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493302697377	 	 level: error, == GENERAL ERROR ==
+				 meta: {"stack":"TypeError: path must be a string or Buffer\n    at Object.fs.readFile (fs.js:274:11)\n    at /Users/steveroettger/Dev/kurbi-chat-prototype/sharedFunctions/chatCreateFunctions.js:102:8\n    at Object.loadFile (/Users/steveroettger/Dev/kurbi-chat-prototype/sharedFunctions/chatCreateFunctions.js:101:10)\n    at getTemplate (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.loadmessagetemplate/main.js:79:12)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:131:13)\n    at Route.dispatch (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:277:22\n    at Function.process_params (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:330:12)","source":"server"}
+1493302697378	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+
+
+1493302855133	 restart server
+1493302855144	 connecting data service
+1493302855154	 data service connected
+1493302855154	 using hardcoded user, devUser()
+1493302855154	 
+
+1493302855154	 connecting main routes
+1493302855326	 
+
+1493302855326	 creating chatbox routes
+1493302855326	 	/chatbox
+1493302855327	 	/style
+1493302855327	 	/bot
+1493302855327	 	/deleteBot
+1493302855327	 	/convert
+1493302855327	 	/providers
+1493302855327	 	/preview_chat_box
+1493302855327	 	/bot_files
+1493302855327	 	/bot_from_file
+1493302855328	 ./endpoints.createchatbox 
+1493302855328	 ./endpoints.loadmessagetemplate 
+1493302855368	 ./endpoints.conversate/operator 
+1493302855369	 ./endpoints.receivecontactform 
+1493302855369	 ./endpoints.log 
+1493302855369	 
+
+1493302855369	 connecting static apps
+1493302855369	 ./backend 
+1493302855369	 ./demo 
+1493302855369	 ./builder 
+1493302855370	 ./preview 
+1493302855370	 
+
+1493302855370	 Error Handling 
+1493302855370	 
+
+1493302855370	 SERVER READY 
+
+
+
+1493302858289	 restart server
+1493302858302	 connecting data service
+1493302858313	 data service connected
+1493302858313	 using hardcoded user, devUser()
+1493302858313	 
+
+1493302858313	 connecting main routes
+1493302858483	 
+
+1493302858483	 creating chatbox routes
+1493302858484	 	/chatbox
+1493302858484	 	/style
+1493302858484	 	/bot
+1493302858484	 	/deleteBot
+1493302858484	 	/convert
+1493302858484	 	/providers
+1493302858484	 	/preview_chat_box
+1493302858484	 	/bot_files
+1493302858484	 	/bot_from_file
+1493302858484	 ./endpoints.createchatbox 
+1493302858485	 ./endpoints.loadmessagetemplate 
+1493302858519	 ./endpoints.conversate/operator 
+1493302858520	 ./endpoints.receivecontactform 
+1493302858520	 ./endpoints.log 
+1493302858520	 
+
+1493302858520	 connecting static apps
+1493302858521	 ./backend 
+1493302858521	 ./demo 
+1493302858521	 ./builder 
+1493302858521	 ./preview 
+1493302858521	 
+
+1493302858521	 Error Handling 
+1493302858521	 
+
+1493302858521	 SERVER READY 
+
+1493302863382	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19L312gOhXKMGpgzsUyQEjjNIhbeiiA3EGaU4aEcLhMVIf/HQF0hwBLTTsV6gvjDpVD3zElTzjvtEBQ6poONop8U7HGUtzDZcFgEyqTvsDe29Lz94R+fQUW8rLR/bPe2tPEaYvtfCaUC+XQ52k4CdVPZeiTkTwNf6vwpjZAR3MuC48QlrAxEI1Ce+AgkqgkDn/PtEIHg7TBjGqtCrI9lk+eMtI3cJBpzy4=","key":"preview"}}
+1493302867287	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493302867288	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493302868550	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493302868551	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493302869433	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493302869439	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493302869440	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+1493302925327	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+ShHCNtcAe5anj4HZUuDD/24TkDr6ZGfvfbbD1S+wVqhLQnuizdOgAMEZdVWMokh6hEbC+nV8MZDipd2FBVT76eL/0t4o4Ed87IEqP41h3zvDLSdLPkZKj4iSHaJbuy2vZvhobo3FdbQfUjpGzSh83A406oAeZgZSlOb7tYy7/ECaRvQOKPDtrM7xPU+m7OGNhDjxEIhKkhCX58kdyag0HBTJlW4qFm6U=","key":"preview"}}
+1493302928914	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493302928915	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493302930319	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493302930320	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493302931511	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493302931521	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493302931524	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+1493302959231	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19jmdvCq4Hg25x7dlTqIh4jJltrhxN9ze6FE1YLIJSQf/h6KFtcl1QSmgsnZtP1KBsNKFmf5I8fyCQFMTcaEINXerAzC2Nx0BymlKRIpuXxFUtVuicBO2p2wQW+q0U02N2dVF2nXC1/KnpYY5TOVhF1S1OIfNtzaznxCbW8SRH2TeJX8nfiwP5XyRiLCB+wjghBSL3G+uuFXY/heYVgXcLRvG+MVYHzqdA=","key":"preview"}}
+1493302961222	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493302961223	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493302962336	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493302962337	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493302963280	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493302963289	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493302963289	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+1493303216226	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1849g5Ok41jInw6Rk/Hw5wxaplhju4lLiHWvuZUpGcmbqYF3ke7Q0lTmLRq7TB1jBAZCEQ0f6MLwVNo7uMv/623MmGmvLgvjT0khqKzk/ORgQL2hbvMljj6Qa060qJscW16fORFROYcAkOLpAbmePwqd/wsvVzUb9HYBOJ6AsOjHR23nKjhmYBQSZkAN6eQpWHQRIZnCkMuEBcOu8QwcqwZAX5qmP4kL9k=","key":"preview"}}
+1493303227925	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19H6Ei5RUh2x3ljZda/T3DNmhwT15hfNPFVr+AuN1/9UM9Wt5Kxtyo45XhXlwDDrZ8DKZahssFJtTcUSIiUqms1Kh4qUYWu7rKBqTE1SQUhwTRUuDpAuowaqskP8fKo4V0hichJ6Lf3iUAlVMqKc211TxzypeqbNL4EnzII16D9UZEVh238ic95KyQHz8Mv4gv2td+IpvbHbfmf+7ILMo9AwdcIGL7hvec=","key":"preview"}}
+1493303231235	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493303231235	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493303232650	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493303232651	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493303233752	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493303233759	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493303233761	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+1493303293920	 GET/bot_files
+1493303293925	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX18rz2xWb%2BQL9qvG9GxJTZ7t%2FjcRtucuL%2FAAQJBisYJtZxaHhSXLAqb4"}}
+1493303293942	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493303297340	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493303298813	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19EVFUla4GC2oBDUixNY9RxlImamtvy/RyupSRbCAPzPT1W1RAp0dZlBJLzzLb16EpXL5rzD3NsCARLRhqrpEXwKIBTbNiyW4k060ALHbA/CPnqzyotzKc2GhBneUa8xas5/pbv+O6Cg7byOTvdftOdUO2r03goqsvWpofr0XSblXF4QYEa9L7nfHMUsjo2HPeUXr46MZ0BIH+lvWBHMhzeVgDCSGzmWiw=","key":"preview"}}
+1493303301029	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493303301031	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493303302243	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493303302244	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493303303457	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493303303465	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493303303467	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+
+
+1493303562705	 restart server
+1493303562716	 connecting data service
+1493303562725	 data service connected
+1493303562725	 using hardcoded user, devUser()
+1493303562725	 
+
+1493303562725	 connecting main routes
+1493303562897	 
+
+1493303562897	 creating chatbox routes
+1493303562897	 	/chatbox
+1493303562898	 	/style
+1493303562898	 	/bot
+1493303562898	 	/deleteBot
+1493303562898	 	/convert
+1493303562898	 	/providers
+1493303562898	 	/preview_chat_box
+1493303562898	 	/bot_files
+1493303562898	 	/bot_from_file
+1493303562899	 ./endpoints.createchatbox 
+1493303562899	 ./endpoints.loadmessagetemplate 
+1493303562933	 ./endpoints.conversate/operator 
+1493303562934	 ./endpoints.receivecontactform 
+1493303562934	 ./endpoints.log 
+1493303562934	 
+
+1493303562934	 connecting static apps
+1493303562934	 ./backend 
+1493303562934	 ./demo 
+1493303562934	 ./builder 
+1493303562934	 ./preview 
+1493303562935	 
+
+1493303562935	 Error Handling 
+1493303562935	 
+
+1493303562935	 SERVER READY 
+
+1493303973069	 GET/bot_files
+1493303973076	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2B5WMJymuVXDDRPMY8Yjcoeg2zcz%2BiPdF8upcsh8wQ%2FJrKgShLYibTP"}}
+1493303973098	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493303977378	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493303977384	 	 level: error, == ENDPOINT ERROR ==
+				 meta: {"stack":"/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.chatbot/demoBot-stv-2.js:61\n\t\t\t\t{text:\"Get Involved\", message:textMessage(null,\"Get Involved\", \"get website\", null)},\n\t\t\t\t^\nSyntaxError: Unexpected token {\n    at Object.exports.runInThisContext (vm.js:78:16)\n    at Module._compile (module.js:543:28)\n    at Object.Module._extensions..js (module.js:580:10)\n    at Module.load (module.js:488:32)\n    at tryModuleLoad (module.js:447:12)\n    at Function.Module._load (module.js:439:3)\n    at Module.require (module.js:498:17)\n    at require (internal/module.js:20:19)\n    at getBotFromFile (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.createchatbox/main.js:234:12)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)","source":"server"}
+
+
+1493303988648	 restart server
+1493303988666	 connecting data service
+1493303988681	 data service connected
+1493303988681	 using hardcoded user, devUser()
+1493303988681	 
+
+1493303988681	 connecting main routes
+1493303988880	 
+
+1493303988880	 creating chatbox routes
+1493303988880	 	/chatbox
+1493303988880	 	/style
+1493303988881	 	/bot
+1493303988881	 	/deleteBot
+1493303988881	 	/convert
+1493303988881	 	/providers
+1493303988881	 	/preview_chat_box
+1493303988881	 	/bot_files
+1493303988881	 	/bot_from_file
+1493303988881	 ./endpoints.createchatbox 
+1493303988884	 ./endpoints.loadmessagetemplate 
+1493303988921	 ./endpoints.conversate/operator 
+1493303988922	 ./endpoints.receivecontactform 
+1493303988922	 ./endpoints.log 
+1493303988922	 
+
+1493303988922	 connecting static apps
+1493303988923	 ./backend 
+1493303988923	 ./demo 
+1493303988923	 ./builder 
+1493303988923	 ./preview 
+1493303988923	 
+
+1493303988923	 Error Handling 
+1493303988923	 
+
+1493303988923	 SERVER READY 
+
+1493303994956	 GET/bot_files
+1493303994961	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2BUOxSNYNB8PFk3YhuWENQ2pb4kf%2Ff0sqzAykAV8jZPsfexPfze192b"}}
+1493303994984	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493304000241	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493304000246	 	 level: error, == ENDPOINT ERROR ==
+				 meta: {"stack":"/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.chatbot/demoBot-stv-2.js:61\n\t\t\t\t{text:\"Get Involved\", message:textMessage(null,\"Get Involved\", \"get website\", null)},\n\t\t\t\t^\nSyntaxError: Unexpected token {\n    at Object.exports.runInThisContext (vm.js:78:16)\n    at Module._compile (module.js:543:28)\n    at Object.Module._extensions..js (module.js:580:10)\n    at Module.load (module.js:488:32)\n    at tryModuleLoad (module.js:447:12)\n    at Function.Module._load (module.js:439:3)\n    at Module.require (module.js:498:17)\n    at require (internal/module.js:20:19)\n    at getBotFromFile (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.createchatbox/main.js:234:12)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)","source":"server"}
+
+
+1493304072919	 restart server
+1493304072935	 connecting data service
+1493304072949	 data service connected
+1493304072949	 using hardcoded user, devUser()
+1493304072949	 
+
+1493304072949	 connecting main routes
+1493304073144	 
+
+1493304073144	 creating chatbox routes
+1493304073145	 	/chatbox
+1493304073145	 	/style
+1493304073145	 	/bot
+1493304073145	 	/deleteBot
+1493304073145	 	/convert
+1493304073145	 	/providers
+1493304073145	 	/preview_chat_box
+1493304073145	 	/bot_files
+1493304073145	 	/bot_from_file
+1493304073146	 ./endpoints.createchatbox 
+1493304073147	 ./endpoints.loadmessagetemplate 
+1493304073182	 ./endpoints.conversate/operator 
+1493304073182	 ./endpoints.receivecontactform 
+1493304073183	 ./endpoints.log 
+1493304073183	 
+
+1493304073183	 connecting static apps
+1493304073183	 ./backend 
+1493304073183	 ./demo 
+1493304073183	 ./builder 
+1493304073184	 ./preview 
+1493304073184	 
+
+1493304073184	 Error Handling 
+1493304073184	 
+
+1493304073184	 SERVER READY 
+
+1493304080073	 GET/bot_files
+1493304080078	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2Bw%2FAjIL58lXpO8QlZ0D4vDhcrgo1z47V6gsFAJuKbnGTd%2Fd22cpZzV"}}
+1493304080100	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493304083240	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493304083246	 	 level: error, == ENDPOINT ERROR ==
+				 meta: {"stack":"ReferenceError: linkMessage is not defined\n    at module.exports (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.chatbot/demoBot-stv-2.js:67:12)\n    at getBotFromFile (/Users/steveroettger/Dev/kurbi-chat-prototype/endpoints.createchatbox/main.js:234:28)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:131:13)\n    at Route.dispatch (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/route.js:112:3)\n    at Layer.handle [as handle_request] (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:277:22\n    at Function.process_params (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:330:12)\n    at next (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:271:10)\n    at Function.handle (/Users/steveroettger/Dev/kurbi-chat-prototype/node_modules/express/lib/router/index.js:176:3)","source":"server"}
+
+
+1493304108712	 restart server
+1493304108724	 connecting data service
+1493304108733	 data service connected
+1493304108733	 using hardcoded user, devUser()
+1493304108733	 
+
+1493304108733	 connecting main routes
+1493304108897	 
+
+1493304108897	 creating chatbox routes
+1493304108898	 	/chatbox
+1493304108898	 	/style
+1493304108898	 	/bot
+1493304108898	 	/deleteBot
+1493304108898	 	/convert
+1493304108898	 	/providers
+1493304108898	 	/preview_chat_box
+1493304108898	 	/bot_files
+1493304108898	 	/bot_from_file
+1493304108899	 ./endpoints.createchatbox 
+1493304108899	 ./endpoints.loadmessagetemplate 
+1493304108938	 ./endpoints.conversate/operator 
+1493304108938	 ./endpoints.receivecontactform 
+1493304108939	 ./endpoints.log 
+1493304108939	 
+
+1493304108939	 connecting static apps
+1493304108939	 ./backend 
+1493304108939	 ./demo 
+1493304108939	 ./builder 
+1493304108939	 ./preview 
+1493304108939	 
+
+1493304108939	 Error Handling 
+1493304108939	 
+
+1493304108939	 SERVER READY 
+
+1493304114116	 GET/bot_files
+1493304114121	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19Si9XBOCcDKaPyRfFvuPLix1yP%2FLKLtq%2BnnSGMqItDNg3Rvtv2HPyN"}}
+1493304114143	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493304117340	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493304119281	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/IF9Trwgya28DKsb/bUKxq14hKwBz5gEtCCOsZnzl6nyqEXMUwvtDHWK3exBiDdSSQ2h4AVhkXF8XZNSTntxOfDzy2BkIvy2SFN14UmEC7bigAs+L8fo6ZSB3sPe52OHGeO9dy05BDW++LmVFwWHqmR/O5WUxF2O4aHPxfKrKCHRQpv/cGQH5DilLUJTxABj67ZSuEdGabvsQTJL/JNm2Dm72AoIfD8s8=","key":"preview"}}
+1493304121783	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493304121784	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493304123246	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493304123247	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493304124301	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493304124312	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493304124313	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+1493304137938	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.link message"}}
+1493304198035	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+9wWKHWOxFtJyPc22REFyqotAMOkewDtNXPQmpqdtZUamJ4XTFnMOSeGhwN/kRXa/UQDuvcvbF6Bf1b5OD+XfCQ3mZpUHZxRaJ8k4ZZ8p22rHR4AuDnp5N9+/8KXFq+RqSplPpUTZfjfsgJNO/8PszqBRUGZBLrfi+xaC1CXmaQ6CAZdZCynEChEwbRc703Ivux2wJUNmT4+VkDJdFWuJiSuf8CchhBzQ=","key":"preview"}}
+1493304201601	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493304201602	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493304203057	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493304203061	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493304203973	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493304203981	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493304203982	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+1493304208443	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.link message"}}
+1493304222290	 GET/bot_files
+1493304222295	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19verJDyRr3avAQsmtpf5qRet1sA2x9RcJJWSBFwwta7NDMviXLhk7y"}}
+1493304222299	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493304226129	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493304227365	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/KmqlNoEeVpQVwB6EXp/ZwRDFzHJrL7nCodFmLhTwhrNxTpeOLE46WcIKmJFf03frtwA3BEa8IKGuET2NCRPTKn+RLlnAMF63nOj/bJX6AGa2WeZjJYNUsOAj2a/yRp129pCiNNpGSrOidnb2SXCVghBeg/60p5WWDepRntXmCddclNtIKYJP2fRHaIjhqJDsUpzDbsVqEDUytZbzTf6yP1Dg19os7uyw=","key":"preview"}}
+1493304230118	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493304230119	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493304231199	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493304231200	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493304232402	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493304232410	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493304232411	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+1493304234340	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.link message"}}
+1493304338738	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19WRe5av6aWmF04Y0ZHZw6kzUAB7Ctd+ZSmcfNM/Kjdc3oqAOKet9aK3MOMrzfR1ZF+xwgrbrVLDB2WuUq4Nm2Ao2lpi+ODat9vf1V/f+J2f10aUxZruImNvm3tO+qv1aTmx4Nc7TTn0GXIXAgCUSnT8bMfzlIYkJI/Z1l5wjtCZJk/PeYHilymgNUi4ZDS+mvdqJAM004wCrH0jVg8woBABrOHkyznRcw=","key":"preview"}}
+1493304342585	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493304342587	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493304344047	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493304344048	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493304344980	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493304344987	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493304344988	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+1493304346142	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.link message"}}
+1493304365626	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/T6R13WhRWdVqw5hGISJQdPVvxNeLwFs5FQuM5/efiJAhlFLZobryZWONCbkLkb/A185BoB2kyCKezNefKGtF2PAZ1+sADrUJ+f8uVHAAyUp2g3x3kqODdw33BG+YL6c5xU0oYtKP35QVcZ0l6ZI0jEq55Wy9vg5Nr3RN8xrfs45/kvlyJFCwLCu2+dIVd48weTVJARQmfiaSew2eyddEU9pQLHLzx9F8=","key":"preview"}}
+1493304369629	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493304369631	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493304370698	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493304370699	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493304371653	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493304371661	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493304371662	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+1493304372658	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.link message"}}
+
+
+1493304628940	 restart server
+1493304628957	 connecting data service
+1493304628972	 data service connected
+1493304628972	 using hardcoded user, devUser()
+1493304628972	 
+
+1493304628972	 connecting main routes
+1493304629235	 
+
+1493304629235	 creating chatbox routes
+1493304629235	 	/chatbox
+1493304629236	 	/style
+1493304629236	 	/bot
+1493304629236	 	/deleteBot
+1493304629236	 	/convert
+1493304629236	 	/providers
+1493304629236	 	/preview_chat_box
+1493304629236	 	/bot_files
+1493304629236	 	/bot_from_file
+1493304629236	 ./endpoints.createchatbox 
+1493304629237	 ./endpoints.loadmessagetemplate 
+1493304629299	 ./endpoints.conversate/operator 
+1493304629300	 ./endpoints.receivecontactform 
+1493304629301	 ./endpoints.log 
+1493304629301	 
+
+1493304629301	 connecting static apps
+1493304629301	 ./backend 
+1493304629301	 ./demo 
+1493304629302	 ./builder 
+1493304629302	 ./preview 
+1493304629302	 
+
+1493304629302	 Error Handling 
+1493304629302	 
+
+1493304629302	 SERVER READY 
+
+
+
+1493304771407	 restart server
+1493304771418	 connecting data service
+1493304771426	 data service connected
+1493304771426	 using hardcoded user, devUser()
+1493304771426	 
+
+1493304771426	 connecting main routes
+1493304771593	 
+
+1493304771593	 creating chatbox routes
+1493304771593	 	/chatbox
+1493304771594	 	/style
+1493304771594	 	/bot
+1493304771594	 	/deleteBot
+1493304771594	 	/convert
+1493304771594	 	/providers
+1493304771594	 	/preview_chat_box
+1493304771594	 	/bot_files
+1493304771594	 	/bot_from_file
+1493304771594	 ./endpoints.createchatbox 
+1493304771595	 ./endpoints.loadmessagetemplate 
+1493304771633	 ./endpoints.conversate/operator 
+1493304771634	 ./endpoints.receivecontactform 
+1493304771634	 ./endpoints.log 
+1493304771634	 
+
+1493304771634	 connecting static apps
+1493304771634	 ./backend 
+1493304771635	 ./demo 
+1493304771635	 ./builder 
+1493304771635	 ./preview 
+1493304771635	 
+
+1493304771635	 Error Handling 
+1493304771635	 
+
+1493304771635	 SERVER READY 
+
+1493304778011	 GET/bot_files
+1493304778015	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2B9J66UPR9oZAHPWmza1YjzYPSm96iCkAQXiS44FTnTMAMcaoXbUzQv"}}
+1493304778038	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493304782540	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493304784109	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+bzHmbLeqnJ6CKPQIWSGhPqgUbGDKwFqhM0nMEhh+zlG0Lox/iY7St+OyvsthqRGNAKFEQmCziESLRVPPgwrTRNZa225xv5lE7YvemQnoCp17DJqpYnikbC9bM/AyNKKW1a806+WEJg5j5gBDYe/ElMkXD7Iqku6J8ESiytU8ibwqukhK533WRwmD86n71fHnTsB5oA2HccsDo6DVL6VhOUN6ThLAP+5I=","key":"preview"}}
+1493304788580	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493304788580	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493304790131	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493304790132	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493304791301	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493304791309	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493304791310	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+1493304793575	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.link message"}}
+1493304800790	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.event message"}}
+1493304832793	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+t9MxjRKdadKPIJGcXPCWQzDBLDBL9xy1+9Yh5/EabJF5df0PVLQZIFGeEOD+eVnrz2ElLg/GJvgnhlW5Or4J+cUYl0dzNuKfjRCDVmNZ0PbSYumKVvJoyeiyHrveZKZU4ZqsdhThAETaT9VZQ/k4/GTovVO0iqAB6h+5heHJL+WsXLf1MJc/p2MDURebhDBYb6MwER9zjjEuB4imEnRfvgaDFTAGYWfI=","key":"preview"}}
+1493304834737	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493304834738	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493304835974	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493304835974	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493304837211	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493304837217	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493304837217	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+1493304838484	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.link message"}}
+1493304849006	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.event message"}}
+
+
+1493305936221	 restart server
+1493305936240	 connecting data service
+1493305936256	 data service connected
+1493305936256	 using hardcoded user, devUser()
+1493305936256	 
+
+1493305936256	 connecting main routes
+1493305936520	 
+
+1493305936520	 creating chatbox routes
+1493305936520	 	/chatbox
+1493305936520	 	/style
+1493305936520	 	/bot
+1493305936520	 	/deleteBot
+1493305936521	 	/convert
+1493305936521	 	/providers
+1493305936521	 	/preview_chat_box
+1493305936521	 	/bot_files
+1493305936521	 	/bot_from_file
+1493305936521	 ./endpoints.createchatbox 
+1493305936522	 ./endpoints.loadmessagetemplate 
+1493305936582	 ./endpoints.conversate/operator 
+1493305936583	 ./endpoints.receivecontactform 
+1493305936584	 ./endpoints.log 
+1493305936584	 
+
+1493305936584	 connecting static apps
+1493305936585	 ./backend 
+1493305936585	 ./demo 
+1493305936585	 ./builder 
+1493305936585	 ./preview 
+1493305936585	 
+
+1493305936585	 Error Handling 
+1493305936585	 
+
+1493305936585	 SERVER READY 
+
+1493305946857	 GET/bot_files
+1493305946863	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2BXbBxFLCpCbVccSOqd10lCtQCXhsSQBjp24bHlr6vyapOH6EmJ1tof"}}
+1493305946884	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493305951281	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493305952741	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/DUX9rqNOX5OozqhlVMGg9EBS6z9KkDaD3meA8nviPkQ6qiQgTsjdwQCaaCVc3IBiUsK7ll9a35i2jR0567jct6Rl5X7AMEDFChTtOCsUh1mK2aio6aSeC+rHiuAeJIlHH8ZrrE0QJvvg6Llg98E/38AdujdgImLiCUcKk/L6cMhqs+rhw82eFmX58Wn1yVEA3ak6TfITyOx6qrXhnyYO7yoY8QAUXCek=","key":"preview"}}
+1493305956128	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493305956129	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493305958026	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493305958028	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493305959647	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493305959653	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493305959655	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+1493305962391	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.link message"}}
+1493305974648	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.event message"}}
+1493306020474	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.end message"}}
+1493306020475	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response end"}}
+1493306187853	 GET/bot_files
+1493306187858	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19C%2FSK7a1HhrSx5oNhSRpkpEcGHtoUHcAvBYwxSj%2FoUHFoi0xreydKo"}}
+1493306187862	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}

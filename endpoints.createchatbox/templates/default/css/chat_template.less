@@ -1,0 +1,244 @@
+.kurbi-chat-parent {
+	font-family:sans-serif;
+	font-size:12px;
+	@media (max-height: 950px){
+		font-size:11px;
+	}
+}
+
+.kurbi-chat-box {
+	display:flex;
+	justify-content:flex-start;
+	align-items:stretch;
+	flex-direction:column;
+	position:fixed;
+	top:-200px;
+	right:0px;
+	height:0px;
+//	padding-top:10px;
+	background-color:@bodyColor;
+	z-index:5;
+	-webkit-transition: height .4s, top .4s;
+	border-bottom: 3px solid @headerColor;
+/* NEED CSS QUERIES HERE!!!!
+desktop & tablet = width:40%
+mobile = width:95% */
+	width:40%;
+}
+
+.kurbi-chat-container {
+	z-index: 1;
+	display:flex;
+	position:relative;
+	flex-grow:1;
+	flex-direction:column;
+	align-items:stretch;
+	margin: 0 auto;
+	width: 90%;
+	@media (max-width: 992px) {
+		
+	}
+}
+
+
+
+.kurbi-chat-header {
+	z-index: 10;
+	position:absolute;
+	width:100%;
+	height:100px;
+	border-top: 30px solid @headerColor;
+	border-bottom: 1px solid #cccccc;
+//	background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
+background: rgba(255,255,255,0.9);
+}
+
+.kurbi-chat-header-close{
+	float:right;
+	height:100%;
+	width:50px;
+	position: relative;
+	top: 27px;
+	@media (max-width: 992px) {
+		margin-right:0;
+		width:auto;
+		top: 5px;
+	}
+}
+
+.user-headline {
+	font-size: 1.3em;
+	font-weight: bold;
+	line-height: 75px;
+	float: left;
+	margin-left: 70px;
+}
+
+.user-avatar {
+	position: absolute;
+    top: 15px;
+    left: 15px;
+	max-width: 44px;
+	max-height: 45px;
+}
+
+.kurbi-chat-header h5{
+	line-height:50px;
+	margin:0px;
+	margin-left:5%;
+}
+
+.kurbi-chat-footer{
+	flex-grow:0;
+	flex-shrink:0;
+	width:100%;
+	margin-top:20px;
+
+}
+
+.kurbi-input-field {
+	width:100%;
+	line-height:@inputHeight;
+	background-color:@inputColor;
+	border:none;
+	box-shadow: none;
+}
+
+.kurbi-chat-body {
+	flex-grow:1;
+	overflow-y:scroll;
+	width:100%;
+	padding-top: 80px;
+}
+
+.kurbi-chat-body::-webkit-scrollbar { 
+    display: none; 
+}
+
+.kurbi-chat-closed{
+	height:0;
+	top:-500px;
+}
+
+.kurbi-chat-open{
+	height:100vh;
+	padding-bottom:25px;
+	top:0;
+}
+
+
+
+.kurbi-chat-banner {
+	position:fixed;
+	background-color: @bkgdColor;
+//	background-color:@bannerColor;
+//	height:170px;
+	width:270px;
+	left:-300px;
+	top:22vh;
+	border-top: 5px solid #cccccc;
+	border-bottom: 5px solid #cccccc;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 10px 0;
+
+	top:;
+	z-index:2;
+	-webkit-transition: left .4s,
+}
+
+.kurbi-chat-banner-closed{
+	left:-265px;
+}
+
+.kurbi-chat-banner-open{
+	left:0px;
+}
+
+.kurbi-banner-handle {
+	position:absolute;
+	top:0;
+	right:0px;
+	width:5px;
+	background-color: @headerColor;
+	height:100%;
+}
+
+.kurbi-banner-icon-container{
+	height:100%;
+	width:25%;
+	float:left;
+	background-color: @bkgdColor;
+}
+
+.kurbi-banner-icon{
+	width:50%;
+	height:auto;
+	margin-left:25%;
+//	margin-top:5px;
+}
+
+.kurbi-banner-content{
+	float:left;
+	height:100%;
+	width:75%;
+	
+	background-color: @bkgdColor;
+}
+
+.kurbi-banner-header{
+	display:block;
+	color:@bannerHeaderColor;
+	font-size:.9em;
+	font-weight:thinner;
+	margin-bottom:10px;
+//	margin-top:2px;
+
+}
+
+.kurbi-banner-question{
+	display:block;
+	font-size:1.2em;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+
+.kurbi-banner-buttons{
+	display:block;
+//	margin-bottom:4px;
+}
+
+.kurbi-banner-sure{
+	display:inline-block;
+	width:35%;
+	text-align:center;
+	height:25px;
+	line-height:25px;
+	background-color:@kurbiBlue;
+	color:white;
+	font-size:1.2em;
+	cursor: pointer;
+}
+
+.kurbi-banner-nope{
+	display:inline-block;
+	width:50%;
+	text-align:center;
+	height:25px;
+	line-height:25px;
+	font-size:.9em;
+	color:@kurbiBlue;
+	cursor: pointer;
+}
+
+
+.kurbi-backdrop {
+	position:fixed;
+	background-color: #808080;
+	opacity:.8;
+	height:0px;
+	left:0px;
+	right:0px;
+	z-index:1;
+
+}

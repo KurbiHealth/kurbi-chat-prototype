@@ -38,7 +38,6 @@ module.exports = function(io,express,BASEURL,PORT,db){
 	var roomVars = {};					//will hold the user variables that are detected during chat.
 	var BOT_WAIT_TIME = 15000; 			//how long a bot will wait after a client has disconnected, before leaving the room.			
 
-	var winston 				= require('winston');
 
 	function clearRooms(){
 
@@ -53,7 +52,7 @@ module.exports = function(io,express,BASEURL,PORT,db){
 					}, true);
 		});
 		emptyRooms.forEach((room) => {
-			rooms[room].forEach(client => {	if(client.connected) client.disconnect(); });
+			if(rooms && rooms[room]) rooms[room].forEach(client => {	if(client.connected) client.disconnect(); });
 			delete rooms[room];
 			delete roomVars[room];
 			// delete userRecords[room];

@@ -13,11 +13,9 @@ function getBotDialog(query){
 	// 	delete query.owner;
 	// }
 	return new Promise(function(resolve,reject){
-		
   		db.Object('botdialog').get(query,function(err,doc){
   			if(err) reject(err);
   			else{
-  				
   				doc = doc.data[0];
   				if(doc) {
   					_unpack(doc);
@@ -41,26 +39,45 @@ function createBotDialog(input){
 			version: input.version,
 			qcode: input.qcode
 		};
-		
+
+		//stamplay stores the message on a 'stuff' object
 		delete input.owner;
 		delete input.name;
 		delete input.version;
 		delete input.qcode;
 
-		data.stuff = input;
 		
-		db.Object('botdialog').save(data,function(err,doc){
+		db.Object('botdialog').get(data, function(err,docs){
 			if(err) reject(err);
 			else{
-				
-				doc = doc.data[0];
-				_unpack(doc);
-				resolve(doc);
+				data.stuff = input;
+				if(docs.data.length == 0){
+					db.Object('botdialog').save(data,function(err,doc){
+						if(err) reject(err);
+						else{
+							_unpack(doc);
+							resolve(doc);
+						}
+					});
+				} else {
+
+					db.Object('botdialog').update(docs.data[0]._id, data, function(err, doc){
+						if(err) reject(err);
+						else{
+							_unpack(doc);
+							resolve(doc);
+						}
+					});
+
+				}
+
 			}
 		});
 
+
 	});
 }
+
 
 function _unpack(input){
 	if(input.stuff){

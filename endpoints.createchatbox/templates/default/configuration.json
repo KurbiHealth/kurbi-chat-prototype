@@ -1,0 +1,22 @@
+{
+
+	"hbs":{
+		"headline" 					:"debug mode",
+		"icon_url" 					:"#SERVER_URL/img/icons/juggernaut.png",
+		"icon_urlb"					:"#SERVER_URL/img/icons/juggernaut.png",
+		"server_close_button" 		:"#SERVER_URL/img/icons/button_close.png"
+		},
+
+	"less":{
+		"headerColor" 				:"#0088ff"		
+	},
+	"js":{
+		"#BANNER_ICON_URL"			:"#SERVER_URL/img/icons/juggernaut.png",
+		"#BANNER_HEADER"			:"Madison Area Wellness Collective",
+		"#BANNER_QUESTION"			:"Are you looking for something specific? Maybe we can help!",
+		"#BANNER_YES"				:"Sure!",
+		"#BANNER_NO"				:"No Thanks"
+	}
+	
+
+}

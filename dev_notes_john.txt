@@ -138,7 +138,7 @@ Stamplay.Object.get -- needs the fields to be URIencoded to remove white space.
 
 To Do:
 Document Creation
-Better dev logging.
+Session logs in separate files
 
 Provider app: this needs to be able to:
 create chat boxes
@@ -155,3 +155,4 @@ Needs to be built!
 DONE:
 Error Logging? (stamplay endpoint) 
 Stamplay History not working.
+Better dev logging.

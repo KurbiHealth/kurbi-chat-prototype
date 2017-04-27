@@ -1,0 +1,38 @@
+<div>
+<style type="text/css">
+.kurbi-qttf-grandparent{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+}
+.kurbi-qttf-parent {
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	flex-wrap:wrap;
+	width:100%;
+}
+.kurbi-qttf-icon {
+	width:60px;
+	margin: 10px;
+	cursor:pointer;
+}
+</style>
+
+<div class='kurbi-qttf-grandparent'>
+	<img src="#SMALL_IMAGE_URL" onload="
+	kurbi.attachClickHandler['#pickle']('qttf', function(data, chatbox){
+		localStorage.setItem('patient_icon', data.url);	
+		chatbox.sendMessage(data.message);
+	});
+	this.parentNode.removeChild(this);
+	"/>
+	<div class='kurbi-qttf-parent'>
+ 		{{#each responses}}
+ 			<img class='kurbi-qttf-icon' onclick="kurbi.click['#pickle']('qttf', {{json this}});" src="{{this.url}}"></img>
+ 		{{/each}}
+	</div><!-- /.kurbi-qttf-parent -->
+</div><!-- /.kurbi-qttf-grandparent -->
+
+</div><!-- /BEGIN DIV -->

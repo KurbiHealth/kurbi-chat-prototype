@@ -1,0 +1,67 @@
+{{#if self}}
+
+<div style="padding:40px 20px 0 20px;display:block;">
+
+
+<style type="text/css">
+	.kurbi-aqetrt-parent{
+		display:flex;
+		flex-direction:row;
+		justify-content:flex-end;
+		align-items:center;
+		width:100%;
+	}
+	.kurbi-aqetrt-patient-icon {
+		flex-grow:0;
+		margin-bottom: 10px;
+		width:auto;
+		height:45px;
+	}
+	.kurbi-aqetrt-text{
+		flex-grow:0;
+		padding:12px 15px; 
+		font-size:15px;
+		color:#ffffff;
+		line-height: 1.6;
+		background-color: #279cd6;
+		min-width: 330px;
+		overflow: auto;
+	}
+</style>
+
+	<div class="kurbi-aqetrt-parent">
+		<div>
+			<img class="kurbi-aqetrt-patient-icon" src="#SMALL_IMAGE_URL" onload="this.onload=null; this.src=kurbi.getPatientIcon();"/>
+			<div class="kurbi-aqetrt-text">{{text}}</div>
+		</div>
+	</div>
+
+</div>
+
+
+{{else}}
+
+
+
+<div style="padding:40px 20px 0 20px;display:block;">
+
+	<style type="text/css">
+		.kurbi-qetrt-displayName {
+			font-weight:bold;
+			font-size: 13px;
+			margin-bottom:10px;
+			color:#444444;
+		}
+		.kurbi-qetrt-text{
+			font-size:15px;
+			line-height: 1.6;
+			color: #222222;
+		}
+	</style>
+
+	<div class="kurbi-qetrt-displayName">{{displayName}}</div>
+	<div class="kurbi-qetrt-text">{{text}}</div>
+
+</div>
+
+{{/if}}

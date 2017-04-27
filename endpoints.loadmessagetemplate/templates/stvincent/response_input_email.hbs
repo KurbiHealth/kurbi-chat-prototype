@@ -1,0 +1,58 @@
+<div>
+<style type="text/css">
+.kurbi-emma-input {
+	padding: 5px;
+	max-width: 100%;
+	width:100%;
+	height:40px;
+	font-size:14px;
+	color:#888888;
+	border:none;
+}
+.kurbi-emma-input:focus {
+	outline: #279cd6 solid thin;
+}
+.kurbi-emma-parent {
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	flex-wrap:wrap;
+	width:100%;
+}
+.kurbi-emma-child {
+	margin: 10px auto 0 auto;
+	padding: 8px 10px;
+	width: 90%;
+	font-size: 14px;
+	color: #ffffff;
+	background-color: #279cd6;
+	text-align: center;
+	cursor:pointer;
+}
+.kurbi-emma-icon {
+	height:45px;
+	width:auto;
+	margin-right:8px;
+	margin-top:7px;
+	margin-bottom:8px;
+}
+</style>
+
+	<img src="#SMALL_IMAGE_URL" onload="
+	var input = this.parentNode.getElementsByClassName('kurbi-emma-input')[0];
+	kurbi.attachClickHandler['#pickle']('emma', function(data, chatbox){
+		data.body.text = input.value;
+		chatbox.sendMessage(data);
+	});
+	this.parentNode.removeChild(this);
+	"/>
+
+	<div>
+		<input class='kurbi-emma-input' type="email" placeholder="Email address" />
+		<div class='kurbi-emma-parent'>
+	 		<div class='kurbi-emma-child' onclick="kurbi.click['#pickle']('emma', {{json responses.message}})">{{responses.buttonText}}</div><!-- /.kurbi-emma-child -->
+	 		{{!-- <img class="kurbi-emma-icon" src="#SMALL_IMAGE_URL" onload="this.onload=null; this.src=kurbi.getPatientIcon();"/> --}}
+		</div><!-- /.kurbi-emma-parent -->
+	</div>
+</div>

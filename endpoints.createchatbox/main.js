@@ -2,19 +2,18 @@ var UglifyJS 						= require('uglify-js');
 var Handlebars 						= require('handlebars');
 var Less 							= require('less');
 var fs 								= require('fs');
+var CryptoJS 						= require('crypto-js');
+var Formidable 						= require('formidable');
 
 module.exports = function(router,db,BASEURL,PORT,ENV){
 
 	var URL = BASEURL;
-	if(PORT && ENV != 'prod') URL += ":" + PORT;
+	if(PORT && ENV != 'prod' && PORT != 80) URL += ":" + PORT;
 
 	var globFunc = require('../sharedFunctions/chatCreateFunctions')();
 
 	var ICONS = [];						
-	var less,
-		hbs,
-		js,
-		snippet;
+
 
 // -------------------------------------------
 // ROUTE DEFINITION
@@ -26,9 +25,9 @@ module.exports = function(router,db,BASEURL,PORT,ENV){
 	var _getUserChat = (ENV=='dev') ? debugGetUserChat : getChatboxes;
 	router
 		.route('/chatbox')
-			.get(_getUserChat)
-			.post(createChatbox)
-			.put(updateChatbox);
+			.get(_getUserChat);
+			// .post(createChatbox)  			//under development... not currently used in prod
+			// .put(updateChatbox);
 	log('\t/chatbox');
 	router
 		.route('/style')
@@ -53,7 +52,132 @@ module.exports = function(router,db,BASEURL,PORT,ENV){
 			.post(createBotFromFile);
 	log('\t/convert');
 
+	router
+		.route('/providers')
+			.get(getProviders)
+			.post(createProvider);
+	log('\t/providers');
+
 	
+	///routes for the preview
+	router
+		.route('/preview_chat_box')
+			.get(debugGetUserChat);
+	log('\t/preview_chat_box');
+	router
+		.route('/bot_files')
+		.get((req,res)=>{
+				getBotFiles().then((files)=>{ return res.json(files)});
+			})
+		.post(saveBotTemplate);
+	log('\t/bot_files');
+	router
+		.route('/bot_from_file')
+			.get(getBotFromFile);
+	log('\t/bot_from_file');
+	router
+		.route('/simple_publish')
+			.get(simplePublish);
+	
+function decode(str){
+	var bytes = CryptoJS.AES.decrypt(decodeURIComponent(str),"voltron");
+	try{
+		var newConfig = bytes.toString(CryptoJS.enc.Utf8);
+		newConfig = JSON.parse(newConfig);	
+	} catch(e){
+		//dont do anything
+	}
+	return newConfig || {};
+}
+
+function simplePublish(req,res){
+	//req.query
+	newConfig = decode(req.query.config);
+	var providerEmail = newConfig.provider;
+	var botTemplate = newConfig.bot;
+	var organization = newConfig.organization;
+	var provider = null;
+	var template = null;
+	var chatbox = null;
+	if(providerEmail && botTemplate)
+	db.getProvider({email:providerEmail}).then(
+	(doc)=>{
+		provider = doc;
+		if(!provider.chatboxes) provider.chatboxes = [];
+		if(!provider.chatboxes[0]) provider.chatboxes = [];
+		return loadStyleTemplate(newConfig, provider)
+	}).then(
+		db.createChatStyle	
+	).then(
+	(doc)=>{
+		template = doc;
+		var responses = require('../endpoints.chatbot/'+botTemplate)(organization,URL);
+		var messages = [];
+		for(var key in responses) {
+
+			var message = responses[key];
+			message.qcode = key;
+			message.owner = provider._id;
+			message.name = botTemplate;
+			message.version = "0.0.1";
+			messages.push(db.createBotDialog(message));
+			
+		}
+			
+		return Promise.all(messages);
+	}).then(
+	()=>{
+		var bot = {};
+	    bot.owner = provider._id;
+	    bot.name = botTemplate;
+
+		return db.setChatBot(bot);
+	}).then(
+	(doc)=>{
+		if(provider.chatboxes.length > 0) return db.getChatBox({_id:provider.chatboxes[0]});
+		else {
+				chatbox = {};
+
+			    chatbox.owner 			= provider._id;
+				chatbox.allowedPages 	= [];
+				chatbox.rule 			= "random";
+				return db.createChatBox(chatbox);
+		}
+	}).then(
+	(doc)=>{
+			chatbox = doc;
+			if(!chatbox){
+				provider.chatboxes = [];
+				chatbox = {};
+
+			    chatbox.owner 			= provider._id;
+				chatbox.allowedPages 	= [];
+				chatbox.rule 			= "random";
+				return db.createChatBox(chatbox).then((doc)=>{
+					chatbox = doc;
+					return globFunc.loadSnippet(chatbox._id,URL);
+				});
+			}else 
+				return globFunc.loadSnippet(chatbox._id,URL);
+			
+	}).then(
+	(doc)=>{
+			chatbox.styles 			= [template._id];
+			chatbox.bots 			= [botTemplate];
+			chatbox.snippet 		= doc;
+			return db.setChatBox(chatbox);
+	}).then(
+	()=>{
+		provider.chatboxes = [chatbox._id];
+		return db.setProvider(provider);
+	}).then(()=>{
+ 		res.status(200).json({snippet:chatbox.snippet});
+	}).catch((err)=>{
+		console.log('error', err);
+		res.status(500).json(err);
+	})
+	
+}
 
 function deleteBot(req,res){
 	// log("deleteBot()", {body:req.body,user:req.user});
@@ -63,9 +187,56 @@ function deleteBot(req,res){
 
 }
 
+function getProviders(req,res){
+	var newConfig = decode(req.query.config);
+	if(newConfig.allowed){
+	db.getProviders({}).then(function(providers){
+		res.json(providers);
+	});
+	} else res.json({data:[]});
+}
+
+function createProvider(req,res){
+	res.json({okay:'okay'});
+}
+function saveBotTemplate(req,res){
+
+	var form = new Formidable.IncomingForm();
+	form.uploadDir = __dirname + '/../incoming.bots';
+	form.keepExtensions = true;
+
+	form.parse(req, function(err,fields,files){
+		if(err) return res.status('400').json({err:"bad file"});
+		var newConfig = decode(fields.config);
+		if(newConfig.allowed){
+			fs.rename(files.bot.path, __dirname+'/../endpoints.chatbot/' + files.bot.name);	
+		}else{
+			fs.unlink(files.bot.path);
+		}
+		
+		res.json({okay:'okay'});	
+	})
+
+	
+}
+function getBotFiles(){
+	return new Promise(function(resolve,reject){
+		fs.readdir('./endpoints.chatbot', (err,files) => {
+			if(err) reject(err);
+			else resolve(files);
+		});
+	});
+}
+
+function getBotFromFile(req,res){
+	
+	var botname = '../endpoints.chatbot/'+req.query.file;
+	var bot = require(botname)('Kurbi9000',URL);
+	res.json(bot);
+}
 function createBotFromFile(req,res){
 	var serverURL = BASEURL;
-	if(PORT && PORT != 80) serverURL = BASEURL + ":" + PORT;
+	serverURL = BASEURL
 
 	if(!req.body.fileName || req.body.fileName == '')
 		var botFileName = '../endpoints.chatbot/demoBot.js';
@@ -107,14 +278,6 @@ function createBotFromFile(req,res){
 
 // -------------------------------------------
 
-	new Promise(loadTemplates).then(function(templates){
-
-		less = templates.less;
-		hbs = templates.hbs;
-		js = templates.js;
-		snippet = templates.snippet;
-
-	});
 
 	populateIconList(BASEURL);
 
@@ -126,46 +289,42 @@ function getStyles(req,res){
 }
 
 function createStyle(req,res){
+	var newConfig = decode(req.query.config);
+	loadStyleTemplate(newConfig, req.user).then(db.setChatStyle(style)).then((doc) => res.json(doc));
+}
 
-		if(req.body.avatar && req.body.avatar != '') var userAvatar = req.body.avatar;
-			else var userAvatar = '/backend/icons/PNG/mawc.png'; // https://lh6.ggpht.com/HZFQUEzeti5NttBAuyzCM-p6BjEQCZk5fq4ryopFFYvy6qPp8zMFzVHk1IdzWNLr4X7M=w300
-		if(req.body.headline && req.body.headline != '') var userHeadline = req.body.headline;
-			else var userHeadline = 'Welcome';
+function loadStyleTemplate(newConfig, provider){
 
-		var hbsData = {
-			headline: userHeadline,
-			icon_url: userAvatar,
-			icon_urlb: 'http://chat.gokurbi.com/backend/icons/PNG/mawc.png',
-			server_url: URL,
-			server_close_button: URL + '/img/icons/close-white.png',
-			server_dots_button: URL + '/img/icons/dots-white.png',
-			// server_close_button: URL + '/img/icons/button_close.png',
-		}
-console.log('hbsData',hbsData);
-		var lessData = {};
+			var config = {};
+			if(newConfig) {
+				config.template = newConfig.template;
+				config.hbs = newConfig.hbs;
+				config.js = newConfig.js;
+				config.less = newConfig.less;
+			}
 
-		if(req.body.color && req.body.color != '') 
-			lessData.headerColor = req.body.color;
+			if(!config.template) config.template = 'floating';
+			if(!config.js) config.js = {};
+			if(!config.hbs) config.hbs = {};
+			if(!config.less) config.less = {};
 
-		var response = {};
-		var promises = [];
+		return globFunc.loadTemplates(config).then((template)=>{
 
-		var configuration = { 
-							hbsData:hbsData,
-							lessData:lessData,
-							};
+			var response = {};
+			var promises = [];
 
-		promises.push(compileHBS(hbsData,hbs));
-		promises.push(compileLESS(lessData,less));
-	
-		Promise.all(promises).then(function(results){	
-			var style = {};
-		  	style.js = js.replace(/#SERVER_URL/g,URL);
-		   	style.html = results[0].replace(/#SERVER_URL/g,URL);
-			style.css = results[1];
-			style.owner = req.user._id;
-			style.configuration = configuration;
-			db.setChatStyle(style).then((doc) => res.json(doc));
+			promises.push(globFunc.compileHBS(template.configuration.hbs,template.hbs));
+			promises.push(globFunc.compileLESS(template.configuration.less,template.less));	
+
+			return Promise.all(promises).then(function(results){	
+						var style = {};
+					  	style.js = template.js.replace(/#SERVER_URL/g,URL);
+					   	style.html = results[0].replace(/#SERVER_URL/g,URL);
+						style.css = results[1];
+						if(provider) style.owner = provider._id;
+						style.configuration = template.configuration;
+						return style;
+					});
 		});
 }
 
@@ -208,8 +367,6 @@ function createBot(req,res){
 }
 
 function getChatboxes(req,res){
-
-
 	var key = req.query.key;
 	if(!key) db.getChatBoxes({owner:req.user._id}).then((docs) => {return res.json(docs)});
 	else db.getChatBox({_id:key}).then((doc) => {
@@ -224,39 +381,11 @@ function getChatboxes(req,res){
 function debugGetUserChat(req,res){
 		var key = req.query.key;
 		if(!key) db.getChatBoxes({owner:req.user._id}).then((docs) => {return res.json(docs)});
-		else{
-		//this is to force it to recompile the html/css every time
-		var lTemps = new Promise(globFunc.loadTemplates);
-		var url = BASEURL;
-		if(PORT) url += ":" + PORT; 
-		lTemps.then(function(template){
-			var hbsData = {
-				headline: 'debug mode',
-				icon_urlb: url + '/img/icons/juggernaut.png',
-				server_url: url,
-				// server_close_button: url + '/img/icons/button_close.png'
-				server_close_button: url + '/img/icons/close-white.png',
-				server_dots_button: url + '/img/icons/dots-white.png'
-
-			}
-			var lessData = {
-				
-			}
-
-			var response = {};
-			var promises = [];
-			promises.push(globFunc.compileHBS(hbsData,template.hbs));
-			promises.push(globFunc.compileLESS(lessData,template.less));
-
-			Promise.all(promises).then(function(results){
-
-				response.js = template.js.replace(/#SERVER_URL/g,url);
-				response.css = results[1];
-				response.html = results[0].replace(/#SERVER_URL/g,url);
-				return res.json(response);
-			
-			});
-		});
+		if(key=='preview'){
+		  var newConfig = decode(req.query.config);
+		  loadStyleTemplate(newConfig).then((doc) => res.json(doc));
+		}else {
+			return getChatboxes(req,res);
 		}
 	}
 
@@ -264,19 +393,21 @@ function debugGetUserChat(req,res){
 function createChatbox(req,res){
 
 	var chatbox = {};
-console.log('req.user',req.user);
+
     chatbox.owner 			= req.user._id;
 	chatbox.styles 			= [];
 	chatbox.bots 			= [];
 	chatbox.allowedPages 	= [];
 	chatbox.rule 			= "random";
-
+	var key;
 	db.createChatBox(chatbox).then(function(doc){
-		var key = doc._id;
-		console.log('new chatbox id',key);
-		doc.snippet = createSnippet(key);
-		db.setChatBox(doc).then((box) => {console.log(doc)});
-	});
+		chatbox = doc;
+		return globFunc.loadSnippet(doc._id, URL);
+		
+	}).then( (snippet) => {
+		chatbox.snippet = snippet;
+		return db.setChatBox(doc);
+	}).then((box) => {console.log(doc)});;
 	
 
 	return res.json({okay:"okay"});
@@ -285,8 +416,6 @@ console.log('req.user',req.user);
 	function updateChatbox(req,res){
 
 		var chatbox = {};
-console.log('req.body',typeof req.body,req.body);
-console.log('req.user',req.user);
 		if(req.user)
 			var user = req.user;
 		else
@@ -298,152 +427,11 @@ console.log('req.user',req.user);
 		chatbox.allowedPages 	= req.body.allowedPages ? req.body.allowedPages : '';
 		chatbox.documents		= req.body.documents ? req.body.documents : '';
 		chatbox.rule 			= req.body.rule ? req.body.rule : '';	
-console.log('chatbox obj',chatbox);
+
 		db.setChatBox(chatbox).then(function(doc){
-			// if(typeof doc == 'string'){ doc = JSON.parse(doc); }
-// console.log('---doc',doc);
-			// if(doc.error)
-			// 	return res.json({error:doc.error});
-			// else
 			return res.json({okay:doc});
 		});
 
-	}
-
-
-/// General Work Flow  (createSnippet)
-//   create snippet takes the custom user preferences
-//   and merges them with handlebar templates (hbs) and 
-//   less templates to generate final 
-//   html and css files.   (compileHBS/ compileLESS)
-
-//   these html, css, and the template js files are then 
-//   converted into strings and stored in the database on
-//   chat a new chat entity.
-//   (chat.save)
-//
-//   a snippet template is then compiled, replacing the word
-//   #BANANA with the chat entity id.  This snippet can then
-//   be pasted into a webpage to call our database 
-//   and download the previously referenced html/css/js files
-//   as strings. 
-//
-//   the snippet is uglified, so that it will take up less space
-//   and be harder to read, then returned to the backend to be displayed
-//   to the user.      
-
-	function createSnippet(id){
-		var customSnippet = snippet.replace('#BANANA', id).replace(/#SERVER_URL/g,URL);
-		var uglySnippet = UglifyJS.minify(customSnippet, {fromString: true});
-		return uglySnippet.code;	
-
-	}
-
-
-	function loadTemplates(resolve,reject){
-		//this just loads the templates as strings using: loadHBS, loadLESS, loadJS, and loadSnippet.
-		//called on server boot.  
-
-		var promises = [];
-		promises.push(new Promise(loadHBS('./endpoints.createchatbox/templates/html/chat_template.hbs')));
-		promises.push(new Promise(loadLESS));
-		promises.push(new Promise(loadJS));
-		promises.push(new Promise(loadSnippet));
-
-		Promise.all(promises).then(function(results){
-			var template = {};
-			template.hbs = results[0];
-			template.less = {
-									vars:results[1][0],
-									file:results[1][1],
-							};
-			template.js = results[2];
-			template.snippet = results[3];
-			
-			resolve(template);
-
-		});	
-	}
-
-
-//worker functions for createSnippet --------------------------
-
-	function compileHBS(data,hbs){
-		return new Promise(function(resolve,reject){
-console.log('data in compile',data);
-			var html = Handlebars.compile(hbs)(data);
-			resolve(html);
-		});
-	}
-
-	function compileLESS(data,less){
-		//because of the cascading nature of css
-		//the less file had to be broken into two pieces
-		//a template holding default css variables
-		//which is loaded first.
-		//then the user preferences can overwrite those.
-		//then they can be applied to the 
-		//chat_template.less
-
-		var dataString = less.vars;
-		return new Promise(function(resolve,reject){
-			for(var key in data){
-				dataString += '@'+key +":"+data[key] +';';
-			}
-			dataString += less.file;
-			Less.render(dataString, function(err,output){
-				if(err) return console.log(err);
-				resolve(output.css);
-			})
-
-		});
-
-	}
-// DELETE
-	function loadHBS(filename){
-
-		return function(resolve,reject){
-			fs.readFile(filename, 'utf8',function(err,data){
-				if(err) return console.log(err);
-				resolve(data);
-			});
-
-		}
-	}
-// DELETE
-	function loadLESS(resolve,reject){
-			Promise.all([new Promise(loadDefaultLessVariables), new Promise(loadDefaultBaseLess)])
-			.then(function(results){
-				resolve(results);
-			});
-	}
-
-	function loadDefaultLessVariables(resolve,reject){
-		fs.readFile('./endpoints.createchatbox/templates/css/default_variables.less', 'utf8',function(err,data){
-				if(err) return console.log(err);
-					resolve(data);	
-			});	
-	}
-
-	function loadDefaultBaseLess(resolve,reject){
-			fs.readFile('./endpoints.createchatbox/templates/css/chat_template.less', 'utf8',function(err,data){
-				if(err) return console.log(err);
-					resolve(data);	
-			});	
-	}
-// DELETE
-	function loadJS(resolve,reject){
-			fs.readFile('./endpoints.createchatbox/templates/javascript/chat_template.js', 'utf8',function(err,data){
-				if(err) return console.log(err);
-					resolve(data);	
-			});			
-	}
-// DELETE
-	function loadSnippet(resolve,reject){
-			fs.readFile('./endpoints.createchatbox/templates/javascript/snippet_template.js', 'utf8',function(err,data){
-				if(err) return console.log(err);
-					resolve(data);	
-			});			
 	}
 
 

@@ -92,6 +92,7 @@ io.use(session);
 
 app.use(bodyParser.urlencoded({ extended: true, parameterLimit:10000, limit:'5mb'}));
 app.use(bodyParser.json({parameterLimit:10000, limit:'5mb'}));
+app.options('/template', cors());
 app.use(cors());
 
 
@@ -118,6 +119,7 @@ var devUser = function(req,res,next){
 	// 	req.user = doc;
 	// 	next();
 	// });
+if(DATASOURCE == "stamplay")
 	req.user = {
       "_id": "57699528f4924a7f641e4950",
       "email": "matteckman@gmail.com",
@@ -142,6 +144,14 @@ var devUser = function(req,res,next){
       "profileImg": "",
       "id": "57699528f4924a7f641e4950"
     };
+if(DATASOURCE="mongodb")
+	req.user = {
+		"_id":"58041b251769e0406744deff",
+		"enabled":"true",
+		"role":"admin",
+		"email":"john@foolhardysoftworks.com",
+	}
+
     next();
 	
 }
@@ -230,6 +240,9 @@ log('./demo ');
 
 app.use('/builder', express.static('apps.builder'));
 log('./builder ');
+
+app.use('/preview', express.static('apps.preview'));
+log('./preview ');
 
 /**
  * App to build bot conversations
