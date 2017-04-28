@@ -10443,6 +10443,7 @@
 				 meta: {"query":{"config":"U2FsdGVkX19C%2FSK7a1HhrSx5oNhSRpkpEcGHtoUHcAvBYwxSj%2FoUHFoi0xreydKo"}}
 1493306187862	 GET/bot_from_file
 				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+<<<<<<< HEAD
 1493307666452	 GET/bot_from_file
 				 meta: {"query":{"file":"demoBot-stv-2.js"}}
 1493307738555	 GET/simple_publish
@@ -10636,3 +10637,1941 @@
 1493384594396	 GET/css/app.css
 1493384594398	 GET/js/app.js
 1493384594464	 GET/js/app.js
+=======
+
+
+1493308962444	 restart server
+1493308962496	 connecting data service
+1493308962581	 data service connected
+1493308962581	 using hardcoded user, devUser()
+1493308962581	 
+
+1493308962581	 connecting main routes
+1493308963600	 
+
+1493308963600	 creating chatbox routes
+1493308963600	 	/chatbox
+1493308963601	 	/style
+1493308963601	 	/bot
+1493308963601	 	/deleteBot
+1493308963601	 	/convert
+1493308963601	 	/providers
+1493308963601	 	/preview_chat_box
+1493308963601	 	/bot_files
+1493308963601	 	/bot_from_file
+1493308963601	 ./endpoints.createchatbox 
+1493308963604	 ./endpoints.loadmessagetemplate 
+1493308963890	 ./endpoints.conversate/operator 
+1493308963892	 ./endpoints.receivecontactform 
+1493308963894	 ./endpoints.log 
+1493308963894	 
+
+1493308963894	 connecting static apps
+1493308963895	 ./backend 
+1493308963895	 ./demo 
+1493308963895	 ./builder 
+1493308963895	 ./preview 
+1493308963895	 
+
+1493308963895	 Error Handling 
+1493308963895	 
+
+1493308963895	 SERVER READY 
+
+1493308964348	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493308966822	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493308969821	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493308972822	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493308975825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493308978136	 GET/favicon.ico
+1493308978821	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493308981821	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493308983708	 GET/bot_files
+1493308983716	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2B8Ao8AX37fEGkYiinkw9xB75HINUobWolFPetpJZMPiHVhiavF%2FU1e"}}
+1493308983734	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493308984821	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493308987810	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493308990820	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493308993820	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493308996841	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493308999830	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309002826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309005795	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309008811	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309011832	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309014562	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493309014813	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309017099	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX18yUy14pqM7A87ZDWA1bo2uaKT4G2OGYj4+3csHmzBHczbIEx8UeUkuGlrIlh500zTwBN6x34F7HJ7FGIlQOdUkWQ7QrpoOFGGYfuqYvkwhkQ0SXf9z+E3n6utd5/pV1oJApez2M1dAiEdSIjcd5cKJ0I8/K8/JWjAU3MYQbtBRDK2wQOy3jg3JoFj6wwmllIHvSgLJygfKmA==","key":"preview"}}
+1493309017811	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309020794	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493309020796	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493309020930	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309023807	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309026172	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493309026172	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493309026812	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309027692	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493309027733	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493309027733	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+1493309029817	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309032813	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309035803	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309038852	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309041797	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309044832	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309047817	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309050818	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309053816	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309056812	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309059817	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309062807	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309065797	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309068813	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309071812	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309074796	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309077812	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309081126	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309083812	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309086813	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309089796	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309092806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309095826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309098823	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309101947	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309102045	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.link message"}}
+1493309104818	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309107811	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309110831	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309113812	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309116823	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309119811	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309122822	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309125811	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309128811	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309131811	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309134812	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309137821	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309140817	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309143812	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309146812	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309149823	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309152823	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309155817	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309158841	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309161831	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309164812	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309167822	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309170812	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309173801	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309176826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309179806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309182827	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309185827	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309188806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309190724	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.event message"}}
+1493309191806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309194806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309197806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309200806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309200885	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.end message"}}
+1493309200895	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response end"}}
+1493309203807	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309206808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309209397	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+7Ut4DMoDF1K3s85lPaGRyYSaIzcbvrU5V5jvQtHbWNJ6R/HBqCcCBGYWv64/tRr+hXcsrBl/QHu/hRuLkMqD960sTFuDuBAQX56H/hu71EDQB+9ngN55J9AO9L5jbx22BVQ+SisaZOJTXMKfQ6KMpoCP8ayL30RotSGElNytmYCMPKOxVIvAEbCg2qY/HtUns7qdPXg5tsQ==","key":"preview"}}
+1493309209807	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309212808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309213049	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493309213050	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493309214816	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309217806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309220807	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309223816	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309226807	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309229806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309232826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309235806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309238806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309241826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309244807	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309247829	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309250806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309253806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309256827	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309259806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309262816	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309265816	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309268818	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309271806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309274805	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309277816	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309280805	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309283815	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309286805	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309289806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309292805	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309295827	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309298817	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309301820	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309304821	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309308405	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309310841	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309313840	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309316825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309319811	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309322810	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309325850	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309328850	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309331851	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309334851	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309337811	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309340850	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309343851	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309346851	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309349811	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309352810	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309355850	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309358811	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309361852	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309364851	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309367842	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309370842	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309373840	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309376811	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309379842	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309382841	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309385840	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309388851	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309391851	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309394841	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309397826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309400826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309403821	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309406825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309409819	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309412809	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309414836	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309417806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309420796	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309423816	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309426816	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309429796	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309432796	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309434805	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309437805	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309440813	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309443825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309446815	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309449815	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309452809	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309455806	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309458797	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309461797	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309464817	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309467817	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309470811	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309473831	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309522814	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309525817	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309528846	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309531845	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309534909	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309537844	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309540844	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309543826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309546874	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309549829	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309552820	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309555819	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309558829	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309561820	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309564838	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309567810	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309570810	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309573824	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309576831	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309579811	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309582826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309585816	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309588860	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309591815	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309594815	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309597855	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309600845	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309603817	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309606836	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309609821	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309612819	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309615821	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309618819	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309621821	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309624820	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309627821	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309630820	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309633820	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309636859	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309639829	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309642822	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309644822	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309647820	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309650819	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309653824	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309656821	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309659800	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309662820	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309665829	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309668819	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309671824	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309674826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309677825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309680826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309683800	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309686825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309689825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309692825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309695825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309698865	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309701825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309704825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309707825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309710825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309713826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309716826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309719795	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309722825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309725826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309728826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309731825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309734825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309737835	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309740830	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309743850	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309746843	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309749811	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309752796	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309754825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309757825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309760785	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309763825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309766824	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309769824	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309772927	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309775826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309778825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309781824	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309784826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309787833	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309790864	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309793825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309796833	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309799848	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309802826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309804829	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309807829	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309810825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309813828	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309816828	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309819831	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309822832	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309826400	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309829524	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309832285	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309834860	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309837823	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309840837	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309843819	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309846835	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309849874	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309852840	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309855824	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309858840	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309861825	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309864836	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309867824	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309870841	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309873830	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309876841	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309879859	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309882824	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309885827	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309888826	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309891829	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309895026	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309897802	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309900837	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309903851	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309906833	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309909848	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309912832	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309915845	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309918831	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309921845	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309924832	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309927846	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309930831	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309933846	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309936831	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309939801	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309942832	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309945847	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309948833	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309951862	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309954832	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309957848	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309960820	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309963818	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309966830	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309969809	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309972819	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309975808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309978819	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309981819	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309984828	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309987815	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309990809	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309994259	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309996809	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493309999809	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310002808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310005294	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310007794	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310010809	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310013814	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310016818	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310019818	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310022797	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310025828	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310028808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310031808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310034794	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310037809	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310040810	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310043828	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310046808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310049807	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310052808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310055808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310058812	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310061788	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310064788	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310067808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310070798	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310073819	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310076808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310079828	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310082807	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310085793	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310088817	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310091815	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310094814	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310097818	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310100819	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310103824	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310106833	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310109819	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310112829	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310114843	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310117842	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310120840	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310123841	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310126851	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310129843	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310132808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310135845	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310138805	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310141850	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310144852	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310147850	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310150845	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310153847	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310156850	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310159845	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310162860	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310165829	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310168876	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310171894	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310174874	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310177888	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310180869	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310183887	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310186878	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310189823	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310192833	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310195824	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310198833	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310201822	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310204837	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310207873	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310210838	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310213858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310216832	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310219814	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310222827	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310225813	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310228828	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310231954	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310234928	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310237832	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310240942	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310244087	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310246862	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310250284	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310252913	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310255049	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310257828	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310260834	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310263833	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310267063	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310270378	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310272438	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310274867	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310277973	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310280912	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310284113	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310286948	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310290314	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310292863	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310296267	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310298908	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310301802	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310304823	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310307804	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310310843	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310313803	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310316833	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310319833	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310322838	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310325805	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310328837	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310331808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310334822	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310337824	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310340943	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310344289	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310346827	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310349852	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310352824	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310355864	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310358835	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310361827	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310364827	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310367827	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310370849	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310373804	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310376892	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310379822	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310382822	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310385803	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310388824	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310391829	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310394823	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310397808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310400822	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310403833	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310406822	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310409829	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310412823	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310414813	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310417857	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310420873	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310423818	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310426812	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310429843	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310432851	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310435842	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310438850	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310441842	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310444841	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310447842	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310450837	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310453828	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310456833	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310459808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310462923	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310464893	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310467822	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310470808	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310473803	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310476822	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310479863	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310482807	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310484817	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310487848	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310490822	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310493819	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310496838	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310499933	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310502868	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310505980	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310508858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310511864	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310514847	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310517919	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310521553	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310524858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310541368	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310541853	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310542408	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310542899	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310543382	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310544439	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310544898	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310546250	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310549019	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310551868	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310554869	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310557889	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310560858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310563889	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310566897	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310569862	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310572859	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310575898	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310578858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310581944	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310585023	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310588098	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310590898	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310593858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310596869	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310599898	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310602898	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310604879	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310607858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310610868	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310613859	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310616859	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310619873	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310622869	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310624858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310627942	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310631493	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310634064	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310636858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310639853	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310642979	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310645864	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310648848	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310651858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310654867	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310657902	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310660903	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310663933	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310666909	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310669879	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310672878	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310675878	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310689829	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310691424	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310692872	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310694343	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310695237	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310695937	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310696858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310697973	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310700868	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310703878	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310706862	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310709857	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310712904	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310730498	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310730667	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310730898	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310731177	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310731378	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310731722	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310732942	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310735868	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310738869	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310741908	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310744867	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310747858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310750858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310753885	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310756890	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310759895	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310762858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310764973	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310767918	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310770873	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310774066	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310777078	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310779898	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310782858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310785872	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310788858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310791858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310795093	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310797877	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310800878	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310803938	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310806922	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310809937	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310812878	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310816024	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310818887	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310821858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310825267	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310827898	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310830878	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310833858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310836880	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310839867	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310842908	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310844917	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310847878	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310850868	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310853877	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310856884	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310859878	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310862938	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310865901	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310868858	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310871856	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310874867	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310877857	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310881018	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310884158	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310886953	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310889918	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310892878	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310895997	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310898898	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310901917	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310904908	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310908149	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310910947	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310914659	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310916917	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310919898	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310922967	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310925106	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310928058	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310931342	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310936537	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310937861	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310940170	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310943177	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310945968	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310950543	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310951980	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310954952	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310958378	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310961172	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493310965178	 GET/driver
+				 meta: {"query":{"phone":"8187474518"}}
+1493319821714	 GET/favicon.ico
+1493319839735	 GET/bot_files
+1493319839740	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2BnZFWmvy7Xt87hMQK6SAV0hPS8sDuzIffM79AXCyeyjlaz7WsP%2FTU%2B"}}
+1493319839752	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493319853109	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493319874072	 GET/simple_publish
+				 meta: {"query":{"config":"U2FsdGVkX18%2FS%2BvryvU1NNKG0cfQicd18PWyBZAZtti%2Ff0c7RoCekdIgFLZK2IRhyaE0Vs0eOZtTNL5PSSNfcQIGPxcW3hGQH4GZmScAc6lZS6xDkmXzdM6j%2FHcuSTsrxuuyPJhN5cK4Y4XBZvQKQxlVh3sKzl8UikxxCpa%2BMBKb1s9pKyKZteuXHnAU8ZgGgPDcT2Wsrlud5OFUvLK5FF0dlaFn4D4pk5MICCkdwXftHv%2FPpulBcERkRZemisBx"}}
+1493319894745	 GET/chatbox
+				 meta: {"query":{"key":"590240c6b80c3dc25ade20eb"}}
+1493319901474	 SOCKET/register
+				 meta: {"key":"590240c6b80c3dc25ade20eb","sessionID":"zOX1KOxcsicDm002","url":"http://localhost:8080/demo/","icon":null,"useIo":true}
+1493319902079	 Creating Bot
+				 meta: {"sessionID":"ihqQUOc1jhw4X9d3"}
+1493319903039	 SOCKET/join room
+				 meta: {"room":"e98e0dbc551b683369a2a681a6cd77e5","source":"bot"}
+1493319903667	 SOCKET/message
+				 meta: {"_id":"590240c58eda41be5998f013","owner":"5902407f5d3da7232459a83d","name":"demoBot-stv-2.js","version":"0.0.1","qcode":"welcome","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-04-27T19:04:37.797Z","dt_create":"2017-04-27T19:04:37.797Z","__v":0,"id":"590240c58eda41be5998f013","message":{"type":"stvincent.welcome message","body":{"displayName":"St. Vincent Charity Medical Center","text":"The epidemic can end, but it begins with you.","image":"http://public.foolhardysoftworks.com:8180/img/stv/stv-logo.png","mainimage":"http://public.foolhardysoftworks.com:8180/img/stv/fst-main.png"}},"responses":{"type":"stvincent.response welcome","body":{"yes":{"text":"Let's talk about it","id":"begin","message":{"type":"stvincent.text message","qCode":null,"meta":"yes","body":{"text":"Let's talk about it"}}},"no":{"text":"I'd rather not","id":"cancel","message":{"type":"stvincent.text message","qCode":null,"meta":"no","body":{"text":"I'd rather not"}}}}}}
+1493319903676	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1493319903687	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1493319905250	 SOCKET/start
+				 meta: {"key":"590240c6b80c3dc25ade20eb","sessionID":"zOX1KOxcsicDm002","url":"http://localhost:8080/demo/","icon":null,"useIo":true}
+1493319905572	 SOCKET/message
+				 meta: {"_id":"590240c5024905d859175ce2","owner":"5902407f5d3da7232459a83d","name":"demoBot-stv-2.js","version":"0.0.1","qcode":"avatar","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-04-27T19:04:37.866Z","dt_create":"2017-04-27T19:04:37.866Z","__v":0,"id":"590240c5024905d859175ce2","message":{"type":"stvincent.text message","body":{"displayName":"St. Vincent Charity Medical Center","text":"Our chat is completely anonymous, so let's start by choosing an avatar you'd like to represent you."}},"responses":{"type":"stvincent.response list icons","body":[{"id":1,"message":{"body":{"image":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-1.png"},"meta":1,"qCode":"get youtube","type":"stvincent.image message"},"url":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-1.png"},{"id":2,"message":{"body":{"image":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-2.png"},"meta":2,"qCode":"get youtube","type":"stvincent.image message"},"url":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-2.png"},{"id":3,"message":{"body":{"image":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-3.png"},"meta":3,"qCode":"get youtube","type":"stvincent.image message"},"url":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-3.png"},{"id":4,"message":{"body":{"image":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-4.png"},"meta":4,"qCode":"get youtube","type":"stvincent.image message"},"url":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-4.png"},{"id":5,"message":{"body":{"image":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-5.png"},"meta":5,"qCode":"get youtube","type":"stvincent.image message"},"url":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-5.png"},{"id":6,"message":{"body":{"image":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-6.png"},"meta":6,"qCode":"get youtube","type":"stvincent.image message"},"url":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-6.png"},{"id":7,"message":{"body":{"image":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-7.png"},"meta":7,"qCode":"get youtube","type":"stvincent.image message"},"url":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-7.png"},{"id":8,"message":{"body":{"image":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-8.png"},"meta":8,"qCode":"get youtube","type":"stvincent.image message"},"url":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-8.png"},{"id":9,"message":{"body":{"image":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-9.png"},"meta":9,"qCode":"get youtube","type":"stvincent.image message"},"url":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-9.png"},{"id":10,"message":{"body":{"image":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-10.png"},"meta":10,"qCode":"get youtube","type":"stvincent.image message"},"url":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-10.png"},{"id":11,"message":{"body":{"image":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-11.png"},"meta":11,"qCode":"get youtube","type":"stvincent.image message"},"url":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-11.png"},{"id":12,"message":{"body":{"image":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-12.png"},"meta":12,"qCode":"get youtube","type":"stvincent.image message"},"url":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-12.png"}]}}
+1493319905578	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.text message"}}
+1493319905580	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list icons"}}
+1493319906850	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.image message"}}
+1493319906856	 SOCKET/message
+				 meta: {"message":{"body":{"image":"http://public.foolhardysoftworks.com:8180/backend/icons/PNG/icon-6.png","displayName":"","self":true},"meta":6,"qCode":"get youtube","type":"stvincent.image message","userId":"zOX1KOxcsicDm002"}}
+1493319909332	 SOCKET/message
+				 meta: {"_id":"590240c5b80c3dc25ade20e9","owner":"5902407f5d3da7232459a83d","name":"demoBot-stv-2.js","version":"0.0.1","qcode":"get youtube","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-04-27T19:04:37.858Z","dt_create":"2017-04-27T19:04:37.858Z","__v":0,"id":"590240c5b80c3dc25ade20e9","message":{"type":"stvincent.special message","body":{"displayName":"St. Vincent Charity Medical Center","text":"Where should we focus our resources? What is our best weapon against this epidemic? At Rosary Hall, we know that comprehensive inpatient and outpatient treatment works - because we've been developing this approach and restoring patients to recovery for more than 65 years.","img":"http://public.foolhardysoftworks.com:8180/img/stv/fst-1.png","source":"Youtube"},"qCode":null,"meta":null},"responses":{"type":"stvincent.response list text","body":[{"message":{"meta":null,"qCode":"get website","body":{"text":"Keep Learning More","displayName":null},"type":"stvincent.text message"},"text":"Keep Learning More"},{"message":{"meta":null,"qCode":"get website","body":{"text":"Get Involved","displayName":null},"type":"stvincent.text message"},"text":"Get Involved"}]}}
+1493319909336	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.special message"}}
+1493319909337	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response list text"}}
+1493319913123	 SOCKET/message
+				 meta: {"message":{"meta":null,"qCode":"get website","body":{"text":"Keep Learning More","displayName":"","self":true},"type":"stvincent.text message","userId":"zOX1KOxcsicDm002"}}
+1493319914771	 SOCKET/message
+				 meta: {"_id":"590240c5024905d859175ce4","owner":"5902407f5d3da7232459a83d","name":"demoBot-stv-2.js","version":"0.0.1","qcode":"get website","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-04-27T19:04:37.888Z","dt_create":"2017-04-27T19:04:37.888Z","__v":0,"id":"590240c5024905d859175ce4","message":{"type":"stvincent.link message","body":{"displayName":"St. Vincent Charity Medical Center","text":"Twenty-five (25) percent of all med/surg admissions have non-tobacoo related addictive disease, yet very few hospitals have an addiction medicine consult service. This contributes to the current standard of care where 50-80% of actively addicted paitents...","link":"https://www.stvincentcharity.com/physicians/graduate-medical-education-gme/addiction-medicine-fellowship/impact/","source":"Our Website"},"qCode":null,"meta":null},"responses":{"type":"stvincent.response list text","body":[{"message":{"meta":null,"qCode":"get addicted","body":{"text":"Continue Reading","displayName":null},"type":"stvincent.text message"},"text":"Continue Reading"},{"message":{"meta":null,"qCode":"get addicted","body":{"text":"Keep Learning More","displayName":null},"type":"stvincent.text message"},"text":"Keep Learning More"}]}}
+1493319914777	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.link message"}}
+1493320532171	 SOCKET/message
+				 meta: {"message":{"meta":null,"qCode":"get addicted","body":{"text":"Continue Reading","displayName":"","self":true},"type":"stvincent.text message","userId":"zOX1KOxcsicDm002"}}
+1493320535674	 SOCKET/message
+				 meta: {"_id":"590240c5024905d859175ce3","owner":"5902407f5d3da7232459a83d","name":"demoBot-stv-2.js","version":"0.0.1","qcode":"get addicted","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-04-27T19:04:37.878Z","dt_create":"2017-04-27T19:04:37.878Z","__v":0,"id":"590240c5024905d859175ce3","message":{"type":"stvincent.text message","body":{"displayName":"St. Vincent Charity Medical Center","text":"Has addiction touched any area of your life before?"},"qCode":null,"meta":null},"responses":{"type":"stvincent.response list text","body":[{"message":{"meta":null,"qCode":"get reason","body":{"text":"Yes it has","displayName":null},"type":"stvincent.text message"},"text":"Yes it has"},{"message":{"meta":null,"qCode":"get reason","body":{"text":"Fortunately it has not","displayName":null},"type":"stvincent.text message"},"text":"Fortunately it has not"}]}}
+1493320536916	 SOCKET/message
+				 meta: {"message":{"meta":null,"qCode":"get reason","body":{"text":"Yes it has","displayName":"","self":true},"type":"stvincent.text message","userId":"zOX1KOxcsicDm002"}}
+1493320540040	 SOCKET/message
+				 meta: {"_id":"590240c5b80c3dc25ade20ea","owner":"5902407f5d3da7232459a83d","name":"demoBot-stv-2.js","version":"0.0.1","qcode":"get reason","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-04-27T19:04:37.861Z","dt_create":"2017-04-27T19:04:37.861Z","__v":0,"id":"590240c5b80c3dc25ade20ea","message":{"type":"stvincent.text message","body":{"displayName":"St. Vincent Charity Medical Center","text":"In 2016, Cuyahoga County lost more than 660 to overdose. That's one death every 13 hours. This epidemic can end with the help of people like you. Are you:"},"qCode":null,"meta":null},"responses":{"type":"stvincent.response list text","variable":"symptomDuration","body":[{"message":{"meta":null,"qCode":"get event","body":{"text":"In Need of Help","displayName":null},"type":"stvincent.text message"},"text":"In Need of Help"},{"message":{"meta":null,"qCode":"get event","body":{"text":"Supporting Someone","displayName":null},"type":"stvincent.text message"},"text":"Supporting Someone"},{"message":{"meta":null,"qCode":"get event","body":{"text":"Interested in Helping","displayName":null},"type":"stvincent.text message"},"text":"Interested in Helping"}]}}
+1493320541247	 SOCKET/message
+				 meta: {"message":{"meta":null,"qCode":"get event","body":{"text":"In Need of Help","displayName":"","self":true},"type":"stvincent.text message","variable":"symptomDuration","userId":"zOX1KOxcsicDm002"}}
+1493320542767	 SOCKET/message
+				 meta: {"_id":"590240c50731e57a17c8f002","owner":"5902407f5d3da7232459a83d","name":"demoBot-stv-2.js","version":"0.0.1","qcode":"get event","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-04-27T19:04:37.888Z","dt_create":"2017-04-27T19:04:37.888Z","__v":0,"id":"590240c50731e57a17c8f002","message":{"type":"stvincent.event message","body":{"displayName":"St. Vincent Charity Medical Center","img":"http://public.foolhardysoftworks.com:8180/img/stv/fst-8.png"},"qCode":null,"meta":null},"responses":{"type":"stvincent.response list text","body":[{"message":{"meta":null,"qCode":"get volunteer","body":{"text":"Register for the Event","displayName":null},"type":"stvincent.text message"},"text":"Register for the Event"},{"message":{"meta":null,"qCode":"get volunteer","body":{"text":"No Thanks","displayName":null},"type":"stvincent.text message"},"text":"No Thanks"}]}}
+1493320542834	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.event message"}}
+1493320548293	 SOCKET/message
+				 meta: {"message":{"meta":null,"qCode":"get volunteer","body":{"text":"No Thanks","displayName":"","self":true},"type":"stvincent.text message","userId":"zOX1KOxcsicDm002"}}
+1493320550298	 SOCKET/message
+				 meta: {"_id":"590240c58eda41be5998f014","owner":"5902407f5d3da7232459a83d","name":"demoBot-stv-2.js","version":"0.0.1","qcode":"get volunteer","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-04-27T19:04:37.847Z","dt_create":"2017-04-27T19:04:37.847Z","__v":0,"id":"590240c58eda41be5998f014","message":{"type":"stvincent.text message","body":{"displayName":"St. Vincent Charity Medical Center","text":"There are a number of ways to get involved in helping us #EndOurEpidemic. We look forward to getting you connected, and thank you for your interest."},"qCode":null,"meta":null},"responses":{"type":"stvincent.response list text","body":[{"message":{"meta":null,"qCode":"get progress","body":{"text":"Become an Advocate","displayName":null},"type":"stvincent.text message"},"text":"Become an Advocate"},{"message":{"meta":null,"qCode":"get progress","body":{"text":"Donate Time/Resources","displayName":null},"type":"stvincent.text message"},"text":"Donate Time/Resources"},{"message":{"meta":null,"qCode":"get progress","body":{"text":"Partner with Us","displayName":null},"type":"stvincent.text message"},"text":"Partner with Us"},{"message":{"meta":null,"qCode":"get progress","body":{"text":"Addiction Mediciine Fellowship","displayName":null},"type":"stvincent.text message"},"text":"Addiction Mediciine Fellowship"}]}}
+1493320552708	 SOCKET/message
+				 meta: {"message":{"meta":null,"qCode":"get progress","body":{"text":"Donate Time/Resources","displayName":"","self":true},"type":"stvincent.text message","userId":"zOX1KOxcsicDm002"}}
+1493320554528	 SOCKET/message
+				 meta: {"_id":"590240c50731e57a17c8f000","owner":"5902407f5d3da7232459a83d","name":"demoBot-stv-2.js","version":"0.0.1","qcode":"get progress","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-04-27T19:04:37.871Z","dt_create":"2017-04-27T19:04:37.871Z","__v":0,"id":"590240c50731e57a17c8f000","message":{"type":"stvincent.text message","body":{"displayName":"St. Vincent Charity Medical Center","text":"Advocacy is one of our most powerful tools for change. Check out the amazing progress being made in our community."},"qCode":null,"meta":null},"responses":{"type":"stvincent.response list text","body":[{"message":{"meta":null,"qCode":"get tweet","body":{"text":"See Stories from the Community","displayName":null},"type":"stvincent.text message"},"text":"See Stories from the Community"},{"message":{"meta":null,"qCode":"get tweet","body":{"text":"Find Advocacy Opportunities","displayName":null},"type":"stvincent.text message"},"text":"Find Advocacy Opportunities"}]}}
+1493320556659	 SOCKET/message
+				 meta: {"message":{"meta":null,"qCode":"get tweet","body":{"text":"See Stories from the Community","displayName":"","self":true},"type":"stvincent.text message","userId":"zOX1KOxcsicDm002"}}
+1493320558288	 SOCKET/message
+				 meta: {"_id":"590240c5b80c3dc25ade20e8","owner":"5902407f5d3da7232459a83d","name":"demoBot-stv-2.js","version":"0.0.1","qcode":"get tweet","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-04-27T19:04:37.798Z","dt_create":"2017-04-27T19:04:37.798Z","__v":0,"id":"590240c5b80c3dc25ade20e8","message":{"type":"stvincent.event message","body":{"displayName":"St. Vincent Charity Medical Center","img":"http://public.foolhardysoftworks.com:8180/img/stv/fst-12.png"},"qCode":null,"meta":null},"responses":{"type":"stvincent.response list text","body":[{"message":{"meta":null,"qCode":"get grid","body":{"text":"More Stories","displayName":null},"type":"stvincent.text message"},"text":"More Stories"},{"message":{"meta":null,"qCode":"get grid","body":{"text":"Find Advocacy Opportunities","displayName":null},"type":"stvincent.text message"},"text":"Find Advocacy Opportunities"}]}}
+1493320560124	 SOCKET/message
+				 meta: {"message":{"meta":null,"qCode":"get grid","body":{"text":"More Stories","displayName":"","self":true},"type":"stvincent.text message","userId":"zOX1KOxcsicDm002"}}
+1493320562719	 SOCKET/message
+				 meta: {"_id":"590240c50731e57a17c8f001","owner":"5902407f5d3da7232459a83d","name":"demoBot-stv-2.js","version":"0.0.1","qcode":"get grid","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-04-27T19:04:37.882Z","dt_create":"2017-04-27T19:04:37.882Z","__v":0,"id":"590240c50731e57a17c8f001","message":{"type":"stvincent.event message","body":{"displayName":"St. Vincent Charity Medical Center","img":"http://public.foolhardysoftworks.com:8180/img/stv/fst-13.png"},"qCode":null,"meta":null},"responses":{"type":"stvincent.response list text","body":[{"message":{"meta":null,"qCode":"end","body":{"text":"More Stories","displayName":null},"type":"stvincent.text message"},"text":"More Stories"},{"message":{"meta":null,"qCode":"end","body":{"text":"End Chat","displayName":null},"type":"stvincent.text message"},"text":"End Chat"}]}}
+1493320564221	 SOCKET/message
+				 meta: {"message":{"meta":null,"qCode":"end","body":{"text":"More Stories","displayName":"","self":true},"type":"stvincent.text message","userId":"zOX1KOxcsicDm002"}}
+1493320566884	 SOCKET/message
+				 meta: {"_id":"590240c50731e57a17c8efff","owner":"5902407f5d3da7232459a83d","name":"demoBot-stv-2.js","version":"0.0.1","qcode":"end","appId":"kurbi","cobjectId":"botdialog","actions":{"comments":[],"ratings":{"users":[],"avg":0,"total":0},"votes":{"users_downvote":[],"users_upvote":[],"users":[],"total":0}},"dt_update":"2017-04-27T19:04:37.806Z","dt_create":"2017-04-27T19:04:37.806Z","__v":0,"id":"590240c50731e57a17c8efff","message":{"type":"stvincent.end message","body":{"displayName":"St. Vincent Charity Medical Center","text":"Well, this is the end of our chat. Thanks a lot for taking the time to get to know us. We hope that the answers we find for you are helpful. Look for a summary of our conversation in your email inbox momentarily. If we happened to get something wrong or if there is something else you'd like to add follow the instructions to revisit our chat session.\n\n We wish you all the best!","image":"http://public.foolhardysoftworks.com:8180/img/stv/stv-logo.png"}},"responses":{"type":"stvincent.response end","body":{"bye":{"text":"End Chat Session","id":"end"}}}}
+1493320566894	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.end message"}}
+1493320566900	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response end"}}
+1493320602929	 SOCKET/end
+				 meta: {"key":"590240c6b80c3dc25ade20eb","sessionID":"zOX1KOxcsicDm002","url":"http://localhost:8080/demo/","icon":null,"useIo":true}
+1493320615861	 GET/chatbox
+				 meta: {"query":{"key":"590240c6b80c3dc25ade20eb"}}
+1493320630824	 	 level: debug, Generating Documents
+1493320659037	 GET/chatbox
+				 meta: {"query":{"key":"590240c6b80c3dc25ade20eb"}}
+
+
+1493321818266	 restart server
+1493321818314	 connecting data service
+1493321818360	 data service connected
+1493321818360	 using hardcoded user, devUser()
+1493321818361	 
+
+1493321818361	 connecting main routes
+1493321819198	 
+
+1493321819198	 creating chatbox routes
+1493321819198	 	/chatbox
+1493321819198	 	/style
+1493321819198	 	/bot
+1493321819199	 	/deleteBot
+1493321819199	 	/convert
+1493321819199	 	/providers
+1493321819199	 	/preview_chat_box
+1493321819199	 	/bot_files
+1493321819199	 	/bot_from_file
+1493321819199	 ./endpoints.createchatbox 
+1493321819202	 ./endpoints.loadmessagetemplate 
+1493321819408	 ./endpoints.conversate/operator 
+1493321819410	 ./endpoints.receivecontactform 
+1493321819412	 ./endpoints.log 
+1493321819412	 
+
+1493321819412	 connecting static apps
+1493321819413	 ./backend 
+1493321819413	 ./demo 
+1493321819413	 ./builder 
+1493321819413	 ./preview 
+1493321819413	 
+
+1493321819413	 Error Handling 
+1493321819413	 
+
+1493321819413	 SERVER READY 
+
+
+
+1493321849751	 restart server
+1493321849790	 connecting data service
+1493321849851	 	 level: error, == GENERAL ERROR ==
+				 meta: {"stack":"Z:\\shared-src\\kurbi\\kurbi-chat-prototype\\service.data\\stamplay\\chatbox.js:80\n\t\t\telse resolve(doc);\n\t\t\t^^^^\nSyntaxError: Unexpected token else\n    at createScript (vm.js:53:10)\n    at Object.runInThisContext (vm.js:95:10)\n    at Module._compile (module.js:543:28)\n    at Object.Module._extensions..js (module.js:580:10)\n    at Module.load (module.js:488:32)\n    at tryModuleLoad (module.js:447:12)\n    at Function.Module._load (module.js:439:3)\n    at Module.require (module.js:498:17)\n    at require (internal/module.js:20:19)\n    at Z:\\shared-src\\kurbi\\kurbi-chat-prototype\\service.data\\dataService.js:34:4","source":"server"}
+
+
+1493321866838	 restart server
+1493321866882	 connecting data service
+1493321866927	 data service connected
+1493321866927	 using hardcoded user, devUser()
+1493321866927	 
+
+1493321866927	 connecting main routes
+1493321867743	 
+
+1493321867743	 creating chatbox routes
+1493321867743	 	/chatbox
+1493321867743	 	/style
+1493321867743	 	/bot
+1493321867743	 	/deleteBot
+1493321867743	 	/convert
+1493321867743	 	/providers
+1493321867744	 	/preview_chat_box
+1493321867744	 	/bot_files
+1493321867744	 	/bot_from_file
+1493321867744	 ./endpoints.createchatbox 
+1493321867747	 ./endpoints.loadmessagetemplate 
+1493321867981	 ./endpoints.conversate/operator 
+1493321867984	 ./endpoints.receivecontactform 
+1493321867986	 ./endpoints.log 
+1493321867986	 
+
+1493321867986	 connecting static apps
+1493321867986	 ./backend 
+1493321867987	 ./demo 
+1493321867987	 ./builder 
+1493321867987	 ./preview 
+1493321867987	 
+
+1493321867987	 Error Handling 
+1493321867987	 
+
+1493321867987	 SERVER READY 
+
+1493321882333	 GET/bot_files
+1493321882341	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX18srddbZWCaeX2Bp5MJJmCb6i8juGp%2BsZxfE4X4nFRLx68EVyazhqaj"}}
+1493321882361	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1493321892808	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1493321906907	 GET/simple_publish
+				 meta: {"query":{"config":"U2FsdGVkX19DDALRueRlln5%2BjXqSCJCLewfxratnottrWGibgxLLik2uWkPGf%2FKBrb6feloeP0a9bxWIVbqdYVKxnO0T7JEaAIN0T9qQS524HbdhJpPAtCB71RfJJJgY6zuYiPauogEPNRcMIYoRsiBwnnVRLKt9VewZPkTgyQJ4V6484dKB2yqKebSLe2R6fjw%2Bg94Oe6fhXKCJSVZRthIhU6kJCsfgaGjKJf2OI37k9lO7t%2ByyP3Ifgw7cOKqd"}}
+1493322246991	 GET/simple_publish
+				 meta: {"query":{"config":"U2FsdGVkX19ducKNw%2BySf4JWGkvYopn11VLP%2BBcIlgehRfgG2QpHaFxeGodhQVkVvhsjWX3A3I7Dkm%2FGObg5zyJyKSOrueFX8mbyiimpLhTwWeCczKioWRmKxRgFh8Ax9Wk27QIWIzQvVYaQAf5DUJsv6P3bnIO6oDNynum7Hqk8q%2FuLsDVkYlcTVpK5t%2BoIYwl5PV%2FDFlQV5OseBllSrojtL%2BHyvVtUYw4SxAL%2FXHkz29gZ49recae4ftpFGWpSPMHHLxG05DHDgVYcT%2BQxCA%3D%3D"}}
+
+
+1493322626608	 restart server
+1493322626649	 connecting data service
+1493322626694	 data service connected
+1493322626694	 using hardcoded user, devUser()
+1493322626694	 
+
+1493322626694	 connecting main routes
+1493322627545	 
+
+1493322627545	 creating chatbox routes
+1493322627545	 	/chatbox
+1493322627545	 	/style
+1493322627545	 	/bot
+1493322627545	 	/deleteBot
+1493322627545	 	/convert
+1493322627546	 	/providers
+1493322627546	 	/preview_chat_box
+1493322627546	 	/bot_files
+1493322627546	 	/bot_from_file
+1493322627546	 ./endpoints.createchatbox 
+1493322627550	 ./endpoints.loadmessagetemplate 
+1493322627779	 ./endpoints.conversate/operator 
+1493322627781	 ./endpoints.receivecontactform 
+1493322627785	 ./endpoints.log 
+1493322627785	 
+
+1493322627785	 connecting static apps
+1493322627785	 ./backend 
+1493322627785	 ./demo 
+1493322627785	 ./builder 
+1493322627785	 ./preview 
+1493322627785	 
+
+1493322627785	 Error Handling 
+1493322627785	 
+
+1493322627785	 SERVER READY 
+
+
+
+1493322794879	 restart server
+1493322794920	 connecting data service
+1493322794965	 data service connected
+1493322794965	 using hardcoded user, devUser()
+1493322794965	 
+
+1493322794965	 connecting main routes
+1493322795808	 
+
+1493322795808	 creating chatbox routes
+1493322795808	 	/chatbox
+1493322795809	 	/style
+1493322795809	 	/bot
+1493322795809	 	/deleteBot
+1493322795809	 	/convert
+1493322795809	 	/providers
+1493322795809	 	/preview_chat_box
+1493322795809	 	/bot_files
+1493322795809	 	/bot_from_file
+1493322795809	 ./endpoints.createchatbox 
+1493322795813	 ./endpoints.loadmessagetemplate 
+1493322796020	 ./endpoints.conversate/operator 
+1493322796023	 ./endpoints.receivecontactform 
+1493322796026	 ./endpoints.log 
+1493322796026	 
+
+1493322796026	 connecting static apps
+1493322796027	 ./backend 
+1493322796027	 ./demo 
+1493322796027	 ./builder 
+1493322796027	 ./preview 
+1493322796027	 
+
+1493322796027	 Error Handling 
+1493322796027	 
+
+1493322796027	 SERVER READY 
+
+1493322849742	 GET/simple_publish
+				 meta: {"query":{"config":"U2FsdGVkX19g7svMqsCHVPHLdXZ6aDQ%2BIVQ8sKApJmbls0pMkUKiXww4vxdq8jJXwqmJj6Fkpm2mteAu5YjzeIPwrWxtB%2FVcdbiYnHOcXNwC7LVIa7pdmaREbjgqfB71Nkd53AWHnUe1uPT42E5cmOq56HL%2F3QiiNZ9i7P2g7badNv9zf2zMQch7V0Nb1iwrC1K7NjRGsMsO3q%2FgA0IBDP9wqaj74XL%2BWvO4Vo1Q%2B2JPxEZzeH1D7%2B7fACrMECRVMSB3gnLPtAlOlVkUkJAwaA%3D%3D"}}
+
+
+1493322898537	 restart server
+1493322898579	 connecting data service
+1493322898634	 data service connected
+1493322898634	 using hardcoded user, devUser()
+1493322898634	 
+
+1493322898634	 connecting main routes
+1493322899500	 
+
+1493322899501	 creating chatbox routes
+1493322899501	 	/chatbox
+1493322899501	 	/style
+1493322899501	 	/bot
+1493322899501	 	/deleteBot
+1493322899501	 	/convert
+1493322899501	 	/providers
+1493322899501	 	/preview_chat_box
+1493322899501	 	/bot_files
+1493322899501	 	/bot_from_file
+1493322899502	 ./endpoints.createchatbox 
+1493322899505	 ./endpoints.loadmessagetemplate 
+1493322899711	 ./endpoints.conversate/operator 
+1493322899714	 ./endpoints.receivecontactform 
+1493322899717	 ./endpoints.log 
+1493322899717	 
+
+1493322899717	 connecting static apps
+1493322899717	 ./backend 
+1493322899717	 ./demo 
+1493322899717	 ./builder 
+1493322899717	 ./preview 
+1493322899717	 
+
+1493322899717	 Error Handling 
+1493322899718	 
+
+1493322899718	 SERVER READY 
+
+1493322913011	 GET/simple_publish
+				 meta: {"query":{"config":"U2FsdGVkX18zJexQQS0T5%2BQab%2FY1c8pbodSVfozL%2Fb0GLOM5Va0PFFzGEuLLyQxx2wAxX1CVK9c3IYvoIC0kDdwkoB6kaRf7CDf%2B2DsBYAZFfO7NBcnawAlT8JRLFmPbDxZgOAlVZ%2FvWygQM1%2FodnwUCj%2BE5A6DKmhXsTzUKBAsKEYwL0CiAMdhIDFvwOItQR8svV%2B35cyT0Wx4kB8twYFFSco5cmLtQBIDDfpZpXLKTPOaQXdzPK5UcsVrg75lwQ2FOIgH77jAVl8%2BNDb6Y%2Fw%3D%3D"}}
+1493322916775	 GET/chatbox
+				 meta: {"query":{"key":"590240c6b80c3dc25ade20eb"}}
+1493322917497	 GET/chatbox
+				 meta: {"query":{"key":"590240c6b80c3dc25ade20eb"}}
+1493322922408	 GET/simple_publish
+				 meta: {"query":{"config":"U2FsdGVkX1%2Bh%2BonWzvtsh%2FR82gfFt1hnV9sQ1eBnr32Sj0ZSGTP%2FwpGsgzi0ZPHOVioYNFjDTowzjhanbBFIw9%2FFwodBGfeIvfef2OgaArX5Uazt7%2BV0y4M1qKehqnnAf6IMiYF7xe080J%2F7DvOZ3INaIwJ9SIez%2Btzdap2awitpQNMOj5VlQJVnu9%2BdoEIXOqLuD7SuHdvLbXpCbOe8fN%2B3ApBsCP5EMXc97jx7HgdWJ%2Fzjt3vGpsXgnhKti6mFBMU6OY0gwumBLHJ0STQtKg%3D%3D"}}
+1493322923440	 GET/simple_publish
+				 meta: {"query":{"config":"U2FsdGVkX1%2FJ3qzftMZpS9krYHVL%2F%2FC6nKNj9OnEvAK7yb8abtGcGrv%2Bp3a1I4UxA56hXrLlLfRDU8G9jJi1k2abrnyRWNwUx8uOcNpazovlaftbXActdwU1w%2B3wOZ5aIWmlQjeIEkUhGrQN3rA0UqIt%2FuMswlp83PxRH8x4NbbXdkoa54NNXX9Rh6ZKNCu3jY0eZkcD4yNxQpwshD25%2Btsp4Otw0ibvaGkD9H9q6fwV6igRJJ3UNGQKWQThIWRF42qlQgY4tBJBPgQRzit%2BEg%3D%3D"}}
+1493322990195	 GET/simple_publish
+				 meta: {"query":{"config":"U2FsdGVkX19E5SWhpIOntZEHt7r%2FrtF2XrliyjK6%2BlFHMR%2FPwQKRLwUCG3y6wLgBlVgJoaR0fhLB1OnXfSwVSu5xqGOF%2FhhdGK%2Fqc838yZl5%2BTI9iPIUEICP9qdos1QGvxinyhgOfebvB4EA0ZS2lOfnpOWBBojbzXrUBffIawlmLNHaWhVo5IIkwXu1uqqE9mbD%2BEeLNLDrOVt%2FIVqVsy3aLTIelndgHpIRqtSfaPXLVLKI751s0piOCfVfiRJbYEZj5A2%2FiY3mgn3cz0sccw%3D%3D"}}
+
+
+1493323103799	 restart server
+1493323103840	 connecting data service
+1493323103890	 data service connected
+1493323103890	 using hardcoded user, devUser()
+1493323103891	 
+
+1493323103891	 connecting main routes
+1493323104737	 
+
+1493323104737	 creating chatbox routes
+1493323104737	 	/chatbox
+1493323104738	 	/style
+1493323104738	 	/bot
+1493323104738	 	/deleteBot
+1493323104738	 	/convert
+1493323104738	 	/providers
+1493323104738	 	/preview_chat_box
+1493323104738	 	/bot_files
+1493323104738	 	/bot_from_file
+1493323104738	 ./endpoints.createchatbox 
+1493323104743	 ./endpoints.loadmessagetemplate 
+1493323104961	 ./endpoints.conversate/operator 
+1493323104964	 ./endpoints.receivecontactform 
+1493323104967	 ./endpoints.log 
+1493323104967	 
+
+1493323104967	 connecting static apps
+1493323104968	 ./backend 
+1493323104968	 ./demo 
+1493323104968	 ./builder 
+1493323104968	 ./preview 
+1493323104968	 
+
+1493323104968	 Error Handling 
+1493323104968	 
+
+1493323104968	 SERVER READY 
+
+
+
+1493323125455	 restart server
+1493323125495	 connecting data service
+1493323125544	 data service connected
+1493323125544	 using hardcoded user, devUser()
+1493323125544	 
+
+1493323125544	 connecting main routes
+1493323126404	 
+
+1493323126404	 creating chatbox routes
+1493323126404	 	/chatbox
+1493323126405	 	/style
+1493323126405	 	/bot
+1493323126405	 	/deleteBot
+1493323126405	 	/convert
+1493323126405	 	/providers
+1493323126405	 	/preview_chat_box
+1493323126405	 	/bot_files
+1493323126405	 	/bot_from_file
+1493323126405	 ./endpoints.createchatbox 
+1493323126409	 ./endpoints.loadmessagetemplate 
+1493323126624	 ./endpoints.conversate/operator 
+1493323126627	 ./endpoints.receivecontactform 
+1493323126630	 ./endpoints.log 
+1493323126630	 
+
+1493323126630	 connecting static apps
+1493323126630	 ./backend 
+1493323126630	 ./demo 
+1493323126630	 ./builder 
+1493323126630	 ./preview 
+1493323126630	 
+
+1493323126630	 Error Handling 
+1493323126630	 
+
+1493323126630	 SERVER READY 
+
+1493323136834	 GET/chatbox
+				 meta: {"query":{"key":"590240c6b80c3dc25ade20eb"}}
+1493323140782	 GET/simple_publish
+				 meta: {"query":{"config":"U2FsdGVkX181upDdb1D1bOf0S7N%2FrcJJc8K84EdEIAIXH6f9i%2FUurFXWGU0yBG%2FVnW59Ni9hQCNQvS13W6nuu108bpabuBcKH67Z2ihnOjAeFv9V67WYwRPsDl0AenHeNyisZrCyQOCsvrVvIlZC2CzUb5yWQ7IhLsXspesUbjcK28AcCUWq59lbb%2FBfOV1bF9MT45bsJWmIA%2Fj0B%2B%2FBx81Nnvk%2BXYe8%2B7zsbqg09fUmvJZ46k6wB2fnyA06GCvgNwKF0faW030CUXTH%2BJ2F%2BQ%3D%3D"}}
+
+
+1493323334960	 restart server
+1493323335006	 connecting data service
+1493323335054	 data service connected
+1493323335054	 using hardcoded user, devUser()
+1493323335055	 
+
+1493323335055	 connecting main routes
+1493323335935	 
+
+1493323335935	 creating chatbox routes
+1493323335936	 	/chatbox
+1493323335936	 	/style
+1493323335936	 	/bot
+1493323335936	 	/deleteBot
+1493323335936	 	/convert
+1493323335936	 	/providers
+1493323335936	 	/preview_chat_box
+1493323335936	 	/bot_files
+1493323335936	 	/bot_from_file
+1493323335937	 ./endpoints.createchatbox 
+1493323335940	 ./endpoints.loadmessagetemplate 
+1493323336162	 ./endpoints.conversate/operator 
+1493323336165	 ./endpoints.receivecontactform 
+1493323336169	 ./endpoints.log 
+1493323336169	 
+
+1493323336169	 connecting static apps
+1493323336169	 ./backend 
+1493323336169	 ./demo 
+1493323336169	 ./builder 
+1493323336169	 ./preview 
+1493323336169	 
+
+1493323336169	 Error Handling 
+1493323336169	 
+
+1493323336169	 SERVER READY 
+
+1493323439425	 GET/simple_publish
+				 meta: {"query":{"config":"U2FsdGVkX18467GwlPim1Dop8G6XuntXw1Ur31E9a59LHCLP1TZxmNUnbOma4bHAvmV%2F2HFKReTUH0exeNocCLZ66DWZGvE3Og3E6ixQLKG9nvJUKrpzkAAhHfSyiGzXU6Xt6lgbjvgg0vcZGd0a0%2F0hyvAcec%2BpCfBL2X2lDeehXwIO6wMaPK0p7%2BuvMa9NcwoVLVDdHy0bfsi376qNEkv9FBe0DMgSF61QrN9SasyhnCAmEbMfdJS9BgcTQhXl8l48LsdxWkPOfvc4pPSJYA%3D%3D"}}
+
+
+1493323551457	 restart server
+1493323551502	 connecting data service
+1493323551551	 data service connected
+1493323551551	 using hardcoded user, devUser()
+1493323551551	 
+
+1493323551551	 connecting main routes
+1493323552468	 
+
+1493323552468	 creating chatbox routes
+1493323552468	 	/chatbox
+1493323552468	 	/style
+1493323552468	 	/bot
+1493323552468	 	/deleteBot
+1493323552468	 	/convert
+1493323552469	 	/providers
+1493323552469	 	/preview_chat_box
+1493323552469	 	/bot_files
+1493323552469	 	/bot_from_file
+1493323552469	 ./endpoints.createchatbox 
+1493323552473	 ./endpoints.loadmessagetemplate 
+1493323552691	 ./endpoints.conversate/operator 
+1493323552694	 ./endpoints.receivecontactform 
+1493323552697	 ./endpoints.log 
+1493323552697	 
+
+1493323552697	 connecting static apps
+1493323552698	 ./backend 
+1493323552698	 ./demo 
+1493323552698	 ./builder 
+1493323552698	 ./preview 
+1493323552698	 
+
+1493323552698	 Error Handling 
+1493323552698	 
+
+1493323552698	 SERVER READY 
+
+
+
+1493323566972	 restart server
+1493323567013	 connecting data service
+1493323567058	 data service connected
+1493323567058	 using hardcoded user, devUser()
+1493323567058	 
+
+1493323567058	 connecting main routes
+1493323568143	 
+
+1493323568143	 creating chatbox routes
+1493323568143	 	/chatbox
+1493323568143	 	/style
+1493323568144	 	/bot
+1493323568144	 	/deleteBot
+1493323568144	 	/convert
+1493323568144	 	/providers
+1493323568144	 	/preview_chat_box
+1493323568144	 	/bot_files
+1493323568144	 	/bot_from_file
+1493323568144	 ./endpoints.createchatbox 
+1493323568148	 ./endpoints.loadmessagetemplate 
+1493323568356	 ./endpoints.conversate/operator 
+1493323568358	 ./endpoints.receivecontactform 
+1493323568361	 ./endpoints.log 
+1493323568361	 
+
+1493323568361	 connecting static apps
+1493323568362	 ./backend 
+1493323568362	 ./demo 
+1493323568362	 ./builder 
+1493323568362	 ./preview 
+1493323568362	 
+
+1493323568362	 Error Handling 
+1493323568362	 
+
+1493323568362	 SERVER READY 
+
+1493323610750	 GET/simple_publish
+				 meta: {"query":{"config":"U2FsdGVkX1%2B8mquXx9Q0sD6cf%2BgLSB5%2BQUljqefZ%2B9JKqpyYkViuScU6Ju6yS65t%2B1Saa6swZJyyjU0etJlLxdrfDVHiPCiLkVXbVD9oP00tr7My8xrensNges3VXRQ6xGhCWU7kTRjduokL7TS06FgzbdvoBIQPzIVdoHjYPOXAjdCWm2axia0FWwTdbFayNzq%2F0VCOFmiz%2B8SXlMi3B3cYcM2RTZefx0Kcfj%2FJSWOLbHvpnbpZuUqMdgOXI1O6"}}
+1493323649396	 GET/chatbox
+				 meta: {"query":{"key":"59024f5eb80c3dc25ade2110"}}
+1493323663001	 GET/simple_publish
+				 meta: {"query":{"config":"U2FsdGVkX19sbp6CZBeS%2B7%2FBzzVfqTKQtKN0A6eVaPT2m2wsmQlYcGJwFpEceKk%2BUeqenAdFFPOx546pdEmo%2BbCn0C0tjyF3HdUj8tbIhg22HRx%2BxcxQFt1YMGstSJ8uSpzUDKkW65r%2BYuhcZjhD7q4cpWmdntx1g8JE1uIhPc8O81GDxEoPzbVb3SKKyhl4ww0UppSsedz%2BeF4OM9LkxMY9Ekd%2BDGXyRJYqxR65vovoyQaAaxqbSIFmD2rDhrP46eoMOCR6MGuyqAGEwD9BqkNZn1%2Fi9tipJZzNIQC3DOw%3D"}}
+1493323668255	 GET/chatbox
+				 meta: {"query":{"key":"59024f5eb80c3dc25ade2110"}}
+>>>>>>> ae9b28fb1b1f6a359460b470bab6681d99562383
