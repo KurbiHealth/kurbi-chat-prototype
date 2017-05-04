@@ -47,8 +47,12 @@
 
 function displayUploadScreen(file){
 	$('#selected-file').text(file.name);
-	if(file.type != 'application/javascript') warn("file needs to be a .js file");
+	var extArr = file.name.split('.');
+	var ext = extArr[extArr.length-1];
+
+	if(ext != 'js') warn("file needs to be a .js file");
 	else warn(false);
+
 	$("#upload-modal").css("display", "inline");
 }
 

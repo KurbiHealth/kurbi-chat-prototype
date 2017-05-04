@@ -111,6 +111,7 @@ function simplePublish(req,res){
 	).then(
 	(doc)=>{
 		template = doc;
+		delete require.cache[require.resolve('../endpoints.chatbot/'+botTemplate)];
 		var responses = require('../endpoints.chatbot/'+botTemplate)(organization,URL);
 		var messages = [];
 		for(var key in responses) {
