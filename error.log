@@ -12575,3 +12575,48 @@
 1493323668255	 GET/chatbox
 				 meta: {"query":{"key":"59024f5eb80c3dc25ade2110"}}
 >>>>>>> ae9b28fb1b1f6a359460b470bab6681d99562383
+
+
+1494597299726	 restart server
+1494597299745	 connecting data service
+1494597299759	 data service connected
+1494597299759	 using hardcoded user, devUser()
+1494597299759	 
+
+1494597299759	 connecting main routes
+1494597300033	 
+
+1494597300033	 creating chatbox routes
+1494597300033	 	/chatbox
+1494597300033	 	/style
+1494597300033	 	/bot
+1494597300034	 	/deleteBot
+1494597300034	 	/convert
+1494597300034	 	/providers
+1494597300034	 	/preview_chat_box
+1494597300034	 	/bot_files
+1494597300034	 	/bot_from_file
+1494597300034	 ./endpoints.createchatbox 
+1494597300036	 ./endpoints.loadmessagetemplate 
+1494597300110	 ./endpoints.conversate/operator 
+1494597300110	 ./endpoints.receivecontactform 
+1494597300111	 ./endpoints.log 
+1494597300111	 
+
+1494597300111	 connecting static apps
+1494597300112	 ./backend 
+1494597300112	 ./demo 
+1494597300112	 ./builder 
+1494597300112	 ./preview 
+1494597300112	 
+
+1494597300112	 Error Handling 
+1494597300112	 
+
+1494597300112	 SERVER READY 
+
+1494597319935	 GET/chatbox
+				 meta: {"query":{"key":"59024f5eb80c3dc25ade2110"}}
+1494597322227	 GET/favicon.ico
+1494597340493	 GET/chatbox
+				 meta: {"query":{"key":"59024f5eb80c3dc25ade2110"}}
