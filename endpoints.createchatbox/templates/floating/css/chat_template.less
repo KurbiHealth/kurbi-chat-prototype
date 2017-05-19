@@ -7,9 +7,13 @@
 }
 
 .kurbi-chat-box {
+	display:-webkit-flex;
 	display:flex;
+	-webkit-justify-content:flex-start;
 	justify-content:flex-start;
+	-webkit-align-items: stretch;
 	align-items:stretch;
+	-webkit-flex-direction:column;
 	flex-direction:column;
 	position:fixed;
 	/*top:-200px;*/
@@ -31,10 +35,14 @@
 
 .kurbi-chat-container {
 	z-index: 1;
+	display:-webkit-flex;
 	display:flex;
 	position:relative;
+	-webkit-flex-grow:1;
 	flex-grow:1;
+	-webkit-flex-direction:column;
 	flex-direction:column;
+	-webkit-align-items:stretch;
 	align-items:stretch;
 	padding: 20px 20px 0px 20px;
 }
@@ -93,7 +101,9 @@
 }
 
 .kurbi-chat-footer{
+	-webkit-flex-grow:0;
 	flex-grow:0;
+	-webkit-flex-shrink:0;
 	flex-shrink:0;
 	width:100%;
 	margin-top:20px;
@@ -109,12 +119,13 @@
 }
 
 .kurbi-chat-body {
+	-webkit-flex-grow:1;
 	flex-grow:1;
 	overflow-y:scroll;
 }
 
-.kurbi-chat-body::-webkit-scrollbar { 
-    display: none; 
+.kurbi-chat-body::-webkit-scrollbar {
+    display: none;
 }
 
 .kurbi-chat-closed{
@@ -194,7 +205,7 @@
 .kurbi-banner-content{
 	margin:0 auto;
 	width:75%;
-	
+
 }
 
 .kurbi-banner-header{
