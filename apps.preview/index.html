@@ -8,7 +8,7 @@
 	<div id="config_panel" style="width:100vw;height:650px;background-color:rgba(0,150,180,0.8);position:absolute;-webkit-transition: top .5s;z-index:10;">
 		<div style="display:flex; flex-direction:row;">
 		<div style="width:40vw;margin-left:10vw;margin-right:10vw;padding-top:30px;padding-bottom:30px; display:flex;justify-content:center;align-items:stretch;flex-direction:column;">
-				<select id="provider-list" style="margin-bottom:10px;height:30px;line-height:30px;"></select>	
+				<select id="provider-list" style="margin-bottom:10px;height:30px;line-height:30px;"></select>
 				<input id="input.page" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="http://target-page.com"></input>
 				<input id="input.hbs.headline" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="headline text"></input>
 				<input id="input.hbs.icon_url" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="chat main icon URL"></input>
@@ -23,8 +23,9 @@
 					<option value="default">MAWC Original</option>
 					<option value="floating">MAWC New</option>
 					<option value="floatingstv">StVincent New</option>
+					<option value="tombstone">Tombstone</option>
 				</select>
-				<select id="input.bots" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="available bots"></select>			
+				<select id="input.bots" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="available bots"></select>
 		</div>
 		<div style="width:40vw;margin-left:10vw;margin-right:10vw;padding-top:30px;padding-bottom:30px; display:flex;justify-content:center;align-items:stretch;flex-direction:column;">
 			<input id="input.password" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="password"></input>
@@ -58,7 +59,7 @@
 	<div id="publish-modal" style="display:none;height:100vh;width:100vw;">
 	<div style="position:fixed;background-color:rgba(50,50,50,.8);top:0;left:0;bottom:0;right:0;z-index:10;"></div>
 	<div class="curtain" style="position:fixed;top:0;left:0;bottom:0;right:0;display:flex;justify-content:center;align-items:center;z-index:20;">
-	<div class="modal-box" style="background-color:white;width:500px;height:300px;display:flex;justify-content:space-around;flex-direction:column;align-items:stretch;padding-left:1vw;padding-right:1vw;z-index:30;">	
+	<div class="modal-box" style="background-color:white;width:500px;height:300px;display:flex;justify-content:space-around;flex-direction:column;align-items:stretch;padding-left:1vw;padding-right:1vw;z-index:30;">
 		<input id="organization-name" style="margin-bottom:10px;height:30px;line-height:30px;" placeholder="Bot's Name in Chat"></input>
 		<div style="font-size:2.0em;text-align:center;">Publish to: <span class="currentProvider"></span>?</div>
 		<div id="submit-publish" style="font-size:2.4em;text-align:center;background-color:orange;cursor:pointer;">SUBMIT</div>

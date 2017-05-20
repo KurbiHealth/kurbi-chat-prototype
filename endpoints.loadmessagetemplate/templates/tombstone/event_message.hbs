@@ -1,0 +1,40 @@
+{{#if self}}
+
+	<div style="padding:40px 20px 0 20px;display:block;">
+
+	<style type="text/css">
+		.kurbi-aevtmg-image {
+			width: auto;
+			height:60px;
+		}
+	</style>
+
+		<img class="kurbi-aspcmg-image" src="{{img}}"/>
+
+	</div>
+
+
+{{else}}
+
+	<div style="padding-top:40px;display:block;">
+
+		<style type="text/css">
+			.kurbi-evtmg-displayName {
+				padding-left: 20px;
+				font-weight:bold;
+				font-size: 13px;
+				margin-bottom:10px;
+				color:#444444;
+			}
+			.kurbi-evtmg-image {
+				width:100%;
+				height:auto;
+				
+			}
+		</style>
+		<div class="kurbi-evtmg-displayName">{{displayName}}</div>
+		<img class="kurbi-evtmg-image" src="{{img}}"/>
+
+	</div>
+
+{{/if}}

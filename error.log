@@ -12692,3 +12692,1146 @@
 				 meta: {"query":{"client":"web","version":"1","template":"stvincent.end message"}}
 1495231990566	 GET/template
 				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response end"}}
+
+
+1495281615936	 restart server
+1495281615954	 connecting data service
+1495281615971	 data service connected
+1495281615972	 using hardcoded user, devUser()
+1495281615972	 
+
+1495281615972	 connecting main routes
+1495281616238	 
+
+1495281616238	 creating chatbox routes
+1495281616238	 	/chatbox
+1495281616238	 	/style
+1495281616238	 	/bot
+1495281616238	 	/deleteBot
+1495281616239	 	/convert
+1495281616239	 	/providers
+1495281616239	 	/preview_chat_box
+1495281616239	 	/bot_files
+1495281616239	 	/bot_from_file
+1495281616239	 ./endpoints.createchatbox 
+1495281616240	 ./endpoints.loadmessagetemplate 
+1495281616301	 ./endpoints.conversate/operator 
+1495281616302	 ./endpoints.receivecontactform 
+1495281616303	 ./endpoints.log 
+1495281616303	 
+
+1495281616303	 connecting static apps
+1495281616303	 ./backend 
+1495281616304	 ./demo 
+1495281616304	 ./demo 
+1495281616304	 ./builder 
+1495281616304	 ./preview 
+1495281616304	 
+
+1495281616304	 Error Handling 
+1495281616304	 
+
+1495281616304	 SERVER READY 
+
+
+
+1495281640646	 restart server
+1495281640656	 connecting data service
+1495281640664	 data service connected
+1495281640664	 using hardcoded user, devUser()
+1495281640665	 
+
+1495281640665	 connecting main routes
+1495281640828	 
+
+1495281640828	 creating chatbox routes
+1495281640828	 	/chatbox
+1495281640828	 	/style
+1495281640829	 	/bot
+1495281640829	 	/deleteBot
+1495281640829	 	/convert
+1495281640829	 	/providers
+1495281640829	 	/preview_chat_box
+1495281640829	 	/bot_files
+1495281640829	 	/bot_from_file
+1495281640829	 ./endpoints.createchatbox 
+1495281640830	 ./endpoints.loadmessagetemplate 
+1495281640865	 ./endpoints.conversate/operator 
+1495281640866	 ./endpoints.receivecontactform 
+1495281640866	 ./endpoints.log 
+1495281640866	 
+
+1495281640866	 connecting static apps
+1495281640867	 ./backend 
+1495281640867	 ./demo 
+1495281640867	 ./demo 
+1495281640867	 ./builder 
+1495281640867	 ./preview 
+1495281640867	 
+
+1495281640867	 Error Handling 
+1495281640867	 
+
+1495281640867	 SERVER READY 
+
+1495281971522	 GET/bot_files
+1495281971532	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19orcjVlajFWUkUC%2B%2Fd0gr%2FoAu2GlngtItxaGFpIhPYpIjD1s5EfXdv"}}
+1495281971569	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495282111308	 GET/bot_files
+1495282111314	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2BZgG%2FvVtmeqHslReNuWWDRKSZy%2B0YYqnnCidPMklbQT4xWZ%2FEGkDv5"}}
+1495282111319	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495282270207	 GET/bot_files
+1495282270213	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2Bh0DGMZUEHAdCA7tHuuxuJEctqX%2BIVdnK4wIBecQt8DSWx69Kzl1zd"}}
+1495282270217	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495282279581	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495282282103	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19Pcx1ep/bBn92eORpGNznCXHiFZ72TR+C/Wg3H/o9rtbfJVkFv/JYUKYrEguLC/MvYVzCqho3q1Rm4FPk4weQa58K28zc8/tpCiqk5yaaagZXN8VgFfgJXO2dmejLXfxrMVWcuGzXJLUgRpDmyBzIB+syqDBL40+l8dgam1gHbwynUHInFjdb3wvVqjEaAs1UzyN/IBSjFWA==","key":"preview"}}
+
+
+1495282359535	 restart server
+1495282359547	 connecting data service
+1495282359557	 data service connected
+1495282359557	 using hardcoded user, devUser()
+1495282359557	 
+
+1495282359557	 connecting main routes
+1495282359730	 
+
+1495282359730	 creating chatbox routes
+1495282359730	 	/chatbox
+1495282359730	 	/style
+1495282359730	 	/bot
+1495282359730	 	/deleteBot
+1495282359731	 	/convert
+1495282359731	 	/providers
+1495282359731	 	/preview_chat_box
+1495282359731	 	/bot_files
+1495282359731	 	/bot_from_file
+1495282359731	 ./endpoints.createchatbox 
+1495282359732	 ./endpoints.loadmessagetemplate 
+1495282359773	 ./endpoints.conversate/operator 
+1495282359773	 ./endpoints.receivecontactform 
+1495282359773	 ./endpoints.log 
+1495282359773	 
+
+1495282359773	 connecting static apps
+1495282359774	 ./backend 
+1495282359774	 ./demo 
+1495282359774	 ./demo 
+1495282359774	 ./builder 
+1495282359774	 ./preview 
+1495282359774	 
+
+1495282359774	 Error Handling 
+1495282359774	 
+
+1495282359774	 SERVER READY 
+
+1495282367541	 GET/bot_files
+1495282367546	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19aHJ9ml29OOHhQfjsZ%2FJzVBFb5FQYsA3W51ikHHfIf3%2B6AYadD04Jk"}}
+1495282367568	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495282374999	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495282377564	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+2L1cvmGsKXxO8n7jeWyAT66sr9Wydd6/94qvNPkX759pxdyfx7wPAAss6vELAmeWcEWndcIlyCReclTkPCTP4NB8U/cc+JMcf8jQwqDYhbF0IpBw5vcAGzk8bKdq86GhDh5g3UIvpv8uKdyqEF+AZFAF7YnXrvR2FsVBSjacXQ7EI7nSfBKpJOpjhF4w3ZZQwbmwpZ76k4A==","key":"preview"}}
+1495282413242	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.welcome message"}}
+1495282413242	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response welcome"}}
+
+
+1495282510866	 restart server
+1495282510877	 connecting data service
+1495282510886	 data service connected
+1495282510886	 using hardcoded user, devUser()
+1495282510886	 
+
+1495282510886	 connecting main routes
+1495282511059	 
+
+1495282511059	 creating chatbox routes
+1495282511059	 	/chatbox
+1495282511059	 	/style
+1495282511059	 	/bot
+1495282511059	 	/deleteBot
+1495282511059	 	/convert
+1495282511059	 	/providers
+1495282511059	 	/preview_chat_box
+1495282511059	 	/bot_files
+1495282511059	 	/bot_from_file
+1495282511060	 ./endpoints.createchatbox 
+1495282511060	 ./endpoints.loadmessagetemplate 
+1495282511096	 ./endpoints.conversate/operator 
+1495282511097	 ./endpoints.receivecontactform 
+1495282511097	 ./endpoints.log 
+1495282511097	 
+
+1495282511097	 connecting static apps
+1495282511098	 ./backend 
+1495282511098	 ./demo 
+1495282511098	 ./demo 
+1495282511098	 ./builder 
+1495282511098	 ./preview 
+1495282511098	 
+
+1495282511098	 Error Handling 
+1495282511098	 
+
+1495282511098	 SERVER READY 
+
+1495282524053	 GET/bot_files
+1495282524059	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2BxBSi2lGD%2BhZnr6xHmw3H2EUB2h3oHISD9G1OTG0g0X8hmRxx4xzmP"}}
+1495282524080	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495282530935	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495282532916	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+7sqnwT8cBW1i8GTbKCG7eKou/sV+L4gf+UbYQ3qJO20JuNtpxIqeY24ED1LxqG1LFGpGd/bqrh3vzZbdoVVYjUBZ8FWyOfiCGw9eJrvnlpF9JurZjBzo/uqV1LS6hvdNZDrLGqdXnPVH143dId6yFV2U+TRNbGvJOOgO0RDMnsZg+jRU4hTyEZ4VY0slpc6V3yJ4PGVGA+g==","key":"preview"}}
+
+
+1495282585605	 restart server
+1495282585616	 connecting data service
+1495282585625	 data service connected
+1495282585625	 using hardcoded user, devUser()
+1495282585625	 
+
+1495282585625	 connecting main routes
+1495282585792	 
+
+1495282585792	 creating chatbox routes
+1495282585792	 	/chatbox
+1495282585792	 	/style
+1495282585793	 	/bot
+1495282585793	 	/deleteBot
+1495282585793	 	/convert
+1495282585793	 	/providers
+1495282585793	 	/preview_chat_box
+1495282585793	 	/bot_files
+1495282585793	 	/bot_from_file
+1495282585794	 ./endpoints.createchatbox 
+1495282585794	 ./endpoints.loadmessagetemplate 
+1495282585831	 ./endpoints.conversate/operator 
+1495282585832	 ./endpoints.receivecontactform 
+1495282585832	 ./endpoints.log 
+1495282585832	 
+
+1495282585832	 connecting static apps
+1495282585833	 ./backend 
+1495282585833	 ./demo 
+1495282585833	 ./demo 
+1495282585833	 ./builder 
+1495282585833	 ./preview 
+1495282585833	 
+
+1495282585833	 Error Handling 
+1495282585833	 
+
+1495282585833	 SERVER READY 
+
+
+
+1495282595080	 restart server
+1495282595093	 connecting data service
+1495282595104	 data service connected
+1495282595104	 using hardcoded user, devUser()
+1495282595104	 
+
+1495282595104	 connecting main routes
+1495282595278	 
+
+1495282595278	 creating chatbox routes
+1495282595278	 	/chatbox
+1495282595278	 	/style
+1495282595278	 	/bot
+1495282595279	 	/deleteBot
+1495282595279	 	/convert
+1495282595279	 	/providers
+1495282595279	 	/preview_chat_box
+1495282595279	 	/bot_files
+1495282595279	 	/bot_from_file
+1495282595279	 ./endpoints.createchatbox 
+1495282595280	 ./endpoints.loadmessagetemplate 
+1495282595316	 ./endpoints.conversate/operator 
+1495282595316	 ./endpoints.receivecontactform 
+1495282595316	 ./endpoints.log 
+1495282595316	 
+
+1495282595316	 connecting static apps
+1495282595317	 ./backend 
+1495282595317	 ./demo 
+1495282595317	 ./demo 
+1495282595317	 ./builder 
+1495282595317	 ./preview 
+1495282595317	 
+
+1495282595317	 Error Handling 
+1495282595317	 
+
+1495282595317	 SERVER READY 
+
+1495282602519	 GET/bot_files
+1495282602524	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19v%2F5mbvJHWHyueY9G5qmJXVdoTHFkFX%2FmM1cKdWD85AeZtneAoP%2B7t"}}
+1495282602546	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495282609855	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495282611281	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/DiOTVwsu8HfV/eblwhQ3mPMzuthUL1RQEvE8Cou425SkVbAaQWuWbq0BHEzykqem4rNLMaZ2P5lc19Uw9t1AztiaPUqQ08tOsMwCITul95f71xh4paWFIn6LJZHIA9jzmGZ8k9shWLvi2ynCiIS1DZDUZ1prPku7zFrcPP50Gm4GsdJwFO7pj7HJDXD30iO0dL0gwD51KlQ==","key":"preview"}}
+1495282618085	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19f7NcWoD33m8s4rNa7eh5DL9O5oJjFk99Op3wcV+vK0VenrVxh29sMB+yJKFSEbFORlyZC1uRsDNJDHsrSidAUpCUpzzPiF7RRWk1viVCezcIuvSHikeVgxljxKXPrUanu2TidGlxMtxCd3UqckxwaYEmRPJ4h4NjQptxZexydywy9u1ujZthigWtsDbUWRHBBrrIvHMo5lg==","key":"preview"}}
+1495282619493	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX18tv1lMm37TphXRLE/sisrc+3d012fjEmSxsYHRvG+pEiMvFuTxYJQ203OtqOeu20T9efx8TeIlAmSR22Awk+nsOUiYGebIPv/XZbxb9vsMUHDSnKcTMdX6x9uIgdvbHc+vFQmQe7QizkBPpjHoKxlgWTS6Jz95kFJpNm7RlClLI2P7g8zKPRtAFLixAPUofxwBXHBknbnFeg==","key":"preview"}}
+1495282627292	 GET/bot_files
+1495282627298	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19mqO%2FDVx6UuhVcbBiRM%2BBOCRIZKaocWQ3sbPpD5ya0PH%2BzoLoHrkh8"}}
+1495282627303	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495282631993	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495282635184	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/DVv8lrrEd0AtIx7HPGCLlEL/sQIHV5MWUbnXudM+d1DNWZsELwt4PwiP7QN5yihqAs+mXFV7TZkadk8UrO6rPnH70JOXXxpnr+aOHb9Vi77d34fQyOLfYal3gG7SgfroHXmBdp/TU6pJAp2A8oBVBfyNpornOcQZt8zxEL/5yJ41ymmvj3f6rdSEeiFgG5mQW0I80h8NtaQ==","key":"preview"}}
+
+
+1495282670545	 restart server
+1495282670556	 connecting data service
+1495282670567	 data service connected
+1495282670567	 using hardcoded user, devUser()
+1495282670567	 
+
+1495282670567	 connecting main routes
+1495282670735	 
+
+1495282670735	 creating chatbox routes
+1495282670735	 	/chatbox
+1495282670735	 	/style
+1495282670736	 	/bot
+1495282670736	 	/deleteBot
+1495282670736	 	/convert
+1495282670736	 	/providers
+1495282670736	 	/preview_chat_box
+1495282670736	 	/bot_files
+1495282670736	 	/bot_from_file
+1495282670736	 ./endpoints.createchatbox 
+1495282670737	 ./endpoints.loadmessagetemplate 
+1495282670774	 ./endpoints.conversate/operator 
+1495282670774	 ./endpoints.receivecontactform 
+1495282670775	 ./endpoints.log 
+1495282670775	 
+
+1495282670775	 connecting static apps
+1495282670776	 ./backend 
+1495282670776	 ./demo 
+1495282670776	 ./demo 
+1495282670776	 ./builder 
+1495282670776	 ./preview 
+1495282670777	 
+
+1495282670777	 Error Handling 
+1495282670777	 
+
+1495282670777	 SERVER READY 
+
+1495282679127	 GET/bot_files
+1495282679132	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19gzoIqZ8p%2F5iIiq1sAXHDk3AQc2%2FmspHwcLJ%2F7hWhXIa8wnfz%2Fh%2Bu8"}}
+1495282679154	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495282686245	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495282688375	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+yFRDyjwUZ5tVvSy051xj8DbPSb4ac7RNO08zydrZT6ysUo8+MGsFa8jB8k4Ez7JA2lFgSIqxdSmaeSMaLoTzPuQapsNgyL8yxa1ERko6TKr3P1YO/EsmLz1fTq+udeAAIeh1PZnSO+/5BeAdY4HPMaa1aZvdI+gfH2xtPkwIRjqtr1n6/hzObInI6LmrmK1vlis8zr7jbYA==","key":"preview"}}
+1495282762208	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX189i3jYr01Z9LHlizMv8TK9NpaZ8kgjih5bHaj5Em9TjQDQVxUTnXgQX+/6MI21W/3H+BrpuWvkzH61qXmmNwYWuQdBv6WZFLiia6tgzEvkU/D/gWOxZ/pHOJgP/m6hNON5teSNGHU+znjqIGnyz8NB74XMRcCGTWGmM3Jkmlqzoiwn6ObqoxUd+a6Kmy0n4wKhZ16mzmVd0A==","key":"preview"}}
+1495282764450	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/HdqYzUmU69rqnjBc9GBfz8Oq/BFxscDCpiKndi/lAa4OWnXMrIWqK6lUhVvAqdGgeXj6OpD65ql5+lT0d9nXsaXj5iR1kWqc7woAx0Fy8dKN0Raf5vatN0yTG1mcsNrj3yOvw7Ib+PpQl41r4OHdCzIlSdeULMsM3OFWoCEFGJChdOQoFQBZ6j345SedhcutQ+8XBtIzgNg==","key":"preview"}}
+1495282909222	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1495282914892	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX183XQlmagu4fHmt2/7xivo+IU/Omyt6bx0HjyF5ar0mbNgMPG4xsXGGcJCzHDlRn+oaig1Z1f0jw24auns7Mll8zoBoZRfYagPfOiULLD1ktEoJ2iCJzkbxUsT2PSmIUtNqkIKPZZ9YwRW5CglklihIc829Y2nx0Mn2jQpp9KonNNh8Ylcvs2j7nZCvUrlj2AjCzHvQrFR9sGOsJd+yCX8e7ew/HYQ8BVo=","key":"preview"}}
+1495282924562	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495282926190	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+iyM4opeFJmUYcjW5VF9/4u4IcF6S74B4tRm4zaDUjqM1QH/C7usdVNBvt0wggGgW+y84/iAYIFUBpVtCMz4l9CtN3FtJC+4a+dtV+qImrbmqMVwu+kkGr4QZnoxa5ClFhtSWereAlnNea9BBEW9Ypz5mLt6Phs8g1r4sWvsAlUBdvS6+JZRS54wwKhqBcw8wgE5QZxb7p5g==","key":"preview"}}
+1495282955121	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.welcome message"}}
+1495282955121	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response welcome"}}
+
+
+1495282972759	 restart server
+1495282972770	 connecting data service
+1495282972778	 data service connected
+1495282972778	 using hardcoded user, devUser()
+1495282972778	 
+
+1495282972778	 connecting main routes
+1495282972945	 
+
+1495282972945	 creating chatbox routes
+1495282972945	 	/chatbox
+1495282972946	 	/style
+1495282972946	 	/bot
+1495282972946	 	/deleteBot
+1495282972946	 	/convert
+1495282972946	 	/providers
+1495282972946	 	/preview_chat_box
+1495282972946	 	/bot_files
+1495282972946	 	/bot_from_file
+1495282972947	 ./endpoints.createchatbox 
+1495282972947	 ./endpoints.loadmessagetemplate 
+1495282972984	 ./endpoints.conversate/operator 
+1495282972984	 ./endpoints.receivecontactform 
+1495282972985	 ./endpoints.log 
+1495282972985	 
+
+1495282972985	 connecting static apps
+1495282972985	 ./backend 
+1495282972985	 ./demo 
+1495282972990	 ./demo 
+1495282972990	 ./builder 
+1495282972990	 ./preview 
+1495282972990	 
+
+1495282972990	 Error Handling 
+1495282972990	 
+
+1495282972990	 SERVER READY 
+
+1495282984030	 GET/bot_files
+1495282984035	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2FDC%2F0QUQiuM79QmyIen5RfIlSVk31tolIOJCsv2Ci9i9Qyfraxdvc%2F"}}
+1495282984056	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495282989467	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495282990993	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX186yXozWW+FMYi8d7LrYLDwy4Q8z3/RP2R4kZYRxeDhRDBhe/20K6kw3mZvcEpw38Mu7ZcwwSJ/TlQGpq09uFG9sfpLJkc0Dj9Y0pJfYeQBO9m0GygOyIf4bwaRg0znTu9RJZGM3X63WXusZcF3Ynyq6lCj27F0ArWmtppcmcQrz1RYcDHmGrQghWjVpbtNQF2mrMZNgEVbhQ==","key":"preview"}}
+1495283000870	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1495283004064	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+oU7jMa8ZIuLq65JG+bmRcnppMs2sZ4xLIeNlHzG0PckNSnWfPpSyglUrMz0WGSWNaeTZ7yj+henRiBtsgOK7C4UnkGE2atDcvHG3USKK7G1u6BxCLzjzM9UIT7xCqtdWbPMG53Mn3STgcZ4VkXUWH4PpWPA5Eh2JfKmK0JdY/od7y3SVRS+BzA51cEVvlxryRaIzsGKNaYBOGFACcNCAI+MwF/IZJZnM=","key":"preview"}}
+1495283011218	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495283012631	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX185MnUTb9MzR531HTIGzVTWR6X1Nch8x+xC3sDq0+RkoTGqcWHw+Rp7MMnwS7p/bXmTnxj3c6Ccol9MSxtqxB9znwgZRsur6nTppZHXkEWzR53r2BAaTTlDnE51E2xn21aGb5s0vMJiV83DUSNWsk9vMbM0f9ITyNQymJJzs9O3B6U1/HrXt7QSxqq+C8Cv2p7AJYCyoIgn2g==","key":"preview"}}
+1495283030270	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.welcome message"}}
+1495283030270	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response welcome"}}
+1495283070310	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+a5HPDpiju/1x9+neltL707aVZixSjNRIZ/OUyevKaR0YTiGO6nTzyt+yne6+XiyYsLpj7zmNd5jg4QunzWzwLqII18KMkR6ORib15Nioc0YqacyCmwxQDrKP0Qsm/FJ5Fh8NV+p0UEZ+xyfYWUdO80ziIamhBDSMpaiho6j5Cb0/2+/oc92a1lbJNYtsUMzd3uAUMSLYtfyR2Q64O4z9ySzPRTqMWbTVfN2Ms5e7hSkQZiogHGkNz","key":"preview"}}
+1495283078947	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX185PkWW0E9qnc7CTHO/69RFPJgWwhzM9r5YbTMiKYRV9789BCGCC8A/5LblXBsb5d0psWeZYGUTOMVdueepgm8nGxwsaZmZ5zpR1RgdILcIojj2FD6WfhFHfnuoYzNH1VmBCe9qnFhhIhibwtuqnMy6yEP9Tcsa2bys7i146MTMxLdSQRrVSb4dUQyhjGbc16xtqzHBJ2eYGwKfifiQA+ziQprZ0U/P6xEM5xvC2gp+g7T04oVDaITVwH9prT3SXiwTwNdarkPfsesOwYiSPHrwZLHLp5wBbyg=","key":"preview"}}
+1495283091749	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19rrYjZT0kq+Oa/rO2S08hMClsVxSEn76TDqdD2bNZjDvMeWeVAuA05T+JcqfKlD29Rqp8ezKekILlZoIrdTPRhx0lwdWUDrYhYk4jqeCF4uz6De+fuuQdrbQNiJ8LQX5ox44Hey5dbaYMnYnD3u0nVbWX3UNSVGIG+WBajwsEZRY1N6rr45O/hWSGl9EKi0QQ0w5zy5pT2cWniDI9/128OFm4KDuNP1btDetziR6D+PW6NRvbo5efjt3Yge9SRxGta5SdJGFVtVM0ewRLmomGrNAxvJrrnMMXex28v3nmTH7YWMSU9owChrla6rNVVGdAIbOVUN4hauA==","key":"preview"}}
+1495283110473	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-stv-2.js"}}
+1495283117154	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+tItCIt8l5etquFEoCYxKM0ms1mEV8b73G6KY40Klbc9W7RFG+c8ZAYHCsSz0Iu8Dlb09eFO7YoRHliObLKK/uMMrY90EQM1f9CpW3ZsG709MafU8BBf+Y35zGh4an22FRUnK6aBy1QsrZnVBsJBb77LXsJ3wCTONII7X2wwEheF0k4uCZKcSPfxDh61fqQQpB3TGGBsNToVzTMi68ZaRIvwYt/K8zm48g2Npm6rbUM3z6Vox7NOOdhdcbP+9HWnj3R4w/TJ5RDM+MprU7mWz+IELRISCofgi/J4lvULiE1gaElzJ9vUzCVR/BGxP88ywZjBW1qfs6Eg==","key":"preview"}}
+1495283152370	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.welcome message"}}
+1495283152370	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"stvincent.response welcome"}}
+1495283287709	 GET/bot_files
+1495283287714	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19kZmc7LCEoOQ4Vwlp03VI37%2FJJ%2FQ7bARYDbTD7Jx3vhegVP4AFd%2B%2FR"}}
+1495283287720	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495283293388	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495283296041	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19s9VszmJtWHHQOVxTSPv3q6N6tNopM1Jzv0d7OeXv2Aageu294orULUz9lA3c60kenK1ZPhWpIz8U++Pgp8udejPeT0fGry2DFKe/lIL33KIW/44OKdBcbEdSHTMxWeWl1BFyvADrlDhN7sBFYe8ilhrROUeIVfk3c5lQn0F9cyESVThR99eZ2GYVOcrrKnWSoG7KoR6vKYA==","key":"preview"}}
+1495283302802	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX186c9aryTkjWgprC8wZDqlB7r+VxKO21HD6+/eV4oTJgdHHJ8VUDhK32Xhajijmw7a/62th6NYsfEicALKVHyvaFb7f+1eD+28zsXmjWgt9EkX2P+1gRclcoNk6FEOdI3nPtfbHfG8YL5loN30+I9sfWNpv9MQ6XBWsskzulERBkr98nDVJhejNKMkk+CMb5MdwT8p80ishJg==","key":"preview"}}
+1495283303962	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19Mykpju/6NmHIpEeQmMr38ZOlhX7QvH9QFUSaT8O3JeZcMzLmL39TyLbTLp0hvoktZFAOkVVOJLEmujrsq+UIMsZXf0pOlk1lBTrlw3fD9ekSP20/u9VLfSK5gmkYS4hvBPe1gBDP2mnTnYbkzVMXwL/zNsRA+rzbieZyLmlTJ6g2TnMAjVEAxeMGUBBzW7ogw/57jQJ94wQ==","key":"preview"}}
+1495283306960	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX18sosAwxpChJS5sIuURro46Y78tbPvrWJsyA62iKw2O9vX86a0iMm/m+fw75nDDYjeA7a0cK7TrGJ0o9Fn1nqXSomphA/qZgSd/HGsHPWdcp9LxwV/PEmDvFVSS0sYBXZZCHxk/jwm7Mlds0Y1KywTYZHgebOlp7k1wC5qbE9j5ZarOyifqwSbZDxbK2X4Vlr3zER3QYGi8QA==","key":"preview"}}
+1495283310828	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19xGpn3r5CKSXuOEdcT+FRFaP+HmT8dOHM8hhBaD8jbafyCscgHJTtRgyAqqFGbNf+3a2o9VeBjfhFzW3fDFSmoFIlsrWrgWSns8vPNqXn+MR7u7a2ChcfVv9Ii200fqAkVe15EsUw1dkF2NTmNX3ihhF7yjALgK4+3Fni6Wfd7nwofeocpPpj8FyhgvYczw1Ad6Nh29J5dtg==","key":"preview"}}
+1495283313986	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.welcome message"}}
+1495283313987	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response welcome"}}
+
+
+1495283429599	 restart server
+1495283429611	 connecting data service
+1495283429619	 data service connected
+1495283429619	 using hardcoded user, devUser()
+1495283429619	 
+
+1495283429619	 connecting main routes
+1495283429781	 
+
+1495283429781	 creating chatbox routes
+1495283429781	 	/chatbox
+1495283429782	 	/style
+1495283429782	 	/bot
+1495283429782	 	/deleteBot
+1495283429782	 	/convert
+1495283429782	 	/providers
+1495283429782	 	/preview_chat_box
+1495283429782	 	/bot_files
+1495283429782	 	/bot_from_file
+1495283429782	 ./endpoints.createchatbox 
+1495283429783	 ./endpoints.loadmessagetemplate 
+1495283429818	 ./endpoints.conversate/operator 
+1495283429819	 ./endpoints.receivecontactform 
+1495283429819	 ./endpoints.log 
+1495283429819	 
+
+1495283429819	 connecting static apps
+1495283429820	 ./backend 
+1495283429820	 ./demo 
+1495283429820	 ./demo 
+1495283429820	 ./builder 
+1495283429820	 ./preview 
+1495283429820	 
+
+1495283429820	 Error Handling 
+1495283429820	 
+
+1495283429820	 SERVER READY 
+
+
+
+1495283446597	 restart server
+1495283446608	 connecting data service
+1495283446618	 data service connected
+1495283446618	 using hardcoded user, devUser()
+1495283446618	 
+
+1495283446618	 connecting main routes
+1495283446792	 
+
+1495283446792	 creating chatbox routes
+1495283446792	 	/chatbox
+1495283446792	 	/style
+1495283446793	 	/bot
+1495283446793	 	/deleteBot
+1495283446793	 	/convert
+1495283446793	 	/providers
+1495283446793	 	/preview_chat_box
+1495283446793	 	/bot_files
+1495283446793	 	/bot_from_file
+1495283446793	 ./endpoints.createchatbox 
+1495283446794	 ./endpoints.loadmessagetemplate 
+1495283446831	 ./endpoints.conversate/operator 
+1495283446831	 ./endpoints.receivecontactform 
+1495283446832	 ./endpoints.log 
+1495283446832	 
+
+1495283446832	 connecting static apps
+1495283446832	 ./backend 
+1495283446832	 ./demo 
+1495283446832	 ./demo 
+1495283446832	 ./builder 
+1495283446832	 ./preview 
+1495283446832	 
+
+1495283446832	 Error Handling 
+1495283446832	 
+
+1495283446832	 SERVER READY 
+
+
+
+1495283454514	 restart server
+1495283454527	 connecting data service
+1495283454537	 data service connected
+1495283454537	 using hardcoded user, devUser()
+1495283454537	 
+
+1495283454537	 connecting main routes
+1495283454713	 
+
+1495283454713	 creating chatbox routes
+1495283454713	 	/chatbox
+1495283454713	 	/style
+1495283454714	 	/bot
+1495283454714	 	/deleteBot
+1495283454714	 	/convert
+1495283454714	 	/providers
+1495283454714	 	/preview_chat_box
+1495283454714	 	/bot_files
+1495283454714	 	/bot_from_file
+1495283454714	 ./endpoints.createchatbox 
+1495283454715	 ./endpoints.loadmessagetemplate 
+1495283454753	 ./endpoints.conversate/operator 
+1495283454754	 ./endpoints.receivecontactform 
+1495283454754	 ./endpoints.log 
+1495283454754	 
+
+1495283454754	 connecting static apps
+1495283454755	 ./backend 
+1495283454755	 ./demo 
+1495283454761	 ./demo 
+1495283454761	 ./builder 
+1495283454761	 ./preview 
+1495283454761	 
+
+1495283454761	 Error Handling 
+1495283454761	 
+
+1495283454761	 SERVER READY 
+
+
+
+1495283484566	 restart server
+1495283484578	 connecting data service
+1495283484588	 data service connected
+1495283484589	 using hardcoded user, devUser()
+1495283484589	 
+
+1495283484589	 connecting main routes
+1495283484755	 
+
+1495283484755	 creating chatbox routes
+1495283484755	 	/chatbox
+1495283484756	 	/style
+1495283484756	 	/bot
+1495283484756	 	/deleteBot
+1495283484756	 	/convert
+1495283484756	 	/providers
+1495283484756	 	/preview_chat_box
+1495283484756	 	/bot_files
+1495283484756	 	/bot_from_file
+1495283484757	 ./endpoints.createchatbox 
+1495283484757	 ./endpoints.loadmessagetemplate 
+1495283484793	 ./endpoints.conversate/operator 
+1495283484793	 ./endpoints.receivecontactform 
+1495283484794	 ./endpoints.log 
+1495283484794	 
+
+1495283484794	 connecting static apps
+1495283484794	 ./backend 
+1495283484794	 ./demo 
+1495283484794	 ./demo 
+1495283484794	 ./builder 
+1495283484794	 ./preview 
+1495283484794	 
+
+1495283484794	 Error Handling 
+1495283484794	 
+
+1495283484794	 SERVER READY 
+
+
+
+1495283491675	 restart server
+1495283491687	 connecting data service
+1495283491695	 data service connected
+1495283491695	 using hardcoded user, devUser()
+1495283491695	 
+
+1495283491695	 connecting main routes
+1495283491857	 
+
+1495283491857	 creating chatbox routes
+1495283491858	 	/chatbox
+1495283491858	 	/style
+1495283491858	 	/bot
+1495283491858	 	/deleteBot
+1495283491858	 	/convert
+1495283491858	 	/providers
+1495283491858	 	/preview_chat_box
+1495283491858	 	/bot_files
+1495283491858	 	/bot_from_file
+1495283491858	 ./endpoints.createchatbox 
+1495283491859	 ./endpoints.loadmessagetemplate 
+1495283491896	 ./endpoints.conversate/operator 
+1495283491896	 ./endpoints.receivecontactform 
+1495283491897	 ./endpoints.log 
+1495283491897	 
+
+1495283491897	 connecting static apps
+1495283491897	 ./backend 
+1495283491897	 ./demo 
+1495283491897	 ./demo 
+1495283491897	 ./builder 
+1495283491897	 ./preview 
+1495283491897	 
+
+1495283491897	 Error Handling 
+1495283491897	 
+
+1495283491897	 SERVER READY 
+
+
+
+1495283497759	 restart server
+1495283497769	 connecting data service
+1495283497780	 data service connected
+1495283497780	 using hardcoded user, devUser()
+1495283497780	 
+
+1495283497780	 connecting main routes
+1495283497954	 
+
+1495283497955	 creating chatbox routes
+1495283497955	 	/chatbox
+1495283497955	 	/style
+1495283497955	 	/bot
+1495283497955	 	/deleteBot
+1495283497956	 	/convert
+1495283497956	 	/providers
+1495283497956	 	/preview_chat_box
+1495283497956	 	/bot_files
+1495283497956	 	/bot_from_file
+1495283497956	 ./endpoints.createchatbox 
+1495283497956	 ./endpoints.loadmessagetemplate 
+1495283497994	 ./endpoints.conversate/operator 
+1495283497995	 ./endpoints.receivecontactform 
+1495283497995	 ./endpoints.log 
+1495283497995	 
+
+1495283497995	 connecting static apps
+1495283497995	 ./backend 
+1495283497995	 ./demo 
+1495283497996	 ./demo 
+1495283497996	 ./builder 
+1495283497996	 ./preview 
+1495283497996	 
+
+1495283497996	 Error Handling 
+1495283497996	 
+
+1495283497996	 SERVER READY 
+
+
+
+1495283501639	 restart server
+1495283501652	 connecting data service
+1495283501661	 data service connected
+1495283501661	 using hardcoded user, devUser()
+1495283501661	 
+
+1495283501661	 connecting main routes
+1495283501830	 
+
+1495283501830	 creating chatbox routes
+1495283501830	 	/chatbox
+1495283501830	 	/style
+1495283501830	 	/bot
+1495283501830	 	/deleteBot
+1495283501831	 	/convert
+1495283501831	 	/providers
+1495283501831	 	/preview_chat_box
+1495283501831	 	/bot_files
+1495283501831	 	/bot_from_file
+1495283501831	 ./endpoints.createchatbox 
+1495283501832	 ./endpoints.loadmessagetemplate 
+1495283501867	 ./endpoints.conversate/operator 
+1495283501868	 ./endpoints.receivecontactform 
+1495283501868	 ./endpoints.log 
+1495283501868	 
+
+1495283501868	 connecting static apps
+1495283501868	 ./backend 
+1495283501869	 ./demo 
+1495283501874	 ./demo 
+1495283501874	 ./builder 
+1495283501875	 ./preview 
+1495283501875	 
+
+1495283501875	 Error Handling 
+1495283501875	 
+
+1495283501875	 SERVER READY 
+
+1495283507973	 GET/bot_files
+1495283507978	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2BVY1bmM0K9AiWRWJWO18a2%2Bu3WkG3TsA8oHzcZjm%2B1Bk2U3Cosla3D"}}
+1495283507999	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495283514654	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495283516074	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1++OW85poQX4dJyOLsdiMyxtkwJZv0fj5R8gdu1tZQITKTh3IhAWlRQMCWponO3fog+vZZ1zZg2F6zzRltVh+0odqxtI69fklTrkh/C/hxzjBCnU83FwYwhBLhhJcqnONdd0m+piL39f9viLYIE388ZEHzfKboI6reoEBHk1eXrP3ik5GmjaybXigs86lsT/vnuLaAMgh/E8Q==","key":"preview"}}
+1495283522854	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.welcome message"}}
+1495283522855	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response welcome"}}
+
+
+1495284098095	 restart server
+1495284098105	 connecting data service
+1495284098114	 data service connected
+1495284098114	 using hardcoded user, devUser()
+1495284098114	 
+
+1495284098114	 connecting main routes
+1495284098284	 
+
+1495284098284	 creating chatbox routes
+1495284098284	 	/chatbox
+1495284098285	 	/style
+1495284098285	 	/bot
+1495284098285	 	/deleteBot
+1495284098285	 	/convert
+1495284098285	 	/providers
+1495284098285	 	/preview_chat_box
+1495284098285	 	/bot_files
+1495284098285	 	/bot_from_file
+1495284098285	 ./endpoints.createchatbox 
+1495284098286	 ./endpoints.loadmessagetemplate 
+1495284098323	 ./endpoints.conversate/operator 
+1495284098324	 ./endpoints.receivecontactform 
+1495284098324	 ./endpoints.log 
+1495284098324	 
+
+1495284098324	 connecting static apps
+1495284098325	 ./backend 
+1495284098325	 ./demo 
+1495284098330	 ./demo 
+1495284098330	 ./builder 
+1495284098330	 ./preview 
+1495284098330	 
+
+1495284098330	 Error Handling 
+1495284098330	 
+
+1495284098330	 SERVER READY 
+
+1495284357458	 GET/bot_files
+1495284357464	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX188vzxIXV2K%2BLR5LZTlm7pjYyg7KchjySJCkt1K0vrMIUO%2B%2Fj9fgCL0"}}
+1495284357486	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495284362591	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495284363899	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19ICMwM0MQXJOY3scft/+ABvQxTMM3m4MpkRvv0uDzrVF/Pa4mvzB7cBdrp8BqvWW3Rgw3nboH3YosqYnnZ+oYYj6qRhGqnaYB6kjtK0XBm3Hrp7cW/Gmnp7gZXBkZdTsiecdF/QlBft+1Zsu3SLFiusxDrberrk2j1oAxF7nLm5/Q3BUcbmdRWunTI8MavM5xoqI1e4nfAQw==","key":"preview"}}
+1495284367037	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.welcome message"}}
+1495284367037	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response welcome"}}
+1495284369598	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.text message"}}
+1495284369599	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list icons"}}
+1495284370915	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.image message"}}
+1495284370923	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.special message"}}
+1495284370923	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list text"}}
+1495284542890	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/VErxtMeI41md5KKm5z9KC0AJrgudmvfRw4/bUB5citozQazFSLYr/Fddntzn9Ybg3Yv4w7y4duZYM1XKOFbby/4BOr71Yb5xhqR5L35RonNPY8YvoHqX35x4yXpL67CXewhVeQ5ToqwhQzH9jcCVqkh/TpaAyXPgWJAonMxodwgdEG94Xx3OSdTwS9erIlm7ByV6EW2bzww==","key":"preview"}}
+1495284554009	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/EsOAkvp7y1SDsTX+0ptKWCJJ3bdJQSpJZu+hPdFh21dBl3n+1dz1PadncTxP4tWIsfEtMFOItvC4pqvDnr5r9C6oCV1+SVDbd1qf5MNs6yJnfiyqxeSl0WMWAAZIBGNvfTD7VYHFP1pIyGCPXUJ+1Ac4gd4ptlnTVI/AD0xKfWBxPIgKFPiY8fqPvh5PDHQN7OIsHYW3ivQ==","key":"preview"}}
+1495284556547	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.welcome message"}}
+1495284556547	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response welcome"}}
+1495284558191	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.text message"}}
+1495284558191	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list icons"}}
+1495284559472	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.image message"}}
+1495284559479	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.special message"}}
+1495284559479	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list text"}}
+1495284594407	 GET/bot_files
+1495284594413	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2BhTI7TrsSirL5hSSwJlUQEizUC7UzSxwklZjCC3twYWHtBWNe8vrk2"}}
+1495284594419	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495284599091	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495284600480	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX185v7e8vKod6ezikHhKHQY98lL6Os6XYr7y+1CeTFsvQGCxL9luXp6uTYv6Tv7MMMZiHnQvnp63m/2Sw8kmiZPdJWLlq12iTExYEzGk2RhsrS3acW7r5gy7I/29BswFkkoGmlLrVTon/J+FIMxlq1wqga3x2apr3yXm9IldPfl7eD4/+CX9fLQM85UX5Xx7NoEZpzmRJRJunw==","key":"preview"}}
+1495284603903	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.welcome message"}}
+1495284603904	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response welcome"}}
+1495284605419	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.text message"}}
+1495284605420	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list icons"}}
+1495284606634	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.image message"}}
+1495284606641	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.special message"}}
+1495284606643	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list text"}}
+
+
+1495284651642	 restart server
+1495284651654	 connecting data service
+1495284651664	 data service connected
+1495284651664	 using hardcoded user, devUser()
+1495284651664	 
+
+1495284651664	 connecting main routes
+1495284651829	 
+
+1495284651830	 creating chatbox routes
+1495284651830	 	/chatbox
+1495284651830	 	/style
+1495284651830	 	/bot
+1495284651830	 	/deleteBot
+1495284651830	 	/convert
+1495284651831	 	/providers
+1495284651831	 	/preview_chat_box
+1495284651831	 	/bot_files
+1495284651831	 	/bot_from_file
+1495284651831	 ./endpoints.createchatbox 
+1495284651833	 ./endpoints.loadmessagetemplate 
+1495284651868	 ./endpoints.conversate/operator 
+1495284651869	 ./endpoints.receivecontactform 
+1495284651869	 ./endpoints.log 
+1495284651869	 
+
+1495284651869	 connecting static apps
+1495284651870	 ./backend 
+1495284651870	 ./demo 
+1495284651870	 ./demo 
+1495284651870	 ./builder 
+1495284651870	 ./preview 
+1495284651870	 
+
+1495284651870	 Error Handling 
+1495284651870	 
+
+1495284651870	 SERVER READY 
+
+1495284663271	 GET/bot_files
+1495284663276	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19tARvUVwTyLqvatp07iaAidlCVp8IyybEsY71R32c1EwBl4Kednv%2Fw"}}
+1495284663297	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495284669038	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495284670741	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19cW86qYpMZx/LoWXizcVJNIySy0iW7pgZA1E46n++ZE+98j9lDovlYdmfKdtptME1hAP7QYaNgTq0i651SmDIsrGUOOL5s9+2pyr/CsIhJ/aGlmD8dQS4PlmqKB7lK2WWEiLnL0bsEFKkDz62bSl/H2fd2Si1s1GdX4z7GwO8RPCRi4AiP9BOMC1FaFH7HMNzVi3rnmkYY2Q==","key":"preview"}}
+1495284674078	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.welcome message"}}
+1495284674079	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response welcome"}}
+1495284675894	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.text message"}}
+1495284675896	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list icons"}}
+1495284677144	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.image message"}}
+1495284677153	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.special message"}}
+1495284677154	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list text"}}
+1495284724062	 GET/bot_files
+1495284724083	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19U8MwVwIe%2B6fOYbxdY%2BTha6apx16AFwVAARE2isihXkBviQndpZ9mI"}}
+1495284724093	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495284729819	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495284730835	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19sPP0GSlkhMBjMhN33dzDUbms5RTtn50htiJ0qkczNiy7TTLup/hlUjPeA6IRw4ALBzNu6yahOBHkxnwVvcAcEQSad1a1IYl6XRBGtoza2AGWdmF5lk7L0NBvCBoxXVYf2wrR88eghPu+Plc6LMPR9XLnAwQ756mY27xRq5FcHTsN7E+/k02K8y2WOXt2NIPGo4ntHusXbpA==","key":"preview"}}
+1495284733201	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.welcome message"}}
+1495284733201	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response welcome"}}
+1495284735183	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.text message"}}
+1495284735183	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list icons"}}
+1495284736421	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.image message"}}
+1495284736427	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.special message"}}
+1495284736427	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list text"}}
+
+
+1495284769445	 restart server
+1495284769458	 connecting data service
+1495284769467	 data service connected
+1495284769467	 using hardcoded user, devUser()
+1495284769467	 
+
+1495284769467	 connecting main routes
+1495284769628	 
+
+1495284769628	 creating chatbox routes
+1495284769628	 	/chatbox
+1495284769629	 	/style
+1495284769629	 	/bot
+1495284769629	 	/deleteBot
+1495284769629	 	/convert
+1495284769629	 	/providers
+1495284769629	 	/preview_chat_box
+1495284769629	 	/bot_files
+1495284769629	 	/bot_from_file
+1495284769630	 ./endpoints.createchatbox 
+1495284769631	 ./endpoints.loadmessagetemplate 
+1495284769666	 ./endpoints.conversate/operator 
+1495284769667	 ./endpoints.receivecontactform 
+1495284769668	 ./endpoints.log 
+1495284769668	 
+
+1495284769668	 connecting static apps
+1495284769668	 ./backend 
+1495284769668	 ./demo 
+1495284769673	 ./demo 
+1495284769674	 ./builder 
+1495284769674	 ./preview 
+1495284769674	 
+
+1495284769674	 Error Handling 
+1495284769674	 
+
+1495284769674	 SERVER READY 
+
+1495284847758	 GET/bot_files
+1495284847764	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2BgJJMRyakEKdyQXtiT0178jZKyTtLprE%2FF4CkEjqbezlDmfSUY1Vfb"}}
+1495284847784	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495284852413	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495284853387	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+szHvZRqXnge7bIRyrMNN22RbdeAVM4NEdsFxVdLGsAywDmSTMn1ABIAMQiFEuP8rFMbjKA2f8EXl9VGYPtZE0ztcWHN6xeDgOe2x3/Q4ZFi9fAtMN1nkuq3BXPQY8M4Ll4VqX03xkbXUQ9osMUFatQlIUmlHHlMvMEK4sRLiKMv5ELoL9SobmcVg49WRfY15C9pJuKaBftg==","key":"preview"}}
+1495284857232	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.welcome message"}}
+1495284857233	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response welcome"}}
+1495284859002	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.text message"}}
+1495284859003	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list icons"}}
+1495284860336	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.image message"}}
+1495284860345	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.youtube message"}}
+1495284860346	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list text"}}
+1495284860361	 GET/preview/'https://www.youtube.com/embed/'%20+%20MSeFaApcTco
+1495284951158	 GET/bot_files
+1495284951164	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19Hdr9lQ9bmkAsjpLopn%2FUzNEgpiciH9lf3MsXxNF4Qlb3ztpqf%2BTil"}}
+1495284951169	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495284956210	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495284957613	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1861fPqTTh5Lc2xYZokHnpzThxn5JzktkH33K2dJerpGsIk0l6AG9RK89Euey9uLf0y5rH2e8JEnOkwzofFBrEP3FdW+3SB8yU8IT/NE4UDFk/Fwlr2alh5Emr67jVg1pONJ4ZgasigouPMs79EnW9fPdQkhKgQD3eboxANqguMjn6pHO+1WczB2PjVze1hlnu13kj2ARqK5g==","key":"preview"}}
+1495284960448	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.welcome message"}}
+1495284960451	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response welcome"}}
+1495284961917	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.text message"}}
+1495284961918	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list icons"}}
+1495284963087	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.image message"}}
+1495284963096	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.youtube message"}}
+1495284963096	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list text"}}
+1495284963107	 GET/preview/src=
+
+
+1495284995017	 restart server
+1495284995029	 connecting data service
+1495284995038	 data service connected
+1495284995038	 using hardcoded user, devUser()
+1495284995038	 
+
+1495284995038	 connecting main routes
+1495284995205	 
+
+1495284995205	 creating chatbox routes
+1495284995205	 	/chatbox
+1495284995205	 	/style
+1495284995205	 	/bot
+1495284995205	 	/deleteBot
+1495284995205	 	/convert
+1495284995206	 	/providers
+1495284995206	 	/preview_chat_box
+1495284995206	 	/bot_files
+1495284995206	 	/bot_from_file
+1495284995206	 ./endpoints.createchatbox 
+1495284995206	 ./endpoints.loadmessagetemplate 
+1495284995243	 ./endpoints.conversate/operator 
+1495284995243	 ./endpoints.receivecontactform 
+1495284995244	 ./endpoints.log 
+1495284995244	 
+
+1495284995244	 connecting static apps
+1495284995244	 ./backend 
+1495284995244	 ./demo 
+1495284995244	 ./demo 
+1495284995244	 ./builder 
+1495284995244	 ./preview 
+1495284995245	 
+
+1495284995245	 Error Handling 
+1495284995245	 
+
+1495284995245	 SERVER READY 
+
+1495285003466	 GET/bot_files
+1495285003471	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2BaqTMoK%2FLgSyhN3fGN7ICNGG2czg4enjv7NOnPKmvTWOVCeFdB5V87"}}
+1495285003492	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495285009081	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495285010249	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+fjJodz6hYA4oDBaVNT83+jANXFogWPjqsmso2sP9EjMl5DClu78dGBln24B7s3Qu1V9Uwwp9kklszdHRVNVE5Y+A0IpjJkzAXR2tx8YEpRwvZZhI7wwvY1xxnSYS+unL2gzlBWQUBB4vvQ4GmK9wc2rqk+aXRcJdcq6SEI1I8yoWJLnRFKwDivHyXeoTksZWo1LHk54QdJw==","key":"preview"}}
+1495285012745	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.welcome message"}}
+1495285012745	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response welcome"}}
+1495285014122	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.text message"}}
+1495285014123	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list icons"}}
+1495285015784	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.image message"}}
+1495285015793	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.youtube message"}}
+1495285015794	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list text"}}
+1495285015806	 GET/preview/src=
+1495285093130	 GET/bot_files
+1495285093136	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX184lQC7LxS3Uu8zsOvkp7TKTA48qsO%2Bbjk8u8iwfOvXlsoBTCtBNm6x"}}
+1495285093141	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495285097954	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495285098598	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+XhgLnoTCr9orWkW9UZ3ufeSozoZ5ASapGFy7dhefdXVWa/bQbObfdYt9FJISMwjDVTh9Go9tlBR/ADiQkHjodUgH75+eYLgPSQ7ayjubFl47GkoqneCNmfZFC/iC93fJA7alqcQS047zD3H/EdKqfdkpjHzIWl0JGYabtOuCsAYHI/5/sB3mgu31DIJIzJXbehfM73V95Eg==","key":"preview"}}
+1495285100644	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.welcome message"}}
+1495285100645	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response welcome"}}
+1495285102143	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.text message"}}
+1495285102143	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list icons"}}
+1495285103272	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.image message"}}
+1495285103286	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.response list text"}}
+1495285103286	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.youtube message"}}
+1495285118774	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"tombstone.link message"}}
