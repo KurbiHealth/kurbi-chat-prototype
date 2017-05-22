@@ -10,14 +10,14 @@
 		},
 
 	"less":{
-		"headerColor" 				:"#722D24"
+		"headerColor" 				:"#19110E"
 	},
 
 		"js":{
-		"#BANNER_HEADER"			:"Doc Holiday",
-		"#BANNER_QUESTION"			:"Are you looking for something specific? Maybe a drink!",
-		"#BANNER_YES"				:"YeeHah!",
-		"#BANNER_NO"				:"Hell Naw!"
+		"#BANNER_HEADER"			:"Rick & Morty",
+		"#BANNER_QUESTION"			:"Some funny quote or something.",
+		"#BANNER_YES"				:"Chat with Morty",
+		"#BANNER_NO"				:"Close Chat"
 	}
 
 

@@ -1,0 +1,33 @@
+{{#if self}}
+
+	<div style="padding:40px 20px 0 20px;display:block;">
+
+	<style type="text/css">
+		.kurbi-allmf-image {
+			width: auto;
+			height:60px;
+		}
+	</style>
+
+		<img class="kurbi-allmf-image" src="{{image}}"/>
+
+	</div>
+
+
+{{else}}
+
+	<div style="padding:40px 20px 0 20px;display:block;">
+
+		<style type="text/css">
+			.kurbi-llmf-image {
+				width:auto;
+				height:60px;
+				
+			}
+		</style>
+
+		<img class="kurbi-llmf-image" src="{{image}}"/>
+
+	</div>
+
+{{/if}}

@@ -1,0 +1,51 @@
+<div>
+<style type="text/css">
+.kurbi-qwpp-parent {
+	display:-webkit-flex;
+	display:flex;
+	-webkit-flex-direction:row;
+	flex-direction:row;
+	-webkit-justify-content:flex-start;
+	justify-content:flex-start;
+	-webkit-align-items:center;
+	align-items:center;
+	-webkit-flex-wrap:wrap;
+	flex-wrap:wrap;
+	width:100%;
+}
+.kurbi-qwpp-child {
+	margin:5px 0;
+	padding: 3px 10px;
+	width: 296px;
+	font-size: 14px;
+	text-align: left;
+	color: #279cd6;
+	background: #ffffff;
+	border: 2px solid #279cd6;
+	cursor:pointer;
+}
+.kurbi-qwpp-prompt{
+	font-size:1.3em;
+	color:#888888;
+	margin-bottom:5px;
+}
+</style>
+	<img src="#SMALL_IMAGE_URL" onload="
+	kurbi.attachClickHandler['#pickle']('qwpp', function(data,chatbox){
+		chatbox.sendMessage(data.message);
+	});
+	this.parentNode.removeChild(this);
+	"/>
+	<div class="kurbi-qwpp-prompt">Choose One:</div>
+	<div class='kurbi-qwpp-parent'>
+	 {{#each responses}}
+
+	 <div class='kurbi-qwpp-child' onclick="(function(){
+		 var temp = {{json this}};
+		 var temp2 = {{json ../this}};
+		 temp.message.variable = temp2.variable;
+		 kurbi.click['#pickle']('qwpp', temp)
+	 })()">{{this.text}}</div>
+	 {{/each}}
+	</div><!-- /.kurbi-qwpp-parent -->
+</div>
