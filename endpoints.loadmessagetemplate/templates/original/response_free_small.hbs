@@ -58,6 +58,16 @@ kurbi.attachClickHandler['#pickle']('kkrm', function(data, chatbox){
 	chatbox.sendMessage(data);
 	
 });
+var button = this.parentNode.getElementsByClassName('kurbi-kkrm-child')[0];
+input.onkeypress = function(e){
+if (!e) e = window.event;
+var keyCode = e.keyCode || e.which;
+if (keyCode == '13'){
+  // Enter pressed
+ 	kurbi.click['#pickle']('kkrm', {{json responses.message}});
+  return false;
+}
+	}
 this.parentNode.removeChild(this);
 "/>
 

@@ -46,10 +46,21 @@
 
 	<img src="#SMALL_IMAGE_URL" onload="
 	var input = this.parentNode.getElementsByClassName('kurbi-kkrm-input')[0];
+	var button = this.parentNode.getElementsByClassName('kurbi-kkrm-child')[0];
 	kurbi.attachClickHandler['#pickle']('kkrm', function(data, chatbox){
 		data.body.text = input.value;
 		chatbox.sendMessage(data);
 	});
+	
+	input.onkeypress = function(e){
+    if (!e) e = window.event;
+    var keyCode = e.keyCode || e.which;
+    if (keyCode == '13'){
+      // Enter pressed
+     	kurbi.click['#pickle']('kkrm', {{json responses.message}});
+      return false;
+    }
+  	}
 	this.parentNode.removeChild(this);
 	"/>
 

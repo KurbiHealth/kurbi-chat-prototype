@@ -138,7 +138,8 @@ module.exports = function(BASEURL,PORT,db){
 				function runtimeReplace(data,variables){
 					var temp = JSON.stringify(data);
 						temp = temp.replace(/\[_(.+?)_\]/g, function(whole,variable){
-							return variables[variable];
+							if(variable.split('.')[0] == 'params') return variables.params[variable.split('.')[1]];
+							else return variables[variable];
 						});
 					
 					return JSON.parse(temp);

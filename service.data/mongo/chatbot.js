@@ -5,7 +5,7 @@ module.exports = function(service) {
 	service.getChatBot = getChatBot;
 	service.getChatBots = getChatBots;
 	service.deleteChatBot = deleteChatBot;
-	// service.setChatBot = setChatBot;
+	service.setChatBot = setChatBot;
 	service.createChatBot = createChatBot;
 
 
@@ -67,6 +67,23 @@ function deleteChatBot(query){
 // }
 
 function createChatBot(input){
+	return new Promise(function(resolve,reject){
+		ChatBot.findOne(input, function(err,doc){
+			if(err) reject(err);
+			else{
+				if(!doc) doc = new ChatBot(input);
+				Object.keys(input).forEach((key) => {
+					doc[key] = input[key];
+				});
+				doc.save();
+				
+				resolve(doc);
+			}
+		});
+	});	
+}
+
+function setChatBot(input){
 	return new Promise(function(resolve,reject){
 		ChatBot.findOne(input, function(err,doc){
 			if(err) reject(err);

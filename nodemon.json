@@ -1,4 +1,4 @@
 {
   "verbose": false,
-  "ignore": ["endpoints.chatbot/", "apps.preview/", "apps.demo/", "static/", "incoming.bots/"]
+  "ignore": ["endpoints.chatbot/", "apps.preview/", "apps.demo/", "static/", "incoming.bots/", "apps.chatadmin"]
 }

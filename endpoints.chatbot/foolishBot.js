@@ -2,7 +2,7 @@ module.exports = function(name,URL){
 
 	var responses = {};
 
-	responses['welcome'] = {
+	responses['welcome2'] = {
 		message:{
 			type:'mawc.welcome message', 
 			body:{
@@ -123,7 +123,7 @@ module.exports = function(name,URL){
 			type:'mawc.text message', 
 			body:{
 				displayName: name, 
-				text: 'So here is what we have so far. Your problem is [_symptom_], it has been going on for [_symptomDuration_], and you have treated it with [_treatmentType_]. Is that right?'			}
+				text: 'So here is what we have so far. Your problem is [_params.symptom_], it has been going on for [_symptomDuration_], and you have treated it with [_treatmentType_]. Is that right?'			}
 
 		},
 		responses:{
