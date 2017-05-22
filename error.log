@@ -15242,3 +15242,53 @@
 				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.youtube message"}}
 1495484878492	 GET/template
 				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.response list text"}}
+1495485242919	 GET/bot_files
+1495485242924	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19RIVHSlD73L2VHFar9isiYjg1LtrmLvEUGTc20UZIZm%2Bwt%2FcYcyGG0"}}
+1495485242927	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495485247329	 GET/bot_files
+1495485247335	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19us2V3RvjW2xbSMzHMD%2FkDbIZoy5Ef%2FjzwPtAnfLcKQHU7Ti5iSEXv"}}
+1495485247341	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495485251390	 GET/bot_from_file
+				 meta: {"query":{"file":"rickandmorty-2.js"}}
+1495485251942	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19SXcgWoZXeaXiQTgBsFhPf66hy/p9j88Pa8hBhHy+at8QG3Ag6kOjuttDoAkEhS4Rt7cQgS8bDf8aFZujmDnMNLlCmRzT7sgo7HPdSNw9+NO+RXj2D9rvch0sOTR3KrnWahpOUIuNgTLTHDUGgbYyYnXU/2N4kdaenw5ren8OucuwiwNPGH9DskZRHNzF0jM203j4uQf60nCPSPDanAMpT3XIwq5FzK6o=","key":"preview"}}
+1495485254620	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.welcome message"}}
+1495485254620	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.response welcome"}}
+1495485300980	 GET/bot_files
+1495485300985	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX181ks%2B5buHLz8%2FYvucTQfpzCjuMXM0a0SXDB%2B3yTJA2C5zcwKIFW0MG"}}
+1495485300990	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495485306649	 GET/bot_from_file
+				 meta: {"query":{"file":"tombstone-2.js"}}
+1495485309463	 GET/bot_from_file
+				 meta: {"query":{"file":"rickandmorty-2.js"}}
+1495485309877	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19vI+tFRPFm0OmBD+xhep9YKRHhaWir83qAuZdrCz6oltIMl5vdDT8VH317ngT+0fee6clWkKbdYr8Fg1KeJM2OBZFuzGpNQsiG/vVSe9xLHZpfo2Zb99oL4qL1KTJBAkTlF986WC6tgm+UW3cM0u5NbmEh3lkCyxvhirXyMqe4SorPuRKm2OAPKtKSg+pkLYJbWKUx2aGfdER3DpVgd7efkIeA8FxIZe8=","key":"preview"}}
+1495485311508	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.welcome message"}}
+1495485311508	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.response welcome"}}
+1495485366836	 GET/bot_files
+1495485366841	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19pRDumbfkfgjAsP6oqs%2Flg7%2F8ExphGbowwbFo%2BaE%2F6%2BAl6aSQaW6Sk"}}
+1495485366844	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495485371447	 GET/bot_from_file
+				 meta: {"query":{"file":"rickandmorty-2.js"}}
+1495485372034	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19cMtAdm9xF1DhRwZkgybTcG0WSDUdQjjW6b+4SXf6kfpx3qm7iUCGWn+numTlCv+EDLJ/+9YDvWaRlFj/NvH+7hVFTwcOvIK4zuh/LVoRKOVbiRaMvKPj0n6bK8oflaNY3O65Y9Hx4zSO09e3+TycvoH4hPRYKZfTlZKd6oQZSe7UbrYqupbpCxtBxBnx6X1nu3c931WyyRYG+MSHYqbege+hKW2+q8RA=","key":"preview"}}
+1495485373855	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.welcome message"}}
+1495485373856	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.response welcome"}}
+1495485379278	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.text message"}}
+1495485379279	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.response list icons"}}
