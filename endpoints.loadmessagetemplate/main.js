@@ -8,7 +8,7 @@ module.exports = function(router,db,BASEURL,PORT){
 // -------------------------------------------
 // ROUTE DEFINITION
 // This is a dev/debug version of the endpoint, the production version is on Stamplay
-// Each time this is loaded, it recompiles the chat box & serves the chat box to the 
+// Each time this is loaded, it recompiles the chat box & serves the chat box to the
 // client webpage (snippet_template.js)
 	router
 		.route('/template')
@@ -44,6 +44,10 @@ module.exports = function(router,db,BASEURL,PORT){
 
 			case 'special message':
 			filename = dir + 'special_message.hbs';
+			break;
+
+			case 'youtube message':
+			filename = dir + 'youtube_message.hbs';
 			break;
 
 			case 'link message':
@@ -86,7 +90,7 @@ module.exports = function(router,db,BASEURL,PORT){
 			default:
 
 		}
-		
+
 
 		globFunc.loadFile(filename)
 		.then(function(template){

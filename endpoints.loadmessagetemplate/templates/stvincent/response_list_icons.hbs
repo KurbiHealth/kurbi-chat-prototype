@@ -1,15 +1,23 @@
 <div>
 <style type="text/css">
 .kurbi-qttf-grandparent{
+	display:-webkit-flex;
 	display:flex;
+	-webkit-flex-direction:row;
 	flex-direction:row;
+	-webkit-justify-content:center;
 	justify-content:center;
 }
 .kurbi-qttf-parent {
+	display:-webkit-flex;
 	display:flex;
+	-webkit-flex-direction:row;
 	flex-direction:row;
+	-webkit-justify-content:center;
 	justify-content:center;
+	-webkit-align-items:center;
 	align-items:center;
+	-webkit-flex-wrap:wrap;
 	flex-wrap:wrap;
 	width:100%;
 }
@@ -23,7 +31,7 @@
 <div class='kurbi-qttf-grandparent'>
 	<img src="#SMALL_IMAGE_URL" onload="
 	kurbi.attachClickHandler['#pickle']('qttf', function(data, chatbox){
-		localStorage.setItem('patient_icon', data.url);	
+		localStorage.setItem('patient_icon', data.url);
 		chatbox.sendMessage(data.message);
 	});
 	this.parentNode.removeChild(this);

@@ -15,7 +15,7 @@
 	border:none;
 }
 .kurbi-kkrm-input:focus {
-	outline: #DE5C68 solid thin;
+	outline: #279cd6 solid thin;
 }
 .kurbi-kkrm-parent {
 	display:-webkit-flex;
@@ -36,7 +36,7 @@
 	width: 90%;
 	font-size: 14px;
 	color: #ffffff;
-	background-color: #DE5C68;
+	background-color: #279cd6;
 	text-align: center;
 	cursor:pointer;
 }
@@ -51,21 +51,10 @@
 
 	<img src="#SMALL_IMAGE_URL" onload="
 	var input = this.parentNode.getElementsByClassName('kurbi-kkrm-input')[0];
-	var button = this.parentNode.getElementsByClassName('kurbi-kkrm-child')[0];
 	kurbi.attachClickHandler['#pickle']('kkrm', function(data, chatbox){
 		data.body.text = input.value;
 		chatbox.sendMessage(data);
 	});
-	
-	input.onkeypress = function(e){
-    if (!e) e = window.event;
-    var keyCode = e.keyCode || e.which;
-    if (keyCode == '13'){
-      // Enter pressed
-     	kurbi.click['#pickle']('kkrm', {{json responses.message}});
-      return false;
-    }
-  	}
 	this.parentNode.removeChild(this);
 	"/>
 
