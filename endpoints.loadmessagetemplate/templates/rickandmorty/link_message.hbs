@@ -1,0 +1,66 @@
+{{#if self}}
+
+	<div style="padding:40px 20px 0 20px;display:block;">
+
+	<style type="text/css">
+		.kurbi-alnkmg-link {
+			width: auto;
+			height:60px;
+		}
+	</style>
+
+		<img class="kurbi-alnkmg-link" src="{{link}}"/>
+
+	</div>
+
+
+{{else}}
+
+	<div style="padding:40px 20px 0 20px;display:block;">
+
+		<style type="text/css">
+			.kurbi-lnkmg-displayName {
+				font-weight:bold;
+				font-size: 13px;
+				margin-bottom:10px;
+				color:#444444;
+			}
+			.kurbi-lnkmg-source {
+				margin-bottom: 8px;
+			    padding: 10px 0;
+			    color: #ffffff;
+			    font-weight: bold;
+			    font-size: 14px;
+			    max-width: 100px;
+			    text-align: center;
+			    background: #387e29;
+			    border-radius: 3px;
+			}
+			.kurbi-lnkmg-text{
+				margin-bottom: 10px;
+				font-size:15px;
+				line-height: 1.6;
+				color: #19110E;
+			}
+			.kurbi-lnkmg-h3 {
+				margin-bottom: 5px;
+				color:#444444;
+				font-size: 14px;
+				font-weight: bold;
+			}
+			.kurbi-lnkmg-link {
+				font-size: 12px;
+				color: #387e29;
+				text-decoration: none;
+
+			}
+		</style>
+		<div class="kurbi-lnkmg-displayName">{{displayName}}</div>
+		<div class="kurbi-lnkmg-source">{{source}}</div>
+		<div class="kurbi-lnkmg-text">{{text}}</div>
+		<div class="kurbi-lnkmg-h3">Source:</div>
+		<a href="{{link}}" class="kurbi-lnkmg-link" target="_blank">{{link}}</a>
+
+	</div>
+
+{{/if}}

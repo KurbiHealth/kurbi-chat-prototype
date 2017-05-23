@@ -1,0 +1,43 @@
+<div>
+<style type="text/css">
+.kurbi-llio-parent {
+	display:-webkit-flex;
+	display:flex;
+	-webkit-flex-direction:row;
+	flex-direction:row;
+	-webkit-justify-content:center;
+	justify-content:center;
+	-webkit-align-items:center;
+	align-items:center;
+	-webkit-flex-wrap:wrap;
+	flex-wrap:wrap;
+	width:100%;
+}
+.kurbi-llio-bye {
+	padding: 10px;
+	width: 100%;
+	font-size: 15px;
+	text-align: center;
+	font-weight: bold;
+	color: #ffffff;
+	background: #4eba3a;
+	border-radius: 3px;
+	cursor:pointer;
+}
+</style>
+	<img src="#SMALL_IMAGE_URL" onload="
+	kurbi.attachClickHandler['#pickle']('llio', function(data, chatbox){
+		console.log(data);
+		if(data.id=='end') {
+			chatbox.clear();
+			chatbox.hide();
+			chatbox.end();
+		}
+	});
+	this.parentNode.removeChild(this);
+	"/>
+	<div class='kurbi-llio-parent'>
+	 <div class='kurbi-llio-bye' onclick="kurbi.click['#pickle']('llio', {{json responses.bye}})">{{responses.bye.text}}</div>
+	</div><!-- /.kurbi-llio-parent -->
+
+</div>
