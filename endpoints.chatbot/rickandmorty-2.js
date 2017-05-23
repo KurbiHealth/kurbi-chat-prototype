@@ -10,7 +10,7 @@ module.exports = function(name,URL){
 				headline: "Oh Geez. I'm sorry.",
 				text:"Is my candor not good enough for you? Did my tone offend you? You really want to move on? Without talking to me?",
 				image: URL+'/img/rickandmorty/morty-headshot.png',
-				mainimage: URL+'/img/rickandmorty/welcome.jpg',
+				mainimage: URL+'/img/rickandmorty/morty-welcome.jpg',
 			}
 
 		},
@@ -54,7 +54,7 @@ module.exports = function(name,URL){
 	// ---- CHAIN OF QUESTIONS ----
 
 	responses['get youtube'] = {
-		message: youtubeMessage(name,"Isn't that a daisy!","https://www.youtube.com/watch?v=znEliSV2Hbg?rel=0&amp;controls=0&amp;showinfo=0","Youtube",null,null),
+		message: youtubeMessage(name,"Isn't that a daisy!","http://www.youtube.com/embed/znEliSV2Hbg?rel=0&amp;controls=0&amp;showinfo=0","Youtube",null,null),
 		responses:{
 			type:'rickandmorty.response list text',
 			body:[
@@ -162,7 +162,7 @@ module.exports = function(name,URL){
 			body:{
 				displayName:name,
 				text:"Well, this is the end of our chat. Thanks a lot for taking the time to get to know us. We hope that the answers we find for you are helpful. Look for a summary of our conversation in your email inbox momentarily. If we happened to get something wrong or if there is something else you'd like to add follow the instructions to revisit our chat session.\n\n We wish you all the best!",
-				image: URL+'/img/stv/stv-logo.png',
+				image: URL+'/img/rickandmorty/morty-headshot.png',
 			}
 
 		},
