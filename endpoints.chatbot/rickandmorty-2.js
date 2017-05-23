@@ -7,10 +7,10 @@ module.exports = function(name,URL){
 			type:'rickandmorty.welcome message',
 			body:{
 				displayName:name,
-				headline: "Oh Geez. I'm sorry.",
-				text:"Is my candor not good enough for you? Did my tone offend you? You really want to move on? Without talking to me?",
+				headline: null,
+				text: null,
 				image: URL+'/img/rickandmorty/morty-headshot.png',
-				mainimage: URL+'/img/rickandmorty/morty-welcome.jpg',
+				mainimage: URL+'/img/rickandmorty/rm-welcome.png',
 			}
 
 		},

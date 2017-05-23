@@ -16399,3 +16399,137 @@
 				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.welcome message"}}
 1495538573470	 GET/template
 				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.response welcome"}}
+
+
+1495562054362	 restart server
+1495562054386	 connecting data service
+1495562054403	 data service connected
+1495562054403	 using hardcoded user, devUser()
+1495562054403	 
+
+1495562054403	 connecting main routes
+1495562054668	 
+
+1495562054668	 creating chatbox routes
+1495562054668	 	/chatbox
+1495562054668	 	/style
+1495562054668	 	/bot
+1495562054668	 	/deleteBot
+1495562054669	 	/convert
+1495562054669	 	/providers
+1495562054669	 	/preview_chat_box
+1495562054669	 	/bot_files
+1495562054669	 	/bot_from_file
+1495562054669	 ./endpoints.createchatbox 
+1495562054670	 ./endpoints.loadmessagetemplate 
+1495562054742	 ./endpoints.conversate/operator 
+1495562054743	 ./endpoints.receivecontactform 
+1495562054744	 ./endpoints.log 
+1495562054744	 
+
+1495562054744	 connecting static apps
+1495562054744	 ./backend 
+1495562054744	 ./demo 
+1495562054744	 ./demo 
+1495562054745	 ./builder 
+1495562054745	 ./preview 
+1495562054745	 
+
+1495562054745	 Error Handling 
+1495562054745	 
+
+1495562054745	 SERVER READY 
+
+1495562073283	 GET/bot_files
+1495562073289	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2BTYzjWK0wb%2BU8G9%2BWvq7HvBi1H4mrMLi6wxDwW8zMMUYdzKdpaloMd"}}
+1495562073314	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495562077853	 GET/bot_from_file
+				 meta: {"query":{"file":"rickandmorty-2.js"}}
+1495562079405	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX18xjbRFxBsSvNqCgVaqdz3pAa8k7jxfpG0rnlZq3d9Lp4AFcOHzAp/ObkSS1ycewbFEU8CAEdxQn9I18CXdbEIIAYQ7u2pS6WooS9rCaKBZC/GiOCrWDnrz/goRjruyV1E8TwWg0wMm/BuI1YGPyW3c0T+cHxTnE17DOL9VjaYTStgeSqfGPjjTUcmCo7pP4IIXq3lenQcQNaxHtCFnK622hEprD6CA6rA=","key":"preview"}}
+1495562082038	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.welcome message"}}
+1495562082039	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.response welcome"}}
+1495562687726	 GET/bot_files
+1495562687732	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2FPz1k4mMdBhFomGltmU%2BxR7QfCL2njjRYP2iopwsfvUY1NJn3dtcjU"}}
+1495562687736	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495562695099	 GET/bot_from_file
+				 meta: {"query":{"file":"rickandmorty-2.js"}}
+1495562696720	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+jv4LQTCfpFSSHo5ORM1mnkPFvjarDKF/3HMh+mf/wXARaVItDTOT4Y8HSmDu5ZPCjlGCF+aH0v73d64LpE/kNFuREoZdRTGnf5hsyAyLbR/QcrEpSvpYIX7z0DjzCBnDpS2T9IiomT85WQiZpmX1IbMlHTpcUMaGhttzQ1V6UKzbTFOMlDbZ6xnvLjjxYyzEOLVBeZP3AzHv88vyD7yHysa1hb6Pw5KY=","key":"preview"}}
+1495562699220	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.welcome message"}}
+1495562699221	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.response welcome"}}
+1495562740373	 GET/bot_files
+1495562740378	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2FTgKCplps2I3X1iGreNCt3OqhC93rXhYimfZUxWXINrm2e9d19I0UM"}}
+1495562740381	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495562745170	 GET/bot_from_file
+				 meta: {"query":{"file":"rickandmorty-2.js"}}
+1495562746872	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/FIYMRsnFEcmuYFlQd3/3YQj+yvDCXWfiVWwqOGLXua3EyNOA21pZE1UZHzPpG8OZKxsQtpmk+oaD94UPDEyM9JBU7P6Lh91fVRBfWceKFdj3JNf+4Rbz9nEi9M3dSWijYTQKMMGVR/cnnSgUjVLwK67Kya4S5yr8bNwkF6OiF9RACHFSKT6ZDRau1Ivc0255tSq7qw1Moifzb7yoM90m/mGFz9gAXdIs=","key":"preview"}}
+1495562749606	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.welcome message"}}
+1495562749608	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.response welcome"}}
+
+
+1495562765148	 restart server
+1495562765165	 connecting data service
+1495562765180	 data service connected
+1495562765180	 using hardcoded user, devUser()
+1495562765180	 
+
+1495562765180	 connecting main routes
+1495562765439	 
+
+1495562765439	 creating chatbox routes
+1495562765440	 	/chatbox
+1495562765440	 	/style
+1495562765440	 	/bot
+1495562765440	 	/deleteBot
+1495562765440	 	/convert
+1495562765440	 	/providers
+1495562765440	 	/preview_chat_box
+1495562765440	 	/bot_files
+1495562765440	 	/bot_from_file
+1495562765441	 ./endpoints.createchatbox 
+1495562765442	 ./endpoints.loadmessagetemplate 
+1495562765504	 ./endpoints.conversate/operator 
+1495562765504	 ./endpoints.receivecontactform 
+1495562765505	 ./endpoints.log 
+1495562765505	 
+
+1495562765505	 connecting static apps
+1495562765506	 ./backend 
+1495562765506	 ./demo 
+1495562765506	 ./demo 
+1495562765506	 ./builder 
+1495562765506	 ./preview 
+1495562765506	 
+
+1495562765506	 Error Handling 
+1495562765506	 
+
+1495562765506	 SERVER READY 
+
+1495562772836	 GET/bot_files
+1495562772841	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2Bop5chUXh7PMLZVSJQ7hxNttmYAt2k2NT4mProWnPlyycrI4HlPfAM"}}
+1495562772864	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495562777727	 GET/bot_from_file
+				 meta: {"query":{"file":"rickandmorty-2.js"}}
+1495562779386	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX182L/c1v3IEVxdApIAwzaf88VatLUfEqgR8ME7hxPB5L1ovCooCLyXD6oxGDONgHXe1jCgwyI6F5bMpPBYfBduu1vBB0vmqLikdXCsHUI+zEKbnAspVfD0aBnCmESIHKfEnnqQDD3demQCBf46taIGHm2z3jV8GLEb3YQVLiOt+ofkcYC5FOzIVVk7Th7jsgqPi1eHuBJPqWbpFbSup7s3iYiinQr5dB4s=","key":"preview"}}
+1495562781854	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.welcome message"}}
+1495562781856	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.response welcome"}}
