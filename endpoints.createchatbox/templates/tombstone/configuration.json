@@ -14,10 +14,10 @@
 	},
 
 		"js":{
-		"#BANNER_HEADER"			:"Doc Holiday",
-		"#BANNER_QUESTION"			:"Are you looking for something specific? Maybe a drink!",
-		"#BANNER_YES"				:"YeeHah!",
-		"#BANNER_NO"				:"No Thanks"
+		"#BANNER_HEADER"			:"",
+		"#BANNER_QUESTION"			:"Are you someone's Huckleberry?",
+		"#BANNER_YES"				:"about right",
+		"#BANNER_NO"				:"hell naw"
 	}
 
 
