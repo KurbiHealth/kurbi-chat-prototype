@@ -10,7 +10,7 @@ module.exports = function(name,URL){
 				headline: "SIKE!",
 				text:"LOL... It's me - Rick! \n Let's talk about your stupid leg pain.",
 				image: URL+'/img/rickandmorty/morty-headshot.png',
-				mainimage: URL+'/img/rickandmorty/morty-welcome.jpg',
+				mainimage: URL+'/img/rickandmorty/rm-welcome.png',
 			}
 
 		},
