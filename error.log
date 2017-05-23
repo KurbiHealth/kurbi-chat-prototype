@@ -15750,3 +15750,652 @@
 				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.end message"}}
 1495498719585	 GET/template
 				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.response end"}}
+1495500191215	 GET/favicon.ico
+1495500193175	 GET/css/app.css
+1495500193459	 GET/js/app.js
+
+
+1495537185230	 restart server
+1495537185247	 connecting data service
+1495537185264	 data service connected
+1495537185264	 using hardcoded user, devUser()
+1495537185264	 
+
+1495537185264	 connecting main routes
+1495537185511	 
+
+1495537185511	 creating chatbox routes
+1495537185511	 	/chatbox
+1495537185511	 	/style
+1495537185511	 	/bot
+1495537185511	 	/deleteBot
+1495537185512	 	/convert
+1495537185512	 	/providers
+1495537185512	 	/preview_chat_box
+1495537185512	 	/bot_files
+1495537185512	 	/bot_from_file
+1495537185512	 ./endpoints.createchatbox 
+1495537185513	 ./endpoints.loadmessagetemplate 
+1495537185565	 ./endpoints.conversate/operator 
+1495537185566	 ./endpoints.receivecontactform 
+1495537185566	 ./endpoints.log 
+1495537185566	 
+
+1495537185566	 connecting static apps
+1495537185567	 ./backend 
+1495537185567	 ./demo 
+1495537185567	 ./demo 
+1495537185567	 ./builder 
+1495537185567	 ./preview 
+1495537185567	 
+
+1495537185567	 Error Handling 
+1495537185567	 
+
+1495537185567	 SERVER READY 
+
+
+
+1495537208425	 restart server
+1495537208440	 connecting data service
+1495537208453	 data service connected
+1495537208453	 using hardcoded user, devUser()
+1495537208453	 
+
+1495537208453	 connecting main routes
+1495537208677	 
+
+1495537208677	 creating chatbox routes
+1495537208677	 	/chatbox
+1495537208677	 	/style
+1495537208677	 	/bot
+1495537208677	 	/deleteBot
+1495537208678	 	/convert
+1495537208678	 	/providers
+1495537208678	 	/preview_chat_box
+1495537208678	 	/bot_files
+1495537208678	 	/bot_from_file
+1495537208678	 ./endpoints.createchatbox 
+1495537208679	 ./endpoints.loadmessagetemplate 
+1495537208730	 ./endpoints.conversate/operator 
+1495537208730	 ./endpoints.receivecontactform 
+1495537208731	 ./endpoints.log 
+1495537208731	 
+
+1495537208731	 connecting static apps
+1495537208731	 ./backend 
+1495537208732	 ./demo 
+1495537208732	 ./demo 
+1495537208732	 ./builder 
+1495537208732	 ./preview 
+1495537208732	 
+
+1495537208732	 Error Handling 
+1495537208732	 
+
+1495537208732	 SERVER READY 
+
+
+
+1495537249017	 restart server
+1495537249035	 connecting data service
+1495537249051	 data service connected
+1495537249051	 using hardcoded user, devUser()
+1495537249051	 
+
+1495537249051	 connecting main routes
+1495537249313	 
+
+1495537249313	 creating chatbox routes
+1495537249313	 	/chatbox
+1495537249313	 	/style
+1495537249313	 	/bot
+1495537249313	 	/deleteBot
+1495537249313	 	/convert
+1495537249314	 	/providers
+1495537249314	 	/preview_chat_box
+1495537249314	 	/bot_files
+1495537249314	 	/bot_from_file
+1495537249314	 ./endpoints.createchatbox 
+1495537249315	 ./endpoints.loadmessagetemplate 
+1495537249379	 ./endpoints.conversate/operator 
+1495537249380	 ./endpoints.receivecontactform 
+1495537249381	 ./endpoints.log 
+1495537249381	 
+
+1495537249381	 connecting static apps
+1495537249381	 ./backend 
+1495537249381	 ./demo 
+1495537249381	 ./demo 
+1495537249381	 ./builder 
+1495537249381	 ./preview 
+1495537249381	 
+
+1495537249381	 Error Handling 
+1495537249381	 
+
+1495537249381	 SERVER READY 
+
+
+
+1495537615868	 restart server
+1495537615886	 connecting data service
+1495537615901	 data service connected
+1495537615901	 using hardcoded user, devUser()
+1495537615901	 
+
+1495537615901	 connecting main routes
+1495537616164	 
+
+1495537616165	 creating chatbox routes
+1495537616165	 	/chatbox
+1495537616165	 	/style
+1495537616165	 	/bot
+1495537616165	 	/deleteBot
+1495537616166	 	/convert
+1495537616166	 	/providers
+1495537616166	 	/preview_chat_box
+1495537616166	 	/bot_files
+1495537616166	 	/bot_from_file
+1495537616166	 ./endpoints.createchatbox 
+1495537616167	 ./endpoints.loadmessagetemplate 
+1495537616230	 ./endpoints.conversate/operator 
+1495537616231	 ./endpoints.receivecontactform 
+1495537616232	 ./endpoints.log 
+1495537616232	 
+
+1495537616232	 connecting static apps
+1495537616232	 ./backend 
+1495537616233	 ./demo 
+1495537616233	 ./demo 
+1495537616233	 ./builder 
+1495537616233	 ./preview 
+1495537616233	 
+
+1495537616233	 Error Handling 
+1495537616233	 
+
+1495537616233	 SERVER READY 
+
+
+
+1495537621673	 restart server
+1495537621685	 connecting data service
+1495537621693	 data service connected
+1495537621693	 using hardcoded user, devUser()
+1495537621693	 
+
+1495537621693	 connecting main routes
+1495537621874	 
+
+1495537621874	 creating chatbox routes
+1495537621874	 	/chatbox
+1495537621875	 	/style
+1495537621875	 	/bot
+1495537621875	 	/deleteBot
+1495537621875	 	/convert
+1495537621875	 	/providers
+1495537621875	 	/preview_chat_box
+1495537621875	 	/bot_files
+1495537621875	 	/bot_from_file
+1495537621876	 ./endpoints.createchatbox 
+1495537621876	 ./endpoints.loadmessagetemplate 
+1495537621911	 ./endpoints.conversate/operator 
+1495537621911	 ./endpoints.receivecontactform 
+1495537621912	 ./endpoints.log 
+1495537621912	 
+
+1495537621912	 connecting static apps
+1495537621912	 ./backend 
+1495537621912	 ./demo 
+1495537621917	 ./demo 
+1495537621917	 ./builder 
+1495537621917	 ./preview 
+1495537621917	 
+
+1495537621917	 Error Handling 
+1495537621917	 
+
+1495537621917	 SERVER READY 
+
+
+
+1495537811038	 restart server
+1495537811055	 connecting data service
+1495537811068	 data service connected
+1495537811068	 using hardcoded user, devUser()
+1495537811068	 
+
+1495537811068	 connecting main routes
+1495537811341	 
+
+1495537811341	 creating chatbox routes
+1495537811341	 	/chatbox
+1495537811341	 	/style
+1495537811341	 	/bot
+1495537811342	 	/deleteBot
+1495537811342	 	/convert
+1495537811342	 	/providers
+1495537811342	 	/preview_chat_box
+1495537811342	 	/bot_files
+1495537811342	 	/bot_from_file
+1495537811342	 ./endpoints.createchatbox 
+1495537811343	 ./endpoints.loadmessagetemplate 
+1495537811404	 ./endpoints.conversate/operator 
+1495537811405	 ./endpoints.receivecontactform 
+1495537811405	 ./endpoints.log 
+1495537811405	 
+
+1495537811406	 connecting static apps
+1495537811406	 ./backend 
+1495537811406	 ./demo 
+1495537811406	 ./demo 
+1495537811406	 ./builder 
+1495537811406	 ./preview 
+1495537811406	 
+
+1495537811406	 Error Handling 
+1495537811406	 
+
+1495537811406	 SERVER READY 
+
+
+
+1495537819011	 restart server
+1495537819024	 connecting data service
+1495537819032	 data service connected
+1495537819032	 using hardcoded user, devUser()
+1495537819032	 
+
+1495537819032	 connecting main routes
+1495537819201	 
+
+1495537819201	 creating chatbox routes
+1495537819201	 	/chatbox
+1495537819202	 	/style
+1495537819202	 	/bot
+1495537819202	 	/deleteBot
+1495537819202	 	/convert
+1495537819202	 	/providers
+1495537819202	 	/preview_chat_box
+1495537819202	 	/bot_files
+1495537819202	 	/bot_from_file
+1495537819202	 ./endpoints.createchatbox 
+1495537819203	 ./endpoints.loadmessagetemplate 
+1495537819240	 ./endpoints.conversate/operator 
+1495537819240	 ./endpoints.receivecontactform 
+1495537819241	 ./endpoints.log 
+1495537819241	 
+
+1495537819241	 connecting static apps
+1495537819241	 ./backend 
+1495537819241	 ./demo 
+1495537819241	 ./demo 
+1495537819241	 ./builder 
+1495537819241	 ./preview 
+1495537819241	 
+
+1495537819241	 Error Handling 
+1495537819241	 
+
+1495537819241	 SERVER READY 
+
+1495537852177	 GET/bot_files
+1495537852184	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19P5t6JR7Vf%2FqiFfnk35rhGDEasvEVlBCVuCasMAualqeq4s8iH%2BBXL"}}
+1495537852205	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495537856384	 GET/bot_from_file
+				 meta: {"query":{"file":"rickandmorty-2.js"}}
+1495537857616	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+PALb6uc3UJwDR4bcDb94BoffSCP/W9RjNYKYOFLN4Q26gKvbTxDKOdJ+bP6BdTbhN8TLzxSQP5qee8pP2rM7a7U6sX14aR1DKGcH3obqPjYGXp91ycsocvZWdCRaDS8kcaOPCQePDsx839Kqllk7d9ou8sgMRVLeXzwlS+2O41oGQejogBtFac95fA7PGLeVkUA+HlACS8tb5884xcz5iC8g+llJN4uk=","key":"preview"}}
+
+
+1495537876439	 restart server
+1495537876451	 connecting data service
+1495537876461	 data service connected
+1495537876461	 using hardcoded user, devUser()
+1495537876461	 
+
+1495537876461	 connecting main routes
+1495537876632	 
+
+1495537876632	 creating chatbox routes
+1495537876632	 	/chatbox
+1495537876632	 	/style
+1495537876632	 	/bot
+1495537876633	 	/deleteBot
+1495537876633	 	/convert
+1495537876633	 	/providers
+1495537876633	 	/preview_chat_box
+1495537876633	 	/bot_files
+1495537876633	 	/bot_from_file
+1495537876633	 ./endpoints.createchatbox 
+1495537876634	 ./endpoints.loadmessagetemplate 
+1495537876672	 ./endpoints.conversate/operator 
+1495537876672	 ./endpoints.receivecontactform 
+1495537876673	 ./endpoints.log 
+1495537876673	 
+
+1495537876673	 connecting static apps
+1495537876673	 ./backend 
+1495537876673	 ./demo 
+1495537876673	 ./demo 
+1495537876673	 ./builder 
+1495537876673	 ./preview 
+1495537876673	 
+
+1495537876673	 Error Handling 
+1495537876673	 
+
+1495537876673	 SERVER READY 
+
+
+
+1495537896113	 restart server
+1495537896126	 connecting data service
+1495537896136	 data service connected
+1495537896136	 using hardcoded user, devUser()
+1495537896136	 
+
+1495537896136	 connecting main routes
+1495537896310	 
+
+1495537896310	 creating chatbox routes
+1495537896310	 	/chatbox
+1495537896311	 	/style
+1495537896311	 	/bot
+1495537896311	 	/deleteBot
+1495537896311	 	/convert
+1495537896311	 	/providers
+1495537896311	 	/preview_chat_box
+1495537896311	 	/bot_files
+1495537896311	 	/bot_from_file
+1495537896311	 ./endpoints.createchatbox 
+1495537896312	 ./endpoints.loadmessagetemplate 
+1495537896353	 ./endpoints.conversate/operator 
+1495537896353	 ./endpoints.receivecontactform 
+1495537896354	 ./endpoints.log 
+1495537896354	 
+
+1495537896354	 connecting static apps
+1495537896355	 ./backend 
+1495537896355	 ./demo 
+1495537896360	 ./demo 
+1495537896360	 ./builder 
+1495537896360	 ./preview 
+1495537896361	 
+
+1495537896361	 Error Handling 
+1495537896361	 
+
+1495537896361	 SERVER READY 
+
+
+
+1495537900435	 restart server
+1495537900446	 connecting data service
+1495537900457	 data service connected
+1495537900457	 using hardcoded user, devUser()
+1495537900457	 
+
+1495537900457	 connecting main routes
+1495537900634	 
+
+1495537900634	 creating chatbox routes
+1495537900635	 	/chatbox
+1495537900635	 	/style
+1495537900635	 	/bot
+1495537900635	 	/deleteBot
+1495537900635	 	/convert
+1495537900635	 	/providers
+1495537900635	 	/preview_chat_box
+1495537900635	 	/bot_files
+1495537900635	 	/bot_from_file
+1495537900636	 ./endpoints.createchatbox 
+1495537900636	 ./endpoints.loadmessagetemplate 
+1495537900673	 ./endpoints.conversate/operator 
+1495537900673	 ./endpoints.receivecontactform 
+1495537900673	 ./endpoints.log 
+1495537900673	 
+
+1495537900674	 connecting static apps
+1495537900674	 ./backend 
+1495537900674	 ./demo 
+1495537900679	 ./demo 
+1495537900680	 ./builder 
+1495537900680	 ./preview 
+1495537900680	 
+
+1495537900680	 Error Handling 
+1495537900680	 
+
+1495537900680	 SERVER READY 
+
+1495537914607	 GET/bot_files
+1495537914611	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX19ABqKnnEg7lv2vS%2FnLOzmHa9iUOlqi7wgzZXnUh1EIlxsKvNlDyN9S"}}
+1495537914632	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495537919281	 GET/bot_from_file
+				 meta: {"query":{"file":"rickandmorty-2.js"}}
+1495537920291	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+cnMvWq9WlEnTdA1QQAUeN9t9PDzYguHb/xVrrQWdtmrOBiwsffi9ghQ4IQ/wcni5cY6Cs9V8UnNXB/67sbisg4h5BmuaubqZLCy4CaKsRJNGwnBnwu8fcGSoC6IBXyT6NBlp+LFIUeaPMnbf0Qf68ttwI3ggqYJvwGAQiy4/GvokR8enbBMci4YXqDmhLr65uQG78bJ5il5lepJ4aGokom/QE5fiyCME=","key":"preview"}}
+1495537939284	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+yIKMmSetsA0CnoCaPLHATphAQAF5KWGYFLh84HwTExyuha6kmShqAvLWKLeeRVYEG/om15yFNrGjoeFB1CSejJK+want2ifwSgoXfPzqksxokta1geiPxNf8iXXN+FzjEX/pIooPFZIZaBHUOAI0TvKbR4af5OwXlDcUkEQw+ruM6zAu7gdoaNfxuu/Z24BKKi4DVmJtJQyZOjccLNx8zp/nXXT7dx/A=","key":"preview"}}
+1495537940558	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+gvP/TvH7hvBU1Epp8utJREDWj+ULTi5nB8XmFSiq9IgvWpRDEso1uHpHBwy+QJkeVcr+Su/j+Pg6NV0BfdWkXamHZVE2IbYvnT+DndRZdmg02qXvLku3uIXCREAR1N0FDEt43AUvuUPWsEe8ZGbBA4E5B1OnHQ8pFN19CdOhcEuOjiQuLLcXfdHejmS3o7G0XOcoRgXv1RIx9ZnZ+RH/5GHfqMeWfjKM=","key":"preview"}}
+1495537943059	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+UDM0tlH35lnbcMPmvWSYfmqa18zrEa1HJHCpZxTUKxaRiAMSkSv+24FKbSRI4+ihdwaob1UUSIWu6xzBzJMT3OK/5mtxaPEm1se5F6okeF7OhluEpr9fU8HVENpn+klSrE91jUFYcKt87jpA0HURuRRTTvScmj6xFB01WuVQ6QOmc95lEQaayNKD4Ow6+fXT2Lk1sg8ULgFELb4eM3PqsEEgORhMJO/I=","key":"preview"}}
+1495537943283	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+zUbfJMq+6hT5X67Ujzy4Hul4y20ydfOZSpFoHS4leM/fNuIrgcMX538zw4tU/ajk1GUs4+WPSGKuXS5apkrQfcbxPKkYnLiHu43ri+7lRT7Xrs/FslWHu3kmiBIc+RaPaR/SfqiJeu/2mZ73R1DoEU1VlSS1UHvfG7qitb3E0edpsFcVnqyLwou7wGWJIwEnbBgl1WzBT96x9yheWFkEnh7E0wSbnJnU=","key":"preview"}}
+
+
+1495537976222	 restart server
+1495537976234	 connecting data service
+1495537976244	 data service connected
+1495537976244	 using hardcoded user, devUser()
+1495537976245	 
+
+1495537976245	 connecting main routes
+1495537976414	 
+
+1495537976415	 creating chatbox routes
+1495537976415	 	/chatbox
+1495537976415	 	/style
+1495537976415	 	/bot
+1495537976415	 	/deleteBot
+1495537976415	 	/convert
+1495537976415	 	/providers
+1495537976415	 	/preview_chat_box
+1495537976415	 	/bot_files
+1495537976416	 	/bot_from_file
+1495537976416	 ./endpoints.createchatbox 
+1495537976416	 ./endpoints.loadmessagetemplate 
+1495537976454	 ./endpoints.conversate/operator 
+1495537976454	 ./endpoints.receivecontactform 
+1495537976455	 ./endpoints.log 
+1495537976455	 
+
+1495537976455	 connecting static apps
+1495537976455	 ./backend 
+1495537976455	 ./demo 
+1495537976455	 ./demo 
+1495537976455	 ./builder 
+1495537976455	 ./preview 
+1495537976455	 
+
+1495537976455	 Error Handling 
+1495537976455	 
+
+1495537976455	 SERVER READY 
+
+
+
+1495537979800	 restart server
+1495537979811	 connecting data service
+1495537979822	 data service connected
+1495537979822	 using hardcoded user, devUser()
+1495537979822	 
+
+1495537979823	 connecting main routes
+1495537979996	 
+
+1495537979996	 creating chatbox routes
+1495537979996	 	/chatbox
+1495537979997	 	/style
+1495537979997	 	/bot
+1495537979997	 	/deleteBot
+1495537979997	 	/convert
+1495537979997	 	/providers
+1495537979997	 	/preview_chat_box
+1495537979997	 	/bot_files
+1495537979997	 	/bot_from_file
+1495537979997	 ./endpoints.createchatbox 
+1495537979998	 ./endpoints.loadmessagetemplate 
+1495537980037	 ./endpoints.conversate/operator 
+1495537980037	 ./endpoints.receivecontactform 
+1495537980038	 ./endpoints.log 
+1495537980038	 
+
+1495537980038	 connecting static apps
+1495537980038	 ./backend 
+1495537980038	 ./demo 
+1495537980038	 ./demo 
+1495537980038	 ./builder 
+1495537980038	 ./preview 
+1495537980039	 
+
+1495537980039	 Error Handling 
+1495537980039	 
+
+1495537980039	 SERVER READY 
+
+
+
+1495537992039	 restart server
+1495537992050	 connecting data service
+1495537992058	 data service connected
+1495537992058	 using hardcoded user, devUser()
+1495537992058	 
+
+1495537992058	 connecting main routes
+1495537992227	 
+
+1495537992227	 creating chatbox routes
+1495537992227	 	/chatbox
+1495537992227	 	/style
+1495537992227	 	/bot
+1495537992227	 	/deleteBot
+1495537992228	 	/convert
+1495537992228	 	/providers
+1495537992228	 	/preview_chat_box
+1495537992228	 	/bot_files
+1495537992228	 	/bot_from_file
+1495537992228	 ./endpoints.createchatbox 
+1495537992229	 ./endpoints.loadmessagetemplate 
+1495537992262	 ./endpoints.conversate/operator 
+1495537992262	 ./endpoints.receivecontactform 
+1495537992263	 ./endpoints.log 
+1495537992263	 
+
+1495537992263	 connecting static apps
+1495537992263	 ./backend 
+1495537992263	 ./demo 
+1495537992268	 ./demo 
+1495537992268	 ./builder 
+1495537992268	 ./preview 
+1495537992268	 
+
+1495537992269	 Error Handling 
+1495537992269	 
+
+1495537992269	 SERVER READY 
+
+1495537999501	 GET/bot_files
+1495537999505	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2ByvpZqn3cR0niFYwNZU9cK%2FpnEqXe6%2FNSwku6jj8AcoW8%2FUv%2BgPM2N"}}
+1495537999527	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495538004063	 GET/bot_from_file
+				 meta: {"query":{"file":"rickandmorty-2.js"}}
+1495538005818	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1/NXF0ra39IHY2bzfXpMhrIlaqh6GM0d1hV4uLcsxMmaGckBpE18R7VtPP48s0xHVLrFgVIOpKua1u0j5YdcURlNMsN2tCNkjAVKCWZYa5zg3A/OGrYxDC1QkdCCflZXHuYDJWX1rPgFxnNtDI1x+uvrHLdhneKe3nAqmveNkGinIYTmqTi5VWt15tc7dMorvsrFINtGDE1j/ODD6wJbG/FgfCdpTRQjmo=","key":"preview"}}
+
+
+1495538025518	 restart server
+1495538025530	 connecting data service
+1495538025539	 data service connected
+1495538025539	 using hardcoded user, devUser()
+1495538025539	 
+
+1495538025539	 connecting main routes
+1495538025696	 
+
+1495538025697	 creating chatbox routes
+1495538025697	 	/chatbox
+1495538025697	 	/style
+1495538025697	 	/bot
+1495538025697	 	/deleteBot
+1495538025697	 	/convert
+1495538025697	 	/providers
+1495538025697	 	/preview_chat_box
+1495538025697	 	/bot_files
+1495538025698	 	/bot_from_file
+1495538025698	 ./endpoints.createchatbox 
+1495538025698	 ./endpoints.loadmessagetemplate 
+1495538025735	 ./endpoints.conversate/operator 
+1495538025736	 ./endpoints.receivecontactform 
+1495538025737	 ./endpoints.log 
+1495538025737	 
+
+1495538025737	 connecting static apps
+1495538025737	 ./backend 
+1495538025737	 ./demo 
+1495538025737	 ./demo 
+1495538025737	 ./builder 
+1495538025737	 ./preview 
+1495538025738	 
+
+1495538025738	 Error Handling 
+1495538025738	 
+
+1495538025738	 SERVER READY 
+
+1495538039315	 GET/bot_files
+1495538039320	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2FKPBlrXf%2FORwvYero22d1xusnYlZ3MHNcY6vr3vK9VTFo7WX6paa6K"}}
+1495538039342	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495538045011	 GET/bot_from_file
+				 meta: {"query":{"file":"rickandmorty-2.js"}}
+1495538046779	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19SUvMxxSBb5STte1fQ0T9S6Jpczy4b5qhgaT8IFBquzeCoTUGxyd/fGK21JA4160/LX9Z0qZ1eymLLROjyISA6gb+a0jzemWZfw+SZ0CIhNX8aGyqQgnKWold/zjQxtvMimMEbfdyz1EYKk3ZEhTWynE97D0euX/+EMxqOCfa/pIVfMDBkZsFMtnJSb9eGcpYL/NNIsY8aN8JVvKldwix14whWN3T9A3E=","key":"preview"}}
+1495538263470	 GET/bot_files
+1495538263476	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2BpcPiCzNI6XZ3XuCvqPpa6OjvHjAk37g%2BZl%2FdcXyK1591uRUgE61jP"}}
+1495538263481	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495538268226	 GET/bot_from_file
+				 meta: {"query":{"file":"rickandmorty-2.js"}}
+1495538269618	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+xua5vpRbXy15ZgoxCOo2xNrBBx09STZeqahD2f1T7hldFG9Y1yS2fEb8fLQrsxGH2WMGAMchzArGyitZHKa2/04g0gPaV/aIG0pUzxHlNwfiF1DrO4Cr7+gTYfUR+4bhtnIJczxhHe/mGeO1WnI6TTclENnQlygLjo1HKZWMb34M9Ol1XSWMGSZWpgiKbF6g//OanFThEEgU2hZXWchoGR8PBv5N5Drg=","key":"preview"}}
+1495538285465	 GET/bot_files
+1495538285471	 GET/providers
+				 meta: {"query":{"config":"U2FsdGVkX1%2B0XIweSC9vlXqFO0f9wzYSM5KY1x6NY7zEOhwH0FwSXJFaBn6nNvJk"}}
+1495538285477	 GET/bot_from_file
+				 meta: {"query":{"file":"demoBot-mawc-1.js"}}
+1495538289491	 GET/bot_from_file
+				 meta: {"query":{"file":"rickandmorty-2.js"}}
+1495538290878	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX1+7FkmaRDV/LTeUwgfGOZu3cMMGaLufvI+NWjoQ/I2fr9Ga+1JoxmyxAb17oTcuWk4GkUpvRUxsk13dM3Ui4edOxSqOP+n2X7MC2UAp626ftjSsPI12V0rbV22/8mCBDqGroquNzDV8fudg1xooG4szenohRQr01YMi511oSzyyQm3QgUDFePBfnTdNHEP3DH+VocM+6AHYO8EpDKpnLqsCrI6isIjIuIg=","key":"preview"}}
+1495538321077	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19v+AA5k2gemxqbzq7C5FhWrdp1P9LrDi3SyehqeI7Rvm1Pf+KCy7570frqM8WhqZF4z45iIGzWsslSloXGiwUsygPV53zWdW0FaiIiJ3uPxQDM4GYmvhLYUN2ahzMiPhD02Fdf/qcw60U8m9LFnosoNtaFUVxGIxi3p9lh/TECyQea6NC1jeHHOMc1q7Aub0tRQ5to3oUuxsFrEEDrYC/Bw3AdVJStp5EDpIuGNS8VTdXxLVWgENLzu7ft+OFUH+uOjwF27XM3ZA==","key":"preview"}}
+1495538401523	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX183fXAqZbAhyYk4/2mxmmlrxbLyz1Saa9lwxmQEAqM+PoP+P+nfPyaXmRjO3ETOuh5FUKzYOqVp+76O4ILpQI8sLkjcNf5Gi1jftLABbtnUBDjLhhmMUHikN0m2OAWp89xoTWe7pHu23pLxxy3JCc8r4lhNM2eTxmTUSxf4zvD59p/7En+X62yUHvzK/yv+z3emPuoGcLDYcEQ8lFSfa6h7kAnsxX9TGW84aVhXl0HL3FghtKdokGEX9e7oj6bOjSi8JhoSj0AfVw==","key":"preview"}}
+1495538442509	 GET/preview_chat_box
+				 meta: {"query":{"config":"U2FsdGVkX19waZcbp8DsgqONyTPicbAN7pi0T4HGyjkOobYEz6LsLRNblSxURWDv4cybR94rMIVmXheWz1NDTK1AipXbsCzxYhJQMbJJhhLnO+Fw11MFJ+Oj2Xe+QEQS5iU0xRPuotrH/KkH1WxRdZSorIuu9KYl9A4Q15Q7+nsowFQCMavm6FoEqx57USeilv4gxmnxYAU/yJEeC1JnVNczdTHIWMVjwRNBs4MNBRp6NfM9G3TnfixSK9jZ2vF+KR+gtHGkQqL994S0tYFILw==","key":"preview"}}
+1495538573470	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.welcome message"}}
+1495538573470	 GET/template
+				 meta: {"query":{"client":"web","version":"1","template":"rickandmorty.response welcome"}}
