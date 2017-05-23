@@ -117,7 +117,7 @@ function simplePublish(req,res){
 		for(var key in responses) {
 
 			var message = responses[key];
-			message.qcode = key;
+			message.qCode = key;
 			message.owner = provider._id;
 			message.name = botTemplate;
 			message.version = "0.0.1";
@@ -254,7 +254,7 @@ function createBotFromFile(req,res){
 	for(var key in responses) {
 
 		var message = responses[key];
-		message.qcode = key;
+		message.qCode = key;
 		message.owner = "57699528f4924a7f641e4950";
 		//message.name = "demoBot";
 		//message.owner="58041b251769e0406744deff";

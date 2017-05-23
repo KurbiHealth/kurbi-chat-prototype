@@ -48,7 +48,7 @@ function getBotDialogs(query){
 function createBotDialog(input){
 	return new Promise(function(resolve,reject){
 		BotDialog.remove({
-						qcode:input.qcode,
+						qCode:input.qCode,
 						owner:input.owner,
 						name:input.name,
 						version:input.version

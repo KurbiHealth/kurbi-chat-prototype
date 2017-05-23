@@ -79,7 +79,7 @@ function fileFormat(data){
 }
 
 function fileFormat2(data){
-	var s = "qcode: " + count + "," + data.meta.qcode;
+	var s = "qcode: " + count + "," + data.meta.qCode;
 	console.log("fileFormat2 " + s);
 	count++;
 	return s;

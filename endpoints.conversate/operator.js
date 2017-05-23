@@ -103,7 +103,7 @@ module.exports = function(io,express,BASEURL,PORT,db){
 		socket.on('message', function(data){
 			data.source = socket.source;
 			//checkForUserData(data,socket.room);
-			if(data.message.variable) {	roomVars[socket.room][data.message.variable] = data.message.body.text; }
+			if(data && data.message && data.message.variable) {	roomVars[socket.room][data.message.variable] = data.message.body.text; }
 			var currentMessage = OperatorRuntimeReplace(data,roomVars[socket.room]);
 			socket.broadcast.to(socket.room).emit('message', currentMessage);
 			logChat(currentMessage,roomVars[socket.room],socket.room);

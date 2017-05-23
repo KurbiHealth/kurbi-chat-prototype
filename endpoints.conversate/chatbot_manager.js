@@ -56,6 +56,8 @@ module.exports = function(BASEURL,PORT,db){
 
 				connection.socket.on('message', function(data){
 						//save any variables
+						console.log('REAL MESSAGE', data.message);
+						if(data.message.variable) console.log(data.message.variable, data.message.body);
 						if(data.message.variable) {	userVariables[data.message.variable] = data.message.body.text; }
 						bot.reply(data.message, userVariables);	
 					});
@@ -112,12 +114,17 @@ module.exports = function(BASEURL,PORT,db){
 					if(!waitTime) waitTime = Math.floor(Math.random()*2500+1000);
 					setTimeout(function(){
 						if(msg) {
+							console.log('GETTING MESSAGE HERE', msg.qCode);
+							console.log(msg);
 							getResponse(null,msg.qCode,botInfo,function(rawResponse){
 								var response = runtimeReplace(rawResponse,userVariables);
+								console.log('RESPONSE', response);
 								if(Object.keys(response).length === 0 && response.constructor === Object) response = null;
 								if(response) {
+									console.log('apparently, there something to say');
+									console.log(response.qCode, response.qcode);
 									connection.socket.emit('message', response);
-									reply(response);
+									if(response && response.message && response.message.qCode) reply(response.message);
 								}
 							});
 							
@@ -126,9 +133,9 @@ module.exports = function(BASEURL,PORT,db){
 					}, waitTime);
 				}
 
-				function getResponse(prompt,qcode,bot, callback){
+				function getResponse(prompt,qCode,bot, callback){
 					if(bot)
-						db.getBotDialog({owner:bot.owner,name:bot.name,qcode:qcode}).then((doc)=>{callback(doc);});
+						db.getBotDialog({owner:bot.owner,name:bot.name,qCode:qCode}).then((doc)=>{callback(doc);});
 					else 
 						callback(require('../endpoints.chatbot/noPermission-mawc-1.js')('Kurbi Health Services',serverURL)[qcode]);
 					

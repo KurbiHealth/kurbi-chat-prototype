@@ -166,14 +166,15 @@ var ChatBox = function(info){
 	function addMessage(data){
 		console.log('new message', data);
 		if(data.message) appendMessage(data.message);
-		if(data.responses) {
-			that.freechat = false;
-			setInput(data.responses);
-		}else{
-			that.freechat = true;
+		if(data.responses) setInput(data.responses);
+		// if(data.responses) {
+		// 	that.freechat = false;
+		// 	setInput(data.responses);
+		// }else{
+		// 	that.freechat = true;
 			
-			setInput(that.freeTemplate);
-		}
+		// 	setInput(that.freeTemplate);
+		// }
 	}
 
 
@@ -304,7 +305,6 @@ var ChatBox = function(info){
 			function sendToBot(data){
 				if(data.message.variable) demoVars[data.message.variable] = data.message.body.text;
 				var botMessage = kurbi.bot[data.message.qCode];
-
 				var temp = JSON.stringify(botMessage) || '{}';
 				if(temp) temp = temp.replace(/\[_(.+?)_\]/g, function(whole,variable){return demoVars[variable];});
 					
