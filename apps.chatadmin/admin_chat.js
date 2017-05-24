@@ -1,25 +1,10 @@
 (function(d,namespace){
 
-var msgBannerHeader 				= '#BANNER_HEADER';
-var msgBannerQuestion 				= '#BANNER_QUESTION';
-var msgBannerYes 					= '#BANNER_YES';
-var msgBannerNo 					= '#BANNER_NO';
-var serverURL 						= '#SERVER_URL';
-var bannerIconURL 					= '#BANNER_ICON_URL';
-var defaultTemplate 				= '#DEFAULT_TEMPLATE';
-if(bannerIconURL[0] == "#") bannerIconURL = null;
-
-console.log('---in chat_template.js---');
-console.log('injected variables')
-console.log('serverURL',serverURL);
-console.log('msgBannerHeader', msgBannerHeader);
-console.log('msgBannerQuestion', msgBannerQuestion);
-console.log('msgBannerYes', msgBannerYes);
-console.log('msgBannerNo', msgBannerNo);
-console.log('banner url', bannerIconURL);
-console.log('default template', defaultTemplate);
-console.log('--------------------------');
-var ChatBox = function(info){
+var serverURL 						= window.location.origin;
+var defaultTemplate 				= 'mawc';
+console.log('adding chatbox code');
+namespace.chatFactory = chatFactory;
+namespace.ChatBox = function(info, target){
 
 	var that = this;
 	var demoVars = {};
@@ -33,7 +18,7 @@ var ChatBox = function(info){
 	this.sendMessage = sendMessage;
 	this.start = start;
 	that.clear = clear;
-	this.freechat = false;
+	this.freechat = true;
 	this.freeTemplate = {
 					type: 			defaultTemplate+"."+'small free response', 
 					body:{
@@ -43,6 +28,7 @@ var ChatBox = function(info){
 										type:defaultTemplate+"."+"text message",
 										body:{
 											text:"",
+											displayName:"tony soprano",
 										}
 									}
 								}, 
@@ -51,38 +37,6 @@ var ChatBox = function(info){
 
 	that.end = end;
 	var socket = null;
-
-///// Okay here is some weirdness...
-// I want to be able to use the handlebar templating to loop over data objects
-// ... like when we want to show a list of icons.  
-//
-// We also want the ability to have these items do things when clicked
-// We also want the ChatBox methods private to the chatbox.
-// 
-// The problem is that the onclick methods inside of the templating engines
-// do not have access to the chatbox scope, because it's private.
-// so our options seemed to be: expose some methods for chatting on the global scope
-// the methods could be general utilites that are then invoked by the chat messages
-// or they could be message specific handlers.  
-// for example the Icon Picker message object needs to assign an icon.
-// I thought it would be nice to be able to define the methods that a message object uses
-// inside of the template that defines the message itself.  
-
-// So currently, the hbs templates define their own message handlers
-// and these message handlers are attached to the ChatBox scope
-// via the attachClickHandler function.
-// once they are attached to the chatbox scope, they can use the chatbox
-// methods.  
-
-// the #pickle stuff.. is because so far, the chatbox could *ALMOST* be instantiated more than one time
-// to make multiple boxes per window, if we wanted.
-// however, the attachHandler functions then need to know which chatbox
-// to attach the clickhandler to.  So the chatbox now generates an id
-// when it's instantiated and puts that into the templates
-// as they're attached to the DOM.
-// so they can call the correct handler attachers.
-//
-// I remember not having to pass in the scope (that)... but now I do.  So whatever.
 
 	if(!kurbi.attachClickHandler) kurbi.attachClickHandler = {};
 	if(!kurbi.click) kurbi.click = {};
@@ -111,7 +65,6 @@ var ChatBox = function(info){
 	function sendMessage(msg){
 		console.log('send msg', msg);	
 		msg.userId = that.userId;
-		msg.body.displayName = "";
 		that.footer.innerHTML = "";
 		if(that.freechat) setInput(that.freeTemplate);
 
@@ -130,6 +83,7 @@ var ChatBox = function(info){
 
 	function appendMessage(msg, self,callback){
 		msg.body.self = (self != null);
+		if(msg.body.displayName == "") msg.body.displayName = "customer";
 		getTemplate(msg.type, function(template){
 			var compiledTemplate = Handlebars.compile(template);
 			that.content.innerHTML += compiledTemplate(msg.body).replace(/#pickle/g, that.instanceId);
@@ -166,15 +120,8 @@ var ChatBox = function(info){
 	function addMessage(data){
 		console.log('new message', data);
 		if(data.message) appendMessage(data.message);
-		if(data.responses) setInput(data.responses);
-		// if(data.responses) {
-		// 	that.freechat = false;
-		// 	setInput(data.responses);
-		// }else{
-		// 	that.freechat = true;
-			
-		// 	setInput(that.freeTemplate);
-		// }
+		setInput(that.freeTemplate);
+		
 	}
 
 
@@ -194,7 +141,7 @@ var ChatBox = function(info){
 				s[j] = string;
 				if(count == s.length) {
 					that.content.innerHTML = s.join("");
-					if(data.length > 0) setInput(data[data.length - 1].responses);
+					if(data.length > 0) setInput(that.freeTemplate);
 					that.content.scrollTop = that.content.scrollHeight;
 				}
 			});
@@ -207,14 +154,13 @@ var ChatBox = function(info){
 			return JSON.stringify(context);
 		});
 
-		that.box = d.getElementsByClassName('kurbi-chat-box')[0];
-		that.banner = d.getElementsByClassName('kurbi-chat-banner')[0];
-		that.backdrop = d.getElementsByClassName('kurbi-backdrop')[0];	
-		that.content = d.getElementsByClassName('kurbi-chat-body')[0];
-		that.footer  = d.getElementsByClassName('kurbi-chat-footer')[0];
-		that.freeResponse = d.getElementsByClassName('kurbi-free-response')[0];
-		that.freeResponseInput = d.getElementsByClassName('kurbi-input')[0];
-
+		that.box = target.getElementsByClassName('kurbi-chat-box')[0];
+		// that.backdrop = target.getElementsByClassName('kurbi-backdrop',target)[0];	
+		that.content = target.getElementsByClassName('kurbi-chat-body',target)[0];
+		that.footer  = target.getElementsByClassName('kurbi-chat-footer',target)[0];
+		that.freeResponse = target.getElementsByClassName('kurbi-free-response',target)[0];
+		that.freeResponseInput = target.getElementsByClassName('kurbi-input',target)[0];
+		// that.backdrop.style.backgroundColor = "#880000";
 		// that.freeResponseInput.onkeypress = function(e){
 		//     if (!e) e = window.event;
 		//     var keyCode = e.keyCode || e.which;
@@ -248,7 +194,7 @@ var ChatBox = function(info){
 	function hide(){
 		this.box.classList.remove('kurbi-chat-open');
 		this.box.classList.add('kurbi-chat-closed');
-		this.backdrop.style.height='0px';
+		// this.backdrop.style.height='0px';
 	}
 
 	function show(){	
@@ -266,10 +212,10 @@ var ChatBox = function(info){
 		}
 
 		if(socket){
-			this.box.classList.remove('kurbi-chat-closed');
-			this.box.classList.add('kurbi-chat-open');
-			this.backdrop.style.height="100vh";
-			this.content.scrollTop = this.content.scrollHeight;
+			that.box.classList.remove('kurbi-chat-closed');
+			that.box.classList.add('kurbi-chat-open');
+			// that.backdrop.style.height="100vh";
+			that.content.scrollTop = that.content.scrollHeight;
 
 		}
 		
@@ -282,7 +228,8 @@ var ChatBox = function(info){
 	function setupSocket(){
 		if(!socket){
 			socket = io(serverURL, {query:{'sessionID':info.sessionID}});
-			socket.emit('register', that.info);
+			// socket.emit('register', that.info);
+			socket.emit('join room',{room:info.room});
 			socket.on('history', addHistory);
 			socket.on('message', addMessage);
 		}
@@ -305,6 +252,7 @@ var ChatBox = function(info){
 			function sendToBot(data){
 				if(data.message.variable) demoVars[data.message.variable] = data.message.body.text;
 				var botMessage = kurbi.bot[data.message.qCode];
+
 				var temp = JSON.stringify(botMessage) || '{}';
 				if(temp) temp = temp.replace(/\[_(.+?)_\]/g, function(whole,variable){return demoVars[variable];});
 					
@@ -324,122 +272,36 @@ var ChatBox = function(info){
 
 //setup public members
 if(!namespace.kurbi) namespace.kurbi = {};
-namespace.kurbi.params = params;     // callback that can receive variables from the clients webpage.
-kurbi.version = 1.0;
-kurbi.client_id = 'web';
-kurbi.getPatientIcon = getPatientIcon;
-// loadJQuery(this, init);
-var that = this;
-var info = null;
-
-function params(apikey, useIo){
-	if("undefined" === typeof useIo) useIo = true; 
-	info = {
-			 key: apikey,
-			 sessionID: getKey(),
-			 url: window.location.href,
-			 icon: null,
-			 useIo: useIo,
-			 params: {},
-			}
-	var urlParams = new URLSearchParams(window.location.search);
-	for(pair of urlParams.entries()) info.params[pair[0]] = pair[1];
-
-	loadJQuery(that, init);
-
-}
 
 function init(local){
 
-	local.chatbox = chatFactory(local);
-		// $.ajaxSetup({
-  //   beforeSend: function(xhr) {
-  //       xhr.setRequestHeader('x-kurbi-header', info.sessionID );
-		//     }
-		// });
+	local.chatbox = chatFactory(local, target);
+
 }
 
 function getPatientIcon(){
 	var iconPath = localStorage.getItem('patient_icon');
-	if(iconPath == null) iconPath = serverURL+'/backend/icons/PNG/a01.png';
+	if(iconPath == null) iconPath = serverURL+'/backend/icons/PNG/icon-6.png';
 	return iconPath;
 }
 
-function chatFactory(local){
+function chatFactory(local,givenParent){
 	
-	var parent = document.getElementsByClassName('kurbi-chat-parent')[0];
+	var parent = givenParent || document.getElementsByClassName(givenParent)[0];
 	var visible = false;
+	kurbi.getPatientIcon = getPatientIcon;
 
-	var bannerVisible = JSON.parse(localStorage.getItem("bannerVisible"));
-	console.log(bannerVisible);
+
 	var clicked = {};
 		clicked['button'] = toggleChat;
-		clicked['kurbi-banner-sure'] = toggleChat;
-		clicked['kurbi-backdrop'] = toggleChat;
+		// clicked['kurbi-backdrop'] = toggleChat;
 		clicked['kurbi-close-button'] = toggleChat;
-		clicked['kurbi-banner-nope'] = toggleBanner;
-		clicked['kurbi-banner-handle'] = toggleBanner;
 
-	 if(!connectToButton('kurbi-chat')) {
-	 				//setup banner
-	 				var banner = attachToDom('kurbi-chat-banner', parent);
-	 				if(bannerIconURL != null){
-	 					console.log('attaching banner icon');
-		 				var bannerIconContainer = attachToDom('kurbi-banner-icon-container', banner);
-		 				var bannerIcon = attachToDom('kurbi-banner-icon', bannerIconContainer, 'img');	
-		 				bannerIcon.src = bannerIconURL;
-	 				}else console.log('no banner icon');
-	 				
-	 				var bannerContent = attachToDom('kurbi-banner-content', banner);
-	 				var bannerHeader = attachToDom('kurbi-banner-header', bannerContent);
-	 				var bannerQuestion = attachToDom('kurbi-banner-question', bannerContent);
-	 				var bannerButtons = attachToDom('kurbi-banner-buttons', bannerContent);
-	 				var bannerSure = attachToDom('kurbi-banner-sure', bannerButtons);
-	 				var bannerNoThanks = attachToDom('kurbi-banner-nope', bannerButtons);
-	 				var bannerHandle = attachToDom('kurbi-banner-handle', banner);
-
-
-	 				
-	 				bannerHeader.innerHTML = msgBannerHeader;
-	 				bannerQuestion.innerHTML = msgBannerQuestion;
-	 				bannerSure.innerHTML = msgBannerYes;
-	 				bannerNoThanks.innerHTML = msgBannerNo;
-
-	 				d.getElementById('kurbi-chat-close-button').addEventListener('click', clicked['kurbi-close-button']);
-	 				setTimeout(function(){
-	 					if(bannerVisible){
-	 						banner.classList.remove('kurbi-chat-banner-open');
-							banner.classList.add('kurbi-chat-banner-closed');
-	 					}else {
-	 						banner.classList.add('kurbi-chat-banner-open');
-							banner.classList.remove('kurbi-chat-banner-closed');
-	 					}
-
-	 				}, 500);
-	 				
-	 	}
-	 attachToDom('kurbi-backdrop', parent);
-
-	 return new ChatBox(info);
-
-	function toggleBanner(e){
-		console.log('toggleBanner clicked');
-		bannerVisible = !bannerVisible;
-
-		var banner  = d.getElementsByClassName('kurbi-chat-banner')[0];
-		if(bannerVisible){
-			banner.classList.remove('kurbi-chat-banner-open');
-			banner.classList.add('kurbi-chat-banner-closed');
-		}
-		if(!bannerVisible){
-			banner.classList.add('kurbi-chat-banner-open');
-			banner.classList.remove('kurbi-chat-banner-closed');
-		}
-		localStorage.setItem("bannerVisible", bannerVisible);
-		//visible = !visible;
-		//toggleChat();
-	}
-
+	 	// attachToDom('kurbi-backdrop', parent);
+	 	console.log(parent);
+	 	parent.getElementsByClassName('room-container')[0].addEventListener('click',toggleChat);
+	var chatbox = new ChatBox(local.info, parent);
+   
 
 	function toggleChat(e){
 		visible = !visible
@@ -450,7 +312,7 @@ function chatFactory(local){
 		if(!visible) {
 			chatbox.hide();
 		}
-		toggleBanner();
+
 	}
 
 	function attachToDom(c, parent, type){
@@ -473,7 +335,7 @@ function chatFactory(local){
 
 		return true;
 	}
-
+ 	return chatbox;
 }
 
 
@@ -524,5 +386,6 @@ function loadJQuery(local, callback){
 	}
 	
 }
+
 
 })(document,this);

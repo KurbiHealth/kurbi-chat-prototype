@@ -117,7 +117,7 @@ function simplePublish(req,res){
 		for(var key in responses) {
 
 			var message = responses[key];
-			message.qcode = key;
+			message.qCode = key;
 			message.owner = provider._id;
 			message.name = botTemplate;
 			message.version = "0.0.1";
@@ -155,7 +155,6 @@ function simplePublish(req,res){
 				chatbox.allowedPages 	= [];
 				chatbox.rule 			= "random";
 				return db.createChatBox(chatbox).then((doc)=>{
-					console.log('arRRRRRRrr')
 					chatbox = doc;
 					return globFunc.loadSnippet(chatbox._id,URL);
 				});
@@ -255,7 +254,7 @@ function createBotFromFile(req,res){
 	for(var key in responses) {
 
 		var message = responses[key];
-		message.qcode = key;
+		message.qCode = key;
 		message.owner = "57699528f4924a7f641e4950";
 		//message.name = "demoBot";
 		//message.owner="58041b251769e0406744deff";
@@ -372,9 +371,11 @@ function getChatboxes(req,res){
 	var key = req.query.key;
 	if(!key) db.getChatBoxes({owner:req.user._id}).then((docs) => {return res.json(docs)});
 	else db.getChatBox({_id:key}).then((doc) => {
-		var chosenStyle = db.getStyle(doc.styles);
+		if(doc){
+			var chosenStyle = db.getStyle(doc.styles);
+			db.getChatStyle({_id:chosenStyle}).then((style) => {return res.json(style)});
+		}else return {};
 		//if(chosenStyle)  //need to load some sort of default style
-		db.getChatStyle({_id:chosenStyle}).then((style) => {return res.json(style)});
 	});
 
 

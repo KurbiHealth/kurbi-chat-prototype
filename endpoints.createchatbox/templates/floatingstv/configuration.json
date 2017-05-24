@@ -17,7 +17,8 @@
 		"#BANNER_HEADER"			:"Madison Area Wellness Collective",
 		"#BANNER_QUESTION"			:"Are you looking for something specific? Maybe we can help!",
 		"#BANNER_YES"				:"Sure!",
-		"#BANNER_NO"				:"No Thanks"
+		"#BANNER_NO"				:"No Thanks",
+		"#DEFAULT_TEMPLATE"			:"stvincent"
 	}
 	
 

@@ -7,7 +7,7 @@ var dialog   = new Schema({
     owner: 				{type:ObjectId, ref:'provider'},
     name: 				String,
     version: 			String,
-    qcode: 				String,
+    qCode: 				String,
 
 });
 

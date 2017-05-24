@@ -7,7 +7,7 @@ module.exports = function(name,URL){
 			type:'tombstone.welcome message',
 			body:{
 				displayName:name,
-				text:"Are you looking for something specific? Maybe a drink!",
+				text:"Well, ain't that a daisy",
 				image: URL+'/img/stv/stv-logo.png',
 				mainimage: URL+'/img/tombstone/tstone-main.jpg',
 			}
@@ -17,30 +17,17 @@ module.exports = function(name,URL){
 			type:'tombstone.response welcome',
 			body:{
 				yes:{
-					text: "Let's talk about it",
+					text: "DOC!",
 					id: 'begin',
 					message: {
 						type: "tombstone.text message",
 						qCode: null,
 						meta: 'yes',
 						body: {
-							text:"Let's talk about it",
+							text:"DOC!",
 						},
 					},
 				},
-				no:{
-					text: "I'd rather not",
-			  		id: 'cancel',
-					message: {
-						type: "tombstone.text message",
-						qCode: null,
-						meta: 'no',
-						body: {
-							text:"I'd rather not",
-						},
-					},
-				}
-
 			}
 		}
 
@@ -48,7 +35,135 @@ module.exports = function(name,URL){
 
 	// ---- CHOOSE AVATAR ----
 
-	responses['avatar'] = chooseAvatar('get youtube');
+	responses['choose avatar'] = {
+		message:{
+			type:'tombstone.avatar choice',
+			body:{
+				displayName:name,
+				text:"Identify Yourself",
+				image: URL+'/img/tombstone/filligree.png',
+			}
+
+		},
+		responses: {
+			type:'tombstone.response list icons',
+			body:[
+				{
+					url: URL+'/img/tombstone/wyatt-icon.jpg',
+					id: '1',
+					text:'Wyatt Earp',
+					message: {
+						type: "tombstone.text message",
+						qCode: "wyatt greeting",
+						body: {
+							text:"Well,well.\n Howw the hell are you?",
+						},
+					},
+				},
+				{
+					url: URL+'/img/tombstone/virgil-icon.jpg',
+					id: '2',
+					text:'Virgil Earp',
+					message: {
+						type: "tombstone.text message",
+						qCode: "virgil greeting",
+						body: {
+							text:"'Lo, Doc.",
+						},
+					},
+				},
+				{
+					url: URL+'/img/tombstone/ringo-icon.jpg',
+					id: '1',
+					text:'Johnny Ringo',
+					message: {
+						type: "tombstone.text message",
+						qCode: "ringo greeting",
+						body: {
+							text:"Lunger.",
+						},
+					},
+				}
+			]
+		}
+
+	};
+	//wyatt 
+	responses['wyatt greeting'] = {
+		message: textMessage(name, "Wyatt, I am rolling.", null, null);
+		responses: {
+			type: 'tombestone.response list text',
+			body:[
+				{text:"Don't roll too hard.", message:textMessage(null,"Don't roll too hard.","indignation",null)},
+				{text:"What has got you so excited?", message:textMessage(null,"What has got you so excited?", "in my prime", null)},
+			]
+		}
+	}
+
+	responses['indignation'] = {
+		message: textMessage(name, "Nonsense, Wyatt \n I have hardly begun.", 'in my prime', null);
+	}
+
+	responses['in my prime'] = {
+		message: textMessage(name, "I'm in my prime", null, null);
+		responses: {
+			type: 'tombestone.response list text',
+			body:[
+				{text:"Recollect what that means.", message:textMessage(null,"hmmm...","doc gambling youtube",null)},
+			]
+		}
+	}
+
+	responses['doc gambling youtube'] = {
+		message: youtubeMessage(name, "I'm in my prime", 'https://www.youtube.com/watch?v=t2PXlUjWz5M',null, null);
+		responses: {
+			type: 'tombestone.response list text',
+			body:[
+				{text:"I think I've seen enough of your 'prime.'", message:textMessage(null,"I think I've seen enough of your 'prime.'","wyatt have a drink",null)},
+			]
+		}
+	}
+
+
+	responses['wyatt have a drink'] = {
+		message: textMessage(name, "Before you get all cross, \n how about you have a drink?", null, null);
+		responses: {
+			type: 'tombestone.drink',
+			body:[
+				{text:"Recollect what that means.", message:textMessage(null,"hmmm...","doc gambling youtube",null)},
+			]
+		}
+	}
+
+	//Virgil
+
+	//Ringo 
+	responses['ringo greeting'] = {
+		message: textMessage(name, "Why Ringo, \n you know I abhor ugliness.", "reminder?", null);
+	}
+
+	responses['reminder?'] = {
+		message: textMessage(name, "We don't need a reminder, \n do we?", null, null);
+		responses: {
+			type: 'tombestone.response list text',
+			body:[
+				{text:"Recall your enchanted moment with Doc.", message:textMessage(null,"...","doc ringo duel",null)},
+				
+			]
+		}
+	}
+
+	responses['doc gambling youtube'] = {
+		message: youtubeMessage(name, "I'm your huckleberry", 'https://www.youtube.com/watch?v=FSjvgSHK0f0',null, null);
+		responses: {
+			type: 'tombestone.response list text',
+			body:[
+				{text:"It didn't keep.", message:textMessage(null,"You shoulda used two bullets.","we can go again",null)},
+			]
+		}
+	}
+
+
 
 	// ---- CHAIN OF QUESTIONS ----
 
@@ -255,10 +370,10 @@ module.exports = function(name,URL){
 		var body = [];
 		var letters = 'ABCDEFGHIJKLMNO';
 
-		for(var i = 1; i < 13; i++){
+		for(var i = 1; i < 4; i++){
 			var temp = {};
 
-			temp.url = URL+"/backend/icons/PNG/icon-"+i+".png";
+			temp.url = URL+"/img/tombstone/icon-"+i+".png";
 			temp.message = {};
 			temp.message.type = 'tombstone.image message';
 			temp.message.qCode = qCode;

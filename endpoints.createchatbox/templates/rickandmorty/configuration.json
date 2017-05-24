@@ -14,10 +14,12 @@
 	},
 
 		"js":{
-		"#BANNER_HEADER"			:"Rick & Morty",
-		"#BANNER_QUESTION"			:"Some funny quote or something.",
+		"#BANNER_HEADER"			:"Prince Nebulon, M.D.",
+		"#BANNER_SUBHEADER" 		:"Department of Gymnophobia",
+		"#BANNER_QUESTION"			:"Who is complaining about lower leg pain and wants to chat because they are weak?",
 		"#BANNER_YES"				:"Chat with Morty",
-		"#BANNER_NO"				:"Close Chat"
+		"#BANNER_NO"				:"Close Chat",
+		"#DEFAULT_TEMPLATE" 		:"rickandmorty" 
 	}
 
 

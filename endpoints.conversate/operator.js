@@ -37,8 +37,11 @@ module.exports = function(io,express,BASEURL,PORT,db){
 	var checkRooms = [];				//list of rooms that might be empty (and need their bots removed)
 	var roomVars = {};					//will hold the user variables that are detected during chat.
 	var BOT_WAIT_TIME = 15000; 			//how long a bot will wait after a client has disconnected, before leaving the room.			
-
-
+	var service = {};
+	service.getActiveRooms = function(){return rooms};
+	service.getRoomData = function(key){return roomVars[key]};
+	io.on('connect', ioConnect);
+	return service;
 	function clearRooms(){
 
 		var emptyRooms = checkRooms.filter((room) => {		
@@ -61,7 +64,7 @@ module.exports = function(io,express,BASEURL,PORT,db){
 		checkRooms = [];
 	}
 
-	io.on('connect', function(socket){
+	function ioConnect(socket){
 		// THIS EVENT ('register') IS EMITTED BY THE CHATBOX WHEN IT LOADS 
 		// (/endpoints.createchatbox/templates/js/chat_template.js)
 
@@ -70,6 +73,7 @@ module.exports = function(io,express,BASEURL,PORT,db){
 			//info.sessionId (chat session token, this changes when a new chat is made)
 			//info.url (url that the snippet is embedded in)
 			//info.icon (image the user chose to represent them)
+			//info.params (key-value pairs in the url)
 			var roomName = generateRoomName(info.sessionID,info.url,info.key);
 
 
@@ -99,7 +103,7 @@ module.exports = function(io,express,BASEURL,PORT,db){
 		socket.on('message', function(data){
 			data.source = socket.source;
 			//checkForUserData(data,socket.room);
-			if(data.message.variable) {	roomVars[socket.room][data.message.variable] = data.message.body.text; }
+			if(data && data.message && data.message.variable) {	roomVars[socket.room][data.message.variable] = data.message.body.text; }
 			var currentMessage = OperatorRuntimeReplace(data,roomVars[socket.room]);
 			socket.broadcast.to(socket.room).emit('message', currentMessage);
 			logChat(currentMessage,roomVars[socket.room],socket.room);
@@ -141,6 +145,10 @@ module.exports = function(io,express,BASEURL,PORT,db){
 					chatroom.room = roomId;
 					chatroom.key = info.key;
 					chatroom.sessionID = info.sessionID;
+					if(info.params){
+						chatroom.userVariables = {};
+						chatroom.userVariables.params = info.params;
+					}
 				db.setChatRoom(chatroom).then((doc)=>resolve(doc));
 
 
@@ -164,8 +172,7 @@ module.exports = function(io,express,BASEURL,PORT,db){
 			db.getChatRoom({room:socket.room}).then((chatroom) => { io.to(socket.id).emit('history',chatroom.messages)});
 		}
 
-	}); /// end of io.on
-
+	}; /// end of ioConnect
 
 
 

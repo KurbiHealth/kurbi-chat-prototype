@@ -201,9 +201,11 @@ log('./endpoints.loadmessagetemplate ');
  * This manages the sockets that the chat boxes use to communicate with
  * the Bot and with (potentially) other human beings.
  */
-require('./endpoints.conversate/operator')(io,express,BASEURL,LISTENPORT,db);
+var operator = require('./endpoints.conversate/operator')(io,express,BASEURL,LISTENPORT,db);
 log('./endpoints.conversate/operator ');
 
+require('./endpoints.admin/main.js')(router,operator);
+log('./endpoints.admin ');
 /**
  * ChatBot
  * This endpoint sends messages and accepts responses from chat boxes
@@ -227,6 +229,7 @@ log('./endpoints.log ');
 // ---- APPS ----
 log('\n');
 log('connecting static apps');
+app.use('/admin',express.static('apps.chatadmin'))
 /**
  * Chat Box Configuration Form for Providers (app)
  */

@@ -7,8 +7,8 @@ module.exports = function(name,URL){
 			type:'rickandmorty.welcome message',
 			body:{
 				displayName:name,
-				headline: null,
-				text: null,
+				headline: "SIKE!",
+				text:"LOL... It's me - Rick! \n Let's talk about your stupid leg pain.",
 				image: URL+'/img/rickandmorty/morty-headshot.png',
 				mainimage: URL+'/img/rickandmorty/rm-welcome.png',
 			}
@@ -18,29 +18,17 @@ module.exports = function(name,URL){
 			type:'rickandmorty.response welcome',
 			body:{
 				yes:{
-					text: "Chat with Morty",
+					text: "Ok. Fine! Let's talk, Rick.",
 					id: 'begin',
 					message: {
 						type: "rickandmorty.text message",
 						qCode: null,
 						meta: 'yes',
 						body: {
-							text:"Chat with Morty",
+							text:"Ok. Fine! Let's talk, Rick.",
 						},
 					},
 				},
-				no:{
-					text: "Close Chatbox",
-			  		id: 'cancel',
-					message: {
-						type: "rickandmorty.text message",
-						qCode: null,
-						meta: 'no',
-						body: {
-							text:"Close Chatbox",
-						},
-					},
-				}
 
 			}
 		}
@@ -49,134 +37,171 @@ module.exports = function(name,URL){
 
 	// ---- CHOOSE AVATAR ----
 
-	responses['avatar'] = chooseAvatar('get youtube');
+	responses['avatar'] = chooseAvatar('get duration');
 
 	// ---- CHAIN OF QUESTIONS ----
 
-	responses['get youtube'] = {
-		message: youtubeMessage(name,"Isn't that a daisy!","http://www.youtube.com/embed/znEliSV2Hbg?rel=0&amp;controls=0&amp;showinfo=0","Youtube",null,null),
-		responses:{
-			type:'rickandmorty.response list text',
-			body:[
-				{text:"Keep Learning More", message:textMessage(null,"Keep Learning More","get website",null)},
-				{text:"Get Involved", message:textMessage(null,"Get Involved", "get website", null)},
-			],
-		}
-	}
-
-	responses['get website'] = {
-		message: linkMessage(name,"Twenty-five (25) percent of all med/surg admissions have non-tobacoo related addictive disease, yet very few hospitals have an addiction medicine consult service. This contributes to the current standard of care where 50-80% of actively addicted paitents...","https://www.rickandmortycharity.com/physicians/graduate-medical-education-gme/addiction-medicine-fellowship/impact/","Our Website",null,null),
-		responses:{
-			type:'rickandmorty.response list text',
-			body:[
-				{text:"Continue Reading", message:textMessage(null,"Continue Reading", "get addicted", null)},
-				{text:"Keep Learning More", message:textMessage(null,"Keep Learning More","get addicted",null)},
-			],
-		}
-	}
-
-	responses['get addicted'] = {
-		message: textMessage(name,"Has addiction touched any area of your life before?",null,null),
-		responses:{
-			type:'rickandmorty.response list text',
-			body:[
-				{text:"Yes it has", message:textMessage(null,"Yes it has","get reason",null)},
-				{text:"Fortunately it has not", message:textMessage(null,"Fortunately it has not", "get reason", null)},
-			],
-		}
-	}
-
-	responses['get reason'] = {
-		message: textMessage(name,"In 2016, Cuyahoga County lost more than 660 to overdose. That's one death every 13 hours. This epidemic can end with the help of people like you. Are you:",null,null),
+///------------ how long has your leg hurt?
+	responses['get duration'] = {
+		message: textMessage(name,"Alright. For once in life, be honest. Tell me about your leg pain.",null,null),
 		responses:{
 			type:'rickandmorty.response list text',
 			variable: 'symptomDuration',
 			body:[
-				{text:"In Need of Help", message:textMessage(null,"In Need of Help","get event",null)},
-				{text:"Supporting Someone", message:textMessage(null,"Supporting Someone", "get event", null)},
-				{text:"Interested in Helping", message:textMessage(null,"Interested in Helping", "get event", null)},
+				{text:"It's hurt for a day", message:textMessage(null,"A day or so","day of pain",null)},
+				{text:"It's hurt for more than a day", message:textMessage(null,"About a week", "days of pain", null)},
+				{text:"It's hurt a week or more", message:textMessage(null,"Longer than a week", "weeks of pain", null)},
 			],
 		}
-	}
+		}
 
-	responses['get event'] = {
-		message: eventMessage(name,URL+"/img/stv/fst-8.png",null,null),
+		responses['day of pain'] = {
+		message: textMessage(name,"So you got a cramp.  Walk it off big guy.","day of pain 2",null),
+		}
+		responses['day of pain 2'] = {
+		message: textMessage(name,"It happens. But you know what doesn't need to happen.  You don't need to be a little bitch about it.","follow-up",null),
+		}
+
+		responses['days of pain'] = {
+		message: textMessage(name,"Haha... so your leg has been hurting for that long and you're just now asking for help?","days of pain 2",null),
+		}
+		responses['days of pain 2'] = {
+		message: textMessage(name,"You know people like you are the reason why healthcare is so F*** in the galaxy.","follow-up",null),
+		}
+
+		responses['weeks of pain'] = {
+		message: textMessage(name,"Oh Geez.  That long Mr. Anonymous Internet Tough Guy?","weeks of pain 2",null),
+		}
+		responses['weeks of pain 2'] = {
+		message: textMessage(name,"It's basically set in now. You'll just have to live with it.","follow-up",null),
+		}
+
+
+		responses['follow-up'] = {
+		message: textMessage(name,"*sigh*","follow-up 2",null),
+		}
+		responses['follow-up 2'] = {
+		message: textMessage(name,"this is happening, isn't it?","follow-up 3",null),
+		}
+		responses['follow-up 3'] = {
+		message: textMessage(name,"Okay. What were you doing when you 'hurt' it?",null,null),
+		responses:{
+			type:'rickandmorty.response list text',
+			variable: 'suspiciousActivity',
+			body:[
+				{text:"'Physical' activity", message:textMessage(null,"I hurt myself doing a 'Physical' activity","physical-youtube",null)},
+				{text:"Non-physical activity", message:textMessage(null,"Ummm.. why is that important? It hurts okay?", "non-physical-gif", null)},
+			],
+		}
+		}
+
+/// --------------- youtube setup
+
+	responses['physical-youtube'] = {
+		message: youtubeMessage(name,"Hold up!  Real quick ... here's what I'm picturing. This is you doing a 'Physical' activity. HaHa... you look so dumb.","http://www.youtube.com/embed/znEliSV2Hbg?rel=0&amp;controls=0&amp;showinfo=0","Youtube",null,null),
 		responses:{
 			type:'rickandmorty.response list text',
 			body:[
-				{text:"Register for the Event", message:textMessage(null,"Register for the Event","get volunteer",null)},
-				{text:"No Thanks", message:textMessage(null,"No Thanks", "get volunteer", null)},
+				{text:"Funny. Now, let's move on.", message:textMessage(null,"Ha.. Ha.. Too funny. Now, let's get back to business","back to business",null)},
 			],
 		}
-	}
+	}	
+	responses['non-physical-gif'] = {
+		message: imageMessage(name,"",URL+'/img/rickandmorty/rick-logic.gif','back to business',null),
+	}	
 
-	responses['get volunteer'] = {
-		message: textMessage(name,"There are a number of ways to get involved in helping us #EndOurEpidemic. We look forward to getting you connected, and thank you for your interest.",null,null),
+
+	responses['back to business'] = {
+	message: textMessage(name,"Alright. Fine. Do you have any specific questions you'd like me to answer?",null,null),
 		responses:{
 			type:'rickandmorty.response list text',
 			body:[
-				{text:"Become an Advocate", message:textMessage(null,"Become an Advocate","get progress",null)},
-				{text:"Donate Time/Resources", message:textMessage(null,"Donate Time/Resources", "get progress", null)},
-				{text:"Partner with Us", message:textMessage(null,"Partner with Us", "get progress", null)},
-				{text:"Addiction Mediciine Fellowship", message:textMessage(null,"Addiction Mediciine Fellowship", "get progress", null)},
+				{text:"I certainly do!", message:textMessage(null,"That's why I'm here...","get details",null)},
+				{text:"Not at this time", message:textMessage(null,"You know what I've just realized? Scientists aren't real doctors.", "get a real doctor", null)},
 			],
 		}
-	}
+		}
 
-	responses['get progress'] = {
-		message: textMessage(name,"Advocacy is one of our most powerful tools for change. Check out the amazing progress being made in our community.",null,null),
+
+// ----- Any Specifics?
+
+	responses['get details'] = {
+	message: textMessage(name,"Okay whatever. Fill out the form.",null,null),
 		responses:{
-			type:'rickandmorty.response list text',
-			body:[
-				{text:"See Stories from the Community", message:textMessage(null,"See Stories from the Community","get tweet",null)},
-				{text:"Find Advocacy Opportunities", message:textMessage(null,"Find Advocacy Opportunities", "get tweet", null)},
-			],
-		}
-	}
-
-	responses['get tweet'] = {
-		message: eventMessage(name,URL+"/img/stv/fst-12.png",null,null),
-		responses:{
-			type:'rickandmorty.response list text',
-			body:[
-				{text:"More Stories", message:textMessage(null,"More Stories","get grid",null)},
-				{text:"Find Advocacy Opportunities", message:textMessage(null,"Find Advocacy Opportunities", "get grid", null)},
-			],
-		}
-	}
-
-	responses['get grid'] = {
-		message: eventMessage(name,URL+"/img/stv/fst-13.png",null,null),
-		responses:{
-			type:'rickandmorty.response list text',
-			body:[
-				{text:"More Stories", message:textMessage(null,"More Stories","end",null)},
-				{text:"End Chat", message:textMessage(null,"End Chat", "end", null)},
-			],
-		}
-	}
-
-	responses['end'] = {
-		message:{
-			type:'rickandmorty.end message',
+			type:'rickandmorty.large free response',
+			variable: 'specificQuestion',
 			body:{
-				displayName:name,
-				text:"Well, this is the end of our chat. Thanks a lot for taking the time to get to know us. We hope that the answers we find for you are helpful. Look for a summary of our conversation in your email inbox momentarily. If we happened to get something wrong or if there is something else you'd like to add follow the instructions to revisit our chat session.\n\n We wish you all the best!",
-				image: URL+'/img/rickandmorty/morty-headshot.png',
+				buttonText:"Type your stupid question here",
+				prompt:"Type in the box below:",
+				message:{
+					type:"rickandmorty.text message",
+					qCode:"that far",
+					body:{
+						text:"",
+					}
+				}
+			},
+		}
+		}
+
+	responses['that far'] = {
+		message: textMessage(name,"Oh my god.","that far 2",null),
+		}
+	responses['that far 2'] = {
+		message: textMessage(name,"You actually filled it out.","that far 3",null),
+		}
+	responses['that far 3'] = {
+		message: textMessage(name,"You have a clear case of the measels","that far 4",null),
+		}
+	responses['that far 4'] = {
+		message: textMessage(name,"mumps?","that far 5",null),
+		}
+	responses['that far 5'] = {
+		message: textMessage(name,"bad legitis?","that far 6",null),
+		}
+	responses['that far 6'] = {
+		message: textMessage(name,"You're not buying this are you?",null,null),
+		responses:{
+			type:'rickandmorty.response list text',
+			variable:"needsHuman",
+			body:[
+				{text:"Nope", message:textMessage(null,"Get me a human.","discovered",null)},
+				{text:"Yep", message:textMessage(null,"It all makes perfect sense now.", "youre cured", null)},
+			],
+		}
+		}
+
+	responses['get a real doctor'] = {
+		message: textMessage(name,"should have a full screen robot image here","end page",null),
+	}
+
+	responses['discovered'] = {
+		message: imageMessage(name,'', URL + "/img/rickandmorty/robots.jpg",null,null),
+	}
+
+	responses['youre cured'] = {
+		message: textMessage(name,"Great!","end page",null),
+		}
+	responses['end page'] ={
+		message:{
+			type:'original.end message', 
+			body:{
+				displayName:name, 
+				text:"You're cured!  And you're welcome.  Pleasure to service.",
+				image: URL+'/img/rickandmorty/end.png',
 			}
 
 		},
 		responses: {
-			type:'rickandmorty.response end',
+			type:'original.response end',
 			body:{
 				bye:{
-					text: "End Chat Session",
+					text: "Peace!",
 					id: 'end',
-				},
+				},				
 			}
 		}
-
-	};
+	}
 
 	return responses;
 
@@ -191,6 +216,20 @@ module.exports = function(name,URL){
 
 		return temp;
 
+	}
+
+	function imageMessage(name,text,url,qCode,meta){
+		var temp = {};
+
+		temp.type = 'rickandmorty.image message';
+		temp.qCode = qCode;
+		temp.meta = meta;
+		temp.body = {
+						image: url,
+						displayName: name,
+							};
+
+		return temp;
 	}
 
 	function specialMessage(name,text,img,source,qCode,meta){
