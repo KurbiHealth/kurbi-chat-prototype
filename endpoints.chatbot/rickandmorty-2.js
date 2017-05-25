@@ -7,8 +7,8 @@ module.exports = function(name,URL){
 			type:'rickandmorty.welcome message',
 			body:{
 				displayName:name,
-				headline: "SIKE!",
-				text:"LOL... It's me - Rick! \n Let's talk about your stupid leg pain.",
+				headline: null,
+				text:null,
 				image: URL+'/img/rickandmorty/morty-headshot.png',
 				mainimage: URL+'/img/rickandmorty/rm-welcome.png',
 			}
@@ -105,10 +105,10 @@ module.exports = function(name,URL){
 				{text:"Funny. Now, let's move on.", message:textMessage(null,"Ha.. Ha.. Too funny. Now, let's get back to business","back to business",null)},
 			],
 		}
-	}	
+	}
 	responses['non-physical-gif'] = {
 		message: imageMessage(name,"",URL+'/img/rickandmorty/rick-logic.gif','back to business',null),
-	}	
+	}
 
 
 	responses['back to business'] = {
@@ -184,9 +184,9 @@ module.exports = function(name,URL){
 		}
 	responses['end page'] ={
 		message:{
-			type:'original.end message', 
+			type:'original.end message',
 			body:{
-				displayName:name, 
+				displayName:name,
 				text:"You're cured!  And you're welcome.  Pleasure to service.",
 				image: URL+'/img/rickandmorty/end.png',
 			}
@@ -198,7 +198,7 @@ module.exports = function(name,URL){
 				bye:{
 					text: "Peace!",
 					id: 'end',
-				},				
+				},
 			}
 		}
 	}
