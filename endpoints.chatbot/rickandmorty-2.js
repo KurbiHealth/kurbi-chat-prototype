@@ -176,7 +176,7 @@ module.exports = function(name,URL){
 	}
 
 	responses['discovered'] = {
-		message: imageMessage(name,'', URL + "/img/rickandmorty/robots.jpg",null,null),
+		message: imageMessage(name,'', URL + "/img/rickandmorty/robots.png",null,null),
 	}
 
 	responses['youre cured'] = {
