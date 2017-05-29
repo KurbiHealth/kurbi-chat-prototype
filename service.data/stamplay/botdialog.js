@@ -37,14 +37,14 @@ function createBotDialog(input){
 			owner: input.owner,
 			name: input.name,
 			version: input.version,
-			qcode: input.qcode
+			qCode: input.qCode
 		};
 
 		//stamplay stores the message on a 'stuff' object
 		delete input.owner;
 		delete input.name;
 		delete input.version;
-		delete input.qcode;
+		delete input.qCode;
 
 		
 		db.Object('botdialog').get(data, function(err,docs){
