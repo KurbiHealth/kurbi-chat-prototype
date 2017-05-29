@@ -12,6 +12,18 @@ module.exports = function(DATASOURCE){
 
 function connectDatasource(DATASOURCE){
 	return new Promise(function(resolve,reject){
+	if(DATASOURCE=='live') connectMongoDB('mongodb://10.132.88.209:27017/kurbichat').then(function(msg){
+	 	console.log(msg);
+	 	var service = {};
+	 	//build mongo service
+	 	require('./mongo/provider.js')(service);
+	 	require('./mongo/chatroom.js')(service);
+	 	require('./mongo/botdialog.js')(service);
+	 	require('./mongo/chatbox.js')(service);
+	 	require('./mongo/chatstyle.js')(service);
+	 	require('./mongo/chatbot.js')(service);
+	 	resolve(service);
+	 });
 
 	 if(DATASOURCE=='mongodb') connectMongoDB('mongodb://localhost:27017/kurbichat').then(function(msg){
 	 	console.log(msg);

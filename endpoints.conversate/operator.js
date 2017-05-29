@@ -100,6 +100,11 @@ module.exports = function(io,express,BASEURL,PORT,db){
 			socket.broadcast.to(socket.room).emit('start');
 		});
 
+		socket.on('freechat',function(){
+			console.log('broadcasting free chat');
+			socket.broadcast.to(socket.room).emit('begin free chat');
+		})
+
 		socket.on('message', function(data){
 			data.source = socket.source;
 			//checkForUserData(data,socket.room);

@@ -280,7 +280,7 @@ function createBotFromFile(req,res){
 // -------------------------------------------
 
 
-	populateIconList(BASEURL);
+	// populateIconList(BASEURL);
 
 	return router;
 
@@ -304,7 +304,7 @@ function loadStyleTemplate(newConfig, provider){
 				config.less = newConfig.less;
 			}
 
-			if(!config.template) config.template = 'floating';
+			if(!config.template) config.template = 'rickandmorty';
 			if(!config.js) config.js = {};
 			if(!config.hbs) config.hbs = {};
 			if(!config.less) config.less = {};
@@ -442,19 +442,19 @@ function createChatbox(req,res){
 /////////////////////////////////////////////////////////////////
 /// UN-IMPORTANT SHNITZELS /// 
 //------------------------------------------------------------///
-	function populateIconList(URL){
-	//I had a shitton of icons, so I made it choose randomly from them because it was funny
-		// if(BASEURL == '' || typeof BASEURL == 'undefined')
-		// 	var BASEURL = 'http://public.foolhardysoftworks.com:9000';
-		fs.readdir('./apps.providerconfig/icons/PNG', function(err,items){
-			var limit = items.length < 12 ? items.length : 12;
-			for(var i = 0; i < limit; i++){
-				var choice = Math.floor(Math.random()*(items.length-1));
-				ICONS.push(URL + '/backend/icons/PNG/'+items[choice]);	
-			}
-		});
+	// function populateIconList(URL){
+	// //I had a shitton of icons, so I made it choose randomly from them because it was funny
+	// 	// if(BASEURL == '' || typeof BASEURL == 'undefined')
+	// 	// 	var BASEURL = 'http://public.foolhardysoftworks.com:9000';
+	// 	fs.readdir('./apps.providerconfig/icons/PNG', function(err,items){
+	// 		var limit = items.length < 12 ? items.length : 12;
+	// 		for(var i = 0; i < limit; i++){
+	// 			var choice = Math.floor(Math.random()*(items.length-1));
+	// 			ICONS.push(URL + '/img/icons/PNG/'+items[choice]);	
+	// 		}
+	// 	});
 
-	}
+	// }
 
 
 }

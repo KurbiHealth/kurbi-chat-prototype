@@ -18,7 +18,8 @@ namespace.ChatBox = function(info, target){
 	this.sendMessage = sendMessage;
 	this.start = start;
 	that.clear = clear;
-	this.freechat = true;
+	that.sendStart = sendStart;
+	this.freechat = false;
 	this.freeTemplate = {
 					type: 			defaultTemplate+"."+'small free response', 
 					body:{
@@ -28,12 +29,23 @@ namespace.ChatBox = function(info, target){
 										type:defaultTemplate+"."+"text message",
 										body:{
 											text:"",
-											displayName:"tony soprano",
+											displayName:"George, totally a real human",
 										}
 									}
 								}, 
 					variable:{}
 				}
+
+	this.spyTemplate =  {
+				type:'admin.begin chat',
+				body:{
+				yes:{
+					text: "Join the Chat",
+					id: 'begin',
+				},
+
+			}
+		}
 
 	that.end = end;
 	var socket = null;
@@ -52,6 +64,11 @@ namespace.ChatBox = function(info, target){
 
 	setup();
 
+	function sendStart(){
+		socket.emit('freechat',that.info);
+		setInput(that.freeTemplate);
+	}
+
 	function start(){
 		socket.emit('start',that.info);
 	}
@@ -66,7 +83,7 @@ namespace.ChatBox = function(info, target){
 		console.log('send msg', msg);	
 		msg.userId = that.userId;
 		that.footer.innerHTML = "";
-		if(that.freechat) setInput(that.freeTemplate);
+		setInput(that.freeTemplate);
 
 		appendMessage(msg, true, function(){
 			//only send the message after it has been appended
@@ -141,7 +158,7 @@ namespace.ChatBox = function(info, target){
 				s[j] = string;
 				if(count == s.length) {
 					that.content.innerHTML = s.join("");
-					if(data.length > 0) setInput(that.freeTemplate);
+					if(data.length > 0) setInput(that.spyTemplate);
 					that.content.scrollTop = that.content.scrollHeight;
 				}
 			});
@@ -281,7 +298,7 @@ function init(local){
 
 function getPatientIcon(){
 	var iconPath = localStorage.getItem('patient_icon');
-	if(iconPath == null) iconPath = serverURL+'/backend/icons/PNG/icon-6.png';
+	if(iconPath == null) iconPath = serverURL+'/img/icons/icon-6.png';
 	return iconPath;
 }
 

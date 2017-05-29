@@ -1,0 +1,47 @@
+<div>
+<style type="text/css">
+.kurbi-rprps-parent {
+	display: -webkit-flex;
+	display:flex;
+	-webkit-flex-direction:row;
+	flex-direction:row;
+	-webkit-justify-content:left;
+	justify-content:left;
+	-webkit-align-items:left;
+	align-items:left;
+	-webkit-flex-wrap:wrap;
+	flex-wrap:wrap;
+	width:100%;
+}
+.kurbi-rprps-yes {
+	margin-bottom:10px;
+	padding: 5px 10px;
+	width: 296px;
+	font-size: 16px;
+	text-align: left;
+	color: #ffffff;
+	background: #DE5C68;
+	cursor:pointer;
+}
+.kurbi-rprps-no {
+	padding: 3px 10px;
+	width: 296px;
+	font-size: 16px;
+	text-align: left;
+	color: #DE5C68;
+	background: #ffffff;
+	border: 2px solid #DE5C68;
+	cursor:pointer;
+}
+</style>
+<img src="#SMALL_IMAGE_URL" onload="
+kurbi.attachClickHandler['#pickle']('rprps', function(data, chatbox){
+		chatbox.sendStart();
+});
+this.parentNode.removeChild(this);
+"/>
+	<div class='kurbi-rprps-parent'>
+		<div class='kurbi-rprps-yes' onclick="kurbi.click['#pickle']('rprps', {{json responses.yes}})">{{responses.yes.text}}</div>
+	</div><!-- /.kurbi-rprps-parent -->
+
+</div>

@@ -102,6 +102,12 @@ var ChatBox = function(info){
 		socket.emit('start',that.info);
 	}
 
+	function startFreeChat(){
+		console.log('free chat activated');
+		that.freeChat = true;
+		setInput(that.freeTemplate);
+	}
+
 	function end(){
 		clearKey();
 		socket.emit('end',that.info);
@@ -166,15 +172,7 @@ var ChatBox = function(info){
 	function addMessage(data){
 		console.log('new message', data);
 		if(data.message) appendMessage(data.message);
-		if(data.responses) setInput(data.responses);
-		// if(data.responses) {
-		// 	that.freechat = false;
-		// 	setInput(data.responses);
-		// }else{
-		// 	that.freechat = true;
-			
-		// 	setInput(that.freeTemplate);
-		// }
+		if(data.responses && !that.freechat) setInput(data.responses);
 	}
 
 
@@ -285,6 +283,7 @@ var ChatBox = function(info){
 			socket.emit('register', that.info);
 			socket.on('history', addHistory);
 			socket.on('message', addMessage);
+			socket.on('begin free chat', startFreeChat);
 		}
 	}
 
@@ -361,7 +360,7 @@ function init(local){
 
 function getPatientIcon(){
 	var iconPath = localStorage.getItem('patient_icon');
-	if(iconPath == null) iconPath = serverURL+'/backend/icons/PNG/a01.png';
+	if(iconPath == null) iconPath = serverURL+'/img/icons/icon-1.png';
 	return iconPath;
 }
 

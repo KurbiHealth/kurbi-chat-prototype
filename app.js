@@ -229,7 +229,6 @@ log('./endpoints.log ');
 // ---- APPS ----
 log('\n');
 log('connecting static apps');
-app.use('/admin',express.static('apps.chatadmin'))
 /**
  * Chat Box Configuration Form for Providers (app)
  */
@@ -250,6 +249,11 @@ log('./builder ');
 app.use('/preview', express.static('apps.preview'));
 log('./preview ');
 
+app.use('/modea', express.static('apps.demo.rickandmorty'));
+log('./modea ');
+
+app.use('/modea/admin',express.static('apps.chatadmin'));
+log('./admin')
 /**
  * App to build bot conversations
  */

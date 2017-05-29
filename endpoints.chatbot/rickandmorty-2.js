@@ -298,7 +298,7 @@ module.exports = function(name,URL){
 		for(var i = 1; i < 13; i++){
 			var temp = {};
 
-			temp.url = URL+"/backend/icons/PNG/icon-"+i+".png";
+			temp.url = URL+"/img/icons/icon-"+i+".png";
 			temp.message = {};
 			temp.message.type = 'rickandmorty.image message';
 			temp.message.qCode = qCode;

@@ -8,7 +8,7 @@ module.exports = function(name,URL){
 			body:{
 				displayName:name, 
 				text:"We know how confusing it can be to find the answers to health questions. If that's what brought you here, we’d love to help you connect with our members.\n\nChatting with us is completely anonymous because your privacy is very important.\n\nTo get started, simply click \"Let\'s Chat\" button and follow the prompts.",
-				image: URL+'/backend/icons/PNG/mawc.png',
+				image: URL+'/img/icons/mawc.png',
 			}
 
 		},
@@ -212,7 +212,7 @@ module.exports = function(name,URL){
 			body:{
 				displayName:name, 
 				text:"Well, this is the end of our chat. Thanks a lot for taking the time to get to know us. We hope that the answers we find for you are helpful. Look for a summary of our conversation in your email inbox momentarily. If we happened to get something wrong or if there is something else you'd like to add follow the instructions to revisit our chat session.\n\n We wish you all the best!",
-				image: URL+'/backend/icons/PNG/mawc.png',
+				image: URL+'/img/icons/mawc.png',
 			}
 
 		},
@@ -251,7 +251,7 @@ module.exports = function(name,URL){
 		for(var i = 1; i < 13; i++){
 			var temp = {};
 			
-			temp.url = URL+"/backend/icons/PNG/icon-"+i+".png";
+			temp.url = URL+"/img/icons/icon-"+i+".png";
 			temp.message = {};
 			temp.message.type = 'original.image message';
 			temp.message.qCode = qCode;

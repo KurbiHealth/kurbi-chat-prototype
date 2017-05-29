@@ -62,6 +62,10 @@ module.exports = function(router,db,BASEURL,PORT){
 			filename = dir + 'end_page.hbs';
 			break;
 
+			case 'begin chat':
+			filename = dir + 'response_begin_chat.hbs';
+			break;
+
 			case 'response welcome':
 			filename = dir + 'response_welcome.hbs';
 			break;
@@ -95,7 +99,7 @@ module.exports = function(router,db,BASEURL,PORT){
 		globFunc.loadFile(filename)
 		.then(function(template){
 
-			res.send(template.replace(/#SMALL_IMAGE_URL/g, serverURL+'/backend/icons/PNG/small-image.png'));
+			res.send(template.replace(/#SMALL_IMAGE_URL/g, serverURL+'/img/icons/small-image.png'));
 
 		});
 
