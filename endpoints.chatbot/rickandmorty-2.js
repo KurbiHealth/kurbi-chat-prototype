@@ -172,7 +172,7 @@ module.exports = function(name,URL){
 		}
 
 	responses['get a real doctor'] = {
-		message: textMessage(name,"should have a full screen robot image here","end page",null),
+		message: imageMessage(name,'', URL + "/img/rickandmorty/NRD-alternate.png","screw you",null),
 	}
 
 	responses['discovered'] = {
@@ -188,7 +188,28 @@ module.exports = function(name,URL){
 			body:{
 				displayName:name,
 				text:"You're cured!  And you're welcome.  Pleasure to service.",
-				image: URL+'/img/rickandmorty/end.png',
+				image: URL+'/img/rickandmorty/end.gif',
+			}
+
+		},
+		responses: {
+			type:'original.response end',
+			body:{
+				bye:{
+					text: "Peace!",
+					id: 'end',
+				},
+			}
+		}
+	}
+
+	responses['screw you'] ={
+		message:{
+			type:'original.end message',
+			body:{
+				displayName:name,
+				text:"Enjoy the rest of your crappy life.",
+				image: URL+'/img/rickandmorty/screw-you.gif',
 			}
 
 		},
