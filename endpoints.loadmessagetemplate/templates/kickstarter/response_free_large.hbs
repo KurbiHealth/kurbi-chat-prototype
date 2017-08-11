@@ -1,0 +1,69 @@
+<div>
+<style type="text/css">
+.kurbi-porq-prompt{
+	font-size:1.3em;
+	color:#888888;
+	margin-bottom:10px;
+}
+.kurbi-porq-input{
+	padding: 5px;
+	max-width: 100%;
+	width:100%;
+	height:150px;
+	font-size:14px;
+	color:#888888;
+	border:none;
+}
+.kurbi-porq-input:focus {
+	outline: #000000 solid thin;
+}
+.kurbi-porq-parent {
+	display:-webkit-flex;
+	display:flex;
+	-webkit-flex-direction:row;
+	flex-direction:row;
+	-webkit-justify-content:center;
+	justify-content:center;
+	-webkit-align-items:center;
+	align-items:center;
+	-webkit-flex-wrap:wrap;
+	flex-wrap:wrap;
+	width:100%;
+}
+.kurbi-porq-child {
+	margin: 10px auto 0 auto;
+	padding: 8px 10px;
+	width: 90%;
+	font-size: 14px;
+	color: #ffffff;
+	background-color: #000000;
+	text-align: center;
+	cursor:pointer;
+}
+.kurbi-porq-icon {
+	height:45px;
+	width:auto;
+	margin-right:8px;
+	margin-top:7px;
+	margin-bottom:8px;
+}
+</style>
+
+	<img src="#SMALL_IMAGE_URL" onload="
+	var input = this.parentNode.getElementsByClassName('kurbi-porq-input')[0];
+	kurbi.attachClickHandler['#pickle']('porq', function(data, chatbox){
+		data.body.text = input.value;
+		chatbox.sendMessage(data);
+	});
+	this.parentNode.removeChild(this);
+	"/>
+
+	<div>
+		<div class='kurbi-porq-prompt'>{{responses.prompt}}</div>
+		<textarea class='kurbi-porq-input' placeholder="Click here to start typing"></textarea>
+		<div class='kurbi-porq-parent'>
+ 			<div class='kurbi-porq-child' onclick="kurbi.click['#pickle']('porq', {{json responses.message}})">{{responses.buttonText}}</div>
+ 			{{!-- <img class="kurbi-porq-icon" src="#SMALL_IMAGE_URL" onload="this.onload=null; this.src=kurbi.getPatientIcon();"/> --}}
+		</div>
+	</div>
+</div>
